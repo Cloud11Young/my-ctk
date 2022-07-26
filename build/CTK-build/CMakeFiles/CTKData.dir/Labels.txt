@@ -1,0 +1,13 @@
+# Target labels
+ CTKData
+# Source files and their labels
+/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/CTKData
+/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/CTKData.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/CTKData-complete.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-install.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-mkdir.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-download.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-update.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-patch.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-configure.rule
+/home/yq/work/Practice/CTK/build/CTK-build/CTKData-cmake/src/CTKData-stamp/CTKData-build.rule

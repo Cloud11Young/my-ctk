@@ -23,7 +23,7 @@
 
 // Qt includes
 #include <QtGlobal>
-#ifndef HAVE_QT5
+#ifndef HAVE_QT6
 #include <QDesignerCustomWidgetCollectionInterface>
 #else
 #include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
@@ -80,58 +80,58 @@ class CTK_WIDGETS_PLUGINS_EXPORT ctkWidgetsPlugins
   , public QDesignerCustomWidgetCollectionInterface
 {
   Q_OBJECT
-  Q_INTERFACES(QDesignerCustomWidgetCollectionInterface)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "org.commontk.Widgets")
+    Q_INTERFACES(QDesignerCustomWidgetCollectionInterface)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "org.commontk.Widgets")
 #endif
 public:
   QList<QDesignerCustomWidgetInterface*> customWidgets() const
-    {
-    QList<QDesignerCustomWidgetInterface *> plugins;
+  {
+    QList<QDesignerCustomWidgetInterface*> plugins;
     plugins << new ctkActionsWidgetPlugin
-            << new ctkAxesWidgetPlugin
-            << new ctkCheckableComboBoxPlugin
-            << new ctkCheckablePushButtonPlugin
-            << new ctkCheckBoxPlugin
-            << new ctkCollapsibleButtonPlugin
-            << new ctkCollapsibleGroupBoxPlugin
-            << new ctkColorPickerButtonPlugin
-            << new ctkComboBoxPlugin
-            << new ctkCoordinatesWidgetPlugin
-            << new ctkCrosshairLabelPlugin
-            << new ctkDirectoryButtonPlugin
-            << new ctkDoubleRangeSliderPlugin
-            << new ctkDoubleSliderPlugin
-            << new ctkDoubleSpinBoxPlugin
-            << new ctkDynamicSpacerPlugin
-            << new ctkExpandButtonPlugin
-            << new ctkExpandableWidgetPlugin
-            << new ctkFittedTextBrowserPlugin
-            << new ctkFontButtonPlugin
-            << new ctkLanguageComboBoxPlugin
-            << new ctkMaterialPropertyPreviewLabelPlugin
-            << new ctkMaterialPropertyWidgetPlugin
-            << new ctkMatrixWidgetPlugin
-            << new ctkMenuButtonPlugin
-            << new ctkModalityWidgetPlugin
-            << new ctkPathLineEditPlugin
-            << new ctkPathListButtonsWidgetPlugin
-            << new ctkPathListWidgetPlugin
-            << new ctkPopupWidgetPlugin
-            << new ctkPushButtonPlugin
-            << new ctkRangeSliderPlugin
-            << new ctkRangeWidgetPlugin
-            << new ctkSearchBoxPlugin
-            << new ctkSettingsPanelPlugin
-            << new ctkSettingsDialogPlugin
-            << new ctkSliderWidgetPlugin
-            << new ctkThumbnailLabelPlugin
-            << new ctkTransferFunctionViewPlugin
-            << new ctkTreeComboBoxPlugin
-            << new ctkWorkflowButtonBoxWidgetPlugin
-            << new ctkWorkflowWidgetStepPlugin;
+      << new ctkAxesWidgetPlugin
+      << new ctkCheckableComboBoxPlugin
+      << new ctkCheckablePushButtonPlugin
+      << new ctkCheckBoxPlugin
+      << new ctkCollapsibleButtonPlugin
+      << new ctkCollapsibleGroupBoxPlugin
+      << new ctkColorPickerButtonPlugin
+      << new ctkComboBoxPlugin
+      << new ctkCoordinatesWidgetPlugin
+      << new ctkCrosshairLabelPlugin
+      << new ctkDirectoryButtonPlugin
+      << new ctkDoubleRangeSliderPlugin
+      << new ctkDoubleSliderPlugin
+      << new ctkDoubleSpinBoxPlugin
+      << new ctkDynamicSpacerPlugin
+      << new ctkExpandButtonPlugin
+      << new ctkExpandableWidgetPlugin
+      << new ctkFittedTextBrowserPlugin
+      << new ctkFontButtonPlugin
+      << new ctkLanguageComboBoxPlugin
+      << new ctkMaterialPropertyPreviewLabelPlugin
+      << new ctkMaterialPropertyWidgetPlugin
+      << new ctkMatrixWidgetPlugin
+      << new ctkMenuButtonPlugin
+      << new ctkModalityWidgetPlugin
+      << new ctkPathLineEditPlugin
+      << new ctkPathListButtonsWidgetPlugin
+      << new ctkPathListWidgetPlugin
+      << new ctkPopupWidgetPlugin
+      << new ctkPushButtonPlugin
+      << new ctkRangeSliderPlugin
+      << new ctkRangeWidgetPlugin
+      << new ctkSearchBoxPlugin
+      << new ctkSettingsPanelPlugin
+      << new ctkSettingsDialogPlugin
+      << new ctkSliderWidgetPlugin
+      << new ctkThumbnailLabelPlugin
+      << new ctkTransferFunctionViewPlugin
+      << new ctkTreeComboBoxPlugin
+      << new ctkWorkflowButtonBoxWidgetPlugin
+      << new ctkWorkflowWidgetStepPlugin;
     return plugins;
-    }
+  }
 };
 
 #endif

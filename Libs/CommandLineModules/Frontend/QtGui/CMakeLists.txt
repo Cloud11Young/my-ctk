@@ -7,7 +7,6 @@ project(CTKCommandLineModulesFrontendQtGui)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_CMDLINEMODULEQTGUI_EXPORT")
 
 # Additional directories to include
@@ -43,7 +42,7 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::UiTools Qt5::Widgets)
+  list(APPEND KIT_target_libraries Qt6::UiTools Qt6::Widgets)
 else()
   set(QT_USE_QTUITOOLS 1)
   include(${QT_USE_FILE})
@@ -59,7 +58,7 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-  )
+)
 
 target_link_libraries(${PROJECT_NAME} ${QT_LIBRARIES})
 
@@ -68,7 +67,7 @@ if(CTK_WRAP_PYTHONQT_LIGHT)
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
 
 # Testing

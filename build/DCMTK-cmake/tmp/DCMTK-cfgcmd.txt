@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DDCMTK_INSTALL_BINDIR:STRING=bin/.;-DDCMTK_INSTALL_LIBDIR:STRING=lib/.;-GUnix Makefiles;-C<TMP_DIR>/DCMTK-cache-$<CONFIG>.cmake;<SOURCE_DIR><SOURCE_SUBDIR>'

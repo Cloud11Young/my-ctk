@@ -1,0 +1,9 @@
+-I/home/yq/work/Practice/CTK/Libs/Core
+-I/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core
+-I/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core/Resources/UI
+-I/home/yq/work/Practice/CTK/build/CTK-build/CTK-build
+-fctkLinearValueProxy.h
+-DHAVE_QT6
+-o
+/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core/moc_ctkLinearValueProxy.cpp
+/home/yq/work/Practice/CTK/Libs/Core/ctkLinearValueProxy.h

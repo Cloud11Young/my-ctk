@@ -1,0 +1,13 @@
+# Target labels
+ PythonQt
+# Source files and their labels
+/home/yq/work/Practice/CTK/build/CMakeFiles/PythonQt
+/home/yq/work/Practice/CTK/build/CMakeFiles/PythonQt.rule
+/home/yq/work/Practice/CTK/build/CMakeFiles/PythonQt-complete.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-install.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-mkdir.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-download.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-update.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-patch.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-configure.rule
+/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-build.rule

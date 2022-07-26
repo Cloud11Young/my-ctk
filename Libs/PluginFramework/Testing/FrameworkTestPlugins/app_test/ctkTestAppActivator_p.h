@@ -29,12 +29,12 @@
 class MyAppContainer;
 
 class ctkTestAppActivator : public QObject,
-    public ctkPluginActivator
+  public ctkPluginActivator
 {
   Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "app_test")
+    Q_INTERFACES(ctkPluginActivator)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "app_test")
 #endif
 
 public:
@@ -49,7 +49,7 @@ private:
 
   Q_DISABLE_COPY(ctkTestAppActivator)
 
-  QScopedPointer<MyAppContainer> appContainer;
+    QScopedPointer<MyAppContainer> appContainer;
 };
 
 #endif // CTKTESTAPPACTIVATOR_P_H

@@ -27,16 +27,16 @@
 
 // ----------------------------------------------------------------------------
 // We can't use a QCheckBox because we are in QtCore, simulate one.
-class ctkObjectWithBoolProp: public QObject
+class ctkObjectWithBoolProp : public QObject
 {
   Q_OBJECT
-  Q_PROPERTY(bool checked READ checked WRITE setChecked NOTIFY toggled);
+    Q_PROPERTY(bool checked READ checked WRITE setChecked NOTIFY toggled);
 public:
-  ctkObjectWithBoolProp(){this->Checked = false;}
-  bool checked()const {return this->Checked;}
+  ctkObjectWithBoolProp() { this->Checked = false; }
+  bool checked()const { return this->Checked; }
 
 public Q_SLOTS:
-  void setChecked(bool check){
+  void setChecked(bool check) {
     if (check == this->Checked)
       return;
     this->Checked = check;
@@ -49,7 +49,7 @@ private:
 };
 
 // ----------------------------------------------------------------------------
-class ctkBooleanMapperTester: public QObject
+class ctkBooleanMapperTester : public QObject
 {
   Q_OBJECT
 private Q_SLOTS:
@@ -145,9 +145,9 @@ void ctkBooleanMapperTester::testSignals()
   QSignalSpy spyToggled(&object, SIGNAL(toggled(bool)));
   QSignalSpy spyValueChanged(complementMapper, SIGNAL(valueChanged(bool)));
   QSignalSpy spyComplementChanged(complementMapper,
-                                  SIGNAL(complementChanged(bool)));
+    SIGNAL(complementChanged(bool)));
   QSignalSpy spyValueAsIntChanged(complementMapper,
-                                  SIGNAL(valueAsIntChanged(int)));
+    SIGNAL(valueAsIntChanged(int)));
 
   object.setChecked(true);
   QCOMPARE(spyToggled.count(), 1);

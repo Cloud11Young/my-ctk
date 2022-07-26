@@ -27,12 +27,12 @@
 
 
 class ctkEventAdminTestPerfActivator : public QObject,
-    public ctkPluginActivator
+  public ctkPluginActivator
 {
   Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "org_commontk_eventadmintest_perf")
+    Q_INTERFACES(ctkPluginActivator)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "org_commontk_eventadmintest_perf")
 #endif
 
 public:

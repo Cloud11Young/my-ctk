@@ -12,12 +12,13 @@ if(CTK_LIB_CommandLineModules/Frontend/QtGui)
 
   if(CTK_LIB_CommandLineModules/Backend/LocalProcess)
     set(_test_cpp_files
-        ctkCmdLineModuleFutureTest.cpp
-        ctkCmdLineModuleProcessXmlOutputTest.cpp
-        )
+      ctkCmdLineModuleFutureTest.cpp
+      ctkCmdLineModuleProcessXmlOutputTest.cpp
+    )
     list(APPEND _test_srcs ${_test_cpp_files})
     list(APPEND _test_mocs ${_test_cpp_files})
   endif()
+
   if(CTK_LIB_CommandLineModules/Backend/FunctionPointer)
     list(APPEND _test_srcs ctkCmdLineModuleQtCustomizationTest.cpp)
     list(APPEND _test_mocs ctkCmdLineModuleQtCustomizationTest.cpp)
@@ -47,48 +48,55 @@ include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}
   ${_base_src_include_dir}/Core
   ${_base_bin_include_dir}/Core
-  )
+)
 
 set(_additional_link_libraries)
 
 if(CTK_LIB_CommandLineModules/Backend/LocalProcess)
   include_directories(${_base_src_include_dir}/Backend/LocalProcess
-                      ${_base_bin_include_dir}/Backend/LocalProcess)
+    ${_base_bin_include_dir}/Backend/LocalProcess)
   list(APPEND _additional_link_libraries CTKCommandLineModulesBackendLocalProcess)
 endif()
 
 if(CTK_LIB_CommandLineModules/Backend/FunctionPointer)
   include_directories(${_base_src_include_dir}/Backend/FunctionPointer
-                      ${_base_bin_include_dir}/Backend/FunctionPointer)
+    ${_base_bin_include_dir}/Backend/FunctionPointer)
   list(APPEND _additional_link_libraries CTKCommandLineModulesBackendFunctionPointer)
 endif()
 
 if(CTK_LIB_CommandLineModules/Frontend/QtGui)
   include_directories(${_base_src_include_dir}/Frontend/QtGui
-                      ${_base_bin_include_dir}/Frontend/QtGui)
+    ${_base_bin_include_dir}/Frontend/QtGui)
   list(APPEND _additional_link_libraries CTKCommandLineModulesFrontendQtGui)
 endif()
 
 set(Tests_MOC_CPP)
 set(Tests_UI_CPP)
 set(Tests_RESOURCES_SRCS)
-if (CTK_QT_VERSION VERSION_GREATER "4")
-  QT5_WRAP_CPP(Tests_MOC_CPP ${Tests_MOC_SRCS})
+
+if(CTK_QT_VERSION VERSION_GREATER "4")
+  QT6_WRAP_CPP(Tests_MOC_CPP ${Tests_MOC_SRCS})
+
   if(_test_mocs)
-    QT5_GENERATE_MOCS(${_test_mocs})
+    QT6_GENERATE_MOCS(${_test_mocs})
   endif()
+
   if(TEST_UI_FORMS)
-    QT5_WRAP_UI(Tests_UI_CPP ${Tests_UI_FORMS})
+    QT6_WRAP_UI(Tests_UI_CPP ${Tests_UI_FORMS})
   endif()
-  QT5_ADD_RESOURCES(Tests_RESOURCES_SRCS ${Tests_RESOURCES})
+
+  QT6_ADD_RESOURCES(Tests_RESOURCES_SRCS ${Tests_RESOURCES})
 else()
   QT4_WRAP_CPP(Tests_MOC_CPP ${Tests_MOC_SRCS})
+
   if(_test_mocs)
     QT4_GENERATE_MOCS(${_test_mocs})
   endif()
+
   if(TEST_UI_FORMS)
     QT4_WRAP_UI(Tests_UI_CPP ${Tests_UI_FORMS})
   endif()
+
   QT4_ADD_RESOURCES(Tests_RESOURCES_SRCS ${Tests_RESOURCES})
 endif()
 
@@ -97,12 +105,13 @@ target_link_libraries(${KIT}CppTests ${_additional_link_libraries})
 add_dependencies(${KIT}CppTests ctkCmdLineTestModules)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  target_link_libraries(${KIT}CppTests Qt5::Gui Qt5::Test)
+  target_link_libraries(${KIT}CppTests Qt6::Gui Qt6::Test)
 endif()
 
 if(TARGET CTKCommandLineModulesCoreCppTests)
   add_dependencies(${KIT}CppTests CTKCommandLineModulesCoreCppTests)
 endif()
+
 if(TARGET CTKCommandLineModulesFrontendQtGuiCppTests)
   add_dependencies(${KIT}CppTests CTKCommandLineModulesFrontendQtGuiCppTests)
 endif()
@@ -110,7 +119,6 @@ endif()
 #
 # Add Tests
 #
-
 foreach(_src ${_test_srcs})
   get_filename_component(_test_name ${_src} NAME_WE)
   SIMPLE_TEST(${_test_name})

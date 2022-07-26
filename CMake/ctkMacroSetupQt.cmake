@@ -1,55 +1,60 @@
-###########################################################################
+# ##########################################################################
 #
-#  Library:   CTK
+# Library:   CTK
 #
-#  Copyright (c) Kitware Inc.
+# Copyright (c) Kitware Inc.
 #
-#  Licensed under the Apache License, Version 2.0 (the "License");
-#  you may not use this file except in compliance with the License.
-#  You may obtain a copy of the License at
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0.txt
+# http://www.apache.org/licenses/LICENSE-2.0.txt
 #
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-###########################################################################
+# ##########################################################################
 
-#! \ingroup CMakeUtilities
+# ! \ingroup CMakeUtilities
 macro(ctkMacroSetupQt)
-  set(CTK_QT_VERSION "4" CACHE STRING "Expected Qt version")
+  set(CTK_QT_VERSION "6" CACHE STRING "Expected Qt version")
   mark_as_advanced(CTK_QT_VERSION)
 
-  set_property(CACHE CTK_QT_VERSION PROPERTY STRINGS 4 5)
+  set_property(CACHE CTK_QT_VERSION PROPERTY STRINGS 6 5)
 
-  if(NOT (CTK_QT_VERSION VERSION_EQUAL "4" OR CTK_QT_VERSION VERSION_EQUAL "5"))
+  if(NOT(CTK_QT_VERSION VERSION_EQUAL "6" OR CTK_QT_VERSION VERSION_EQUAL "5"))
     message(FATAL_ERROR "Expected value for CTK_QT_VERSION is either '4' or '5'")
   endif()
 
-
   if(CTK_QT_VERSION VERSION_GREATER "4")
     cmake_minimum_required(VERSION 2.8.12)
-    find_package(Qt5 COMPONENTS Core)
-    set(CTK_QT5_COMPONENTS Core Xml XmlPatterns Concurrent Sql Test Multimedia)
+    find_package(Qt6 COMPONENTS Core)
+
+    # set(CTK_QT6_COMPONENTS Core Xml XmlPatterns Concurrent Sql Test Multimedia)
+    set(CTK_QT6_COMPONENTS Core Xml Concurrent Sql Test Multimedia Core5Compat StateMachine)
+
     if(CTK_ENABLE_Widgets OR CTK_LIB_Widgets OR CTK_LIB_CommandLineModules/Frontend/QtGui OR CTK_BUILD_ALL OR CTK_BUILD_ALL_LIBRARIES)
-      list(APPEND CTK_QT5_COMPONENTS Widgets OpenGL UiTools)
+      list(APPEND CTK_QT6_COMPONENTS Widgets OpenGL UiTools)
     endif()
+
     if(CTK_LIB_CommandLineModules/Frontend/QtWebKit OR CTK_BUILD_ALL OR CTK_BUILD_ALL_LIBRARIES)
-      if(TARGET Qt5::WebKitWidgets)
-        list(APPEND CTK_QT5_COMPONENTS WebKitWidgets)
+      if(TARGET Qt6::WebKitWidgets)
+        list(APPEND CTK_QT6_COMPONENTS WebKitWidgets)
       else()
-        list(APPEND CTK_QT5_COMPONENTS WebEngineWidgets)
+        list(APPEND CTK_QT6_COMPONENTS WebEngineWidgets)
       endif()
     endif()
-    if(CTK_LIB_XNAT/Core OR CTK_BUILD_ALL OR CTK_BUILD_ALL_LIBRARIES)
-      list(APPEND CTK_QT5_COMPONENTS Script)
-    endif()
-    find_package(Qt5 COMPONENTS ${CTK_QT5_COMPONENTS} REQUIRED)
 
-    mark_as_superbuild(Qt5_DIR) # Qt 5
+    if(CTK_LIB_XNAT/Core OR CTK_BUILD_ALL OR CTK_BUILD_ALL_LIBRARIES)
+      list(APPEND CTK_QT6_COMPONENTS Script)
+    endif()
+
+    find_package(Qt6 COMPONENTS ${CTK_QT6_COMPONENTS} REQUIRED)
+
+    mark_as_superbuild(Qt6_DIR) # Qt 5
 
     # XXX Backward compatible way
     if(DEFINED CMAKE_PREFIX_PATH)
@@ -62,7 +67,6 @@ macro(ctkMacroSetupQt)
     find_package(Qt4)
 
     if(QT4_FOUND)
-
       if("${QT_VERSION_MAJOR}.${QT_VERSION_MINOR}" VERSION_LESS "${minimum_required_qt_version}")
         message(FATAL_ERROR "error: CTK requires Qt >= ${minimum_required_qt_version} -- you cannot use Qt ${QT_VERSION_MAJOR}.${QT_VERSION_MINOR}.${QT_VERSION_PATCH}.")
       endif()
@@ -78,6 +82,7 @@ macro(ctkMacroSetupQt)
       # Set variable QT_INSTALLED_LIBRARY_DIR that will contains
       # Qt shared library
       set(QT_INSTALLED_LIBRARY_DIR ${QT_LIBRARY_DIR})
+
       if(WIN32)
         get_filename_component(QT_INSTALLED_LIBRARY_DIR ${QT_QMAKE_EXECUTABLE} PATH)
       endif()

@@ -13,7 +13,6 @@ include(CMake/ctkMacroBFDCheck.cmake) # HAVE_BFD will be set to True if it appli
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_CORE_EXPORT")
 
 # Source files
@@ -88,13 +87,13 @@ set(KIT_SRCS
   ctkWorkflowTransitions.h
   ctkSetName.cpp
   ctkSetName.h
-  )
+)
 
 if(HAVE_BFD)
   list(APPEND KIT_SRCS
     ctkBinaryFileDescriptor.cpp
     ctkBinaryFileDescriptor.h
-    )
+  )
 endif()
 
 # Headers that should run through moc
@@ -119,7 +118,7 @@ set(KIT_MOC_SRCS
   ctkWorkflow_p.h
   ctkWorkflowStep_p.h
   ctkWorkflowTransitions.h
-  )
+)
 
 # UI files
 set(KIT_UI_FORMS
@@ -136,7 +135,7 @@ set(KIT_target_libraries)
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::Core)
+  list(APPEND KIT_target_libraries Qt6::Core Qt6::Core5Compat Qt6::StateMachine)
 endif()
 
 ctkMacroBuildLib(
@@ -148,12 +147,13 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-  )
+)
 
 # Needed for ctkBackTrace
 if(UNIX)
   # FreeBSD: The same functionality that is in linux's libdl is provided in FreeBSD's libc
   find_library(HAVE_LIBDL dl)
+
   if(HAVE_LIBDL)
     target_link_libraries(${PROJECT_NAME} dl)
   endif()
@@ -166,13 +166,12 @@ if(CTK_WRAP_PYTHONQT_LIGHT)
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
-
 
 # Testing
 if(BUILD_TESTING)
-  add_subdirectory(Testing)
+  # add_subdirectory(Testing)
 
   # Compile source code snippets
   add_subdirectory(Documentation/Snippets)

@@ -11,7 +11,7 @@ ExternalProject_Include_Dependencies(${proj}
   DEPENDS_VAR ${proj}_DEPENDENCIES
   EP_ARGS_VAR ${proj}_EXTERNAL_PROJECT_ARGS
   USE_SYSTEM_VAR ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj}
-  )
+)
 
 if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
   message(FATAL_ERROR "Enabling ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj} is not supported !")
@@ -23,7 +23,6 @@ if(DEFINED PYTHONQT_INSTALL_DIR AND NOT EXISTS ${PYTHONQT_INSTALL_DIR})
 endif()
 
 if(NOT DEFINED PYTHONQT_INSTALL_DIR)
-
   set(ep_PythonQt_args)
 
   # Should PythonQt use VTK
@@ -36,22 +35,25 @@ if(NOT DEFINED PYTHONQT_INSTALL_DIR)
   # Enable Qt libraries PythonQt wrapping if required
   if(CTK_QT_VERSION VERSION_GREATER "4")
     list(APPEND ep_PythonQt_args
-      -DQt5_DIR:PATH=${Qt5_DIR}
-      )
+      -DQt6_DIR:PATH=${Qt6_DIR}
+    )
+
     # XXX Backward compatible way
     if(DEFINED CMAKE_PREFIX_PATH)
       list(APPEND ep_PythonQt_args
         -DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH}
-        )
+      )
     endif()
+
     list(APPEND qtlibs qml quick)
+
     if(CTK_QT_VERSION VERSION_LESS "5.6.0")
       list(APPEND qtlibs webkit)
     endif()
   else()
     list(APPEND ep_PythonQt_args
       -DQT_QMAKE_EXECUTABLE:FILEPATH=${QT_QMAKE_EXECUTABLE}
-      )
+    )
     list(APPEND qtlibs webkit)
   endif()
 
@@ -74,6 +76,7 @@ if(NOT DEFINED PYTHONQT_INSTALL_DIR)
   # Python is required
   if(NOT PYTHONLIBS_FOUND)
     find_package(PythonLibs)
+
     if(NOT PYTHONLIBS_FOUND)
       message(FATAL_ERROR "error: Python is required to build ${PROJECT_NAME}")
     endif()
@@ -81,7 +84,7 @@ if(NOT DEFINED PYTHONQT_INSTALL_DIR)
 
   ctkFunctionExtractOptimizedLibrary(PYTHON_LIBRARIES PYTHON_LIBRARY)
 
-  if (CTK_QT_VERSION VERSION_GREATER "4")
+  if(CTK_QT_VERSION VERSION_GREATER "4")
     set(revision_tag c4a5a155b2942d4b003862c3317105b4a1ea6755) # patched-9
   else()
     set(revision_tag 90c08fb0d523622d2de9e7a91f4ef116a66a8801) # patched-5
@@ -91,15 +94,16 @@ if(NOT DEFINED PYTHONQT_INSTALL_DIR)
     set(revision_tag ${${proj}_REVISION_TAG})
   endif()
 
-  set(location_args )
+  set(location_args)
+
   if(${proj}_URL)
     set(location_args URL ${${proj}_URL})
   elseif(${proj}_GIT_REPOSITORY)
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
-                      GIT_TAG ${revision_tag})
+      GIT_TAG ${revision_tag})
   else()
     set(location_args GIT_REPOSITORY "https://github.com/commontk/PythonQt.git"
-                      GIT_TAG ${revision_tag})
+      GIT_TAG ${revision_tag})
   endif()
 
   ExternalProject_Add(${proj}
@@ -110,15 +114,15 @@ if(NOT DEFINED PYTHONQT_INSTALL_DIR)
     ${location_args}
     BUILD_COMMAND ""
     CMAKE_CACHE_ARGS
-      ${ep_common_cache_args}
-      -DPythonQt_QT_VERSION:STRING=${CTK_QT_VERSION}
-      -DPYTHON_INCLUDE_DIR:PATH=${PYTHON_INCLUDE_DIR}
-      -DPYTHON_INCLUDE_DIR2:PATH=${PYTHON_INCLUDE_DIR2}
-      -DPYTHON_LIBRARY:FILEPATH=${PYTHON_LIBRARY}
-      ${ep_PythonQt_args}
+    ${ep_common_cache_args}
+    -DPythonQt_QT_VERSION:STRING=${CTK_QT_VERSION}
+    -DPYTHON_INCLUDE_DIR:PATH=${PYTHON_INCLUDE_DIR}
+    -DPYTHON_INCLUDE_DIR2:PATH=${PYTHON_INCLUDE_DIR2}
+    -DPYTHON_LIBRARY:FILEPATH=${PYTHON_LIBRARY}
+    ${ep_PythonQt_args}
     DEPENDS
-      ${${proj}_DEPENDENCIES}
-    )
+    ${${proj}_DEPENDENCIES}
+  )
   set(PYTHONQT_INSTALL_DIR ${ep_install_dir})
 
 else()
@@ -129,14 +133,14 @@ set(PythonQt_DIR ${PYTHONQT_INSTALL_DIR})
 
 mark_as_superbuild(
   VARS
-    PYTHONQT_INSTALL_DIR:PATH
-    PYTHON_EXECUTABLE:FILEPATH # FindPythonInterp expects PYTHON_EXECUTABLE variable to be defined
-    PYTHON_INCLUDE_DIR:PATH # FindPythonQt expects PYTHON_INCLUDE_DIR variable to be defined
-    PYTHON_INCLUDE_DIR2:PATH
-    PYTHON_LIBRARY:FILEPATH # FindPythonQt expects PYTHON_LIBRARY variable to be defined
+  PYTHONQT_INSTALL_DIR:PATH
+  PYTHON_EXECUTABLE:FILEPATH # FindPythonInterp expects PYTHON_EXECUTABLE variable to be defined
+  PYTHON_INCLUDE_DIR:PATH # FindPythonQt expects PYTHON_INCLUDE_DIR variable to be defined
+  PYTHON_INCLUDE_DIR2:PATH
+  PYTHON_LIBRARY:FILEPATH # FindPythonQt expects PYTHON_LIBRARY variable to be defined
   LABELS "FIND_PACKAGE_VARS"
-  )
+)
 mark_as_superbuild(
   VARS PythonQt_DIR:PATH
   LABELS "FIND_PACKAGE"
-  )
+)

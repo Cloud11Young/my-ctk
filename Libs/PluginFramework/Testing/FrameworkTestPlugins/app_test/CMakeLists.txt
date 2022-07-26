@@ -13,7 +13,6 @@ set(PLUGIN_MOC_SRCS
 )
 
 set(PLUGIN_resources
-
 )
 
 ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
@@ -33,12 +32,12 @@ set(SRCS
   ctkTestAppMain.cpp
 )
 
-set(MOC_SRCS )
+set(MOC_SRCS)
 
-set(MY_MOC_CXX )
+set(MY_MOC_CXX)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  qt5_wrap_cpp(MY_MOC_CXX ${MOC_SRCS})
+  qt6_wrap_cpp(MY_MOC_CXX ${MOC_SRCS})
 else()
   qt4_wrap_cpp(MY_MOC_CXX ${MOC_SRCS})
 endif()
@@ -51,7 +50,7 @@ target_link_libraries(${test_executable}
 )
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  target_link_libraries(${test_executable} Qt5::Test)
+  target_link_libraries(${test_executable} Qt6::Test)
 endif()
 
 add_dependencies(${test_executable} ${PROJECT_NAME})

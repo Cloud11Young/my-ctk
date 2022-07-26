@@ -1,7 +1,6 @@
 project(org_commontk_dah_core)
 
-#message(QtSOAP_LIBRARY_DIRS:${QtSOAP_LIBRARY_DIRS})
-
+# message(QtSOAP_LIBRARY_DIRS:${QtSOAP_LIBRARY_DIRS})
 SET(PLUGIN_export_directive "org_commontk_dah_core_EXPORT")
 
 set(PLUGIN_SRCS
@@ -44,11 +43,11 @@ set(PLUGIN_resources
   Resources/dah_wsdl.qrc
 )
 
-#Compute the plugin dependencies
+# Compute the plugin dependencies
 ctkFunctionGetTargetLibraries(PLUGIN_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND PLUGIN_target_libraries Qt5::Network Qt5::Widgets)
+  list(APPEND PLUGIN_target_libraries Qt6::Network Qt6::Widgets)
 endif()
 
 ctkMacroBuildPlugin(
@@ -64,4 +63,3 @@ ctkMacroBuildPlugin(
 if(BUILD_TESTING)
   add_subdirectory(Testing)
 endif()
-

@@ -1,0 +1,13 @@
+# Target labels
+ QtSOAP
+# Source files and their labels
+/home/yq/work/Practice/CTK/build/CMakeFiles/QtSOAP
+/home/yq/work/Practice/CTK/build/CMakeFiles/QtSOAP.rule
+/home/yq/work/Practice/CTK/build/CMakeFiles/QtSOAP-complete.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-install.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-mkdir.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-download.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-update.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-patch.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-configure.rule
+/home/yq/work/Practice/CTK/build/QtSOAP-cmake/src/QtSOAP-stamp/QtSOAP-build.rule

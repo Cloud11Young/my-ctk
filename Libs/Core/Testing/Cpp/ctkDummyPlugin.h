@@ -30,12 +30,12 @@ public:
 
 Q_DECLARE_INTERFACE ( ctkDummyInterface, "dummy.plugin" )
 */
-class CTK_DUMMY_EXPORT ctkDummyPlugin: public QObject//, public ctkDummyInterface
+class CTK_DUMMY_EXPORT ctkDummyPlugin : public QObject//, public ctkDummyInterface
 {
   Q_OBJECT
-//  Q_INTERFACES(ctkDummyInterface)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "org.commontk.DummyPlugin")
+    //  Q_INTERFACES(ctkDummyInterface)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "org.commontk.DummyPlugin")
 #endif
 public:
   ctkDummyPlugin(QObject* parent = 0);

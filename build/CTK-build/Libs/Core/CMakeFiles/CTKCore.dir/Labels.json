@@ -1,0 +1,337 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractFactory.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractFactory.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractFileBasedFactory.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractFileBasedFactory.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractObjectFactory.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractObjectFactory.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractPluginFactory.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractPluginFactory.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractQObjectFactory.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractQObjectFactory.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractLibraryFactory.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkAbstractLibraryFactory.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkBackTrace.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkBooleanMapper.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkBooleanMapper.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCallback.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCallback.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCommandLineParser.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCommandLineParser.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCoreSettings.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCoreSettings.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCoreTestingUtilities.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCoreTestingUtilities.tpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkCoreTestingUtilities.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogAbstractMessageHandler.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogAbstractMessageHandler.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogAbstractModel.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogAbstractModel.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogContext.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogFDMessageHandler.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogFDMessageHandler.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogFDMessageHandler_p.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogLevel.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogLevel.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogQtMessageHandler.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogQtMessageHandler.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogStreamMessageHandler.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogStreamMessageHandler.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogTerminalOutput.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkErrorLogTerminalOutput.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkException.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkException.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkFileLogger.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkFileLogger.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkHighPrecisionTimer.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkLinearValueProxy.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkLinearValueProxy.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkLogger.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkLogger.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkModelTester.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkModelTester.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkPimpl.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkScopedCurrentDir.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkScopedCurrentDir.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkSingleton.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkUtils.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkUtils.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkValueProxy.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkValueProxy.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflow.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflow.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflow_p.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflowStep.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflowStep.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflowStep_p.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkWorkflowTransitions.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkSetName.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/Libs/Core/ctkSetName.h"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkBooleanMapper.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkCallback.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkCommandLineParser.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkCoreSettings.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogAbstractMessageHandler.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogAbstractModel.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogFDMessageHandler_p.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogLevel.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogQtMessageHandler.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogTerminalOutput.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkFileLogger.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkLinearValueProxy.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkLogger.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkModelTester.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkValueProxy.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflow.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflow_p.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflowStep_p.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflowTransitions.cpp"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkBooleanMapper.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkCallback.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkCommandLineParser.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkCoreSettings.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogAbstractMessageHandler.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogAbstractModel.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogFDMessageHandler_p.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogLevel.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogQtMessageHandler.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkErrorLogTerminalOutput.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkFileLogger.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkLinearValueProxy.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkLogger.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkModelTester.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkValueProxy.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflow.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflow_p.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflowStep_p.cpp.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/moc_ctkWorkflowTransitions.cpp.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"CTKCore"
+		],
+		"name" : "CTKCore"
+	}
+}

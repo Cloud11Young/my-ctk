@@ -3,7 +3,6 @@ project(CTKWidgets)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_WIDGETS_EXPORT")
 
 # add local include directory for FreeBSD
@@ -21,7 +20,7 @@ if(CTK_USE_QTTESTING)
   include_directories(
     ${QtTesting_INCLUDE_DIRS}
     ${CMAKE_BINARY_DIR} # For ctkConfig.h
-    )
+  )
 endif()
 
 # Source files
@@ -216,7 +215,7 @@ set(KIT_SRCS
   ctkWorkflowWidgetStep.cpp
   ctkWorkflowWidgetStep_p.h
   ctkWorkflowWidgetStep.h
-  )
+)
 
 # Headers that should run through moc
 set(KIT_MOC_SRCS
@@ -312,7 +311,7 @@ set(KIT_MOC_SRCS
   ctkWorkflowWidget.h
   ctkWorkflowWidgetStep.h
   ctkWorkflowWidgetStep_p.h
-  )
+)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
   list(APPEND KIT_MOC_SRCS ctkIconEnginePlugin_qt5.h)
@@ -325,7 +324,7 @@ endif()
 set(KIT_GENERATE_MOC_SRCS
   ctkPathLineEdit.h
   ctkPathListWidget.h
-  )
+)
 
 # UI files
 set(KIT_UI_FORMS
@@ -342,19 +341,19 @@ set(KIT_UI_FORMS
   Resources/UI/ctkThumbnailLabel.ui
   Resources/UI/ctkThumbnailListWidget.ui
   Resources/UI/ctkWorkflowGroupBox.ui
-  )
+)
 
 # Resources
 set(KIT_resources
   Resources/ctkWidgets.qrc
-  )
+)
 
 # Target libraries - See CMake/ctkFunctionGetTargetLibraries.cmake
 # The following macro will read the target libraries from the file 'target_libraries.cmake'
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::Widgets Qt5::Xml Qt5::OpenGL)
+  list(APPEND KIT_target_libraries Qt6::Widgets Qt6::Xml Qt6::OpenGL)
 endif()
 
 # A player and a translator must be added for custom Qt widgets
@@ -412,7 +411,7 @@ if(CTK_USE_QTTESTING)
     ctkTreeComboBoxEventPlayer.h
     ctkTreeComboBoxEventTranslator.cpp
     ctkTreeComboBoxEventTranslator.h
-    )
+  )
   list(APPEND KIT_MOC_SRCS
     ctkAxesWidgetEventPlayer.h
     ctkAxesWidgetEventTranslator.h
@@ -441,7 +440,7 @@ if(CTK_USE_QTTESTING)
     ctkRangeSliderEventTranslator.h
     ctkTreeComboBoxEventPlayer.h
     ctkTreeComboBoxEventTranslator.h
-    )
+  )
   list(APPEND KIT_target_libraries QtTesting)
 endif()
 
@@ -455,14 +454,14 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-  )
+)
 
 if(CTK_WRAP_PYTHONQT_LIGHT)
   ctkMacroBuildLibWrapper(
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
 
 # Plugins

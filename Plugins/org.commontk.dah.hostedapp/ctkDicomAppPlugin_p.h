@@ -32,9 +32,9 @@ class ctkDicomAppPlugin :
   public QObject, public ctkPluginActivator
 {
   Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "org_commontk_dah_hostedapp")
+    Q_INTERFACES(ctkPluginActivator)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "org_commontk_dah_hostedapp")
 #endif
 
 public:

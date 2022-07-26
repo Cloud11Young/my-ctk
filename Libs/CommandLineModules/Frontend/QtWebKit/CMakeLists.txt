@@ -7,7 +7,6 @@ project(CTKCommandLineModulesFrontendQtWebKit)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_CMDLINEMODULEQTWEBKIT_EXPORT")
 
 # Additional directories to include
@@ -37,10 +36,10 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  if(TARGET Qt5::WebKitWidgets)
-    list(APPEND KIT_target_libraries Qt5::WebKitWidgets)
+  if(TARGET Qt6::WebKitWidgets)
+    list(APPEND KIT_target_libraries Qt6::WebKitWidgets)
   else()
-    list(APPEND KIT_target_libraries Qt5::WebEngineWidgets)
+    list(APPEND KIT_target_libraries Qt6::WebEngineWidgets)
   endif()
 else()
   set(QT_USE_QTWEBKIT 1)
@@ -56,7 +55,7 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-  )
+)
 
 target_link_libraries(${PROJECT_NAME} ${QT_LIBRARIES})
 
@@ -65,10 +64,10 @@ if(CTK_WRAP_PYTHONQT_LIGHT)
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
 
 # Testing
 if(BUILD_TESTING)
-#  add_subdirectory(Testing)
+  # add_subdirectory(Testing)
 endif()

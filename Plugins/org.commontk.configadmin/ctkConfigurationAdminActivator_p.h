@@ -40,9 +40,9 @@ class ctkConfigurationAdminActivator :
   public QObject, public ctkPluginActivator
 {
   Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "org_commontk_configadmin")
+    Q_INTERFACES(ctkPluginActivator)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "org_commontk_configadmin")
 #endif
 
 public:

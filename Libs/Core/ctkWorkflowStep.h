@@ -27,13 +27,13 @@ class QState;
 
 // CTK includes
 #include "ctkPimpl.h"
-#include "ctkWorkflow_p.h"
+// #include "ctkWorkflow_p.h"
 #include "ctkWorkflowTransitions.h"
 
 #include "ctkCoreExport.h"
 
 class ctkWorkflow;
-
+class ctkWorkflowPrivate;
 class ctkWorkflowStepPrivate;
 
 /// \ingroup Core
@@ -98,7 +98,7 @@ public:
 
 protected:
 
-  explicit ctkWorkflowStep(ctkWorkflowStepPrivate * pimpl, const QString& newId);
+  explicit ctkWorkflowStep(ctkWorkflowStepPrivate* pimpl, const QString& newId);
 
   /// Set workflow
   void setWorkflow(ctkWorkflow* newWorkflow);
@@ -175,7 +175,7 @@ protected:
   ///
   /// \param transitionType gives the type of the transition used to get to this step.
   virtual void onExit(const ctkWorkflowStep* goingTo,
-                      const ctkWorkflowInterstepTransition::InterstepTransitionType transitionType);
+    const ctkWorkflowInterstepTransition::InterstepTransitionType transitionType);
 
   /// \brief Validates the computation performed in this step's processing state.
   ///

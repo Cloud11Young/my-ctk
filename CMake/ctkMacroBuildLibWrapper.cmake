@@ -1,35 +1,34 @@
-###########################################################################
+# ##########################################################################
 #
-#  Library:   CTK
+# Library:   CTK
 #
-#  Copyright (c) Kitware Inc.
+# Copyright (c) Kitware Inc.
 #
-#  Licensed under the Apache License, Version 2.0 (the "License");
-#  you may not use this file except in compliance with the License.
-#  You may obtain a copy of the License at
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0.txt
+# http://www.apache.org/licenses/LICENSE-2.0.txt
 #
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-###########################################################################
+# ##########################################################################
 
 #
 # Depends on:
-#  CTK/CMake/ctkMacroParseArguments.cmake
+# CTK/CMake/ctkMacroParseArguments.cmake
 #
 
-
-#! When CTK is built as shared library, the following macro builds a python module
-#! associated with the generated PythonQt wrappers. When loaded, it will
-#! dynamically loads both the (1) generated decorators and the (2) hand written one.
-#! On the other hand, when CTK is built statically, it creates a
-#! static library providing a initialization function that will allow to load
-#! both (1) and (2).
+# ! When CTK is built as shared library, the following macro builds a python module
+# ! associated with the generated PythonQt wrappers. When loaded, it will
+# ! dynamically loads both the (1) generated decorators and the (2) hand written one.
+# ! On the other hand, when CTK is built statically, it creates a
+# ! static library providing a initialization function that will allow to load
+# ! both (1) and (2).
 
 # Function copied from https://github.com/scikit-build/scikit-build/pull/299
 # XXX Update this CMake module to use function from scikit-build to build the wrapper
@@ -39,35 +38,37 @@ function(_ctk_set_python_extension_symbol_visibility _target)
   else()
     set(_modinit_prefix "init")
   endif()
+
   if("${CMAKE_C_COMPILER_ID}" STREQUAL "MSVC")
     set_target_properties(${_target} PROPERTIES LINK_FLAGS
-        "/EXPORT:${_modinit_prefix}${_target}"
+      "/EXPORT:${_modinit_prefix}${_target}"
     )
   elseif("${CMAKE_C_COMPILER_ID}" STREQUAL "GNU")
     set(_script_path
       ${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/${_target}-version-script.map
     )
     file(WRITE ${_script_path}
-               "{global: ${_modinit_prefix}${_target}; local: *; };"
+      "{global: ${_modinit_prefix}${_target}; local: *; };"
     )
     set_property(TARGET ${_target} APPEND_STRING PROPERTY LINK_FLAGS
-        " -Wl,--version-script=${_script_path}"
+      " -Wl,--version-script=${_script_path}"
     )
   endif()
 endfunction()
 
-#! \ingroup CMakeAPI
+# ! \ingroup CMakeAPI
 macro(ctkMacroBuildLibWrapper)
   ctkMacroParseArguments(MY
     "NAMESPACE;TARGET;SRCS;WRAPPER_LIBRARY_TYPE;ARCHIVE_OUTPUT_DIRECTORY;LIBRARY_OUTPUT_DIRECTORY;RUNTIME_OUTPUT_DIRECTORY;INSTALL_BIN_DIR;INSTALL_LIB_DIR"
     "NO_INSTALL"
     ${ARGN}
-    )
+  )
 
   # Sanity checks
   if(NOT DEFINED MY_TARGET)
     message(FATAL_ERROR "NAME is mandatory")
   endif()
+
   if(NOT DEFINED MY_WRAPPER_LIBRARY_TYPE OR "${MY_WRAPPER_LIBRARY_TYPE}" STREQUAL "SHARED")
     set(MY_WRAPPER_LIBRARY_TYPE "MODULE")
   endif()
@@ -75,14 +76,17 @@ macro(ctkMacroBuildLibWrapper)
   if(NOT DEFINED MY_NAMESPACE)
     set(MY_NAMESPACE "org.commontk")
   endif()
+
   foreach(type RUNTIME LIBRARY ARCHIVE)
     if(NOT DEFINED MY_${type}_OUTPUT_DIRECTORY)
       set(MY_${type}_OUTPUT_DIRECTORY ${CMAKE_${type}_OUTPUT_DIRECTORY})
     endif()
   endforeach()
+
   if(NOT DEFINED MY_INSTALL_BIN_DIR)
     set(MY_INSTALL_BIN_DIR ${CTK_INSTALL_BIN_DIR})
   endif()
+
   if(NOT DEFINED MY_INSTALL_LIB_DIR)
     set(MY_INSTALL_LIB_DIR ${CTK_INSTALL_LIB_DIR})
   endif()
@@ -94,7 +98,7 @@ macro(ctkMacroBuildLibWrapper)
   set(my_includes
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_BINARY_DIR}
-    )
+  )
 
   # Since the PythonQt decorator depends on PythonQt, Python and VTK, let's link against
   # these ones to avoid complaints of MSVC
@@ -110,36 +114,44 @@ macro(ctkMacroBuildLibWrapper)
   set(_msg "Looking for decorator header ${DECORATOR_HEADER}")
   message(STATUS "${_msg}")
   set(_status "Not found")
+
   if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${DECORATOR_HEADER})
     set(HAS_DECORATOR TRUE)
     set(DECORATOR_HEADER ${DECORATOR_HEADER})
     set_source_files_properties(${DECORATOR_HEADER} WRAP_EXCLUDE)
     set(_status "Found")
   endif()
-  message(STATUS "${_msg} - ${_status}")
-  #message("path/to/DECORATOR_HEADER:${CMAKE_CURRENT_SOURCE_DIR}/${DECORATOR_HEADER}")
 
+  message(STATUS "${_msg} - ${_status}")
+
+  # message("path/to/DECORATOR_HEADER:${CMAKE_CURRENT_SOURCE_DIR}/${DECORATOR_HEADER}")
   set(KIT_PYTHONQT_SRCS) # Clear variable
   ctkMacroWrapPythonQt(${MY_NAMESPACE} ${lib_name}
     KIT_PYTHONQT_SRCS "${MY_SRCS}" FALSE ${HAS_DECORATOR})
+
   if(HAS_DECORATOR)
     list(APPEND KIT_PYTHONQT_SRCS ${DECORATOR_HEADER})
-    if (CTK_QT_VERSION VERSION_GREATER "4")
-      qt5_wrap_cpp(KIT_PYTHONQT_SRCS ${DECORATOR_HEADER} OPTIONS -f${DECORATOR_HEADER})
+
+    if(CTK_QT_VERSION VERSION_GREATER "4")
+      qt6_wrap_cpp(KIT_PYTHONQT_SRCS ${DECORATOR_HEADER} OPTIONS -f${DECORATOR_HEADER})
     else()
       QT4_WRAP_CPP(KIT_PYTHONQT_SRCS ${DECORATOR_HEADER} OPTIONS -f${DECORATOR_HEADER})
     endif()
   endif()
+
   add_library(${lib_name}PythonQt ${MY_WRAPPER_LIBRARY_TYPE} ${KIT_PYTHONQT_SRCS})
   target_link_libraries(${lib_name}PythonQt ${lib_name} ${my_EXTRA_PYTHON_LIBRARIES})
+
   if(MY_WRAPPER_LIBRARY_TYPE STREQUAL "STATIC")
     if(CMAKE_SIZEOF_VOID_P EQUAL 8) # 64-bit
       set_target_properties(${lib_name}PythonQt PROPERTIES COMPILE_FLAGS "-fPIC")
     endif()
   endif()
+
   if(MY_WRAPPER_LIBRARY_TYPE STREQUAL "MODULE")
     # Make sure that no prefix is set on the library
     set_target_properties(${lib_name}PythonQt PROPERTIES PREFIX "")
+
     # Python extension modules on Windows must have the extension ".pyd"
     # instead of ".dll" as of Python 2.5.  Older python versions do support
     # this suffix.
@@ -148,12 +160,13 @@ macro(ctkMacroBuildLibWrapper)
       set_target_properties(${lib_name}PythonQt PROPERTIES SUFFIX ".pyd")
     endif()
   endif()
+
   _ctk_set_python_extension_symbol_visibility(${lib_name}PythonQt)
   set_target_properties(${lib_name}PythonQt PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${MY_RUNTIME_OUTPUT_DIRECTORY}"
     LIBRARY_OUTPUT_DIRECTORY "${MY_LIBRARY_OUTPUT_DIRECTORY}"
     ARCHIVE_OUTPUT_DIRECTORY "${MY_ARCHIVE_OUTPUT_DIRECTORY}"
-    )
+  )
 
   # Set labels associated with the target.
   set_target_properties(${lib_name}PythonQt PROPERTIES LABELS ${lib_name})
@@ -170,7 +183,4 @@ macro(ctkMacroBuildLibWrapper)
       LIBRARY DESTINATION ${MY_INSTALL_LIB_DIR} COMPONENT RuntimePlugins
       ARCHIVE DESTINATION ${MY_INSTALL_LIB_DIR} COMPONENT Development)
   endif()
-
 endmacro()
-
-

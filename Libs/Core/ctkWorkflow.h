@@ -28,7 +28,9 @@
 #include "ctkPimpl.h"
 #include "ctkCoreExport.h"
 
-class ctkWorkflowStep;
+#include "ctkWorkflowStep.h"
+
+// class ctkWorkflowStep;
 class ctkWorkflowPrivate;
 class QAbstractState;
 
@@ -39,10 +41,10 @@ class QAbstractState;
 class CTK_CORE_EXPORT ctkWorkflow : public QObject
 {
   Q_OBJECT
-  Q_ENUMS(TransitionDirectionality)
-  Q_PROPERTY(bool isRunning READ isRunning DESIGNABLE false)
-  Q_PROPERTY(bool goBackToOriginStepUponSuccess READ goBackToOriginStepUponSuccess WRITE setGoBackToOriginStepUponSuccess)
-  Q_PROPERTY(bool verbose READ verbose WRITE setVerbose)
+    Q_ENUMS(TransitionDirectionality)
+    Q_PROPERTY(bool isRunning READ isRunning DESIGNABLE false)
+    Q_PROPERTY(bool goBackToOriginStepUponSuccess READ goBackToOriginStepUponSuccess WRITE setGoBackToOriginStepUponSuccess)
+    Q_PROPERTY(bool verbose READ verbose WRITE setVerbose)
 
 public:
 
@@ -88,9 +90,9 @@ public:
   ///
   /// Returns true/false indicating whether the method was successful.
   Q_INVOKABLE virtual bool addTransition(ctkWorkflowStep* origin, ctkWorkflowStep* destination,
-                                         const QString& branchId = QString(),
-                                         const ctkWorkflow::TransitionDirectionality directionality
-                                         = ctkWorkflow::Bidirectional);
+    const QString& branchId = QString(),
+    const ctkWorkflow::TransitionDirectionality directionality
+    = ctkWorkflow::Bidirectional);
 
   /// \brief Determine whether a transition has already been added
   /// <ul>
@@ -102,9 +104,9 @@ public:
   /// with the same destination and branch id (for backward transitions)</li>
   /// </ul>
   Q_INVOKABLE bool hasTransition(ctkWorkflowStep* origin, ctkWorkflowStep* destination,
-                                 const QString& branchId = QString(),
-                                 const ctkWorkflow::TransitionDirectionality directionality
-                                 = ctkWorkflow::Bidirectional);
+    const QString& branchId = QString(),
+    const ctkWorkflow::TransitionDirectionality directionality
+    = ctkWorkflow::Bidirectional);
 
   /// \brief Set/get the initial step.
   /// \note In not specified, the first step added will be considered as the initialStep
@@ -128,13 +130,13 @@ public:
   /// given step.
   ///
   /// If no step is given, then the workflow's current step will be used.
-  Q_INVOKABLE bool canGoForward(ctkWorkflowStep* step=0)const;
+  Q_INVOKABLE bool canGoForward(ctkWorkflowStep* step = 0)const;
 
   /// Returns whether or not we can go backward: i.e. there exists a step that directly preceeds the
   /// given step.
   ///
   /// If no step is given, then the workflow's current step will be used.
-  Q_INVOKABLE bool canGoBackward(ctkWorkflowStep* step=0)const;
+  Q_INVOKABLE bool canGoBackward(ctkWorkflowStep* step = 0)const;
 
   /// Returns whether or not we can go to the goal step from the origin step: i.e. there is a path
   /// in the workflow from the current step to the given step.
@@ -142,7 +144,7 @@ public:
   /// If no step is designated as the 'origin', then the workflow's current step will be used
   /// Note: does not currently work in branching workflows if the origin and target steps are not on
   /// the same branch
-  Q_INVOKABLE bool canGoToStep(const QString& targetId, ctkWorkflowStep* step=0)const;
+  Q_INVOKABLE bool canGoToStep(const QString& targetId, ctkWorkflowStep* step = 0)const;
 
   /// Get the steps that directly follow the given step.
   ///
@@ -151,7 +153,7 @@ public:
   /// to ctkWorkflow::Bidirectional or ctkWorkflow::Forward.
   ///
   /// If no step is given, then the workflow's current step will be used.
-  Q_INVOKABLE QList<ctkWorkflowStep*> forwardSteps(ctkWorkflowStep* step=0)const;
+  Q_INVOKABLE QList<ctkWorkflowStep*> forwardSteps(ctkWorkflowStep* step = 0)const;
 
   /// Get the steps that directly preceed the given step.
   ///
@@ -160,7 +162,7 @@ public:
   /// set to ctkWorkflow::Bidirectional or ctkWorkflow::Backward.
   ///
   /// If no step is given, then the workflow's current step will be used.
-  Q_INVOKABLE QList<ctkWorkflowStep*> backwardSteps(ctkWorkflowStep* step=0)const;
+  Q_INVOKABLE QList<ctkWorkflowStep*> backwardSteps(ctkWorkflowStep* step = 0)const;
 
   /// Get the steps that are 'finish' steps (i.e. have no step following them)
   Q_INVOKABLE QList<ctkWorkflowStep*> finishSteps()const;

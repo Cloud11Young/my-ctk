@@ -3,7 +3,6 @@ project(CTKVisualizationVTKWidgets)
 #
 # 3rd party dependencies
 #
-
 if(${VTK_VERSION} VERSION_LESS "8.90")
   include(${VTK_USE_FILE})
 else()
@@ -11,18 +10,20 @@ else()
   set(VTK_VERSION_MAJOR ${VTK_MAJOR_VERSION})
 
   set(_test_components)
+
   if(BUILD_TESTING)
     list(APPEND _test_components
       TestingRendering
       ImagingGeneral
-      )
+    )
   endif()
 
   find_package(VTK COMPONENTS
     ChartsCore
     CommonCore
     CommonDataModel
-    #Context2D
+
+    # Context2D
     FiltersCore
     FiltersGeneral
     FiltersModeling
@@ -48,7 +49,6 @@ endif()
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_VISUALIZATION_VTK_WIDGETS_EXPORT")
 
 #
@@ -59,7 +59,7 @@ if(CTK_USE_QTTESTING)
   include_directories(
     ${QtTesting_INCLUDE_DIRS}
     ${CMAKE_BINARY_DIR} # For ctkConfig.h
-    )
+  )
 endif()
 
 # Source files
@@ -112,7 +112,7 @@ set(KIT_SRCS
   ctkVTKThumbnailView.h
   ctkVTKWidgetsUtils.cpp
   ctkVTKWidgetsUtils.h
-  )
+)
 
 # Headers that should run through moc
 set(KIT_MOC_SRCS
@@ -141,7 +141,7 @@ set(KIT_MOC_SRCS
   ctkVTKTextPropertyWidget.h
   ctkVTKThresholdWidget.h
   ctkVTKThumbnailView.h
-  )
+)
 
 # UI files
 set(KIT_UI_FORMS
@@ -158,8 +158,8 @@ set(KIT_resources
 )
 
 # Set VTK_LIBRARIES variable
-if(${VTK_VERSION} VERSION_EQUAL 8.90 OR ${VTK_VERSION} VERSION_GREATER 8.90 )
-  # VTK_LIBRARIES is automatically set based on selected components
+if(${VTK_VERSION} VERSION_EQUAL 8.90 OR ${VTK_VERSION} VERSION_GREATER 8.90)
+# VTK_LIBRARIES is automatically set based on selected components
 elseif(${VTK_VERSION_MAJOR} GREATER 5)
   set(VTK_LIBRARIES
     vtkChartsCore
@@ -171,20 +171,23 @@ elseif(${VTK_VERSION_MAJOR} GREATER 5)
     vtkRenderingContext2D
     vtkViewsContext2D
     vtkGUISupportQt
-    )
+  )
+
   if(TARGET vtkRenderingContext${VTK_RENDERING_BACKEND})
     list(APPEND VTK_LIBRARIES vtkRenderingContext${VTK_RENDERING_BACKEND})
   endif()
+
   if(TARGET vtkRenderingGL2PS${VTK_RENDERING_BACKEND})
     list(APPEND VTK_LIBRARIES vtkRenderingGL2PS${VTK_RENDERING_BACKEND})
   endif()
-    if(CTK_LIB_Scripting/Python/Core AND CTK_LIB_Scripting/Python/Core_PYTHONQT_USE_VTK)
-      set(VTK_LIBRARIES ${VTK_LIBRARIES} vtkWrappingPythonCore)
-    endif()
+
+  if(CTK_LIB_Scripting/Python/Core AND CTK_LIB_Scripting/Python/Core_PYTHONQT_USE_VTK)
+    set(VTK_LIBRARIES ${VTK_LIBRARIES} vtkWrappingPythonCore)
+  endif()
 else()
   set(VTK_LIBRARIES
     QVTK
-    )
+  )
 endif()
 
 if(CTK_LIB_Visualization/VTK/Widgets_USE_TRANSFER_FUNCTION_CHARTS)
@@ -193,30 +196,31 @@ endif()
 
 if(${CTK_USE_CHARTS})
   set(KIT_SRCS
-      ctkVTKChartView.cpp
-      ctkVTKChartView.h
-	  ctkVTKDiscretizableColorTransferWidget.h
-	  ctkVTKDiscretizableColorTransferWidget.cpp
-      ctkVTKVolumePropertyWidget.cpp
-      ctkVTKVolumePropertyWidget.h
-      ctkVTKScalarsToColorsView.cpp
-      ctkVTKScalarsToColorsView.h
-      ctkVTKScalarsToColorsWidget.cpp
-      ctkVTKScalarsToColorsWidget.h
-      ${KIT_SRCS})
+    ctkVTKChartView.cpp
+    ctkVTKChartView.h
+    ctkVTKDiscretizableColorTransferWidget.h
+    ctkVTKDiscretizableColorTransferWidget.cpp
+    ctkVTKVolumePropertyWidget.cpp
+    ctkVTKVolumePropertyWidget.h
+    ctkVTKScalarsToColorsView.cpp
+    ctkVTKScalarsToColorsView.h
+    ctkVTKScalarsToColorsWidget.cpp
+    ctkVTKScalarsToColorsWidget.h
+    ${KIT_SRCS})
   set(KIT_MOC_SRCS
-      ctkVTKChartView.h
-	  ctkVTKDiscretizableColorTransferWidget.h
-      ctkVTKVolumePropertyWidget.h
-      ctkVTKScalarsToColorsView.h
-      ctkVTKScalarsToColorsWidget.h
-      ${KIT_MOC_SRCS})
+    ctkVTKChartView.h
+    ctkVTKDiscretizableColorTransferWidget.h
+    ctkVTKVolumePropertyWidget.h
+    ctkVTKScalarsToColorsView.h
+    ctkVTKScalarsToColorsWidget.h
+    ${KIT_MOC_SRCS})
   set(KIT_UI_FORMS
-      Resources/UI/ctkVTKVolumePropertyWidget.ui
-      Resources/UI/ctkVTKScalarsToColorsWidget.ui
-      ${KIT_UI_FORMS})
-  if(${VTK_VERSION} VERSION_EQUAL 8.90 OR ${VTK_VERSION} VERSION_GREATER 8.90 )
-    # VTK_LIBRARIES is automatically set based on selected components
+    Resources/UI/ctkVTKVolumePropertyWidget.ui
+    Resources/UI/ctkVTKScalarsToColorsWidget.ui
+    ${KIT_UI_FORMS})
+
+  if(${VTK_VERSION} VERSION_EQUAL 8.90 OR ${VTK_VERSION} VERSION_GREATER 8.90)
+  # VTK_LIBRARIES is automatically set based on selected components
   elseif(${VTK_VERSION_MAJOR} GREATER 5)
     set(VTK_LIBRARIES
       vtkChartsCore
@@ -226,6 +230,7 @@ if(${CTK_USE_CHARTS})
       vtkCharts
       ${VTK_LIBRARIES})
   endif()
+
   add_definitions(-DCTK_USE_CHARTS)
 endif()
 
@@ -240,20 +245,21 @@ if(CTK_USE_QTTESTING)
     ctkVTKRenderViewEventPlayer.h
     ctkVTKRenderViewEventTranslator.cpp
     ctkVTKRenderViewEventTranslator.h
-    )
+  )
   list(APPEND KIT_MOC_SRCS
     ctkVTKRenderViewEventPlayer.h
     ctkVTKRenderViewEventTranslator.h
-)
+  )
   list(APPEND KIT_target_libraries QtTesting)
 endif()
 
-# Prefer QVTKOpenGLWidget to QVTKWidget when using Qt5
+# Prefer QVTKOpenGLWidget to QVTKWidget when using Qt6
 set(_use_qvtkopenglwidget 1)
+
 if(VTK_VERSION VERSION_LESS "8.90")
   if(CTK_QT_VERSION VERSION_LESS "5"
     OR VTK_VERSION VERSION_LESS "8"
-    OR (NOT VTK_RENDERING_BACKEND STREQUAL "OpenGL2"))
+    OR(NOT VTK_RENDERING_BACKEND STREQUAL "OpenGL2"))
     set(_use_qvtkopenglwidget 0)
   endif()
 endif()
@@ -265,15 +271,18 @@ endif()
 # Detect if QVTKOpenGLNativeWidget.h is available
 if(VTK_VERSION VERSION_LESS "8.90")
   set(_has_QVTKOpenGLNativeWidget_h 0)
+
   if(_use_qvtkopenglwidget)
     set(_msg "Checking if QVTKOpenGLNativeWidget.h exists")
     message(STATUS "${_msg}")
+
     foreach(include_dir IN ITEMS ${vtkGUISupportQt_INCLUDE_DIRS})
       if(EXISTS "${include_dir}/QVTKOpenGLNativeWidget.h")
         set(_has_QVTKOpenGLNativeWidget_h 1)
         break()
       endif()
     endforeach()
+
     if(_has_QVTKOpenGLNativeWidget_h)
       message(STATUS "${_msg} - found")
     else()
@@ -282,8 +291,7 @@ if(VTK_VERSION VERSION_LESS "8.90")
   endif()
 else()
   set(_has_QVTKOpenGLNativeWidget_h 1)
-endif ()
-
+endif()
 
 if(_has_QVTKOpenGLNativeWidget_h)
   add_definitions(-DCTK_HAS_QVTKOPENGLNATIVEWIDGET_H)
@@ -309,22 +317,22 @@ ctkMacroBuildLib(
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
   EXPORT_CUSTOM_CONTENT_FROM_VARIABLE "CTK_VTK_EXPORT_CUSTOM_CONTENT"
-  )
+)
 
 if(_use_qvtkopenglwidget)
   target_compile_definitions(
     ${PROJECT_NAME}
     INTERFACE
-      CTK_USE_QVTKOPENGLWIDGET
-    )
+    CTK_USE_QVTKOPENGLWIDGET
+  )
 endif()
 
 if(_has_QVTKOpenGLNativeWidget_h)
   target_compile_definitions(
     ${PROJECT_NAME}
     INTERFACE
-      CTK_HAS_QVTKOPENGLNATIVEWIDGET_H
-    )
+    CTK_HAS_QVTKOPENGLNATIVEWIDGET_H
+  )
 endif()
 
 if(CTK_WRAP_PYTHONQT_LIGHT)
@@ -332,16 +340,15 @@ if(CTK_WRAP_PYTHONQT_LIGHT)
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
 
 if(NOT VTK_VERSION VERSION_LESS "8.90.0")
   vtk_module_autoinit(
     TARGETS ${PROJECT_NAME}
     MODULES ${VTK_LIBRARIES}
-    )
+  )
 endif()
-
 
 # Plugins
 if(CTK_BUILD_QTDESIGNER_PLUGINS)

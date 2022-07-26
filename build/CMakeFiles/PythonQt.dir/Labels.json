@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CMakeFiles/PythonQt"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CMakeFiles/PythonQt.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/CMakeFiles/PythonQt-complete.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-install.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-mkdir.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-download.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-update.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-patch.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-configure.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/CTK/build/PythonQt-cmake/src/PythonQt-stamp/PythonQt-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"PythonQt"
+		],
+		"name" : "PythonQt"
+	}
+}

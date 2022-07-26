@@ -33,7 +33,7 @@
 
 class QStateMachine;
 class ctkWorkflowStep;
-//class ctkWorkflow;
+// class ctkWorkflow;
 //enum ctkWorkflow::TransitionDirectionality;
 
 //-----------------------------------------------------------------------------
@@ -77,52 +77,52 @@ struct forwardAndBackwardSteps
   QString firstForwardBranchId()
   {
     if (this->ForwardBranchIds.isEmpty())
-      {
+    {
       return QString();
-      }
+    }
     else
-      {
-    return this->ForwardBranchIds.first();
-      }
+    {
+      return this->ForwardBranchIds.first();
+    }
   }
 
   ctkWorkflowStep* forwardStep(QString branchId)
   {
     int index = this->ForwardBranchIds.indexOf(branchId);
     if (index != -1)
-      {
+    {
       return ForwardSteps.at(index);
-      }
+    }
     else
-      {
+    {
       return 0;
-      }
+    }
   }
 
   QString backwardBranchId(ctkWorkflowStep* step)
   {
     int index = this->BackwardSteps.indexOf(step);
     if (index != -1)
-      {
+    {
       return BackwardBranchIds.at(index);
-      }
+    }
     else
-      {
+    {
       return QString();
-      }
+    }
   }
 
   QString forwardBranchId(ctkWorkflowStep* step)
   {
     int index = this->ForwardSteps.indexOf(step);
     if (index != -1)
-      {
+    {
       return ForwardBranchIds.at(index);
-      }
+    }
     else
-      {
+    {
       return QString();
-      }
+    }
   }
 
 private:
@@ -141,7 +141,7 @@ private:
 class ctkWorkflowPrivate : public QObject
 {
   Q_OBJECT
-  Q_DECLARE_PUBLIC(ctkWorkflow);
+    Q_DECLARE_PUBLIC(ctkWorkflow);
 protected:
   ctkWorkflow* const q_ptr;
 public:
@@ -160,13 +160,13 @@ public:
   /// \brief Returns whether a transition has been previously added with the same origin,
   /// destination and directionality
   bool hasDuplicateTransition(ctkWorkflowStep* origin, ctkWorkflowStep* destination,
-                              const ctkWorkflow::TransitionDirectionality directionality);
+    const ctkWorkflow::TransitionDirectionality directionality);
 
   /// \brief Returns whether a transition has been previously added with the same origin and branch
   /// id (for forward transitions) or with the same destination and branch id (for backward transitions
   bool hasTransitionWithSameBranchId(ctkWorkflowStep* origin, ctkWorkflowStep* destination,
-                                     const QString& branchId,
-                                     const ctkWorkflow::TransitionDirectionality directionality);
+    const QString& branchId,
+    const ctkWorkflow::TransitionDirectionality directionality);
 
   /// \brief Creates a transition from the origin to the destinatio.
   ///
@@ -178,8 +178,8 @@ public:
   ///
   /// Returns true/false indicating whether the method was successful.
   void createTransitionToNextStep(ctkWorkflowStep* origin,
-                                  ctkWorkflowStep* destination,
-                                  const QString& branchId = "");
+    ctkWorkflowStep* destination,
+    const QString& branchId = "");
 
   /// \brief Creates a transition from the destination to the origin
   ///
@@ -191,8 +191,8 @@ public:
   ///
   /// Returns true/false indicating whether the method was successful.
   void createTransitionToPreviousStep(ctkWorkflowStep* origin,
-                                      ctkWorkflowStep* destination,
-                                      const QString& branchId = "");
+    ctkWorkflowStep* destination,
+    const QString& branchId = "");
 
   /// \brief Creates a transition from the goTo step to the step from which the attempt to go to the
   /// goTo step was initiated.
@@ -202,7 +202,7 @@ public:
   ///
   /// Returns true/false indicating whether the method was successful.
   void createTransitionToPreviousStartingStep(ctkWorkflowStep* startingStep,
-                                              ctkWorkflowStep* currentStep);
+    ctkWorkflowStep* currentStep);
   ///
   void validateInternal(ctkWorkflowStep* step);
 
@@ -211,14 +211,14 @@ public:
   /// Does some sanity checks and then either calls onEntry() or emits the invokeOnEntryCommand(),
   /// depending on whether the user indicates that there is an onEntryCommand.
   void onEntryInternal(ctkWorkflowStep* step, ctkWorkflowStep* comingFrom,
-                       const ctkWorkflowInterstepTransition::InterstepTransitionType& transitionType);
+    const ctkWorkflowInterstepTransition::InterstepTransitionType& transitionType);
 
   /// \brief Performs computation required when exiting this step.
   ///
   /// Does some sanity checks and then either calls onExit() or emits the invokeOnExitCommand(),
   /// depending on whether the user indicates that there is an onExitCommand.
   void onExitInternal(ctkWorkflowStep* step, ctkWorkflowStep* goingTo,
-                      const ctkWorkflowInterstepTransition::InterstepTransitionType& transitionType);
+    const ctkWorkflowInterstepTransition::InterstepTransitionType& transitionType);
 
   /// Get the step in the workflow with a given id.
   ctkWorkflowStep* stepFromId(const QString& id)const;
@@ -275,13 +275,13 @@ public:
   typedef QMap<const QAbstractState*, ctkWorkflowStep*>::iterator StateToStepMapIterator;
   StateToStepMapType                                              StateToStepMap;
 
-  ctkWorkflowStep*                         InitialStep;
-  ctkWorkflowStep*                         CurrentStep;
+  ctkWorkflowStep* InitialStep;
+  ctkWorkflowStep* CurrentStep;
   QMap<ctkWorkflowStep*, ctkWorkflowStep*> StepToPreviousStepMap;
 
   // Used when performing a transition
-  ctkWorkflowStep*                                        OriginStep;
-  ctkWorkflowStep*                                        DestinationStep;
+  ctkWorkflowStep* OriginStep;
+  ctkWorkflowStep* DestinationStep;
   ctkWorkflowInterstepTransition::InterstepTransitionType TransitionType;
 
   QString          DesiredBranchId; // Desired branchId specified when invoking goForward

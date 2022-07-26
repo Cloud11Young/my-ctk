@@ -1,21 +1,20 @@
 #
 # Depends on:
-#  CTK/CMake/ctkMacroParseArguments.cmake
+# CTK/CMake/ctkMacroParseArguments.cmake
 #
 
-#! \ingroup CMakeUtilities
+# ! \ingroup CMakeUtilities
 macro(ctkMacroGeneratePluginResourceFile QRC_SRCS)
-
   CtkMacroParseArguments(MY
     "NAME;PREFIX;RESOURCES;BINARY_RESOURCES"
     ""
     ${ARGN}
-    )
+  )
 
   set(_qrc_filepath "${CMAKE_CURRENT_BINARY_DIR}/${MY_NAME}")
 
   set(_qrc_content
-"<!DOCTYPE RCC><RCC version=\"1.0\">
+    "<!DOCTYPE RCC><RCC version=\"1.0\">
 <qresource prefix=\"/${MY_PREFIX}\">
 ")
 
@@ -39,10 +38,9 @@ macro(ctkMacroGeneratePluginResourceFile QRC_SRCS)
 ")
   configure_file("${CTK_CMAKE_DIR}/plugin_resources_cached.qrc.in" "${_qrc_filepath}" @ONLY)
 
-  if (CTK_QT_VERSION VERSION_GREATER "4")
-    QT5_ADD_RESOURCES(${QRC_SRCS} ${_qrc_filepath})
+  if(CTK_QT_VERSION VERSION_GREATER "4")
+    QT6_ADD_RESOURCES(${QRC_SRCS} ${_qrc_filepath})
   else()
     QT4_ADD_RESOURCES(${QRC_SRCS} ${_qrc_filepath})
   endif()
-
 endmacro()

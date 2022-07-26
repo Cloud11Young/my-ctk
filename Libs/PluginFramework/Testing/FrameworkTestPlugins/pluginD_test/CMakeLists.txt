@@ -17,14 +17,15 @@ add_library(${lib_name} SHARED ${PLUGIN_SRCS})
 if(CTK_QT_VERSION VERSION_LESS "5")
   target_link_libraries(${lib_name} ${QT_LIBRARIES})
 else()
-  target_link_libraries(${lib_name} Qt5::Core)
+  target_link_libraries(${lib_name} Qt6::Core)
 endif()
 
 # Apply properties to the library target.
 set_target_properties(${lib_name} PROPERTIES
-#    COMPILE_FLAGS "-DQT_PLUGIN"
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/test_plugins
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/test_plugins
-    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/test_plugins
-    PREFIX "lib"
-    )
+
+  # COMPILE_FLAGS "-DQT_PLUGIN"
+  RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/test_plugins
+  LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/test_plugins
+  ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}/test_plugins
+  PREFIX "lib"
+)

@@ -23,7 +23,7 @@
 
 // Qt includes
 #include <QtGlobal>
-#ifndef HAVE_QT5
+#ifndef HAVE_QT6
 #include <QDesignerCustomWidgetCollectionInterface>
 #else
 #include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
@@ -41,20 +41,20 @@ class CTK_DICOM_WIDGETS_PLUGINS_EXPORT ctkDICOMWidgetsPlugins
   , public QDesignerCustomWidgetCollectionInterface
 {
   Q_OBJECT
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "org.commontk.DICOM")
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "org.commontk.DICOM")
 #endif
-  Q_INTERFACES(QDesignerCustomWidgetCollectionInterface);
+    Q_INTERFACES(QDesignerCustomWidgetCollectionInterface);
 
 public:
   QList<QDesignerCustomWidgetInterface*> customWidgets() const
-    {
-    QList<QDesignerCustomWidgetInterface *> plugins;
+  {
+    QList<QDesignerCustomWidgetInterface*> plugins;
     plugins << new ctkDICOMQueryRetrieveWidgetPlugin;
     plugins << new ctkDICOMTableManagerPlugin;
     plugins << new ctkDICOMTableViewPlugin;
     return plugins;
-    }
+  }
 };
 
 #endif

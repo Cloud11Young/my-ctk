@@ -3,7 +3,6 @@ project(ctkPluginBrowser)
 #
 # See CTK/CMake/ctkMacroBuildApp.cmake for details
 #
-
 set(KIT_SRCS
   ctkPluginBrowser.cpp
   ctkPluginBrowserEditors.cpp
@@ -18,7 +17,7 @@ set(KIT_MOC_SRCS
   ctkPluginBrowser.h
   ctkPluginBrowserEditors.h
   ctkPluginTableModel.h
-  )
+)
 
 # UI files
 set(KIT_UI_FORMS
@@ -35,7 +34,7 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::Widgets)
+  list(APPEND KIT_target_libraries Qt6::Widgets)
 endif()
 
 ctkMacroBuildApp(
@@ -45,9 +44,9 @@ ctkMacroBuildApp(
   UI_FORMS ${KIT_UI_FORMS}
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
-  )
+)
 
 # Testing
 if(BUILD_TESTING)
-#   add_subdirectory(Testing)
+  # add_subdirectory(Testing)
 endif()

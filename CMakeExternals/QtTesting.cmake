@@ -11,7 +11,7 @@ ExternalProject_Include_Dependencies(${proj}
   DEPENDS_VAR ${proj}_DEPENDENCIES
   EP_ARGS_VAR ${proj}_EXTERNAL_PROJECT_ARGS
   USE_SYSTEM_VAR ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj}
-  )
+)
 
 if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
   message(FATAL_ERROR "Enabling ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj} is not supported !")
@@ -23,25 +23,27 @@ if(DEFINED QtTesting_DIR AND NOT EXISTS ${QtTesting_DIR})
 endif()
 
 if(NOT DEFINED QtTesting_DIR)
-
   set(revision_tag b5324a213dc3c4abd7b588575ea926db57aa981e)
+
   if(${proj}_REVISION_TAG)
     set(revision_tag ${${proj}_REVISION_TAG})
   endif()
 
-  set(location_args )
+  set(location_args)
+
   if(${proj}_URL)
     set(location_args URL ${${proj}_URL})
   elseif(${proj}_GIT_REPOSITORY)
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
-                      GIT_TAG ${revision_tag})
+      GIT_TAG ${revision_tag})
   else()
     set(location_args GIT_REPOSITORY "https://github.com/commontk/QtTesting.git"
-                      GIT_TAG ${revision_tag})
+      GIT_TAG ${revision_tag})
   endif()
 
   # Set CMake OSX variable to pass down the external project
   set(CMAKE_OSX_EXTERNAL_PROJECT_ARGS)
+
   if(APPLE)
     list(APPEND CMAKE_OSX_EXTERNAL_PROJECT_ARGS
       -DCMAKE_OSX_ARCHITECTURES=${CMAKE_OSX_ARCHITECTURES}
@@ -51,21 +53,24 @@ if(NOT DEFINED QtTesting_DIR)
 
   set(ep_cache_args
     -DQtTesting_QT_VERSION:STRING=${CTK_QT_VERSION})
+
   if(CTK_QT_VERSION VERSION_LESS "5")
     list(APPEND ep_cache_args
       -DQT_QMAKE_EXECUTABLE:FILEPATH=${QT_QMAKE_EXECUTABLE}
-      )
+    )
   else()
     list(APPEND ep_cache_args
-      -DQt5_DIR:PATH=${Qt5_DIR}
-      )
+      -DQt6_DIR:PATH=${Qt6_DIR}
+    )
+
     # XXX Backward compatible way
     if(DEFINED CMAKE_PREFIX_PATH)
       list(APPEND ep_cache_args
         -DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH}
-        )
+      )
     endif()
   endif()
+
   message(STATUS "Adding project:${proj}")
   ExternalProject_Add(${proj}
     ${${proj}_EXTERNAL_PROJECT_ARGS}
@@ -74,12 +79,12 @@ if(NOT DEFINED QtTesting_DIR)
     PREFIX ${proj}${ep_suffix}
     ${location_args}
     CMAKE_CACHE_ARGS
-      ${ep_common_cache_args}
-      ${ep_cache_args}
-      -DBUILD_SHARED_LIBS:BOOL=ON
+    ${ep_common_cache_args}
+    ${ep_cache_args}
+    -DBUILD_SHARED_LIBS:BOOL=ON
     DEPENDS
-      ${${proj}_DEPENDENCIES}
-    )
+    ${${proj}_DEPENDENCIES}
+  )
   set(QtTesting_INSTALL_DIR ${ep_install_dir})
   set(QtTesting_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
 
@@ -90,8 +95,8 @@ endif()
 mark_as_superbuild(
   VARS QtTesting_INSTALL_DIR:PATH
   LABELS "FIND_PACKAGE_VARS"
-  )
+)
 mark_as_superbuild(
   VARS QtTesting_DIR:PATH
   LABELS "FIND_PACKAGE"
-  )
+)

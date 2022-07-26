@@ -32,16 +32,16 @@
 class ctkFooService;
 
 class ctkActivatorSL3 :
-    public QObject, public ctkPluginActivator,
-    public ctkServiceTrackerCustomizer<ctkFooService*>
+  public QObject, public ctkPluginActivator,
+  public ctkServiceTrackerCustomizer<ctkFooService*>
 {
   Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "pluginSL3_test")
+    Q_INTERFACES(ctkPluginActivator)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "pluginSL3_test")
 #endif
-  Q_PROPERTY(bool serviceAdded READ serviceAdded)
-  Q_PROPERTY(bool serviceRemoved READ serviceRemoved)
+    Q_PROPERTY(bool serviceAdded READ serviceAdded)
+    Q_PROPERTY(bool serviceRemoved READ serviceRemoved)
 
 public:
 

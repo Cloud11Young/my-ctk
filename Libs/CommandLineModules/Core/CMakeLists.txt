@@ -7,7 +7,6 @@ project(CTKCommandLineModulesCore)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_CMDLINEMODULECORE_EXPORT")
 
 # Additional directories to include
@@ -80,7 +79,7 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::XmlPatterns Qt5::Widgets Qt5::Concurrent)
+  list(APPEND KIT_target_libraries Qt6::XmlPatterns Qt6::Widgets Qt6::Concurrent)
 else()
   set(QT_USE_QTXMLPATTERNS 1)
   include(${QT_USE_FILE})
@@ -96,7 +95,7 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-  )
+)
 
 target_link_libraries(${PROJECT_NAME} ${QT_LIBRARIES})
 
@@ -105,7 +104,7 @@ if(CTK_WRAP_PYTHONQT_LIGHT)
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
 
 # Testing

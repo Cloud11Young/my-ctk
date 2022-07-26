@@ -1,16 +1,15 @@
 #
 # Depends on:
-#  CTK/CMake/ctkMacroParseArguments.cmake
+# CTK/CMake/ctkMacroParseArguments.cmake
 #
 
-#! \ingroup CMakeUtilities
+# ! \ingroup CMakeUtilities
 function(ctkFunctionGeneratePluginManifest QRC_SRCS)
-
   CtkMacroParseArguments(MY
     "ACTIVATIONPOLICY;CATEGORY;CONTACT_ADDRESS;COPYRIGHT;DESCRIPTION;DOC_URL;ICON;LICENSE;NAME;REQUIRE_PLUGIN;SYMBOLIC_NAME;VENDOR;VERSION;CUSTOM_HEADERS"
     ""
     ${ARGN}
-    )
+  )
 
   # Sanity checks
   if(NOT DEFINED MY_SYMBOLIC_NAME)
@@ -21,6 +20,7 @@ function(ctkFunctionGeneratePluginManifest QRC_SRCS)
 
   if(DEFINED MY_ACTIVATIONPOLICY)
     string(TOLOWER "${MY_ACTIVATIONPOLICY}" _activation_policy)
+
     if(_activation_policy STREQUAL "eager")
       set(_manifest_content "${_manifest_content}\nPlugin-ActivationPolicy: eager")
     else()
@@ -75,6 +75,7 @@ function(ctkFunctionGeneratePluginManifest QRC_SRCS)
 
   if(DEFINED MY_CUSTOM_HEADERS)
     set(_manifest_content "${_manifest_content}\n")
+
     foreach(_custom_header ${MY_CUSTOM_HEADERS})
       set(_manifest_content "${_manifest_content}\n${_custom_header}: ${${_custom_header}}")
     endforeach()
@@ -86,7 +87,7 @@ function(ctkFunctionGeneratePluginManifest QRC_SRCS)
   set(_manifest_qrc_filepath "${CMAKE_CURRENT_BINARY_DIR}/${_symbolic_name}_manifest.qrc")
 
   set(_manifest_qrc_content
-"<!DOCTYPE RCC><RCC version=\"1.0\">
+    "<!DOCTYPE RCC><RCC version=\"1.0\">
 <qresource prefix=\"/${MY_SYMBOLIC_NAME}/META-INF\">
  <file>${_manifest_filename}</file>
 </qresource>
@@ -96,12 +97,11 @@ function(ctkFunctionGeneratePluginManifest QRC_SRCS)
   configure_file("${CTK_CMAKE_DIR}/MANIFEST.MF.in" "${_manifest_filepath}" @ONLY)
   configure_file("${CTK_CMAKE_DIR}/plugin_manifest.qrc.in" "${_manifest_qrc_filepath}" @ONLY)
 
-  if (CTK_QT_VERSION VERSION_GREATER "4")
-    QT5_ADD_RESOURCES(_qrc_src ${_manifest_qrc_filepath})
+  if(CTK_QT_VERSION VERSION_GREATER "4")
+    QT6_ADD_RESOURCES(_qrc_src ${_manifest_qrc_filepath})
   else()
     QT4_ADD_RESOURCES(_qrc_src ${_manifest_qrc_filepath})
   endif()
 
   set(${QRC_SRCS} ${${QRC_SRCS}} ${_qrc_src} PARENT_SCOPE)
-
 endfunction()

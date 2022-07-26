@@ -28,12 +28,12 @@
 #include <ctkTestPluginAService.h>
 
 class ctkTestPluginAActivator : public QObject,
-                                public ctkPluginActivator
+  public ctkPluginActivator
 {
   Q_OBJECT
-  Q_INTERFACES(ctkPluginActivator)
-#ifdef HAVE_QT5
-  Q_PLUGIN_METADATA(IID "pluginA_test")
+    Q_INTERFACES(ctkPluginActivator)
+#ifdef HAVE_QT6
+    Q_PLUGIN_METADATA(IID "pluginA_test")
 #endif
 
 public:

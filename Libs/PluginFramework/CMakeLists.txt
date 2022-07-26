@@ -3,9 +3,7 @@ project(CTKPluginFramework)
 #
 # See CTK/CMake/ctkMacroBuildLib.cmake for details
 #
-
 set(KIT_export_directive "CTK_PLUGINFW_EXPORT")
-
 
 # Source files
 set(KIT_SRCS
@@ -133,7 +131,7 @@ set(KIT_SRCS
   service/metatype/ctkMetaTypeProvider.cpp
   service/metatype/ctkMetaTypeService.cpp
   service/metatype/ctkObjectClassDefinition.h
-  )
+)
 
 # Headers that should run through moc
 set(KIT_MOC_SRCS
@@ -158,7 +156,7 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt5::Sql Qt5::Concurrent)
+  list(APPEND KIT_target_libraries Qt6::Sql Qt6::Concurrent)
 endif()
 
 # Create a MANIFEST.MF resource for the PluginFramework library,
@@ -166,7 +164,7 @@ endif()
 ctkFunctionGeneratePluginManifest(KIT_SRCS
   SYMBOLIC_NAME "system.plugin"
   VERSION "0.9.9"
-  )
+)
 
 ctkMacroBuildLib(
   NAME ${PROJECT_NAME}
@@ -178,14 +176,14 @@ ctkMacroBuildLib(
   TARGET_LIBRARIES ${KIT_target_libraries}
   RESOURCES ${KIT_resources}
   LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-  )
+)
 
 if(CTK_WRAP_PYTHONQT_LIGHT)
   ctkMacroBuildLibWrapper(
     TARGET ${PROJECT_NAME}
     SRCS ${KIT_SRCS}
     WRAPPER_LIBRARY_TYPE ${CTK_LIBRARY_MODE}
-    )
+  )
 endif()
 
 # Testing
@@ -194,5 +192,4 @@ if(BUILD_TESTING)
 
   # Compile source code snippets
   add_subdirectory(Documentation/Snippets)
-
 endif()

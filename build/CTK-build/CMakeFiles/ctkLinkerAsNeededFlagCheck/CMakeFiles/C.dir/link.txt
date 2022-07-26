@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9    -Wl,--no-as-needed -rdynamic CMakeFiles/C.dir/C.cpp.o  -o C  -Wl,-rpath,/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/ctkLinkerAsNeededFlagCheck libB.so libA.so 

@@ -3,6 +3,7 @@
 
 #include <QCoreApplication>
 #include <QTextStream>
+#include <QIODevice>
 
 #include <cstdlib>
 
@@ -30,7 +31,7 @@ int main(int argc, char** argv)
   if (!ok)
   {
     QTextStream(stderr, QIODevice::WriteOnly) << "Error parsing arguments: "
-                                              << parser.errorString() << "\n";
+      << parser.errorString() << "\n";
     return EXIT_FAILURE;
   }
 

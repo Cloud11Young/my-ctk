@@ -1,59 +1,59 @@
-###########################################################################
+# ##########################################################################
 #
-#  Library:   CTK
+# Library:   CTK
 #
-#  Copyright (c) Kitware Inc.
+# Copyright (c) Kitware Inc.
 #
-#  Licensed under the Apache License, Version 2.0 (the "License");
-#  you may not use this file except in compliance with the License.
-#  You may obtain a copy of the License at
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0.txt
+# http://www.apache.org/licenses/LICENSE-2.0.txt
 #
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-###########################################################################
+# ##########################################################################
 
 #
 # Depends on:
-#  CTK/CMake/ctkMacroParseArguments.cmake
-#  CTK/CMake/ctkMacroGeneratePluginManifest.cmake
+# CTK/CMake/ctkMacroParseArguments.cmake
+# CTK/CMake/ctkMacroGeneratePluginManifest.cmake
 #
-#! \brief Build a CTK plug-in.
-#!
-#! This macro takes the usual arguments for building
-#! a shared library using Qt. Additionally, it generates
-#! plugin meta-data by creating a MANIFEST.MF text file
-#! which is embedded in the share library as a Qt resource.
-#!
-#! The following variables can be set in a file named
-#! manifest_headers.cmake, which will then be read by
-#! this macro:
-#!
-#! - Plugin-ActivationPolicy
-#! - Plugin-Category
-#! - Plugin-ContactAddress
-#! - Plugin-Copyright
-#! - Plugin-Description
-#! - Plugin-DocURL
-#! - Plugin-Icon
-#! - Plugin-License
-#! - Plugin-Name
-#! - Require-Plugin
-#! - Plugin-Vendor
-#! - Plugin-Version
-#!
-#! \ingroup CMakeAPI
+# ! \brief Build a CTK plug-in.
+# !
+# ! This macro takes the usual arguments for building
+# ! a shared library using Qt. Additionally, it generates
+# ! plugin meta-data by creating a MANIFEST.MF text file
+# ! which is embedded in the share library as a Qt resource.
+# !
+# ! The following variables can be set in a file named
+# ! manifest_headers.cmake, which will then be read by
+# ! this macro:
+# !
+# ! - Plugin-ActivationPolicy
+# ! - Plugin-Category
+# ! - Plugin-ContactAddress
+# ! - Plugin-Copyright
+# ! - Plugin-Description
+# ! - Plugin-DocURL
+# ! - Plugin-Icon
+# ! - Plugin-License
+# ! - Plugin-Name
+# ! - Require-Plugin
+# ! - Plugin-Vendor
+# ! - Plugin-Version
+# !
+# ! \ingroup CMakeAPI
 macro(ctkMacroBuildPlugin)
   CtkMacroParseArguments(MY
     "EXPORT_DIRECTIVE;SRCS;MOC_SRCS;MOC_OPTIONS;UI_FORMS;INCLUDE_DIRECTORIES;EXPORTED_INCLUDE_SUFFIXES;TARGET_LIBRARIES;RESOURCES;CACHED_RESOURCEFILES;TRANSLATIONS;OUTPUT_DIR"
     "TEST_PLUGIN;NO_INSTALL"
     ${ARGN}
-    )
+  )
 
   # Keep parameter 'INCLUDE_DIRECTORIES' for backward compatiblity
 
@@ -65,6 +65,7 @@ macro(ctkMacroBuildPlugin)
   # Print a warning if the project name does not match the directory name
   get_filename_component(_dir_name ${CMAKE_CURRENT_SOURCE_DIR} NAME)
   string(REPLACE "." "_" _dir_name_with_ ${_dir_name})
+
   if(NOT _dir_name_with_ STREQUAL ${PROJECT_NAME})
     message(WARNING "Discouraged mismatch of plug-in project name [${PROJECT_NAME}] and top-level directory name [${CMAKE_CURRENT_SOURCE_DIR}].")
   endif()
@@ -81,32 +82,33 @@ macro(ctkMacroBuildPlugin)
   set(MY_LIBRARY_TYPE "SHARED")
 
   # Clear the variables for the manifest headers
-  set(Plugin-ActivationPolicy )
-  set(Plugin-Category )
-  set(Plugin-ContactAddress )
-  set(Plugin-Copyright )
-  set(Plugin-Description )
-  set(Plugin-DocURL )
-  set(Plugin-Icon )
-  set(Plugin-License )
-  set(Plugin-Name )
-  set(Require-Plugin )
-  set(Plugin-SymbolicName )
-  set(Plugin-Vendor )
-  set(Plugin-Version )
+  set(Plugin-ActivationPolicy)
+  set(Plugin-Category)
+  set(Plugin-ContactAddress)
+  set(Plugin-Copyright)
+  set(Plugin-Description)
+  set(Plugin-DocURL)
+  set(Plugin-Icon)
+  set(Plugin-License)
+  set(Plugin-Name)
+  set(Require-Plugin)
+  set(Plugin-SymbolicName)
+  set(Plugin-Vendor)
+  set(Plugin-Version)
 
-  set(Custom-Headers )
+  set(Custom-Headers)
 
   if(MY_TEST_PLUGIN)
     # Since the test plug-ins are not considered when calculating
     # target dependencies via DGraph, we add the dependencies
     # manually here
-    #message("${lib_name}_DEPENDENCIES ${MY_TARGET_LIBRARIES}")
+    # message("${lib_name}_DEPENDENCIES ${MY_TARGET_LIBRARIES}")
     list(APPEND ${lib_name}_DEPENDENCIES ${MY_TARGET_LIBRARIES})
   endif()
 
   # If a file named manifest_headers.cmake exists, read it
-  set(manifest_headers_dep )
+  set(manifest_headers_dep)
+
   if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/manifest_headers.cmake")
     include(${CMAKE_CURRENT_SOURCE_DIR}/manifest_headers.cmake)
     set(manifest_headers_dep "${CMAKE_CURRENT_SOURCE_DIR}/manifest_headers.cmake")
@@ -118,23 +120,24 @@ macro(ctkMacroBuildPlugin)
   # Include dirs
   if(MY_EXPORTED_INCLUDE_SUFFIXES)
     set(${lib_name}_INCLUDE_SUFFIXES ${MY_EXPORTED_INCLUDE_SUFFIXES}
-        CACHE INTERNAL "List of exported plugin include dirs")
+      CACHE INTERNAL "List of exported plugin include dirs")
 
-    set(my_includes )
+    set(my_includes)
+
     foreach(_suffix ${MY_EXPORTED_INCLUDE_SUFFIXES})
       list(APPEND my_includes ${CMAKE_CURRENT_SOURCE_DIR}/${_suffix})
     endforeach()
   else()
     set(${lib_name}_INCLUDE_SUFFIXES ""
-        CACHE INTERNAL "List of exported plugin include dirs")
+      CACHE INTERNAL "List of exported plugin include dirs")
 
-    set(my_includes )
+    set(my_includes)
   endif()
 
   list(APPEND my_includes
-      ${CMAKE_CURRENT_SOURCE_DIR}
-      ${CMAKE_CURRENT_BINARY_DIR}
-      )
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
+  )
 
   # Add the include directories from the plugin dependencies
   # and external dependencies
@@ -143,14 +146,14 @@ macro(ctkMacroBuildPlugin)
   if(CMAKE_VERSION VERSION_LESS 2.8.12)
     include_directories(
       ${my_includes}
-      )
+    )
   endif()
 
   if(CTK_QT_VERSION VERSION_LESS "5")
     # Add Qt include dirs and defines
     include(${QT_USE_FILE})
   else()
-    find_package(Qt5 COMPONENTS LinguistTools REQUIRED)
+    find_package(Qt6 COMPONENTS LinguistTools REQUIRED)
   endif()
 
   # Add the library directories from the external project
@@ -158,7 +161,7 @@ macro(ctkMacroBuildPlugin)
 
   link_directories(
     ${my_library_dirs}
-    )
+  )
 
   set(MY_LIBRARY_EXPORT_DIRECTIVE ${MY_EXPORT_DIRECTIVE})
   set(MY_EXPORT_HEADER_PREFIX "${lib_name}_")
@@ -167,7 +170,7 @@ macro(ctkMacroBuildPlugin)
   configure_file(
     ${CTK_EXPORT_HEADER_TEMPLATE}
     ${CMAKE_CURRENT_BINARY_DIR}/${MY_EXPORT_HEADER_PREFIX}Export.h
-    )
+  )
   set(dynamicHeaders
     "${dynamicHeaders};${CMAKE_CURRENT_BINARY_DIR}/${MY_EXPORT_HEADER_PREFIX}Export.h")
 
@@ -177,21 +180,25 @@ macro(ctkMacroBuildPlugin)
   set(MY_QRC_SRCS)
 
   # Wrap
-  if (CTK_QT_VERSION VERSION_GREATER "4")
+  if(CTK_QT_VERSION VERSION_GREATER "4")
     set(target)
-    if(Qt5Core_VERSION VERSION_GREATER "5.2.0")
+
+    if(Qt6Core_VERSION VERSION_GREATER "5.2.0")
       set(target TARGET ${lib_name})
     endif()
+
     if(MY_MOC_SRCS)
       # this is a workaround for Visual Studio. The relative include paths in the generated
       # moc files can get very long and can't be resolved by the MSVC compiler.
       foreach(moc_src ${MY_MOC_SRCS})
-        QT5_WRAP_CPP(MY_MOC_CPP ${moc_src} OPTIONS -f${moc_src} -DHAVE_QT5 ${MY_MOC_OPTIONS} ${target})
+        QT6_WRAP_CPP(MY_MOC_CPP ${moc_src} OPTIONS -f${moc_src} -DHAVE_QT6 ${MY_MOC_OPTIONS} ${target})
       endforeach()
     endif()
-    QT5_WRAP_UI(MY_UI_CPP ${MY_UI_FORMS})
+
+    QT6_WRAP_UI(MY_UI_CPP ${MY_UI_FORMS})
+
     if(DEFINED MY_RESOURCES)
-      QT5_ADD_RESOURCES(MY_QRC_SRCS ${MY_RESOURCES})
+      QT6_ADD_RESOURCES(MY_QRC_SRCS ${MY_RESOURCES})
     endif()
   else()
     if(MY_MOC_SRCS)
@@ -201,13 +208,16 @@ macro(ctkMacroBuildPlugin)
         QT4_WRAP_CPP(MY_MOC_CPP ${moc_src} OPTIONS -f${moc_src} ${MY_MOC_OPTIONS} TARGET ${lib_name})
       endforeach()
     endif()
+
     QT4_WRAP_UI(MY_UI_CPP ${MY_UI_FORMS})
+
     if(DEFINED MY_RESOURCES)
       QT4_ADD_RESOURCES(MY_QRC_SRCS ${MY_RESOURCES})
     endif()
   endif()
+
   # Add the generated manifest qrc file
-  set(manifest_qrc_src )
+  set(manifest_qrc_src)
   ctkFunctionGeneratePluginManifest(manifest_qrc_src
     ACTIVATIONPOLICY ${Plugin-ActivationPolicy}
     CATEGORY ${Plugin-Category}
@@ -223,23 +233,26 @@ macro(ctkMacroBuildPlugin)
     VENDOR ${Plugin-Vendor}
     VERSION ${Plugin-Version}
     CUSTOM_HEADERS ${Custom-Headers}
-    )
+  )
 
   if(manifest_headers_dep)
     set_property(SOURCE ${manifest_qrc_src} APPEND
-                   PROPERTY OBJECT_DEPENDS ${manifest_headers_dep})
+      PROPERTY OBJECT_DEPENDS ${manifest_headers_dep})
   endif()
+
   list(APPEND MY_QRC_SRCS ${manifest_qrc_src})
 
   # Create translation files (.ts and .qm)
-  set(_plugin_qm_files )
-  set(_plugin_cached_resources_in_binary_tree )
+  set(_plugin_qm_files)
+  set(_plugin_cached_resources_in_binary_tree)
   set(_translations_dir "${CMAKE_CURRENT_BINARY_DIR}/CTK-INF/l10n")
+
   if(MY_TRANSLATIONS)
     set_source_files_properties(${MY_TRANSLATIONS}
-                                PROPERTIES OUTPUT_LOCATION ${_translations_dir})
+      PROPERTIES OUTPUT_LOCATION ${_translations_dir})
+
     if(CTK_QT_VERSION VERSION_GREATER "4")
-      qt5_create_translation(_plugin_qm_files ${MY_SRCS} ${MY_UI_FORMS} ${MY_TRANSLATIONS})
+      qt6_create_translation(_plugin_qm_files ${MY_SRCS} ${MY_UI_FORMS} ${MY_TRANSLATIONS})
     else()
       QT4_CREATE_TRANSLATION(_plugin_qm_files ${MY_SRCS} ${MY_UI_FORMS} ${MY_TRANSLATIONS})
     endif()
@@ -252,7 +265,8 @@ macro(ctkMacroBuildPlugin)
     endforeach()
   endif()
 
-  set(_plugin_cached_resources_in_source_tree )
+  set(_plugin_cached_resources_in_source_tree)
+
   if(MY_CACHED_RESOURCEFILES)
     foreach(_cached_resource ${MY_CACHED_RESOURCEFILES})
       if(IS_ABSOLUTE "${_cached_resource}")
@@ -279,14 +293,14 @@ macro(ctkMacroBuildPlugin)
     ${MY_RESOURCES}
     ${MY_UI_FORMS}
     ${MY_TRANSLATIONS}
-    )
+  )
 
   source_group("Generated" FILES
     ${MY_QRC_SRCS}
     ${MY_MOC_CPP}
     ${MY_UI_CPP}
     ${_plugin_qm_files}
-    )
+  )
 
   add_library(${lib_name} ${MY_LIBRARY_TYPE}
     ${MY_SRCS}
@@ -294,37 +308,40 @@ macro(ctkMacroBuildPlugin)
     ${MY_UI_CPP}
     ${MY_QRC_SRCS}
     ${_plugin_qm_files}
-    )
+  )
 
   if(NOT CMAKE_VERSION VERSION_LESS 2.8.12)
     target_include_directories(${lib_name}
       PUBLIC "$<BUILD_INTERFACE:${my_includes}>"
-             "$<INSTALL_INTERFACE:${CTK_INSTALL_PLUGIN_INCLUDE_DIR}/${Plugin-SymbolicName}>"
-      )
+      "$<INSTALL_INTERFACE:${CTK_INSTALL_PLUGIN_INCLUDE_DIR}/${Plugin-SymbolicName}>"
+    )
+
     if(CTK_QT_VERSION VERSION_LESS "5")
       # Add Qt include dirs to the target
       target_include_directories(${lib_name} PUBLIC ${QT_INCLUDE_DIR})
+
       foreach(module QT3SUPPORT QTOPENGL QTASSISTANT QTDESIGNER QTMOTIF QTNSPLUGIN
-               QAXSERVER QAXCONTAINER QTDECLARATIVE QTSCRIPT QTSVG QTUITOOLS QTHELP
-               QTWEBKIT PHONON QTSCRIPTTOOLS QTMULTIMEDIA QTXMLPATTERNS QTGUI QTTEST
-               QTDBUS QTXML QTSQL QTNETWORK QTCORE)
-        if (QT_USE_${module} OR QT_USE_${module}_DEPENDS)
-          if (QT_${module}_FOUND)
+        QAXSERVER QAXCONTAINER QTDECLARATIVE QTSCRIPT QTSVG QTUITOOLS QTHELP
+        QTWEBKIT PHONON QTSCRIPTTOOLS QTMULTIMEDIA QTXMLPATTERNS QTGUI QTTEST
+        QTDBUS QTXML QTSQL QTNETWORK QTCORE)
+        if(QT_USE_${module} OR QT_USE_${module}_DEPENDS)
+          if(QT_${module}_FOUND)
             target_include_directories(${lib_name} PUBLIC ${QT_${module}_INCLUDE_DIR})
-          endif ()
-        endif ()
+          endif()
+        endif()
       endforeach()
     endif()
   else()
-    find_package(Qt5LinguistTools REQUIRED)
+    find_package(Qt6LinguistTools REQUIRED)
   endif()
 
   if(MY_TEST_PLUGIN AND CTK_QT_VERSION VERSION_GREATER "4")
-    find_package(Qt5Test REQUIRED)
+    find_package(Qt6Test REQUIRED)
+
     if(CMAKE_VERSION VERSION_LESS 2.8.12)
-      target_link_libraries(${lib_name} Qt5::Test)
+      target_link_libraries(${lib_name} Qt6::Test)
     else()
-      target_link_libraries(${lib_name} PRIVATE Qt5::Test)
+      target_link_libraries(${lib_name} PRIVATE Qt6::Test)
     endif()
   endif()
 
@@ -369,7 +386,7 @@ macro(ctkMacroBuildPlugin)
     LIBRARY_OUTPUT_DIRECTORY ${plugin_LIBRARY_output_dir}
     ARCHIVE_OUTPUT_DIRECTORY ${plugin_ARCHIVE_output_dir}
     PREFIX "lib"
-    )
+  )
 
   if(NOT MY_TEST_PLUGIN AND NOT MY_NO_INSTALL)
     # Install rules
@@ -381,7 +398,7 @@ macro(ctkMacroBuildPlugin)
 
   set(my_libs
     ${MY_TARGET_LIBRARIES}
-    )
+  )
 
   if(MINGW)
     list(APPEND my_libs ssp) # add stack smash protection lib
@@ -404,8 +421,6 @@ macro(ctkMacroBuildPlugin)
       ${headers}
       ${dynamicHeaders}
       DESTINATION ${CTK_INSTALL_PLUGIN_INCLUDE_DIR}/${Plugin-SymbolicName} COMPONENT Development
-      )
+    )
   endif()
-
 endmacro()
-

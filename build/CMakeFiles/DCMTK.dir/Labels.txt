@@ -1,0 +1,13 @@
+# Target labels
+ DCMTK
+# Source files and their labels
+/home/yq/work/Practice/CTK/build/CMakeFiles/DCMTK
+/home/yq/work/Practice/CTK/build/CMakeFiles/DCMTK.rule
+/home/yq/work/Practice/CTK/build/CMakeFiles/DCMTK-complete.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-install.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-mkdir.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-download.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-update.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-patch.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-configure.rule
+/home/yq/work/Practice/CTK/build/DCMTK-cmake/src/DCMTK-stamp/DCMTK-build.rule
