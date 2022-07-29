@@ -1,9 +1,0 @@
--I/home/yq/work/Practice/commontk/CTK/Libs/Core
--I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core
--I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/Resources/UI
--I/home/yq/work/Practice/commontk/CTK/build/CTK-build
--fctkLogger.h
--DHAVE_QT6
--o
-/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/moc_ctkLogger.cpp
-/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkLogger.h

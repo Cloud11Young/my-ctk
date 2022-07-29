@@ -1,8 +1,0 @@
-<!DOCTYPE RCC><RCC version="1.0">
-<qresource prefix="/pluginAttrPwd.test">
-<file>CTK-INF/metatype/testfile.xml</file>
-<file>CTK-INF/l10n/pluginAttrPwd_test_de.qm</file>
-</qresource>
-</RCC>
-
-
