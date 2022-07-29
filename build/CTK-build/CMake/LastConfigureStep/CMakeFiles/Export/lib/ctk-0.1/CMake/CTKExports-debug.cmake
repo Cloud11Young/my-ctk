@@ -15,5 +15,15 @@ set_target_properties(CTKCore PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS CTKCore )
 list(APPEND _IMPORT_CHECK_FILES_FOR_CTKCore "${_IMPORT_PREFIX}/lib/ctk-0.1/libCTKCore.so.0.1.0" )
 
+# Import target "CTKPluginFramework" for configuration "Debug"
+set_property(TARGET CTKPluginFramework APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(CTKPluginFramework PROPERTIES
+  IMPORTED_LOCATION_DEBUG "${_IMPORT_PREFIX}/lib/ctk-0.1/libCTKPluginFramework.so.0.1.0"
+  IMPORTED_SONAME_DEBUG "libCTKPluginFramework.so.0.1"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS CTKPluginFramework )
+list(APPEND _IMPORT_CHECK_FILES_FOR_CTKPluginFramework "${_IMPORT_PREFIX}/lib/ctk-0.1/libCTKPluginFramework.so.0.1.0" )
+
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

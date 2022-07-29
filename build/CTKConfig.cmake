@@ -11,7 +11,7 @@
 ####### Any changes to this file will be overwritten by the next CMake run ####
 ####### The input file was CTKConfig.cmake.in                            ########
 
-get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../../../../usr/local" ABSOLUTE)
+get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../../../../../usr/local" ABSOLUTE)
 
 macro(set_and_check _var _file)
   set(${_var} "${_file}")
@@ -27,26 +27,26 @@ endmacro()
 list(APPEND CMAKE_PREFIX_PATH ${PACKAGE_PREFIX_DIR})
 
 # CMake extension module directory
-set_and_check(CTK_CMAKE_DIR "/home/yq/work/Practice/CTK/CMake")
-set_and_check(CTK_CMAKE_UTILITIES_DIR "/home/yq/work/Practice/CTK/Utilities/CMake")
+set_and_check(CTK_CMAKE_DIR "/home/yq/work/Practice/commontk/CTK/CMake")
+set_and_check(CTK_CMAKE_UTILITIES_DIR "/home/yq/work/Practice/commontk/CTK/Utilities/CMake")
 
 # The location of the UseCTK.cmake file.
-set_and_check(CTK_USE_FILE "/home/yq/work/Practice/CTK/build/UseCTK.cmake")
+set_and_check(CTK_USE_FILE "/home/yq/work/Practice/commontk/CTK/build/UseCTK.cmake")
 
 # Include CTK Plugin specific variables
-set_and_check(CTK_PLUGIN_USE_FILE "/home/yq/work/Practice/CTK/build/CTKPluginUseFile.cmake")
+set_and_check(CTK_PLUGIN_USE_FILE "/home/yq/work/Practice/commontk/CTK/build/CTKPluginUseFile.cmake")
 
-set_and_check(CTK_TARGETS "/home/yq/work/Practice/CTK/build/CTKExports.cmake")
+set_and_check(CTK_TARGETS "/home/yq/work/Practice/commontk/CTK/build/CTKExports.cmake")
 
 # Directory containing the ctkConfig.h file
-set_and_check(CTK_CONFIG_H_INCLUDE_DIR "/home/yq/work/Practice/CTK/build/CTK-build")
+set_and_check(CTK_CONFIG_H_INCLUDE_DIR "/home/yq/work/Practice/commontk/CTK/build/CTK-build")
 
 # Set the header template which defines custom export/import macros
 # for shared libraries
-set_and_check(CTK_EXPORT_HEADER_TEMPLATE "/home/yq/work/Practice/CTK/Libs/ctkExport.h.in")
+set_and_check(CTK_EXPORT_HEADER_TEMPLATE "/home/yq/work/Practice/commontk/CTK/Libs/ctkExport.h.in")
 
 # Set CTK library directory
-set_and_check(CTK_LIBRARY_DIR "/home/yq/work/Practice/CTK/build/CTK-build/bin")
+set_and_check(CTK_LIBRARY_DIR "/home/yq/work/Practice/commontk/CTK/build/CTK-build/bin")
 set(CTK_LIBRARY_DIRS ${CTK_LIBRARY_DIR})
 
 # CTK specific variables
@@ -59,19 +59,21 @@ endif()
 
 ####### Expanded from @CTK_CONFIG_CODE@ #######
 # The CTK DGraph executable used to compute target dependency graphs
-set(CTK_DGRAPH_EXECUTABLE "/home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/DGraph")
+set(CTK_DGRAPH_EXECUTABLE "/home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/DGraph")
 # Qt configuration
 set(CTK_Qt6_DIR "/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6")
 # The CTK Qt designer plugins directory
-set(CTK_QTDESIGNERPLUGINS_DIR "/home/yq/work/Practice/CTK/build/CTK-build/bin")
+set(CTK_QTDESIGNERPLUGINS_DIR "/home/yq/work/Practice/commontk/CTK/build/CTK-build/bin")
 # CTK library include dirctories
-set(CTKCore_INCLUDE_DIRS "/home/yq/work/Practice/CTK/Libs/Core;/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/CTK/build/CTK-build")
-set(CTKTesting_INCLUDE_DIRS "/home/yq/work/Practice/CTK/Libs/Testing;/home/yq/work/Practice/CTK/build/CTK-build/Libs/Testing;/home/yq/work/Practice/CTK/build/CTK-build")
-set(CTK_INCLUDE_DIRS "/home/yq/work/Practice/CTK/Libs/Core;/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/CTK/build/CTK-build;/home/yq/work/Practice/CTK/Libs/Testing;/home/yq/work/Practice/CTK/build/CTK-build/Libs/Testing")
+set(CTKCore_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build")
+set(CTKPluginFramework_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build;/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core")
+set(CTKTesting_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build")
+set(CTK_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build;/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Testing")
 # CTK library directories that could be used for linking
 set(CTKCore_LIBRARY_DIRS "")
+set(CTKPluginFramework_LIBRARY_DIRS "")
 # External project libraries
-set(CTK_EXTERNAL_LIBRARIES "general;Qt6::Core;general;Qt6::Core5Compat;general;Qt6::StateMachine;general;dl")
+set(CTK_EXTERNAL_LIBRARIES "general;Qt6::Core;general;Qt6::Core5Compat;general;Qt6::StateMachine;general;dl;general;Qt6::Sql;general;Qt6::Concurrent")
 ##################################################
 
 # Include CTK macros
@@ -108,7 +110,7 @@ else()
 endif()
 
 # List all libraries
-SET(CTK_LIBRARIES CTKCore)
+SET(CTK_LIBRARIES CTKCore;CTKPluginFramework)
 
 # List all CTK libraries wrapped with PythonQt
 SET(CTK_WRAPPED_LIBRARIES_PYTHONQT )
@@ -118,7 +120,7 @@ include(${CTK_PLUGIN_USE_FILE})
 
 # Qt configuration
 set(CTK_QT_VERSION "6")
-set(CTK_QT6_COMPONENTS Core;Xml;Concurrent;Sql;Test;Multimedia;Core5Compat;StateMachine)
+set(CTK_QT6_COMPONENTS Core;Xml;Concurrent;Sql;Test;Multimedia;Core5Compat;StateMachine;Widgets)
 
 # Update CMake module path so that calling "find_package(DCMTK)" works as expected 
 # after calling "find_package(CTK)"

@@ -1,9 +1,9 @@
--I/home/yq/work/Practice/CTK/Libs/Core
--I/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core
--I/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core/Resources/UI
--I/home/yq/work/Practice/CTK/build/CTK-build/CTK-build
+-I/home/yq/work/Practice/commontk/CTK/Libs/Core
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Libs/Core
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Libs/Core/Resources/UI
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build
 -fctkCallback.h
 -DHAVE_QT6
 -o
-/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core/moc_ctkCallback.cpp
-/home/yq/work/Practice/CTK/Libs/Core/ctkCallback.h
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Libs/Core/moc_ctkCallback.cpp
+/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkCallback.h

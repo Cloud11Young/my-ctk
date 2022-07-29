@@ -195,7 +195,7 @@ macro(ctkMacroBuildPlugin)
       endforeach()
     endif()
 
-    QT6_WRAP_UI(MY_UI_CPP ${MY_UI_FORMS})
+    qt6_wrap_ui(MY_UI_CPP ${MY_UI_FORMS})
 
     if(DEFINED MY_RESOURCES)
       QT6_ADD_RESOURCES(MY_QRC_SRCS ${MY_RESOURCES})

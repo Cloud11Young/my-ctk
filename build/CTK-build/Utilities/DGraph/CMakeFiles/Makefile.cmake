@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/yq/work/Practice/CTK/Libs/ctkExport.h.in"
-  "/home/yq/work/Practice/CTK/Utilities/DGraph/CMakeLists.txt"
-  "/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/3.16.3/CMakeCCompiler.cmake"
-  "/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
-  "/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "/home/yq/work/Practice/commontk/CTK/Libs/ctkExport.h.in"
+  "/home/yq/work/Practice/commontk/CTK/Utilities/DGraph/CMakeLists.txt"
+  "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/3.16.3/CMakeCCompiler.cmake"
+  "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
+  "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/3.16.3/CMakeSystem.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"

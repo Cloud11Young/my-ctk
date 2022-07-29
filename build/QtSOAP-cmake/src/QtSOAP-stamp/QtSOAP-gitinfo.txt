@@ -1,3 +1,0 @@
-repository='https://github.com/commontk/QtSOAP.git'
-module=''
-tag='origin'

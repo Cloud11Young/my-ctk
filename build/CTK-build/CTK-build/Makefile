@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build/CTK-build/CTK-build
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -101,17 +101,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -122,6 +111,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMakeFiles /home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMakeFiles /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -257,6 +257,19 @@ ExperimentalTest: cmake_check_build_system
 ExperimentalTest/fast:
 	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
 .PHONY : ExperimentalTest/fast
+
+#=============================================================================
+# Target rules for targets named CTK
+
+# Build rule for target.
+CTK: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTK
+.PHONY : CTK
+
+# fast build rule for target.
+CTK/fast:
+	$(MAKE) -f CMakeFiles/CTK.dir/build.make CMakeFiles/CTK.dir/build
+.PHONY : CTK/fast
 
 #=============================================================================
 # Target rules for targets named ContinuousUpdate
@@ -402,6 +415,19 @@ NightlyStart/fast:
 .PHONY : NightlyStart/fast
 
 #=============================================================================
+# Target rules for targets named CTKData
+
+# Build rule for target.
+CTKData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKData
+.PHONY : CTKData
+
+# fast build rule for target.
+CTKData/fast:
+	$(MAKE) -f CMakeFiles/CTKData.dir/build.make CMakeFiles/CTKData.dir/build
+.PHONY : CTKData/fast
+
+#=============================================================================
 # Target rules for targets named ExperimentalCoverage
 
 # Build rule for target.
@@ -531,58 +557,6 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
-#=============================================================================
-# Target rules for targets named CTKCore
-
-# Build rule for target.
-CTKCore: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CTKCore
-.PHONY : CTKCore
-
-# fast build rule for target.
-CTKCore/fast:
-	$(MAKE) -f Libs/Core/CMakeFiles/CTKCore.dir/build.make Libs/Core/CMakeFiles/CTKCore.dir/build
-.PHONY : CTKCore/fast
-
-#=============================================================================
-# Target rules for targets named CTKCoreCppTests
-
-# Build rule for target.
-CTKCoreCppTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CTKCoreCppTests
-.PHONY : CTKCoreCppTests
-
-# fast build rule for target.
-CTKCoreCppTests/fast:
-	$(MAKE) -f Libs/Core/Testing/Cpp/CMakeFiles/CTKCoreCppTests.dir/build.make Libs/Core/Testing/Cpp/CMakeFiles/CTKCoreCppTests.dir/build
-.PHONY : CTKCoreCppTests/fast
-
-#=============================================================================
-# Target rules for targets named CTKDummyPlugin
-
-# Build rule for target.
-CTKDummyPlugin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CTKDummyPlugin
-.PHONY : CTKDummyPlugin
-
-# fast build rule for target.
-CTKDummyPlugin/fast:
-	$(MAKE) -f Libs/Core/Testing/Cpp/CMakeFiles/CTKDummyPlugin.dir/build.make Libs/Core/Testing/Cpp/CMakeFiles/CTKDummyPlugin.dir/build
-.PHONY : CTKDummyPlugin/fast
-
-#=============================================================================
-# Target rules for targets named Snippet-CommandLineParser
-
-# Build rule for target.
-Snippet-CommandLineParser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Snippet-CommandLineParser
-.PHONY : Snippet-CommandLineParser
-
-# fast build rule for target.
-Snippet-CommandLineParser/fast:
-	$(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build
-.PHONY : Snippet-CommandLineParser/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -593,15 +567,16 @@ help:
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... edit_cache"
 	@echo "... NightlyMemCheck"
 	@echo "... NightlyTest"
-	@echo "... test"
 	@echo "... ContinuousConfigure"
 	@echo "... ContinuousBuild"
 	@echo "... NightlyConfigure"
 	@echo "... NightlyMemoryCheck"
 	@echo "... ExperimentalTest"
+	@echo "... CTK"
 	@echo "... ContinuousUpdate"
 	@echo "... NightlyUpdate"
 	@echo "... ExperimentalMemCheck"
@@ -614,6 +589,7 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... install"
 	@echo "... NightlyStart"
+	@echo "... CTKData"
 	@echo "... ExperimentalCoverage"
 	@echo "... NightlyCoverage"
 	@echo "... ExperimentalStart"
@@ -624,10 +600,6 @@ help:
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
-	@echo "... CTKCore"
-	@echo "... CTKCoreCppTests"
-	@echo "... CTKDummyPlugin"
-	@echo "... Snippet-CommandLineParser"
 .PHONY : help
 
 

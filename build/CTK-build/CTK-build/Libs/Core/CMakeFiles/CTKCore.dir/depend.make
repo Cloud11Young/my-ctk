@@ -2247,6 +2247,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmap.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmath.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetacontainer.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetaobject.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetatype.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qnamespace.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qnumeric.h
@@ -2285,8 +2286,18 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qtmetamacros.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qtypeinfo.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qutf8stringview.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QAbstractTransition
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QState
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QStateMachine
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstractstate.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstracttransition.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstate.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachine.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachineglobal.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qtstatemachine-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflow.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: ../../../Libs/Core/ctkCompatibility_p.h
@@ -2297,11 +2308,8 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: ../../../Libs/Core/ctkWo
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: ../../../Libs/Core/ctkWorkflowStep.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: ../../../Libs/Core/ctkWorkflowStep_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: ../../../Libs/Core/ctkWorkflowTransitions.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: ../../../Libs/Core/ctkWorkflow_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QDebug
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QEvent
-Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QList
-Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QMap
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QMetaType
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QPointer
@@ -2346,6 +2354,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/inc
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmap.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmath.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetacontainer.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetaobject.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetatype.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qnamespace.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qnumeric.h
@@ -2383,8 +2392,16 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/inc
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qtmetamacros.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qtypeinfo.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qutf8stringview.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QAbstractTransition
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QState
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstractstate.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstracttransition.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstate.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachineglobal.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qtstatemachine-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkWorkflowStep.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkBooleanMapper.cpp.o: ../../../Libs/Core/ctkBooleanMapper.h
@@ -3659,8 +3676,12 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: ../../../Libs/Core/ctkCo
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: ../../../Libs/Core/ctkCompilerDetections_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: ../../../Libs/Core/ctkPimpl.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: ../../../Libs/Core/ctkWorkflow.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: ../../../Libs/Core/ctkWorkflowStep.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: ../../../Libs/Core/ctkWorkflowTransitions.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: Libs/Core/moc_ctkWorkflow.cpp
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QEvent
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QString
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QtGlobal
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qalgorithms.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qanystringview.h
@@ -3729,6 +3750,10 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/inc
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qutf8stringview.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QAbstractTransition
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstracttransition.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachineglobal.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qtstatemachine-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: ../../../Libs/Core/ctkCompatibility_p.h
@@ -3738,11 +3763,8 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: ../../../Libs/Core
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: ../../../Libs/Core/ctkWorkflowStep.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: ../../../Libs/Core/ctkWorkflowStep_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: ../../../Libs/Core/ctkWorkflowTransitions.h
-Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: ../../../Libs/Core/ctkWorkflow_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: Libs/Core/moc_ctkWorkflowStep_p.cpp
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QEvent
-Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QList
-Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QMap
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QPointer
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QString
@@ -3780,7 +3802,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qiterator.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qlist.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qlogging.h
-Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmap.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmath.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetacontainer.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetatype.h
@@ -3799,7 +3820,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qshareddata.h
-Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qshareddata_impl.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qsharedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qsharedpointer_impl.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstring.h
@@ -3819,6 +3839,10 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qutf8stringview.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QAbstractTransition
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstracttransition.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachineglobal.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qtstatemachine-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowStep_p.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: ../../../Libs/Core/ctkCompatibility_p.h
@@ -3839,6 +3863,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qbasicatomic.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qbytearray.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qbytearrayalgorithms.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qbytearraylist.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qbytearrayview.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qchar.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qcompare.h
@@ -3857,23 +3882,32 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qhashfunctions.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qiodevicebase.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qiterable.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qiterator.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qlist.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qlogging.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmath.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetacontainer.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qmetatype.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qnamespace.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qnumeric.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qobject.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qobject_impl.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qobjectdefs.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qobjectdefs_impl.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpair.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qprocessordetection.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qshareddata.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstring.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringalgorithms.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringbuilder.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringlist.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringliteral.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringmatcher.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringtokenizer.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qstringview.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qsysinfo.h
@@ -3885,12 +3919,17 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qutf8stringview.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QAbstractTransition
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstracttransition.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachineglobal.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qtstatemachine-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflowTransitions.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkCompatibility_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkCompilerDetections_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkPimpl.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkWorkflow.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkWorkflowStep.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkWorkflowTransitions.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: ../../../Libs/Core/ctkWorkflow_p.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: Libs/Core/moc_ctkWorkflow_p.cpp
@@ -3969,5 +4008,9 @@ Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/i
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qutf8stringview.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/QAbstractTransition
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qabstracttransition.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qstatemachineglobal.h
+Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtStateMachine/qtstatemachine-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/moc_ctkWorkflow_p.cpp.o: Libs/Core/ctkCoreExport.h
 

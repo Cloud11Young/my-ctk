@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build
 
 # Utility rule file for CTKData.
 
@@ -64,53 +64,53 @@ CMakeFiles/CTKData-complete: CTKData-cmake/src/CTKData-stamp/CTKData-patch
 CMakeFiles/CTKData-complete: CTKData-cmake/src/CTKData-stamp/CTKData-configure
 CMakeFiles/CTKData-complete: CTKData-cmake/src/CTKData-stamp/CTKData-build
 CMakeFiles/CTKData-complete: CTKData-cmake/src/CTKData-stamp/CTKData-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'CTKData'"
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CMakeFiles
-	/usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CMakeFiles/CTKData-complete
-	/usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'CTKData'"
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CMakeFiles
+	/usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CTKData-complete
+	/usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-done
 
 CTKData-cmake/src/CTKData-stamp/CTKData-install: CTKData-cmake/src/CTKData-stamp/CTKData-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No install step for 'CTKData'"
-	cd /home/yq/work/Practice/CTK/build/CTKData-build && /usr/bin/cmake -E echo_append
-	cd /home/yq/work/Practice/CTK/build/CTKData-build && /usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No install step for 'CTKData'"
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData-build && /usr/bin/cmake -E echo_append
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData-build && /usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-install
 
 CTKData-cmake/src/CTKData-stamp/CTKData-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'CTKData'"
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData-build
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData-cmake
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData-cmake/tmp
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData-cmake/src
-	/usr/bin/cmake -E make_directory /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp
-	/usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Creating directories for 'CTKData'"
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData-build
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/tmp
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src
+	/usr/bin/cmake -E make_directory /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp
+	/usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-mkdir
 
 CTKData-cmake/src/CTKData-stamp/CTKData-download: CTKData-cmake/src/CTKData-stamp/CTKData-gitinfo.txt
 CTKData-cmake/src/CTKData-stamp/CTKData-download: CTKData-cmake/src/CTKData-stamp/CTKData-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'CTKData'"
-	/usr/bin/cmake -P /home/yq/work/Practice/CTK/build/CTKData-cmake/tmp/CTKData-gitclone.cmake
-	/usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'CTKData'"
+	/usr/bin/cmake -P /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/tmp/CTKData-gitclone.cmake
+	/usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-download
 
 CTKData-cmake/src/CTKData-stamp/CTKData-update: CTKData-cmake/src/CTKData-stamp/CTKData-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing update step for 'CTKData'"
-	cd /home/yq/work/Practice/CTK/build/CTKData && /usr/bin/cmake -P /home/yq/work/Practice/CTK/build/CTKData-cmake/tmp/CTKData-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing update step for 'CTKData'"
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData && /usr/bin/cmake -P /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/tmp/CTKData-gitupdate.cmake
 
 CTKData-cmake/src/CTKData-stamp/CTKData-patch: CTKData-cmake/src/CTKData-stamp/CTKData-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'CTKData'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "No patch step for 'CTKData'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-patch
+	/usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-patch
 
 CTKData-cmake/src/CTKData-stamp/CTKData-configure: CTKData-cmake/tmp/CTKData-cfgcmd.txt
 CTKData-cmake/src/CTKData-stamp/CTKData-configure: CTKData-cmake/src/CTKData-stamp/CTKData-update
 CTKData-cmake/src/CTKData-stamp/CTKData-configure: CTKData-cmake/src/CTKData-stamp/CTKData-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No configure step for 'CTKData'"
-	cd /home/yq/work/Practice/CTK/build/CTKData-build && /usr/bin/cmake -E echo_append
-	cd /home/yq/work/Practice/CTK/build/CTKData-build && /usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No configure step for 'CTKData'"
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData-build && /usr/bin/cmake -E echo_append
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData-build && /usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-configure
 
 CTKData-cmake/src/CTKData-stamp/CTKData-build: CTKData-cmake/src/CTKData-stamp/CTKData-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No build step for 'CTKData'"
-	cd /home/yq/work/Practice/CTK/build/CTKData-build && /usr/bin/cmake -E echo_append
-	cd /home/yq/work/Practice/CTK/build/CTKData-build && /usr/bin/cmake -E touch /home/yq/work/Practice/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No build step for 'CTKData'"
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData-build && /usr/bin/cmake -E echo_append
+	cd /home/yq/work/Practice/commontk/CTK/build/CTKData-build && /usr/bin/cmake -E touch /home/yq/work/Practice/commontk/CTK/build/CTKData-cmake/src/CTKData-stamp/CTKData-build
 
 CTKData: CMakeFiles/CTKData
 CTKData: CMakeFiles/CTKData-complete
@@ -135,6 +135,6 @@ CMakeFiles/CTKData.dir/clean:
 .PHONY : CMakeFiles/CTKData.dir/clean
 
 CMakeFiles/CTKData.dir/depend:
-	cd /home/yq/work/Practice/CTK/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yq/work/Practice/CTK /home/yq/work/Practice/CTK /home/yq/work/Practice/CTK/build /home/yq/work/Practice/CTK/build /home/yq/work/Practice/CTK/build/CMakeFiles/CTKData.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yq/work/Practice/commontk/CTK/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yq/work/Practice/commontk/CTK /home/yq/work/Practice/commontk/CTK /home/yq/work/Practice/commontk/CTK/build /home/yq/work/Practice/commontk/CTK/build /home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CTKData.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CTKData.dir/depend
 

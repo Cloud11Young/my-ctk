@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget CTKCore)
+foreach(_expectedTarget CTKCore CTKPluginFramework)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -48,11 +48,25 @@ set_target_properties(CTKCore PROPERTIES
   INTERFACE_LINK_LIBRARIES "Qt6::Core;Qt6::Core5Compat;Qt6::StateMachine;dl"
 )
 
+# Create imported target CTKPluginFramework
+add_library(CTKPluginFramework SHARED IMPORTED)
+
+set_target_properties(CTKPluginFramework PROPERTIES
+  INTERFACE_LINK_LIBRARIES "CTKCore;Qt6::Sql;Qt6::Concurrent"
+)
+
 # Import target "CTKCore" for configuration "Debug"
 set_property(TARGET CTKCore APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(CTKCore PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/yq/work/Practice/CTK/build/CTK-build/bin/libCTKCore.so.0.1.0"
+  IMPORTED_LOCATION_DEBUG "/home/yq/work/Practice/commontk/CTK/build/CTK-build/bin/libCTKCore.so.0.1.0"
   IMPORTED_SONAME_DEBUG "libCTKCore.so.0.1"
+  )
+
+# Import target "CTKPluginFramework" for configuration "Debug"
+set_property(TARGET CTKPluginFramework APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
+set_target_properties(CTKPluginFramework PROPERTIES
+  IMPORTED_LOCATION_DEBUG "/home/yq/work/Practice/commontk/CTK/build/CTK-build/bin/libCTKPluginFramework.so.0.1.0"
+  IMPORTED_SONAME_DEBUG "libCTKPluginFramework.so.0.1"
   )
 
 # This file does not depend on other imported targets which have

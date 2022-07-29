@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK/CMake/Testing
+# Install script for directory: /home/yq/work/Practice/commontk/CTK/CMake/Testing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

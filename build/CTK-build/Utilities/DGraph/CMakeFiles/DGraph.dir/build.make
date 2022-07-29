@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK/Utilities/DGraph
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK/Utilities/DGraph
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph
 
 # Include any dependencies generated for this target.
 include CMakeFiles/DGraph.dir/depend.make
@@ -58,30 +58,30 @@ include CMakeFiles/DGraph.dir/progress.make
 include CMakeFiles/DGraph.dir/flags.make
 
 CMakeFiles/DGraph.dir/DGraph.cpp.o: CMakeFiles/DGraph.dir/flags.make
-CMakeFiles/DGraph.dir/DGraph.cpp.o: /home/yq/work/Practice/CTK/Utilities/DGraph/DGraph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DGraph.dir/DGraph.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DGraph.dir/DGraph.cpp.o -c /home/yq/work/Practice/CTK/Utilities/DGraph/DGraph.cpp
+CMakeFiles/DGraph.dir/DGraph.cpp.o: /home/yq/work/Practice/commontk/CTK/Utilities/DGraph/DGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DGraph.dir/DGraph.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DGraph.dir/DGraph.cpp.o -c /home/yq/work/Practice/commontk/CTK/Utilities/DGraph/DGraph.cpp
 
 CMakeFiles/DGraph.dir/DGraph.cpp.i: cmake_force
 	@echo "Preprocessing CXX source to CMakeFiles/DGraph.dir/DGraph.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yq/work/Practice/CTK/Utilities/DGraph/DGraph.cpp > CMakeFiles/DGraph.dir/DGraph.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yq/work/Practice/commontk/CTK/Utilities/DGraph/DGraph.cpp > CMakeFiles/DGraph.dir/DGraph.cpp.i
 
 CMakeFiles/DGraph.dir/DGraph.cpp.s: cmake_force
 	@echo "Compiling CXX source to assembly CMakeFiles/DGraph.dir/DGraph.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yq/work/Practice/CTK/Utilities/DGraph/DGraph.cpp -o CMakeFiles/DGraph.dir/DGraph.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yq/work/Practice/commontk/CTK/Utilities/DGraph/DGraph.cpp -o CMakeFiles/DGraph.dir/DGraph.cpp.s
 
 CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o: CMakeFiles/DGraph.dir/flags.make
-CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o: /home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o -c /home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp
+CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o: /home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o -c /home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.cpp
 
 CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.i: cmake_force
 	@echo "Preprocessing CXX source to CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp > CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.i
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.cpp > CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.i
 
 CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.s: cmake_force
 	@echo "Compiling CXX source to assembly CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp -o CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.s
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.cpp -o CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.s
 
 # Object files for target DGraph
 DGraph_OBJECTS = \
@@ -95,7 +95,7 @@ DGraph: CMakeFiles/DGraph.dir/DGraph.cpp.o
 DGraph: CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o
 DGraph: CMakeFiles/DGraph.dir/build.make
 DGraph: CMakeFiles/DGraph.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable DGraph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable DGraph"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DGraph.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/DGraph.dir/clean:
 .PHONY : CMakeFiles/DGraph.dir/clean
 
 CMakeFiles/DGraph.dir/depend:
-	cd /home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yq/work/Practice/CTK/Utilities/DGraph /home/yq/work/Practice/CTK/Utilities/DGraph /home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph /home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph /home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles/DGraph.dir/DependInfo.cmake
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yq/work/Practice/commontk/CTK/Utilities/DGraph /home/yq/work/Practice/commontk/CTK/Utilities/DGraph /home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph /home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph /home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles/DGraph.dir/DependInfo.cmake
 .PHONY : CMakeFiles/DGraph.dir/depend
 

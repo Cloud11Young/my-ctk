@@ -34,7 +34,7 @@ macro(ctkMacroSetupQt)
     find_package(Qt6 COMPONENTS Core)
 
     # set(CTK_QT6_COMPONENTS Core Xml XmlPatterns Concurrent Sql Test Multimedia)
-    set(CTK_QT6_COMPONENTS Core Xml Concurrent Sql Test Multimedia Core5Compat StateMachine)
+    set(CTK_QT6_COMPONENTS Core Xml Concurrent Sql Test Multimedia Core5Compat StateMachine Widgets)
 
     if(CTK_ENABLE_Widgets OR CTK_LIB_Widgets OR CTK_LIB_CommandLineModules/Frontend/QtGui OR CTK_BUILD_ALL OR CTK_BUILD_ALL_LIBRARIES)
       list(APPEND CTK_QT6_COMPONENTS Widgets OpenGL UiTools)
@@ -49,7 +49,8 @@ macro(ctkMacroSetupQt)
     endif()
 
     if(CTK_LIB_XNAT/Core OR CTK_BUILD_ALL OR CTK_BUILD_ALL_LIBRARIES)
-      list(APPEND CTK_QT6_COMPONENTS Script)
+      # list(APPEND CTK_QT6_COMPONENTS Script)
+      list(APPEND CTK_QT6_COMPONENTS Qml)
     endif()
 
     find_package(Qt6 COMPONENTS ${CTK_QT6_COMPONENTS} REQUIRED)

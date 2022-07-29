@@ -22,7 +22,7 @@ QtGlobal
 
 ../../Libs/Core/ctkCompilerDetections_p.h
 
-/home/yq/work/Practice/CTK/Libs/Core/Documentation/Snippets/CommandLineParser/main.cpp
+/home/yq/work/Practice/commontk/CTK/Libs/Core/Documentation/Snippets/CommandLineParser/main.cpp
 ctkCommandLineParser.h
 -
 QCoreApplication

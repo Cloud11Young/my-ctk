@@ -29,23 +29,23 @@ limitations under the License.
 
 #include <stdexcept>
 
-const int ctkLDAPExpr::AND     =  0;
-const int ctkLDAPExpr::OR      =  1;
-const int ctkLDAPExpr::NOT     =  2;
-const int ctkLDAPExpr::EQ      =  4;
-const int ctkLDAPExpr::LE      =  8;
-const int ctkLDAPExpr::GE      = 16;
-const int ctkLDAPExpr::APPROX  = 32;
+const int ctkLDAPExpr::AND = 0;
+const int ctkLDAPExpr::OR = 1;
+const int ctkLDAPExpr::NOT = 2;
+const int ctkLDAPExpr::EQ = 4;
+const int ctkLDAPExpr::LE = 8;
+const int ctkLDAPExpr::GE = 16;
+const int ctkLDAPExpr::APPROX = 32;
 const int ctkLDAPExpr::COMPLEX = ctkLDAPExpr::AND | ctkLDAPExpr::OR | ctkLDAPExpr::NOT;
-const int ctkLDAPExpr::SIMPLE  = ctkLDAPExpr::EQ | ctkLDAPExpr::LE | ctkLDAPExpr::GE | ctkLDAPExpr::APPROX;
+const int ctkLDAPExpr::SIMPLE = ctkLDAPExpr::EQ | ctkLDAPExpr::LE | ctkLDAPExpr::GE | ctkLDAPExpr::APPROX;
 
-const QChar ctkLDAPExpr::WILDCARD = 65535;
-const QString ctkLDAPExpr::WILDCARD_QString = QString( WILDCARD );
-const QString ctkLDAPExpr::NULLQ     = "Null query";
-const QString ctkLDAPExpr::GARBAGE   = "Trailing garbage";
-const QString ctkLDAPExpr::EOS       = "Unexpected end of query";
+const QChar ctkLDAPExpr::WILDCARD = QChar(65535);
+const QString ctkLDAPExpr::WILDCARD_QString = QString(WILDCARD);
+const QString ctkLDAPExpr::NULLQ = "Null query";
+const QString ctkLDAPExpr::GARBAGE = "Trailing garbage";
+const QString ctkLDAPExpr::EOS = "Unexpected end of query";
 const QString ctkLDAPExpr::MALFORMED = "Malformed query";
-const QString ctkLDAPExpr::OPERATOR  = "Undefined operator";
+const QString ctkLDAPExpr::OPERATOR = "Undefined operator";
 
 //! Contains the current parser position and parsing utility methods.
 class ctkLDAPExpr::ParseState
@@ -58,10 +58,10 @@ private:
 
 public:
 
-  ParseState(const QString &str);
+  ParseState(const QString& str);
 
   //! Move m_pos to remove the prefix \a pre
-  bool prefix(const QString &pre);
+  bool prefix(const QString& pre);
 
   /** Peek a char at m_pos
   \note If index out of bounds, throw exception
@@ -84,7 +84,7 @@ public:
   QString getAttributeValue();
 
   //! Throw InvalidSyntaxException exception
-  void error(const QString &m) const;
+  void error(const QString& m) const;
 
 };
 
@@ -98,17 +98,17 @@ class ctkLDAPExprData : public QSharedData
 {
 public:
 
-  ctkLDAPExprData( int op, QList<ctkLDAPExpr> args )
+  ctkLDAPExprData(int op, QList<ctkLDAPExpr> args)
     : m_operator(op), m_args(args)
   {
   }
 
-  ctkLDAPExprData( int op, QString attrName, QString attrValue )
+  ctkLDAPExprData(int op, QString attrName, QString attrValue)
     : m_operator(op), m_attrName(attrName), m_attrValue(attrValue)
   {
   }
 
-  ctkLDAPExprData( const ctkLDAPExprData& other )
+  ctkLDAPExprData(const ctkLDAPExprData& other)
     : QSharedData(other), m_operator(other.m_operator),
     m_args(other.m_args), m_attrName(other.m_attrName),
     m_attrValue(other.m_attrValue)
@@ -132,7 +132,7 @@ ctkLDAPExpr::ctkLDAPExpr()
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr::ctkLDAPExpr( const QString &filter )
+ctkLDAPExpr::ctkLDAPExpr(const QString& filter)
 {
   ParseState ps(filter);
 
@@ -145,7 +145,7 @@ ctkLDAPExpr::ctkLDAPExpr( const QString &filter )
   {
     ps.error(EOS);
   }
- 
+
   if (!ps.rest().trimmed().isEmpty())
   {
     ps.error(GARBAGE + " '" + ps.rest() + "'");
@@ -155,19 +155,19 @@ ctkLDAPExpr::ctkLDAPExpr( const QString &filter )
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr::ctkLDAPExpr( int op, const QList<ctkLDAPExpr> &args )
+ctkLDAPExpr::ctkLDAPExpr(int op, const QList<ctkLDAPExpr>& args)
   : d(new ctkLDAPExprData(op, args))
 {
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr::ctkLDAPExpr( int op, const QString &attrName, const QString &attrValue )
+ctkLDAPExpr::ctkLDAPExpr(int op, const QString& attrName, const QString& attrValue)
   : d(new ctkLDAPExprData(op, attrName, attrValue))
 {
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr::ctkLDAPExpr( const ctkLDAPExpr& other )
+ctkLDAPExpr::ctkLDAPExpr(const ctkLDAPExpr& other)
   : d(other.d)
 {
 }
@@ -190,20 +190,20 @@ bool ctkLDAPExpr::getMatchedObjectClasses(QSet<QString>& objClasses) const
   if (d->m_operator == EQ)
   {
     if (d->m_attrName.compare(ctkPluginConstants::OBJECTCLASS, Qt::CaseInsensitive) == 0 &&
-      d->m_attrValue.indexOf(WILDCARD) < 0) 
+      d->m_attrValue.indexOf(WILDCARD) < 0)
     {
-      objClasses.insert( d->m_attrValue );
+      objClasses.insert(d->m_attrValue);
       return true;
     }
     return false;
   }
-  else if (d->m_operator == AND) 
+  else if (d->m_operator == AND)
   {
     bool result = false;
-    for (int i = 0; i < d->m_args.size( ); i++)
+    for (int i = 0; i < d->m_args.size(); i++)
     {
       QSet<QString> r;
-      if(d->m_args[i].getMatchedObjectClasses(r))
+      if (d->m_args[i].getMatchedObjectClasses(r))
       {
         result = true;
         if (objClasses.empty())
@@ -222,7 +222,7 @@ bool ctkLDAPExpr::getMatchedObjectClasses(QSet<QString>& objClasses) const
   }
   else if (d->m_operator == OR)
   {
-    for (int i = 0; i < d->m_args.length( ); i++)
+    for (int i = 0; i < d->m_args.length(); i++)
     {
       QSet<QString> r;
       if (d->m_args[i].getMatchedObjectClasses(r))
@@ -241,25 +241,30 @@ bool ctkLDAPExpr::getMatchedObjectClasses(QSet<QString>& objClasses) const
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::isSimple( 
+bool ctkLDAPExpr::isSimple(
   const QStringList& keywords,
   LocalCache& cache,
-  bool matchCase ) const
+  bool matchCase) const
 {
   if (cache.isEmpty())
   {
     cache.resize(keywords.size());
   }
 
-  if (d->m_operator == EQ) {
+  if (d->m_operator == EQ)
+  {
     int index;
     if ((index = keywords.indexOf(matchCase ? d->m_attrName : d->m_attrName.toLower())) >= 0 &&
-      d->m_attrValue.indexOf(WILDCARD) < 0) {
-        cache[index] = QStringList(d->m_attrValue);
-        return true;
+      d->m_attrValue.indexOf(WILDCARD) < 0)
+    {
+      cache[index] = QStringList(d->m_attrValue);
+      return true;
     }
-  } else if (d->m_operator == OR) {
-    for (int i = 0; i < d->m_args.size( ); i++) {
+  }
+  else if (d->m_operator == OR)
+  {
+    for (int i = 0; i < d->m_args.size(); i++)
+    {
       if (!d->m_args[i].isSimple(keywords, cache, matchCase))
         return false;
     }
@@ -275,29 +280,35 @@ bool ctkLDAPExpr::isNull() const
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::query( const QString &filter, const ctkDictionary &pd )
+bool ctkLDAPExpr::query(const QString& filter, const ctkDictionary& pd)
 {
   return ctkLDAPExpr(filter).evaluate(pd, false);
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::evaluate( const ctkServiceProperties &p, bool matchCase ) const
+bool ctkLDAPExpr::evaluate(const ctkServiceProperties& p, bool matchCase) const
 {
-  if ((d->m_operator & SIMPLE) != 0) {
+  if ((d->m_operator & SIMPLE) != 0)
+  {
     // try case sensitive match first
     int index = p.findCaseSensitive(d->m_attrName);
     if (index < 0 && !matchCase) index = p.find(d->m_attrName);
     return index < 0 ? false : compare(p.value(index), d->m_operator, d->m_attrValue);
-  } else { // (d->m_operator & COMPLEX) != 0
-    switch (d->m_operator) {
+  }
+  else
+  { // (d->m_operator & COMPLEX) != 0
+    switch (d->m_operator)
+    {
     case AND:
-      for (int i = 0; i < d->m_args.length( ); i++) {
+      for (int i = 0; i < d->m_args.length(); i++)
+      {
         if (!d->m_args[i].evaluate(p, matchCase))
           return false;
       }
       return true;
     case OR:
-      for (int i = 0; i < d->m_args.length( ); i++) {
+      for (int i = 0; i < d->m_args.length(); i++)
+      {
         if (d->m_args[i].evaluate(p, matchCase))
           return true;
       }
@@ -311,38 +322,51 @@ bool ctkLDAPExpr::evaluate( const ctkServiceProperties &p, bool matchCase ) cons
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::compare( const QVariant &obj, int op, const QString &s ) const
+bool ctkLDAPExpr::compare(const QVariant& obj, int op, const QString& s) const
 {
   if (obj.isNull())
     return false;
-  if (op == EQ && s == WILDCARD_QString )
+  if (op == EQ && s == WILDCARD_QString)
     return true;
-  try {
-    if ( obj.canConvert<QString>( ) ) {
+  try
+  {
+    if (obj.canConvert<QString>())
+    {
       return compareString(obj.toString(), op, s);
-    } else if (obj.canConvert<char>( ) ) {
+    }
+    else if (obj.canConvert<char>())
+    {
       return compareString(obj.toString(), op, s);
-    } else if (obj.canConvert<bool>( ) ) {
-      if (op==LE || op==GE)
+    }
+    else if (obj.canConvert<bool>())
+    {
+      if (op == LE || op == GE)
         return false;
-      if ( obj.toBool() ) {
+      if (obj.toBool())
+      {
         return s.compare("true", Qt::CaseInsensitive);
-      } else {
+      }
+      else
+      {
         return s.compare("false", Qt::CaseInsensitive);
       }
-    } 
-    else if ( obj.canConvert<Byte>( ) || obj.canConvert<int>( ) ) 
+    }
+    else if (obj.canConvert<Byte>() || obj.canConvert<int>())
     {
-      switch(op) {
+      switch (op)
+      {
       case LE:
         return obj.toInt() <= s.toInt();
       case GE:
         return obj.toInt() >= s.toInt();
       default: /*APPROX and EQ*/
-        return s.toInt( ) == obj.toInt();
+        return s.toInt() == obj.toInt();
       }
-    } else if ( obj.canConvert<float>( ) ) {
-      switch(op) {
+    }
+    else if (obj.canConvert<float>())
+    {
+      switch (op)
+      {
       case LE:
         return obj.toFloat() <= s.toFloat();
       case GE:
@@ -350,33 +374,42 @@ bool ctkLDAPExpr::compare( const QVariant &obj, int op, const QString &s ) const
       default: /*APPROX and EQ*/
         return s.toFloat() == obj.toFloat();
       }
-    } else if (obj.canConvert<double>()) {
-      switch(op) {
+    }
+    else if (obj.canConvert<double>())
+    {
+      switch (op)
+      {
       case LE:
         return obj.toDouble() <= s.toDouble();
       case GE:
         return obj.toDouble() >= s.toDouble();
       default: /*APPROX and EQ*/
-        return s.toDouble( ) == obj.toDouble( );
+        return s.toDouble() == obj.toDouble();
       }
-    } else if (obj.canConvert<qlonglong>( )) {
-      switch(op) {
+    }
+    else if (obj.canConvert<qlonglong>())
+    {
+      switch (op)
+      {
       case LE:
-        return obj.toLongLong() <= s.toLongLong( );
+        return obj.toLongLong() <= s.toLongLong();
       case GE:
-        return obj.toLongLong() >= s.toLongLong( );
+        return obj.toLongLong() >= s.toLongLong();
       default: /*APPROX and EQ*/
-        return obj.toLongLong() == s.toLongLong( );
+        return obj.toLongLong() == s.toLongLong();
       }
-    } 
-    else if (obj.canConvert< QList<QVariant> >()) {
+    }
+    else if (obj.canConvert< QList<QVariant> >())
+    {
       QList<QVariant> list = obj.toList();
       QList<QVariant>::Iterator it;
-      for (it=list.begin(); it != list.end( ); it++)
-         if (compare(*it, op, s))
-           return true;
-    } 
-  } catch (...) {
+      for (it = list.begin(); it != list.end(); it++)
+        if (compare(*it, op, s))
+          return true;
+    }
+  }
+  catch (...)
+  {
     // This might happen if a QString-to-datatype conversion fails
     // Just consider it a false match and ignore the exception
   }
@@ -384,15 +417,16 @@ bool ctkLDAPExpr::compare( const QVariant &obj, int op, const QString &s ) const
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::compareString( const QString &s1, int op, const QString &s2 )
+bool ctkLDAPExpr::compareString(const QString& s1, int op, const QString& s2)
 {
-  switch(op) {
+  switch (op)
+  {
   case LE:
     return s1.compare(s2) <= 0;
   case GE:
     return s1.compare(s2) >= 0;
   case EQ:
-    return patSubstr(s1,s2);
+    return patSubstr(s1, s2);
   case APPROX:
     return fixupString(s2) == fixupString(s1);
   default:
@@ -401,13 +435,15 @@ bool ctkLDAPExpr::compareString( const QString &s1, int op, const QString &s2 )
 }
 
 //----------------------------------------------------------------------------
-QString ctkLDAPExpr::fixupString( const QString &s )
+QString ctkLDAPExpr::fixupString(const QString& s)
 {
   QString sb;
   int len = s.length();
-  for(int i=0; i<len; i++) {
+  for (int i = 0; i < len; i++)
+  {
     QChar c = s.at(i);
-    if (!c.isSpace()) {
+    if (!c.isSpace())
+    {
       if (c.isUpper())
         c = c.toLower();
       sb.append(c);
@@ -417,38 +453,44 @@ QString ctkLDAPExpr::fixupString( const QString &s )
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::patSubstr( const QString &s, int si, const QString &pat, int pi )
+bool ctkLDAPExpr::patSubstr(const QString& s, int si, const QString& pat, int pi)
 {
-  if (pat.size( )-pi == 0)
-    return s.size( )-si == 0;
-  if (QChar( pat[pi] ) == WILDCARD ) {
+  if (pat.size() - pi == 0)
+    return s.size() - si == 0;
+  if (QChar(pat[pi]) == WILDCARD)
+  {
     pi++;
-    for (;;) {
-      if (patSubstr( s, si, pat, pi))
+    for (;;)
+    {
+      if (patSubstr(s, si, pat, pi))
         return true;
-      if (s.size( )-si == 0)
+      if (s.size() - si == 0)
         return false;
       si++;
     }
-  } else {
-    if (s.size( )-si==0){
+  }
+  else
+  {
+    if (s.size() - si == 0)
+    {
       return false;
     }
-    if(s[si]!=pat[pi]){
+    if (s[si] != pat[pi])
+    {
       return false;
     }
-    return patSubstr( s, ++si, pat, ++pi);
+    return patSubstr(s, ++si, pat, ++pi);
   }
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::patSubstr( const QString &s, const QString &pat )
+bool ctkLDAPExpr::patSubstr(const QString& s, const QString& pat)
 {
-  return s.isNull() ? false : patSubstr(s,0,pat,0);
+  return s.isNull() ? false : patSubstr(s, 0, pat, 0);
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr ctkLDAPExpr::parseExpr( ParseState &ps )
+ctkLDAPExpr ctkLDAPExpr::parseExpr(ParseState& ps)
 {
   ps.skipWhite();
   if (!ps.prefix("("))
@@ -457,18 +499,26 @@ ctkLDAPExpr ctkLDAPExpr::parseExpr( ParseState &ps )
   int op;
   ps.skipWhite();
   QChar c = ps.peek();
-  if ( c == '&') {
+  if (c == '&')
+  {
     op = AND;
-  }else if ( c == '|' ){
-    op = OR; 
-  } else if ( c == '!' ) {
+  }
+  else if (c == '|')
+  {
+    op = OR;
+  }
+  else if (c == '!')
+  {
     op = NOT;
-  } else {
+  }
+  else
+  {
     return parseSimple(ps);
   }
   ps.skip(1); // Ignore the d->m_operator
   QList<ctkLDAPExpr> v;
-  do {
+  do
+  {
     v.append(parseExpr(ps));
     ps.skipWhite();
   } while (ps.peek() == '(');
@@ -480,7 +530,7 @@ ctkLDAPExpr ctkLDAPExpr::parseExpr( ParseState &ps )
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr ctkLDAPExpr::parseSimple( ParseState &ps )
+ctkLDAPExpr ctkLDAPExpr::parseSimple(ParseState& ps)
 {
   QString attrName = ps.getAttributeName();
   if (attrName.isNull())
@@ -490,11 +540,12 @@ ctkLDAPExpr ctkLDAPExpr::parseSimple( ParseState &ps )
     op = EQ;
   else if (ps.prefix("<="))
     op = LE;
-  else if(ps.prefix(">="))
+  else if (ps.prefix(">="))
     op = GE;
-  else if(ps.prefix("~="))
+  else if (ps.prefix("~="))
     op = APPROX;
-  else {
+  else
+  {
     //      System.out.println("undef op='" + ps.peek() + "'");
     ps.error(OPERATOR); // Does not return
   }
@@ -509,9 +560,11 @@ const QString ctkLDAPExpr::toString() const
 {
   QString res;
   res.append("(");
-  if ((d->m_operator & SIMPLE) != 0) {
+  if ((d->m_operator & SIMPLE) != 0)
+  {
     res.append(d->m_attrName);
-    switch (d->m_operator) {
+    switch (d->m_operator)
+    {
     case EQ:
       res.append("=");
       break;
@@ -525,17 +578,24 @@ const QString ctkLDAPExpr::toString() const
       res.append("~=");
       break;
     }
-    for (int i = 0; i < d->m_attrValue.length(); i++) {
+    for (int i = 0; i < d->m_attrValue.length(); i++)
+    {
       QChar c = d->m_attrValue.at(i);
-      if (c ==  '(' || c == ')' || c == '*' || c == '\\') {
+      if (c == '(' || c == ')' || c == '*' || c == '\\')
+      {
         res.append('\\');
-      } else if (c == WILDCARD) {
+      }
+      else if (c == WILDCARD)
+      {
         c = '*';
       }
       res.append(c);
     }
-  } else {
-    switch (d->m_operator) {
+  }
+  else
+  {
+    switch (d->m_operator)
+    {
     case AND:
       res.append("&");
       break;
@@ -546,7 +606,8 @@ const QString ctkLDAPExpr::toString() const
       res.append("!");
       break;
     }
-    for (int i = 0; i < d->m_args.length( ); i++) {
+    for (int i = 0; i < d->m_args.length(); i++)
+    {
       res.append(d->m_args[i].toString());
     }
   }
@@ -555,7 +616,7 @@ const QString ctkLDAPExpr::toString() const
 }
 
 //----------------------------------------------------------------------------
-ctkLDAPExpr::ParseState::ParseState( const QString &str )
+ctkLDAPExpr::ParseState::ParseState(const QString& str)
 {
   if (str.isEmpty())
   {
@@ -567,7 +628,7 @@ ctkLDAPExpr::ParseState::ParseState( const QString &str )
 }
 
 //----------------------------------------------------------------------------
-bool ctkLDAPExpr::ParseState::prefix( const QString &pre )
+bool ctkLDAPExpr::ParseState::prefix(const QString& pre)
 {
   if (!m_str.mid(m_pos).startsWith(pre))
     return false;
@@ -578,15 +639,15 @@ bool ctkLDAPExpr::ParseState::prefix( const QString &pre )
 //----------------------------------------------------------------------------
 QChar ctkLDAPExpr::ParseState::peek()
 {
-  if ( m_pos >= m_str.size() )
+  if (m_pos >= m_str.size())
   {
-    throw std::out_of_range( "LDAPExpr" );
+    throw std::out_of_range("LDAPExpr");
   }
   return m_str.at(m_pos);
 }
 
 //----------------------------------------------------------------------------
-void ctkLDAPExpr::ParseState::skip( int n )
+void ctkLDAPExpr::ParseState::skip(int n)
 {
   m_pos += n;
 }
@@ -599,7 +660,8 @@ QString ctkLDAPExpr::ParseState::rest() const
 //----------------------------------------------------------------------------
 void ctkLDAPExpr::ParseState::skipWhite()
 {
-  while ( peek( ).isSpace( ) ) {
+  while (peek().isSpace())
+  {
     m_pos++;
   }
 }
@@ -609,17 +671,22 @@ QString ctkLDAPExpr::ParseState::getAttributeName()
 {
   int start = m_pos;
   int n = -1;
-  for(;; m_pos++) {
-    QChar c = peek( );
+  for (;; m_pos++)
+  {
+    QChar c = peek();
     if (c == '(' || c == ')' ||
       c == '<' || c == '>' ||
-      c == '=' || c == '~') {
-        break;
-    } else if ( !c.isSpace( ) ) {
+      c == '=' || c == '~')
+    {
+      break;
+    }
+    else if (!c.isSpace())
+    {
       n = m_pos - start + 1;
     }
   }
-  if (n == -1) {
+  if (n == -1)
+  {
     return QString();
   }
   return m_str.mid(start, n);
@@ -630,12 +697,14 @@ QString ctkLDAPExpr::ParseState::getAttributeValue()
 {
   QString sb;
   bool exit = false;
-  while( !exit ) {
-    QChar c = peek( );
-    switch(c.toLatin1()) {
+  while (!exit)
+  {
+    QChar c = peek();
+    switch (c.toLatin1())
+    {
     case '(':
     case ')':
-    exit = true;
+      exit = true;
       break;
     case '*':
       sb.append(WILDCARD);
@@ -647,7 +716,7 @@ QString ctkLDAPExpr::ParseState::getAttributeValue()
       sb.append(c);
       break;
     }
-    if ( !exit )
+    if (!exit)
     {
       m_pos++;
     }
@@ -656,8 +725,8 @@ QString ctkLDAPExpr::ParseState::getAttributeValue()
 }
 
 //----------------------------------------------------------------------------
-void ctkLDAPExpr::ParseState::error( const QString &m ) const
+void ctkLDAPExpr::ParseState::error(const QString& m) const
 {
-  QString error = m + ": " + (m_str.isNull() ? "" : m_str.mid(m_pos) );
+  QString error = m + ": " + (m_str.isNull() ? "" : m_str.mid(m_pos));
   throw ctkInvalidArgumentException(error);
 }

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build/CTK-build
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build/CTK-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -103,8 +103,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles /home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -557,6 +557,292 @@ Snippet-CommandLineParser/fast:
 	$(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build
 .PHONY : Snippet-CommandLineParser/fast
 
+#=============================================================================
+# Target rules for targets named CTKPluginFramework
+
+# Build rule for target.
+CTKPluginFramework: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKPluginFramework
+.PHONY : CTKPluginFramework
+
+# fast build rule for target.
+CTKPluginFramework/fast:
+	$(MAKE) -f Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/build.make Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/build
+.PHONY : CTKPluginFramework/fast
+
+#=============================================================================
+# Target rules for targets named CTKPluginFrameworkTestUtil
+
+# Build rule for target.
+CTKPluginFrameworkTestUtil: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKPluginFrameworkTestUtil
+.PHONY : CTKPluginFrameworkTestUtil
+
+# fast build rule for target.
+CTKPluginFrameworkTestUtil/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/Cpp/CMakeFiles/CTKPluginFrameworkTestUtil.dir/build.make Libs/PluginFramework/Testing/Cpp/CMakeFiles/CTKPluginFrameworkTestUtil.dir/build
+.PHONY : CTKPluginFrameworkTestUtil/fast
+
+#=============================================================================
+# Target rules for targets named CTKPluginFrameworkCppTests
+
+# Build rule for target.
+CTKPluginFrameworkCppTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKPluginFrameworkCppTests
+.PHONY : CTKPluginFrameworkCppTests
+
+# fast build rule for target.
+CTKPluginFrameworkCppTests/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.pluginfwtest/CMakeFiles/CTKPluginFrameworkCppTests.dir/build.make Libs/PluginFramework/Testing/org.commontk.pluginfwtest/CMakeFiles/CTKPluginFrameworkCppTests.dir/build
+.PHONY : CTKPluginFrameworkCppTests/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_pluginfwtest
+
+# Build rule for target.
+org_commontk_pluginfwtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_pluginfwtest
+.PHONY : org_commontk_pluginfwtest
+
+# fast build rule for target.
+org_commontk_pluginfwtest/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.pluginfwtest/CMakeFiles/org_commontk_pluginfwtest.dir/build.make Libs/PluginFramework/Testing/org.commontk.pluginfwtest/CMakeFiles/org_commontk_pluginfwtest.dir/build
+.PHONY : org_commontk_pluginfwtest/fast
+
+#=============================================================================
+# Target rules for targets named CTKPluginFrameworkAppTests
+
+# Build rule for target.
+CTKPluginFrameworkAppTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKPluginFrameworkAppTests
+.PHONY : CTKPluginFrameworkAppTests
+
+# fast build rule for target.
+CTKPluginFrameworkAppTests/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/app_test/CMakeFiles/CTKPluginFrameworkAppTests.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/app_test/CMakeFiles/CTKPluginFrameworkAppTests.dir/build
+.PHONY : CTKPluginFrameworkAppTests/fast
+
+#=============================================================================
+# Target rules for targets named app_test
+
+# Build rule for target.
+app_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 app_test
+.PHONY : app_test
+
+# fast build rule for target.
+app_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/app_test/CMakeFiles/app_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/app_test/CMakeFiles/app_test.dir/build
+.PHONY : app_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginA_test
+
+# Build rule for target.
+pluginA_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginA_test
+.PHONY : pluginA_test
+
+# fast build rule for target.
+pluginA_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginA_test/CMakeFiles/pluginA_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginA_test/CMakeFiles/pluginA_test.dir/build
+.PHONY : pluginA_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginA1_test
+
+# Build rule for target.
+pluginA1_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginA1_test
+.PHONY : pluginA1_test
+
+# fast build rule for target.
+pluginA1_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginA1_test/CMakeFiles/pluginA1_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginA1_test/CMakeFiles/pluginA1_test.dir/build
+.PHONY : pluginA1_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginS_test
+
+# Build rule for target.
+pluginS_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginS_test
+.PHONY : pluginS_test
+
+# fast build rule for target.
+pluginS_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginS_test/CMakeFiles/pluginS_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginS_test/CMakeFiles/pluginS_test.dir/build
+.PHONY : pluginS_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginA2_test
+
+# Build rule for target.
+pluginA2_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginA2_test
+.PHONY : pluginA2_test
+
+# fast build rule for target.
+pluginA2_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginA2_test/CMakeFiles/pluginA2_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginA2_test/CMakeFiles/pluginA2_test.dir/build
+.PHONY : pluginA2_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginD_test
+
+# Build rule for target.
+pluginD_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginD_test
+.PHONY : pluginD_test
+
+# fast build rule for target.
+pluginD_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginD_test/CMakeFiles/pluginD_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginD_test/CMakeFiles/pluginD_test.dir/build
+.PHONY : pluginD_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginSL1_test
+
+# Build rule for target.
+pluginSL1_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginSL1_test
+.PHONY : pluginSL1_test
+
+# fast build rule for target.
+pluginSL1_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginSL1_test/CMakeFiles/pluginSL1_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginSL1_test/CMakeFiles/pluginSL1_test.dir/build
+.PHONY : pluginSL1_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginSL3_test
+
+# Build rule for target.
+pluginSL3_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginSL3_test
+.PHONY : pluginSL3_test
+
+# fast build rule for target.
+pluginSL3_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginSL3_test/CMakeFiles/pluginSL3_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginSL3_test/CMakeFiles/pluginSL3_test.dir/build
+.PHONY : pluginSL3_test/fast
+
+#=============================================================================
+# Target rules for targets named pluginSL4_test
+
+# Build rule for target.
+pluginSL4_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginSL4_test
+.PHONY : pluginSL4_test
+
+# fast build rule for target.
+pluginSL4_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginSL4_test/CMakeFiles/pluginSL4_test.dir/build.make Libs/PluginFramework/Testing/FrameworkTestPlugins/pluginSL4_test/CMakeFiles/pluginSL4_test.dir/build
+.PHONY : pluginSL4_test/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_pluginfwtest_perfCppTests
+
+# Build rule for target.
+org_commontk_pluginfwtest_perfCppTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_pluginfwtest_perfCppTests
+.PHONY : org_commontk_pluginfwtest_perfCppTests
+
+# fast build rule for target.
+org_commontk_pluginfwtest_perfCppTests/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.pluginfwtest.perf/CMakeFiles/org_commontk_pluginfwtest_perfCppTests.dir/build.make Libs/PluginFramework/Testing/org.commontk.pluginfwtest.perf/CMakeFiles/org_commontk_pluginfwtest_perfCppTests.dir/build
+.PHONY : org_commontk_pluginfwtest_perfCppTests/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_pluginfwtest_perf
+
+# Build rule for target.
+org_commontk_pluginfwtest_perf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_pluginfwtest_perf
+.PHONY : org_commontk_pluginfwtest_perf
+
+# fast build rule for target.
+org_commontk_pluginfwtest_perf/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.pluginfwtest.perf/CMakeFiles/org_commontk_pluginfwtest_perf.dir/build.make Libs/PluginFramework/Testing/org.commontk.pluginfwtest.perf/CMakeFiles/org_commontk_pluginfwtest_perf.dir/build
+.PHONY : org_commontk_pluginfwtest_perf/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_eventadmintest_perf
+
+# Build rule for target.
+org_commontk_eventadmintest_perf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_eventadmintest_perf
+.PHONY : org_commontk_eventadmintest_perf
+
+# fast build rule for target.
+org_commontk_eventadmintest_perf/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.eventadmintest.perf/CMakeFiles/org_commontk_eventadmintest_perf.dir/build.make Libs/PluginFramework/Testing/org.commontk.eventadmintest.perf/CMakeFiles/org_commontk_eventadmintest_perf.dir/build
+.PHONY : org_commontk_eventadmintest_perf/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_configadmintest
+
+# Build rule for target.
+org_commontk_configadmintest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_configadmintest
+.PHONY : org_commontk_configadmintest
+
+# fast build rule for target.
+org_commontk_configadmintest/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.configadmintest/CMakeFiles/org_commontk_configadmintest.dir/build.make Libs/PluginFramework/Testing/org.commontk.configadmintest/CMakeFiles/org_commontk_configadmintest.dir/build
+.PHONY : org_commontk_configadmintest/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_eventadmintest
+
+# Build rule for target.
+org_commontk_eventadmintest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_eventadmintest
+.PHONY : org_commontk_eventadmintest
+
+# fast build rule for target.
+org_commontk_eventadmintest/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.eventadmintest/CMakeFiles/org_commontk_eventadmintest.dir/build.make Libs/PluginFramework/Testing/org.commontk.eventadmintest/CMakeFiles/org_commontk_eventadmintest.dir/build
+.PHONY : org_commontk_eventadmintest/fast
+
+#=============================================================================
+# Target rules for targets named org_commontk_metatypetest
+
+# Build rule for target.
+org_commontk_metatypetest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 org_commontk_metatypetest
+.PHONY : org_commontk_metatypetest
+
+# fast build rule for target.
+org_commontk_metatypetest/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/org.commontk.metatypetest/CMakeFiles/org_commontk_metatypetest.dir/build.make Libs/PluginFramework/Testing/org.commontk.metatypetest/CMakeFiles/org_commontk_metatypetest.dir/build
+.PHONY : org_commontk_metatypetest/fast
+
+#=============================================================================
+# Target rules for targets named pluginAttrPwd_test
+
+# Build rule for target.
+pluginAttrPwd_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pluginAttrPwd_test
+.PHONY : pluginAttrPwd_test
+
+# fast build rule for target.
+pluginAttrPwd_test/fast:
+	$(MAKE) -f Libs/PluginFramework/Testing/MetaTypeTestPlugins/pluginAttrPwd_test/CMakeFiles/pluginAttrPwd_test.dir/build.make Libs/PluginFramework/Testing/MetaTypeTestPlugins/pluginAttrPwd_test/CMakeFiles/pluginAttrPwd_test.dir/build
+.PHONY : pluginAttrPwd_test/fast
+
+#=============================================================================
+# Target rules for targets named Snippet-EventAdmin-Intro
+
+# Build rule for target.
+Snippet-EventAdmin-Intro: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Snippet-EventAdmin-Intro
+.PHONY : Snippet-EventAdmin-Intro
+
+# fast build rule for target.
+Snippet-EventAdmin-Intro/fast:
+	$(MAKE) -f Libs/PluginFramework/Documentation/Snippets/CMakeFiles/Snippet-EventAdmin-Intro.dir/build.make Libs/PluginFramework/Documentation/Snippets/CMakeFiles/Snippet-EventAdmin-Intro.dir/build
+.PHONY : Snippet-EventAdmin-Intro/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -600,6 +886,28 @@ help:
 	@echo "... ContinuousSubmit"
 	@echo "... CTKCore"
 	@echo "... Snippet-CommandLineParser"
+	@echo "... CTKPluginFramework"
+	@echo "... CTKPluginFrameworkTestUtil"
+	@echo "... CTKPluginFrameworkCppTests"
+	@echo "... org_commontk_pluginfwtest"
+	@echo "... CTKPluginFrameworkAppTests"
+	@echo "... app_test"
+	@echo "... pluginA_test"
+	@echo "... pluginA1_test"
+	@echo "... pluginS_test"
+	@echo "... pluginA2_test"
+	@echo "... pluginD_test"
+	@echo "... pluginSL1_test"
+	@echo "... pluginSL3_test"
+	@echo "... pluginSL4_test"
+	@echo "... org_commontk_pluginfwtest_perfCppTests"
+	@echo "... org_commontk_pluginfwtest_perf"
+	@echo "... org_commontk_eventadmintest_perf"
+	@echo "... org_commontk_configadmintest"
+	@echo "... org_commontk_eventadmintest"
+	@echo "... org_commontk_metatypetest"
+	@echo "... pluginAttrPwd_test"
+	@echo "... Snippet-EventAdmin-Intro"
 .PHONY : help
 
 

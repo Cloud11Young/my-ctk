@@ -83,13 +83,13 @@ void ctkPluginPrivate::LockObject::wakeOne()
 
 //----------------------------------------------------------------------------
 ctkPluginPrivate::ctkPluginPrivate(
-    QWeakPointer<ctkPlugin> qq,
-    ctkPluginFrameworkContext* fw,
-    QSharedPointer<ctkPluginArchive> pa)
-      : q_ptr(qq), fwCtx(fw), id(pa->getPluginId()),
-      location(pa->getPluginLocation().toString()), state(ctkPlugin::INSTALLED),
-      archive(pa), pluginContext(0), pluginActivator(0), pluginLoader(pa->getLibLocation()),
-      resolveFailException(0), eagerActivation(false), wasStarted(false)
+  QWeakPointer<ctkPlugin> qq,
+  ctkPluginFrameworkContext* fw,
+  QSharedPointer<ctkPluginArchive> pa)
+  : q_ptr(qq), fwCtx(fw), id(pa->getPluginId()),
+  location(pa->getPluginLocation().toString()), state(ctkPlugin::INSTALLED),
+  archive(pa), pluginContext(0), pluginActivator(0), pluginLoader(pa->getLibLocation()),
+  resolveFailException(0), eagerActivation(false), wasStarted(false)
 {
   //TODO
   //checkCertificates(pa);
@@ -108,13 +108,13 @@ ctkPluginPrivate::ctkPluginPrivate(
   checkManifestHeaders();
 
   pluginDir = fwCtx->getDataStorage(id);
-//  int oldStartLevel = archive->getStartLevel();
+  //  int oldStartLevel = archive->getStartLevel();
   try
   {
     //TODO: StartLevel Service
     //if (fwCtx->startLevelController == 0)
     //{
-      archive->setStartLevel(0);
+    archive->setStartLevel(0);
     //}
 //    else
 //    {
@@ -138,7 +138,7 @@ ctkPluginPrivate::ctkPluginPrivate(
   // fill require list
   QString requireString = archive->getAttribute(ctkPluginConstants::REQUIRE_PLUGIN);
   QList<QMap<QString, QStringList> > requireList = ctkPluginFrameworkUtil::parseEntries(ctkPluginConstants::REQUIRE_PLUGIN,
-                                                                                        requireString, true, true, false);
+    requireString, true, true, false);
   QListIterator<QMap<QString, QStringList> > i(requireList);
   while (i.hasNext())
   {
@@ -146,20 +146,20 @@ ctkPluginPrivate::ctkPluginPrivate(
     const QStringList& res = e.value(ctkPluginConstants::RESOLUTION_DIRECTIVE);
     const QStringList& version = e.value(ctkPluginConstants::PLUGIN_VERSION_ATTRIBUTE);
     ctkRequirePlugin* rp = new ctkRequirePlugin(this, e.value("$key").front(),
-                                                res.empty() ? QString() : res.front(),
-                                                version.empty() ? QString() : version.front());
+      res.empty() ? QString() : res.front(),
+      version.empty() ? QString() : version.front());
     require.push_back(rp);
   }
 }
 
 //----------------------------------------------------------------------------
 ctkPluginPrivate::ctkPluginPrivate(QWeakPointer<ctkPlugin> qq,
-                                   ctkPluginFrameworkContext* fw,
-                                   long id, const QString& loc, const QString& sym, const ctkVersion& ver)
-                                     : q_ptr(qq), fwCtx(fw), id(id), location(loc), symbolicName(sym), version(ver),
-                                       state(ctkPlugin::INSTALLED), archive(0), pluginContext(0),
-                                       pluginActivator(0), resolveFailException(0),
-                                       eagerActivation(false), wasStarted(false)
+  ctkPluginFrameworkContext* fw,
+  long id, const QString& loc, const QString& sym, const ctkVersion& ver)
+  : q_ptr(qq), fwCtx(fw), id(id), location(loc), symbolicName(sym), version(ver),
+  state(ctkPlugin::INSTALLED), archive(0), pluginContext(0),
+  pluginActivator(0), resolveFailException(0),
+  eagerActivation(false), wasStarted(false)
 {
   modified();
 }
@@ -244,13 +244,13 @@ void ctkPluginPrivate::purge()
   {
     fwCtx->plugins->remove(location);
   }
-//  Vector fix = oldGenerations;
-//  if (fix != null) {
-//    oldGenerations = null;
-//    for (Iterator i = fix.iterator(); i.hasNext();) {
-//      ((BundleGeneration)i.next()).purge(true);
-//    }
-//  }
+  //  Vector fix = oldGenerations;
+  //  if (fix != null) {
+  //    oldGenerations = null;
+  //    for (Iterator i = fix.iterator(); i.hasNext();) {
+  //      ((BundleGeneration)i.next()).purge(true);
+  //    }
+  //  }
 }
 
 //----------------------------------------------------------------------------
@@ -302,7 +302,7 @@ void ctkPluginPrivate::checkManifestHeaders()
   if (symbolicName.isEmpty())
   {
     throw ctkInvalidArgumentException(QString("ctkPlugin has no symbolic name, location=") +
-                                      location);
+      location);
   }
 
   QString mpv = archive->getAttribute(ctkPluginConstants::PLUGIN_VERSION);
@@ -315,7 +315,7 @@ void ctkPluginPrivate::checkManifestHeaders()
     catch (const std::exception& e)
     {
       throw ctkInvalidArgumentException(QString("ctkPlugin does not specify a valid ") +
-                                        ctkPluginConstants::PLUGIN_VERSION + " header. Got exception: " + e.what());
+        ctkPluginConstants::PLUGIN_VERSION + " header. Got exception: " + e.what());
     }
   }
 
@@ -324,7 +324,7 @@ void ctkPluginPrivate::checkManifestHeaders()
   if (!snp.isNull() && snp->d_func() != this)
   {
     throw ctkInvalidArgumentException(QString("Plugin with same symbolic name and version is already installed (")
-                                      + symbolicName + ", " + version.toString() + ")");
+      + symbolicName + ", " + version.toString() + ")");
   }
 
   QString ap = archive->getAttribute(ctkPluginConstants::PLUGIN_ACTIVATIONPOLICY);
@@ -384,7 +384,7 @@ void ctkPluginPrivate::finalizeActivation()
     // This happens if start is called from inside the ctkPluginActivator::stop method.
     // Don't allow it.
     throw ctkPluginException("start called from ctkPluginActivator::stop",
-                             ctkPluginException::ACTIVATOR_ERROR);
+      ctkPluginException::ACTIVATOR_ERROR);
   case ctkPlugin::UNINSTALLED:
     throw ctkIllegalStateException("ctkPlugin is in UNINSTALLED state");
   }
@@ -443,12 +443,12 @@ const ctkRuntimeException* ctkPluginPrivate::stop1()
     catch (const ctkException& e)
     {
       res = new ctkPluginException("ctkPlugin::stop: PluginActivator stop failed",
-                                   ctkPluginException::ACTIVATOR_ERROR, e);
+        ctkPluginException::ACTIVATOR_ERROR, e);
     }
     catch (...)
     {
       res = new ctkPluginException("ctkPlugin::stop: PluginActivator stop failed",
-                                   ctkPluginException::ACTIVATOR_ERROR);
+        ctkPluginException::ACTIVATOR_ERROR);
     }
     pluginActivator = 0;
   }
@@ -505,7 +505,7 @@ void ctkPluginPrivate::update0(const QUrl& updateLocation, bool wasActive)
       }
     }
 
-    if(updateUrl.scheme() != "file")
+    if (updateUrl.scheme() != "file")
     {
       QString msg = "Unsupported update URL:";
       msg += updateUrl.toString();
@@ -529,7 +529,8 @@ void ctkPluginPrivate::update0(const QUrl& updateLocation, bool wasActive)
     {
       try
       {
-        this->q_func().data()->start();
+        // this->q_func().data()->start();
+        this->q_func().lock()->start();
       }
       catch (const ctkPluginException& pe)
       {
@@ -544,7 +545,7 @@ void ctkPluginPrivate::update0(const QUrl& updateLocation, bool wasActive)
     catch (std::bad_cast)
     {
       throw ctkPluginException(QString("Failed to get update plugin: ") + e.what(),
-                               ctkPluginException::UNSPECIFIED);
+        ctkPluginException::UNSPECIFIED);
     }
   }
 
@@ -578,19 +579,20 @@ void ctkPluginPrivate::update0(const QUrl& updateLocation, bool wasActive)
   fwCtx->listeners.emitPluginChanged(ctkPluginEvent(ctkPluginEvent::UPDATED, this->q_func()));
   operation.fetchAndStoreOrdered(IDLE);
 
-   // Restart plugin previously stopped in the operation
-   if (wasActive)
-   {
-     try
-     {
-       this->q_func().data()->start();
-     }
-     catch (const ctkPluginException& pe)
-     {
-       fwCtx->listeners.frameworkError(this->q_func(), pe);
-     }
-   }
- }
+  // Restart plugin previously stopped in the operation
+  if (wasActive)
+  {
+    try
+    {
+      // this->q_func().data()->start();
+      this->q_func().lock()->start();
+    }
+    catch (const ctkPluginException& pe)
+    {
+      fwCtx->listeners.frameworkError(this->q_func(), pe);
+    }
+  }
+}
 
 //----------------------------------------------------------------------------
 int ctkPluginPrivate::getStartLevel()
@@ -653,13 +655,13 @@ void ctkPluginPrivate::waitOnOperation(LockObject* lock, const QString& src, boo
       break;
     }
     throw ctkPluginException(src + " called during " + op + " of plug-in",
-                             ctkPluginException::STATECHANGE_ERROR);
+      ctkPluginException::STATECHANGE_ERROR);
   }
 }
 
 //----------------------------------------------------------------------------
 QStringList ctkPluginPrivate::findResourceEntries(const QString& path,
-                                                  const QString& pattern, bool recurse) const
+  const QString& pattern, bool recurse) const
 {
   QStringList result;
   QStringList resources = archive->findResourcesPath(path);
@@ -669,14 +671,14 @@ QStringList ctkPluginPrivate::findResourceEntries(const QString& path,
     bool isDirectory = fp.endsWith("/");
 
     if (!isDirectory &&
-        (pattern.isNull() || ctkPluginFrameworkUtil::filterMatch(pattern, lastComponentOfPath)))
+      (pattern.isNull() || ctkPluginFrameworkUtil::filterMatch(pattern, lastComponentOfPath)))
     {
       result << (path + fp);
     }
     if (isDirectory && recurse)
     {
       QStringList subResources = findResourceEntries(fp, pattern, recurse);
-      foreach (QString subResource, subResources)
+      foreach(QString subResource, subResources)
       {
         result << (path + subResource);
       }
@@ -700,8 +702,8 @@ void ctkPluginPrivate::startDependencies()
         // We should never get here, since the plugin can only be
         // started if all its dependencies could be resolved.
         throw ctkPluginException(
-            QString("Internal error: dependent plugin %1 inside version range %2 is not installed.").
-            arg(pr->name).arg(pr->pluginRange.toString()));
+          QString("Internal error: dependent plugin %1 inside version range %2 is not installed.").
+          arg(pr->name).arg(pr->pluginRange.toString()));
       }
       else
       {
@@ -724,20 +726,21 @@ ctkPluginException* ctkPluginPrivate::start0()
   fwCtx->listeners.emitPluginChanged(ctkPluginEvent(ctkPluginEvent::STARTING, this->q_func()));
 
   ctkPluginException::Type error_type = ctkPluginException::MANIFEST_ERROR;
-  try {
+  try
+  {
     pluginLoader.load();
     if (!pluginLoader.isLoaded())
     {
       error_type = ctkPluginException::ACTIVATOR_ERROR;
       throw ctkPluginException(QString("Loading plugin %1 failed: %2").arg(pluginLoader.fileName()).arg(pluginLoader.errorString()),
-                               ctkPluginException::ACTIVATOR_ERROR);
+        ctkPluginException::ACTIVATOR_ERROR);
     }
 
     pluginActivator = qobject_cast<ctkPluginActivator*>(pluginLoader.instance());
     if (!pluginActivator)
     {
       throw ctkPluginException(QString("Creating ctkPluginActivator instance from %1 failed: %2").arg(pluginLoader.fileName()).arg(pluginLoader.errorString()),
-                               ctkPluginException::ACTIVATOR_ERROR);
+        ctkPluginException::ACTIVATOR_ERROR);
     }
 
     pluginActivator->start(pluginContext.data());

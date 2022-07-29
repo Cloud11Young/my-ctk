@@ -1,3 +1,0 @@
-repository='https://github.com/commontk/PythonQt.git'
-module=''
-tag='origin'

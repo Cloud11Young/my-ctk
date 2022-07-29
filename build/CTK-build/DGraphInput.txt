@@ -1,3 +1,3 @@
-2 0
-CTKCore
+3 1
 CTKTesting
+CTKPluginFramework CTKCore

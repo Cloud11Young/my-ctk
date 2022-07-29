@@ -134,7 +134,7 @@ QSharedPointer<ctkPlugin> ctkPlugins::install(const QUrl& location, QIODevice* i
       //      else
       //      {
       throw ctkPluginException("Failed to install plugin",
-                               ctkPluginException::UNSPECIFIED, e);
+        ctkPluginException::UNSPECIFIED, e);
       //      }
     }
     catch (...)
@@ -248,7 +248,8 @@ QList<ctkPlugin*> ctkPlugins::getPlugins(const QString& name, const ctkVersionRa
   QList<ctkPlugin*> res;
 
   QListIterator<ctkPlugin*> it(pluginsWithName);
-  while (it.hasNext()) {
+  while (it.hasNext())
+  {
     ctkPlugin* plugin = it.next();
     if (range.withinRange(plugin->getVersion()))
     {
@@ -280,7 +281,8 @@ QList<QSharedPointer<ctkPlugin> > ctkPlugins::getActivePlugins() const
     {
       QSharedPointer<ctkPlugin> plugin = it.next().value();
       ctkPlugin::State s = plugin->getState();
-      if (s == ctkPlugin::ACTIVE || s == ctkPlugin::STARTING) {
+      if (s == ctkPlugin::ACTIVE || s == ctkPlugin::STARTING)
+      {
         slist.push_back(plugin);
       }
     }
@@ -311,9 +313,9 @@ void ctkPlugins::load()
         pa->setStartLevel(-2); // Mark as uninstalled
 
         std::cerr << "Error: Failed to load bundle "
-            << pa->getPluginId()
-            << " ("  << qPrintable(pa->getPluginLocation().toString())  << ")"
-            << " uninstalled it!\n";
+          << pa->getPluginId()
+          << " (" << qPrintable(pa->getPluginLocation().toString()) << ")"
+          << " uninstalled it!\n";
         std::cerr << e.what() << std::endl;
       }
     }
@@ -342,7 +344,7 @@ void ctkPlugins::startPlugins(const QList<ctkPlugin*>& slist) const
     {
       try
       {
-        plugin->start(0);
+        plugin->start(ctkPlugin::StartOptions(0));
       }
       catch (const ctkPluginException& pe)
       {

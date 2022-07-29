@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yq/work/Practice/CTK/Libs/Core/Documentation/Snippets/CommandLineParser/main.cpp" "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.o"
+  "/home/yq/work/Practice/commontk/CTK/Libs/Core/Documentation/Snippets/CommandLineParser/main.cpp" "/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -32,7 +32,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/CMakeFiles/CTKCore.dir/DependInfo.cmake"
+  "/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/CMakeFiles/CTKCore.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

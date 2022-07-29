@@ -48,13 +48,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -100,22 +112,10 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CMakeFiles /home/yq/work/Practice/CTK/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CMakeFiles /home/yq/work/Practice/commontk/CTK/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -166,32 +166,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named QtSOAP
-
-# Build rule for target.
-QtSOAP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 QtSOAP
-.PHONY : QtSOAP
-
-# fast build rule for target.
-QtSOAP/fast:
-	$(MAKE) -f CMakeFiles/QtSOAP.dir/build.make CMakeFiles/QtSOAP.dir/build
-.PHONY : QtSOAP/fast
-
-#=============================================================================
-# Target rules for targets named qRestAPI
-
-# Build rule for target.
-qRestAPI: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 qRestAPI
-.PHONY : qRestAPI
-
-# fast build rule for target.
-qRestAPI/fast:
-	$(MAKE) -f CMakeFiles/qRestAPI.dir/build.make CMakeFiles/qRestAPI.dir/build
-.PHONY : qRestAPI/fast
 
 #=============================================================================
 # Target rules for targets named NightlyMemCheck
@@ -428,19 +402,6 @@ NightlySubmit/fast:
 .PHONY : NightlySubmit/fast
 
 #=============================================================================
-# Target rules for targets named CTKData
-
-# Build rule for target.
-CTKData: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CTKData
-.PHONY : CTKData
-
-# fast build rule for target.
-CTKData/fast:
-	$(MAKE) -f CMakeFiles/CTKData.dir/build.make CMakeFiles/CTKData.dir/build
-.PHONY : CTKData/fast
-
-#=============================================================================
 # Target rules for targets named NightlyStart
 
 # Build rule for target.
@@ -452,6 +413,19 @@ NightlyStart: cmake_check_build_system
 NightlyStart/fast:
 	$(MAKE) -f CMakeFiles/NightlyStart.dir/build.make CMakeFiles/NightlyStart.dir/build
 .PHONY : NightlyStart/fast
+
+#=============================================================================
+# Target rules for targets named CTKData
+
+# Build rule for target.
+CTKData: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKData
+.PHONY : CTKData
+
+# fast build rule for target.
+CTKData/fast:
+	$(MAKE) -f CMakeFiles/CTKData.dir/build.make CMakeFiles/CTKData.dir/build
+.PHONY : CTKData/fast
 
 #=============================================================================
 # Target rules for targets named ExperimentalCoverage
@@ -583,46 +557,18 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
-#=============================================================================
-# Target rules for targets named DCMTK
-
-# Build rule for target.
-DCMTK: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 DCMTK
-.PHONY : DCMTK
-
-# fast build rule for target.
-DCMTK/fast:
-	$(MAKE) -f CMakeFiles/DCMTK.dir/build.make CMakeFiles/DCMTK.dir/build
-.PHONY : DCMTK/fast
-
-#=============================================================================
-# Target rules for targets named PythonQt
-
-# Build rule for target.
-PythonQt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 PythonQt
-.PHONY : PythonQt
-
-# fast build rule for target.
-PythonQt/fast:
-	$(MAKE) -f CMakeFiles/PythonQt.dir/build.make CMakeFiles/PythonQt.dir/build
-.PHONY : PythonQt/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... install/strip"
-	@echo "... QtSOAP"
 	@echo "... edit_cache"
-	@echo "... qRestAPI"
 	@echo "... NightlyMemCheck"
 	@echo "... NightlyTest"
 	@echo "... ContinuousConfigure"
@@ -642,8 +588,8 @@ help:
 	@echo "... Nightly"
 	@echo "... NightlySubmit"
 	@echo "... install"
-	@echo "... CTKData"
 	@echo "... NightlyStart"
+	@echo "... CTKData"
 	@echo "... ExperimentalCoverage"
 	@echo "... NightlyCoverage"
 	@echo "... ExperimentalStart"
@@ -654,8 +600,6 @@ help:
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
-	@echo "... DCMTK"
-	@echo "... PythonQt"
 .PHONY : help
 
 

@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget CTKCore)
+foreach(_expectedTarget CTKCore CTKPluginFramework)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -55,6 +55,13 @@ add_library(CTKCore SHARED IMPORTED)
 
 set_target_properties(CTKCore PROPERTIES
   INTERFACE_LINK_LIBRARIES "Qt6::Core;Qt6::Core5Compat;Qt6::StateMachine;dl"
+)
+
+# Create imported target CTKPluginFramework
+add_library(CTKPluginFramework SHARED IMPORTED)
+
+set_target_properties(CTKPluginFramework PROPERTIES
+  INTERFACE_LINK_LIBRARIES "CTKCore;Qt6::Sql;Qt6::Concurrent"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK/Libs/Testing
+# Install script for directory: /home/yq/work/Practice/commontk/CTK/Libs/Testing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ctk-0.1" TYPE FILE FILES "/home/yq/work/Practice/CTK/Libs/Testing/ctkTest.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ctk-0.1" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/Libs/Testing/ctkTest.h")
 endif()
 

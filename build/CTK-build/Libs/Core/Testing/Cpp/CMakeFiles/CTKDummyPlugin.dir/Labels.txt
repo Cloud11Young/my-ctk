@@ -1,7 +1,0 @@
-# Target labels
- CTKDummyPlugin
-# Source files and their labels
-/home/yq/work/Practice/CTK/Libs/Core/Testing/Cpp/ctkDummyPlugin.h
-/home/yq/work/Practice/CTK/Libs/Core/Testing/Cpp/ctkDummyPlugin.cpp
-/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/Testing/Cpp/moc_ctkDummyPlugin.cpp
-/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/Testing/Cpp/moc_ctkDummyPlugin.cpp.rule

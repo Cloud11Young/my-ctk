@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6/config.tests/static_link_order
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build/config.tests/static_link_order
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build/config.tests/static_link_order
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@echo "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@echo "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/config.tests/static_link_order/CMakeFiles /home/yq/work/Practice/CTK/build/config.tests/static_link_order/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/config.tests/static_link_order/CMakeFiles /home/yq/work/Practice/commontk/CTK/build/config.tests/static_link_order/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/config.tests/static_link_order/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/config.tests/static_link_order/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

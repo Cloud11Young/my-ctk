@@ -207,8 +207,8 @@ public:
    * \see ctkPlugin::StartOptions
    */
   static bool start(const QString& symbolicName = QString(),
-                    ctkPlugin::StartOptions options = ctkPlugin::START_ACTIVATION_POLICY,
-                    ctkPluginContext* context = 0);
+    ctkPlugin::StartOptions options = ctkPlugin::START_ACTIVATION_POLICY,
+    ctkPluginContext* context = 0);
 
   /**
    * This method either stops the plug-in with the given <code>symbolicName</code> using
@@ -229,7 +229,7 @@ public:
    * \see ctkPlugin::StopOptions
    */
   static bool stop(const QString& symbolicName = QString(),
-                    ctkPlugin::StopOptions options = 0, ctkPluginContext* context = 0);
+    ctkPlugin::StopOptions options = ctkPlugin::StopOptions(0), ctkPluginContext* context = 0);
 
   /**
    * Resolve the given plug-in.

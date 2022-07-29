@@ -1,11 +1,12 @@
 # CMake generated Testfile for 
-# Source directory: /home/yq/work/Practice/CTK
-# Build directory: /home/yq/work/Practice/CTK/build/CTK-build
+# Source directory: /home/yq/work/Practice/commontk/CTK
+# Build directory: /home/yq/work/Practice/commontk/CTK/build/CTK-build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("CMake/Testing")
 subdirs("Libs/Core")
+subdirs("Libs/PluginFramework")
 subdirs("Libs/CommandLineModules/Core/Documentation")
 subdirs("Libs/CommandLineModules/Backend/LocalProcess/Documentation")
 subdirs("Libs/Testing")

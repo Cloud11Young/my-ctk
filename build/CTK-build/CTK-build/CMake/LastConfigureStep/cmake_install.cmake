@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK/CMake/LastConfigureStep
+# Install script for directory: /home/yq/work/Practice/commontk/CTK/CMake/LastConfigureStep
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ctk-0.1" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/ctkConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ctk-0.1" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/ctkConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/CTKPluginUseFile.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTKPluginUseFile.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake/CTKExports.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake/CTKExports.cmake"
-         "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/CMakeFiles/Export/lib/ctk-0.1/CMake/CTKExports.cmake")
+         "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/CMakeFiles/Export/lib/ctk-0.1/CMake/CTKExports.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake/CTKExports-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -58,17 +58,17 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/CMakeFiles/Export/lib/ctk-0.1/CMake/CTKExports.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/CMakeFiles/Export/lib/ctk-0.1/CMake/CTKExports.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/CMakeFiles/Export/lib/ctk-0.1/CMake/CTKExports-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/CMakeFiles/Export/lib/ctk-0.1/CMake/CTKExports-debug.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMakeFiles/CTKConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CMakeFiles/CTKConfig.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/CTKConfigVersion.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTKConfigVersion.cmake")
 endif()
 

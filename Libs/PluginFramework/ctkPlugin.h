@@ -108,64 +108,64 @@ public:
      * code dependencies and move the plugin to the <code>RESOLVED</code>
      * state.
      */
-    INSTALLED = 0x00000002,
+     INSTALLED = 0x00000002,
 
-    /**
-     * The plugin is resolved and is able to be started.
-     *
-     * <p>
-     * A plugin is in the <code>RESOLVED</code> state when the Framework has
-     * successfully resolved the plugin's code dependencies. These dependencies
-     * include:
-     * <ul>
-     * <li>The plugin's required plugin dependencies from its
-     * {@link ctkPluginConstants::REQUIRE_PLUGIN} Manifest header.
-     * </ul>
-     * <p>
-     * Note that the plugin is not active yet. A plugin must be put in the
-     * <code>RESOLVED</code> state before it can be started. The Framework may
-     * attempt to resolve a plugin at any time.
-     */
-    RESOLVED = 0x00000004,
+     /**
+      * The plugin is resolved and is able to be started.
+      *
+      * <p>
+      * A plugin is in the <code>RESOLVED</code> state when the Framework has
+      * successfully resolved the plugin's code dependencies. These dependencies
+      * include:
+      * <ul>
+      * <li>The plugin's required plugin dependencies from its
+      * {@link ctkPluginConstants::REQUIRE_PLUGIN} Manifest header.
+      * </ul>
+      * <p>
+      * Note that the plugin is not active yet. A plugin must be put in the
+      * <code>RESOLVED</code> state before it can be started. The Framework may
+      * attempt to resolve a plugin at any time.
+      */
+      RESOLVED = 0x00000004,
 
-    /**
-     * The plugin is in the process of starting.
-     *
-     * <p>
-     * A plugin is in the <code>STARTING</code> state when its
-     * {@link #start(const StartOptions&) start} method is active. A plugin must be in this
-     * state when the plugin's {@link ctkPluginActivator::start} method is called. If the
-     * <code>ctkPluginActivator::start</code> method completes without exception,
-     * then the plugin has successfully started and must move to the
-     * <code>ACTIVE</code> state.
-     * <p>
-     * If the plugin does not have a
-     * {@link ctkPluginConstants#ACTIVATION_EAGER eager activation policy}, then the
-     * plugin may remain in this state for some time until the activation is
-     * triggered.
-     */
-    STARTING = 0x00000008,
+      /**
+       * The plugin is in the process of starting.
+       *
+       * <p>
+       * A plugin is in the <code>STARTING</code> state when its
+       * {@link #start(const StartOptions&) start} method is active. A plugin must be in this
+       * state when the plugin's {@link ctkPluginActivator::start} method is called. If the
+       * <code>ctkPluginActivator::start</code> method completes without exception,
+       * then the plugin has successfully started and must move to the
+       * <code>ACTIVE</code> state.
+       * <p>
+       * If the plugin does not have a
+       * {@link ctkPluginConstants#ACTIVATION_EAGER eager activation policy}, then the
+       * plugin may remain in this state for some time until the activation is
+       * triggered.
+       */
+       STARTING = 0x00000008,
 
-    /**
-     * The plugin is in the process of stopping.
-     *
-     * <p>
-     * A plugin is in the <code>STOPPING</code> state when its
-     * {@link #stop(const StopOptions&) stop} method is active. A plugin must be in this state
-     * when the plugin's {@link ctkPluginActivator::stop} method is called. When the
-     * <code>ctkPluginActivator::stop</code> method completes the plugin is
-     * stopped and must move to the <code>RESOLVED</code> state.
-     */
-    STOPPING = 0x00000010,
+       /**
+        * The plugin is in the process of stopping.
+        *
+        * <p>
+        * A plugin is in the <code>STOPPING</code> state when its
+        * {@link #stop(const StopOptions&) stop} method is active. A plugin must be in this state
+        * when the plugin's {@link ctkPluginActivator::stop} method is called. When the
+        * <code>ctkPluginActivator::stop</code> method completes the plugin is
+        * stopped and must move to the <code>RESOLVED</code> state.
+        */
+        STOPPING = 0x00000010,
 
-    /**
-     * The plugin is now running.
-     *
-     * <p>
-     * A plugin is in the <code>ACTIVE</code> state when it has been
-     * successfully started and activated.
-     */
-    ACTIVE = 0x00000020
+        /**
+         * The plugin is now running.
+         *
+         * <p>
+         * A plugin is in the <code>ACTIVE</code> state when it has been
+         * successfully started and activated.
+         */
+         ACTIVE = 0x00000020
   };
 
   /**
@@ -175,7 +175,7 @@ public:
    */
   Q_DECLARE_FLAGS(States, State)
 
-  enum StartOption {
+    enum StartOption {
 
     /**
      * The plugin start operation is transient and the persistent autostart
@@ -204,7 +204,7 @@ public:
      * @see ctkPluginConstants#PLUGIN_ACTIVATIONPOLICY
      * @see #start(const StartOptions&)
      */
-    START_ACTIVATION_POLICY = 0x00000002
+     START_ACTIVATION_POLICY = 0x00000002
 
   };
 
@@ -215,7 +215,7 @@ public:
    */
   Q_DECLARE_FLAGS(StartOptions, StartOption)
 
-  enum StopOption {
+    enum StopOption {
     /**
      * The plugin stop is transient and the persistent autostart setting of the
      * plugin is not modified.
@@ -238,7 +238,7 @@ public:
    */
   Q_DECLARE_FLAGS(StopOptions, StopOption)
 
-  virtual ~ctkPlugin();
+    virtual ~ctkPlugin();
 
   /**
    * Returns this plugin's current state.
@@ -429,7 +429,7 @@ public:
    * @throws ctkIllegalStateException If this plugin has been uninstalled or this
    *         plugin tries to change its own state.
    */
-  virtual void stop(const StopOptions& options = 0);
+  virtual void stop(const StopOptions& options = StopOptions(0));
 
   /**
    * Updates this plugin from a <code>QUrl</code>.
@@ -509,7 +509,7 @@ public:
    * @see #stop()
    * @see #start()
    */
-  void update(const QUrl &updateLocation = QUrl());
+  void update(const QUrl& updateLocation = QUrl());
 
   /**
    * Uninstalls this plugin.
@@ -778,7 +778,7 @@ public:
    * @return A locale specific <code>ctkPluginLocalization</code> instance.
    */
   ctkPluginLocalization getPluginLocalization(const QLocale& locale,
-                                              const QString& base = ctkPluginConstants::PLUGIN_LOCALIZATION_DEFAULT_BASENAME) const;
+    const QString& base = ctkPluginConstants::PLUGIN_LOCALIZATION_DEFAULT_BASENAME) const;
 
   /**
    * Returns the version of this plugin as specified by its
@@ -813,7 +813,7 @@ protected:
 
 private:
   Q_DECLARE_PRIVATE(ctkPlugin)
-  Q_DISABLE_COPY(ctkPlugin)
+    Q_DISABLE_COPY(ctkPlugin)
 };
 
 /**
@@ -830,9 +830,9 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(ctkPlugin::StopOptions)
 
 CTK_PLUGINFW_EXPORT QDebug operator<<(QDebug debug, ctkPlugin::State state);
 CTK_PLUGINFW_EXPORT QDebug operator<<(QDebug debug, const ctkPlugin& plugin);
-CTK_PLUGINFW_EXPORT QDebug operator<<(QDebug debug, ctkPlugin const * plugin);
+CTK_PLUGINFW_EXPORT QDebug operator<<(QDebug debug, ctkPlugin const* plugin);
 
-CTK_PLUGINFW_EXPORT ctkLogStream& operator<<(ctkLogStream& stream, ctkPlugin const * plugin);
+CTK_PLUGINFW_EXPORT ctkLogStream& operator<<(ctkLogStream& stream, ctkPlugin const* plugin);
 CTK_PLUGINFW_EXPORT ctkLogStream& operator<<(ctkLogStream& stream, const QSharedPointer<ctkPlugin>& plugin);
 
 /** @}*/

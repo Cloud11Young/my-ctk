@@ -102,7 +102,7 @@ if(NOT DEFINED PYTHONQT_INSTALL_DIR)
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "https://github.com/commontk/PythonQt.git"
+    set(location_args GIT_REPOSITORY "https://github.com/Cloud11Young/PythonQt.git"
       GIT_TAG ${revision_tag})
   endif()
 

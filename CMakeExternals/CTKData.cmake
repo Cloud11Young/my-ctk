@@ -11,7 +11,7 @@ ExternalProject_Include_Dependencies(${proj}
   DEPENDS_VAR ${proj}_DEPENDENCIES
   EP_ARGS_VAR ${proj}_EXTERNAL_PROJECT_ARGS
   USE_SYSTEM_VAR ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj}
-  )
+)
 
 if(${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
   message(FATAL_ERROR "Enabling ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj} is not supported !")
@@ -23,21 +23,22 @@ if(DEFINED CTKData_DIR AND NOT EXISTS ${CTKData_DIR})
 endif()
 
 if(NOT DEFINED CTKData_DIR)
-
   set(revision_tag cc07f1ff391b7828459c)
+
   if(${proj}_REVISION_TAG)
     set(revision_tag ${${proj}_REVISION_TAG})
   endif()
 
-  set(location_args )
+  set(location_args)
+
   if(${proj}_URL)
     set(location_args URL ${${proj}_URL})
   elseif(${proj}_GIT_REPOSITORY)
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
-                      GIT_TAG ${revision_tag})
+      GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "https://github.com/commontk/CTKData.git"
-                      GIT_TAG ${revision_tag})
+    set(location_args GIT_REPOSITORY "https://github.com/Cloud11Young/CTKData.git"
+      GIT_TAG ${revision_tag})
   endif()
 
   ExternalProject_Add(${proj}
@@ -50,8 +51,8 @@ if(NOT DEFINED CTKData_DIR)
     BUILD_COMMAND ""
     INSTALL_COMMAND ""
     DEPENDS
-      ${${proj}_DEPENDENCIES}
-    )
+    ${${proj}_DEPENDENCIES}
+  )
   set(CTKData_DIR ${CMAKE_BINARY_DIR}/${proj})
 else()
   ExternalProject_Add_Empty(${proj} DEPENDS ${${proj}_DEPENDENCIES})
@@ -59,4 +60,4 @@ endif()
 
 mark_as_superbuild(
   VARS CTKData_DIR:PATH
-  )
+)

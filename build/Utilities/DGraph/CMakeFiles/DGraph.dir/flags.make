@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DNO_SYMBOL_EXPORT
 
-CXX_INCLUDES = -I/home/yq/work/Practice/CTK/Utilities/DGraph -I/home/yq/work/Practice/CTK/build/Utilities/DGraph -I/home/yq/work/Practice/CTK/Utilities/DGraph/../../Libs/Core 
+CXX_INCLUDES = -I/home/yq/work/Practice/commontk/CTK/Utilities/DGraph -I/home/yq/work/Practice/commontk/CTK/build/Utilities/DGraph -I/home/yq/work/Practice/commontk/CTK/Utilities/DGraph/../../Libs/Core 
 

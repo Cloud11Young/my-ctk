@@ -37,7 +37,7 @@ if(NOT DEFINED QtSOAP_DIR)
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "https://github.com/commontk/QtSOAP.git"
+    set(location_args GIT_REPOSITORY "https://github.com/Cloud11Young/QtSOAP.git"
       GIT_TAG ${revision_tag})
   endif()
 

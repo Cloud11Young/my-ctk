@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-str
 
 CXX_DEFINES = -DCTKCore_EXPORTS -DQT_CORE5COMPAT_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_STATEMACHINE_LIB
 
-CXX_INCLUDES = -I/home/yq/work/Practice/CTK/Libs/Core -I/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core -I/home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/Resources/UI -I/home/yq/work/Practice/CTK/build/CTK-build -isystem /opt/Qt/6.2.1/gcc_64/include/QtCore -isystem /opt/Qt/6.2.1/gcc_64/include -isystem /opt/Qt/6.2.1/gcc_64/mkspecs/linux-g++ -isystem /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat -isystem /opt/Qt/6.2.1/gcc_64/include/QtStateMachine -isystem /opt/Qt/6.2.1/gcc_64/include/QtGui 
+CXX_INCLUDES = -I/home/yq/work/Practice/commontk/CTK/Libs/Core -I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core -I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/Resources/UI -I/home/yq/work/Practice/commontk/CTK/build/CTK-build -isystem /opt/Qt/6.2.1/gcc_64/include/QtCore -isystem /opt/Qt/6.2.1/gcc_64/include -isystem /opt/Qt/6.2.1/gcc_64/mkspecs/linux-g++ -isystem /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat -isystem /opt/Qt/6.2.1/gcc_64/include/QtStateMachine -isystem /opt/Qt/6.2.1/gcc_64/include/QtGui 
 

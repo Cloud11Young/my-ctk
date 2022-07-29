@@ -37,7 +37,7 @@ if(NOT DEFINED QtTesting_DIR)
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "https://github.com/commontk/QtTesting.git"
+    set(location_args GIT_REPOSITORY "https://github.com/Cloud11Young/QtTesting.git"
       GIT_TAG ${revision_tag})
   endif()
 

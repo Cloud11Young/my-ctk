@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yq/work/Practice/CTK/CMake/ctkLinkerAsNeededFlagCheck/A.cpp" "/home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles/ctkLinkerAsNeededFlagCheck/CMakeFiles/A.dir/A.cpp.o"
+  "/home/yq/work/Practice/commontk/CTK/CMake/ctkLinkerAsNeededFlagCheck/A.cpp" "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/ctkLinkerAsNeededFlagCheck/CMakeFiles/A.dir/A.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

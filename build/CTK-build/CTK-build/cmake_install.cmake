@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK
+# Install script for directory: /home/yq/work/Practice/commontk/CTK
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,170 +38,152 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkListToString.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkListToString.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroParseArguments.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroParseArguments.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroSetPaths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroSetPaths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroListFilter.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroListFilter.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroOptionUtils.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroOptionUtils.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroBuildLib.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroBuildLib.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionAddExecutableUtf8.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionAddExecutableUtf8.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionExtractOptimizedLibrary.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionExtractOptimizedLibrary.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroBuildLibWrapper.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroBuildLibWrapper.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroBuildPlugin.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroBuildPlugin.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroBuildApp.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroBuildApp.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroBuildQtPlugin.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroBuildQtPlugin.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroCompilePythonScript.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroCompilePythonScript.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroGenerateMocs.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroGenerateMocs.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroWrapPythonQt.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroWrapPythonQt.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroSetupQt.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroSetupQt.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroTargetLibraries.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroTargetLibraries.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionExtractOptionNameAndValue.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionExtractOptionNameAndValue.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroValidateBuildOptions.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroValidateBuildOptions.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroAddCtkLibraryOptions.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroAddCtkLibraryOptions.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionGenerateDGraphInput.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionGenerateDGraphInput.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionGeneratePluginManifest.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionGeneratePluginManifest.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkMacroGeneratePluginResourceFile.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkMacroGeneratePluginResourceFile.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionAddPluginRepo.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionAddPluginRepo.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionCheckCompilerFlags.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionCheckCompilerFlags.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionCheckoutRepo.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionCheckoutRepo.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionGetIncludeDirs.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionGetIncludeDirs.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionGetLibraryDirs.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionGetLibraryDirs.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionGetGccVersion.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionGetGccVersion.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionGetCompilerVisibilityFlags.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionGetCompilerVisibilityFlags.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkFunctionCompileSnippets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkFunctionCompileSnippets.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/Libs/ctkExport.h.in")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/Libs/ctkExport.h.in")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctkLinkerAsNeededFlagCheck.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctkLinkerAsNeededFlagCheck.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/ctk_compile_python_scripts.cmake.in")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/ctk_compile_python_scripts.cmake.in")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/CMake/CMakeFindDependencyMacro.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/commontk/CTK/CMake/CMakeFindDependencyMacro.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake/ctkLinkerAsNeededFlagCheck" TYPE FILE FILES
-    "/home/yq/work/Practice/CTK/CMake/ctkLinkerAsNeededFlagCheck/CMakeLists.txt"
-    "/home/yq/work/Practice/CTK/CMake/ctkLinkerAsNeededFlagCheck/A.cpp"
-    "/home/yq/work/Practice/CTK/CMake/ctkLinkerAsNeededFlagCheck/B.cpp"
-    "/home/yq/work/Practice/CTK/CMake/ctkLinkerAsNeededFlagCheck/C.cpp"
+    "/home/yq/work/Practice/commontk/CTK/CMake/ctkLinkerAsNeededFlagCheck/CMakeLists.txt"
+    "/home/yq/work/Practice/commontk/CTK/CMake/ctkLinkerAsNeededFlagCheck/A.cpp"
+    "/home/yq/work/Practice/commontk/CTK/CMake/ctkLinkerAsNeededFlagCheck/B.cpp"
+    "/home/yq/work/Practice/commontk/CTK/CMake/ctkLinkerAsNeededFlagCheck/C.cpp"
     )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xDevelopmentx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ctk-0.1/CMake" TYPE FILE FILES "/home/yq/work/Practice/CTK/build/CTK-build/UseCTK.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMake/Testing/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Core/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/CommandLineModules/Core/Documentation/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/CommandLineModules/Backend/LocalProcess/Documentation/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/Testing/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Libs/CommandLineModules/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Applications/Testing/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Documentation/cmake_install.cmake")
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/CMake/LastConfigureStep/cmake_install.cmake")
-
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -212,5 +194,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

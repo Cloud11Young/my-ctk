@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yq/work/Practice/CTK/Utilities/DGraph/DGraph.cpp" "/home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles/DGraph.dir/DGraph.cpp.o"
-  "/home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp" "/home/yq/work/Practice/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o"
+  "/home/yq/work/Practice/commontk/CTK/Utilities/DGraph/DGraph.cpp" "/home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles/DGraph.dir/DGraph.cpp.o"
+  "/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.cpp" "/home/yq/work/Practice/commontk/CTK/build/CTK-build/Utilities/DGraph/CMakeFiles/DGraph.dir/ctkDependencyGraph.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,9 +16,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/yq/work/Practice/CTK/Utilities/DGraph"
+  "/home/yq/work/Practice/commontk/CTK/Utilities/DGraph"
   "."
-  "/home/yq/work/Practice/CTK/Utilities/DGraph/../../Libs/Core"
+  "/home/yq/work/Practice/commontk/CTK/Utilities/DGraph/../../Libs/Core"
   )
 
 # Targets to which this target links.

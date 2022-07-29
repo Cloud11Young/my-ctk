@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK/Documentation
+# Install script for directory: /home/yq/work/Practice/commontk/CTK/Documentation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

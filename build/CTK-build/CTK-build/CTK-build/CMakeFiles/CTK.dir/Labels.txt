@@ -1,0 +1,14 @@
+# Target labels
+ CTK
+# Source files and their labels
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CMakeFiles/CTK
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CMakeFiles/CTK.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CMakeFiles/CTK-complete.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-install.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-mkdir.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-download.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-update.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-patch.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-configure.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-build.rule
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/CTK-build/CTK-prefix/src/CTK-stamp/CTK-forceconfigure.rule

@@ -5,7 +5,7 @@ Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/Comman
  ../../Libs/Core/ctkCommandLineParser.h
  ../../Libs/Core/ctkCompatibility_p.h
  ../../Libs/Core/ctkCompilerDetections_p.h
- /home/yq/work/Practice/CTK/Libs/Core/Documentation/Snippets/CommandLineParser/main.cpp
+ /home/yq/work/Practice/commontk/CTK/Libs/Core/Documentation/Snippets/CommandLineParser/main.cpp
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QCoreApplication
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QIODevice
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QString

@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK/Utilities/DGraph
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK/Utilities/DGraph
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Utilities/DGraph
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Utilities/DGraph
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/DGraph.dir/clean
 CMakeFiles/DGraph.dir/all:
 	$(MAKE) -f CMakeFiles/DGraph.dir/build.make CMakeFiles/DGraph.dir/depend
 	$(MAKE) -f CMakeFiles/DGraph.dir/build.make CMakeFiles/DGraph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=1,2,3 "Built target DGraph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Utilities/DGraph/CMakeFiles --progress-num=1,2,3 "Built target DGraph"
 .PHONY : CMakeFiles/DGraph.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DGraph.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Utilities/DGraph/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Utilities/DGraph/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DGraph.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Utilities/DGraph/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Utilities/DGraph/CMakeFiles 0
 .PHONY : CMakeFiles/DGraph.dir/rule
 
 # Convenience name for target.

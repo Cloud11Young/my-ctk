@@ -1,3 +1,0 @@
-repository='https://github.com/commontk/qRestAPI.git'
-module=''
-tag='origin'

@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget CTKCore CTKDummyPlugin)
+foreach(_expectedTarget CTKCore)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -45,28 +45,14 @@ unset(_expectedTargets)
 add_library(CTKCore SHARED IMPORTED)
 
 set_target_properties(CTKCore PROPERTIES
-  INTERFACE_LINK_LIBRARIES "Qt6::Core;Qt6::Core5Compat;dl"
-)
-
-# Create imported target CTKDummyPlugin
-add_library(CTKDummyPlugin SHARED IMPORTED)
-
-set_target_properties(CTKDummyPlugin PROPERTIES
-  INTERFACE_LINK_LIBRARIES "Qt6::Core;Qt6::Core5Compat;CTKCore"
+  INTERFACE_LINK_LIBRARIES "Qt6::Core;Qt6::Core5Compat;Qt6::StateMachine;dl"
 )
 
 # Import target "CTKCore" for configuration "Debug"
 set_property(TARGET CTKCore APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(CTKCore PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/bin/libCTKCore.so.0.1.0"
+  IMPORTED_LOCATION_DEBUG "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/bin/libCTKCore.so.0.1.0"
   IMPORTED_SONAME_DEBUG "libCTKCore.so.0.1"
-  )
-
-# Import target "CTKDummyPlugin" for configuration "Debug"
-set_property(TARGET CTKDummyPlugin APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
-set_target_properties(CTKDummyPlugin PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/bin/libCTKDummyPlugin.so.0.1.0"
-  IMPORTED_SONAME_DEBUG "libCTKDummyPlugin.so.0.1"
   )
 
 # This file does not depend on other imported targets which have

@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK/Applications/Testing
+# Install script for directory: /home/yq/work/Practice/commontk/CTK/Applications/Testing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Applications/Testing/Cpp/cmake_install.cmake")
+  include("/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Applications/Testing/Cpp/cmake_install.cmake")
 
 endif()
 

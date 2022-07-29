@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.cpp
+/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.cpp
 ctkDependencyGraph.h
-/home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.h
+/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.h
 iostream
 -
 sstream
@@ -28,13 +28,13 @@ queue
 cassert
 -
 
-/home/yq/work/Practice/CTK/Libs/Core/ctkDependencyGraph.h
+/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkDependencyGraph.h
 ctkCoreExport.h
-/home/yq/work/Practice/CTK/Libs/Core/ctkCoreExport.h
+/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkCoreExport.h
 list
 -
 
-/home/yq/work/Practice/CTK/Utilities/DGraph/DGraph.cpp
+/home/yq/work/Practice/commontk/CTK/Utilities/DGraph/DGraph.cpp
 ctkDependencyGraph.h
 -
 cstdlib

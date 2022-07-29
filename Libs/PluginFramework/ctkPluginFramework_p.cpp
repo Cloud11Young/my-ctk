@@ -38,10 +38,10 @@
 //----------------------------------------------------------------------------
 ctkPluginFrameworkPrivate::ctkPluginFrameworkPrivate(QWeakPointer<ctkPlugin> qq, ctkPluginFrameworkContext* fw)
   : ctkPluginPrivate(qq, fw, 0, ctkPluginConstants::SYSTEM_PLUGIN_LOCATION,
-                     ctkPluginConstants::SYSTEM_PLUGIN_SYMBOLICNAME,
-                     // TODO: read version from the manifest resource
-                     ctkVersion(0, 9, 0)),
-    shuttingDown(0)
+    ctkPluginConstants::SYSTEM_PLUGIN_SYMBOLICNAME,
+    // TODO: read version from the manifest resource
+    ctkVersion(0, 9, 0)),
+  shuttingDown(0)
 {
   systemHeaders.insert(ctkPluginConstants::PLUGIN_SYMBOLICNAME, symbolicName);
   systemHeaders.insert(ctkPluginConstants::PLUGIN_NAME, location);
@@ -68,7 +68,7 @@ void ctkPluginFrameworkPrivate::activate(ctkPluginContext* context)
   ctkBasicLocation* location = ctkLocationManager::getUserLocation();
   if (location != NULL)
   {
-    locationProperties["type"] =  ctkPluginFrameworkLauncher::PROP_USER_AREA;
+    locationProperties["type"] = ctkPluginFrameworkLauncher::PROP_USER_AREA;
     registrations.push_back(context->registerService<ctkLocation>(location, locationProperties));
   }
   location = ctkLocationManager::getInstanceLocation();
@@ -146,12 +146,12 @@ void ctkPluginFrameworkPrivate::shutdown(bool restart)
       {
         const bool wa = wasActive;
         shuttingDown.fetchAndStoreOrdered(1);
-        QtConcurrent::run(this, &ctkPluginFrameworkPrivate::shutdown0, restart, wa);
+        QtConcurrent::run(&ctkPluginFrameworkPrivate::shutdown0, this, restart, wa);
       }
       catch (const ctkException& e)
       {
         systemShuttingdownDone(ctkPluginFrameworkEvent(ctkPluginFrameworkEvent::PLUGIN_ERROR,
-                                                       this->q_func(), e));
+          this->q_func(), e));
       }
     }
     break;
@@ -175,7 +175,7 @@ void ctkPluginFrameworkPrivate::shutdown0(bool restart, bool wasActive)
     }
 
     fwCtx->listeners.emitPluginChanged(
-        ctkPluginEvent(ctkPluginEvent::STOPPING, this->q_func()));
+      ctkPluginEvent(ctkPluginEvent::STOPPING, this->q_func()));
 
     if (wasActive)
     {
@@ -206,7 +206,7 @@ void ctkPluginFrameworkPrivate::shutdown0(bool restart, bool wasActive)
   {
     shuttingDown.fetchAndStoreOrdered(0);
     systemShuttingdownDone(ctkPluginFrameworkEvent(ctkPluginFrameworkEvent::PLUGIN_ERROR,
-                                                   this->q_func(), e));
+      this->q_func(), e));
   }
 }
 
@@ -229,10 +229,12 @@ void ctkPluginFrameworkPrivate::stopAllPlugins()
   // Stop all active plug-ins, in reverse plug-in ID order
   // The list will be empty when the start level service is in use.
   QList<QSharedPointer<ctkPlugin> > activePlugins = fwCtx->plugins->getActivePlugins();
-  qSort(activePlugins.begin(), activePlugins.end(), pluginIdLessThan);
+  // qSort(activePlugins.begin(), activePlugins.end(), pluginIdLessThan);
+  std::sort(activePlugins.begin(), activePlugins.end(), pluginIdLessThan);
+
   QListIterator<QSharedPointer<ctkPlugin> > i(activePlugins);
   i.toBack();
-  while(i.hasPrevious())
+  while (i.hasPrevious())
   {
     QSharedPointer<ctkPlugin> p = i.previous();
     try
@@ -252,7 +254,7 @@ void ctkPluginFrameworkPrivate::stopAllPlugins()
   QList<QSharedPointer<ctkPlugin> > allPlugins = fwCtx->plugins->getPlugins();
 
   // Set state to INSTALLED and purge any unrefreshed bundles
-  foreach (QSharedPointer<ctkPlugin> p, allPlugins)
+  foreach(QSharedPointer<ctkPlugin> p, allPlugins)
   {
     if (p->getPluginId() != 0)
     {

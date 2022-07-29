@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/yq/work/Practice/CTK
-BuildDirectory: /home/yq/work/Practice/CTK/build/CTK-build
+SourceDirectory: /home/yq/work/Practice/commontk/CTK
+BuildDirectory: /home/yq/work/Practice/commontk/CTK/build/CTK-build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://my.cdash.org/submit.php?project=CTK
 NightlyStartTime: 23:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/yq/work/Practice/CTK"
+ConfigureCommand: "/usr/bin/cmake" "/home/yq/work/Practice/commontk/CTK"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 

@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 26 14:50:27 2022
+# Make data base, printed on Fri Jul 29 11:58:00 2022
 
 # Variables
 
@@ -37,7 +35,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/yq/work/Practice/CTK
+CURDIR := /home/yq/work/Practice/commontk/CTK
 # makefile
 SHELL = /bin/sh
 # environment
@@ -49,7 +47,7 @@ VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"1d735750dbb1b9066c7513078396ba0f.zh-cn","_translationsConfigFile":"/home/yq/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/tcf.json","_cacheRoot":"/home/yq/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn","_resolvedLanguagePackCoreLocation":"/home/yq/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/3b889b090b5ad5793f524b5d1d39fda662b96a2a","_corruptedFile":"/home/yq/.config/Code/clp/1d735750dbb1b9066c7513078396ba0f.zh-cn/corrupted.info","_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:44270
+JOURNAL_STREAM = 8:44288
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -62,20 +60,22 @@ MAKEFILE_LIST :=
 @F = $(notdir $@)
 # environment
 IM_CONFIG_PHASE = 1
+# environment
+QT_IM_MODULE = ibus
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/opt/apps/com.qq.office.deepin/entries:/opt/apps/com.qquwp.im.gtj/entries
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=712ee522aa8b9153a6203f0162df3fdd
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=41bbcae83c4ce9f6eb6664b762e3339f
 # environment
 DEPEND_INCLUDE_PATH = /home/yq/work/Depend
 # environment
-MANAGERPID = 3617
+MANAGERPID = 3578
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-VSCODE_CWD = /home/yq/work/Practice/CTK
+VSCODE_CWD = /home/yq/work/Practice/commontk/CTK
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
@@ -83,11 +83,11 @@ GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/yq/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0
+NO_PROXY = localhost,127.0.0.0/8,::1
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/yq-mento:@/tmp/.ICE-unix/3806,unix/yq-mento:/tmp/.ICE-unix/3806
+SESSION_MANAGER = local/yq-mento:@/tmp/.ICE-unix/3767,unix/yq-mento:/tmp/.ICE-unix/3767
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -105,7 +105,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 3bd415435d5249e8a4a4964f694ab145
+INVOCATION_ID = 549c79f433c3465ba17d547760fcf916
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -121,15 +121,17 @@ SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = :0
+HTTPS_PROXY = http://127.0.0.1:43545/
+# environment
+no_proxy = localhost,127.0.0.0/8,::1
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-PWD = /home/yq/work/Practice/CTK
+PWD = /home/yq/work/Practice/commontk/CTK
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 3769
+SSH_AGENT_PID = 3730
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -149,7 +151,7 @@ VSCODE_CODE_CACHE_PATH = /home/yq/.config/Code/CachedData/3b889b090b5ad5793f524b
 # environment
 LOGNAME = yq
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
@@ -175,7 +177,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-QT_IM_MODULE = ibus
+PATH = /home/yq/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0
 # environment
 SNAP_USER_DATA = /home/yq/snap/code/102
 # environment
@@ -221,7 +223,11 @@ GDK_BACKEND = x11
 # environment
 NO_AT_BRIDGE = 1
 # environment
+HTTP_PROXY = http://127.0.0.1:43545/
+# environment
 QT_ACCESSIBILITY = 1
+# environment
+DISPLAY = :0
 # default
 MAKEFILES := 
 # environment
@@ -229,17 +235,19 @@ SNAP_COOKIE = vQew3Xe_5C3cVhzi_tpivwrpeVD9eEQIv3w0D_3tga0AUEjctAVD
 # automatic
 <F = $(notdir $<)
 # environment
+https_proxy = http://127.0.0.1:43545/
+# environment
 SNAP_NAME = code
 # environment
 LC_ALL = C
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/52c518c8_e423_4155_ad4d_dab379c609a0
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/66416f76_df5f_4229_a14e_4c57d98b5d2a
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.119
+GNOME_TERMINAL_SERVICE = :1.136
 # default
 SUFFIXES := 
 # environment
@@ -251,25 +259,30 @@ CHROME_DESKTOP = code-url-handler.desktop
 # default
 .RECIPEPREFIX := 
 # environment
+http_proxy = http://127.0.0.1:43545/
+# environment
 LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 6002
+VSCODE_PID = 5980
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=712ee522aa8b9153a6203f0162df3fdd
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=41bbcae83c4ce9f6eb6664b762e3339f
 # variable set hash-table stats:
-# Load=123/1024=12%, Rehash=0, Collisions=10/145=7%
+# Load=129/1024=13%, Rehash=0, Collisions=13/151=9%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
 # Directories
+ 
+make: *** No rule to make target 'all'.  Stop.
 
-# . (device 2051, inode 4727972): 25 files, no impossibilities.
 
-# 25 files, no impossibilities in 1 directories.
+# . (device 2051, inode 4727972): 26 files, no impossibilities.
+
+# 26 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -319,13 +332,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 33 / storage = 355 B / avg = 10 B
-# current buf: size = 8162 B / used = 355 B / count = 33 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 34 / storage = 370 B / avg = 10 B
+# current buf: size = 8162 B / used = 370 B / count = 34 / avg = 10 B
 
-# strcache performance: lookups = 36 / hit rate = 8%
+# strcache performance: lookups = 37 / hit rate = 8%
 # hash-table stats:
- 
-# Load=33/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Tue Jul 26 14:50:27 2022
+# Load=34/8192=0%, Rehash=0, Collisions=1/37=3%
+# Finished Make data base on Fri Jul 29 11:58:00 2022
 
  

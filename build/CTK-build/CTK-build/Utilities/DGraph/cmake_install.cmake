@@ -1,4 +1,4 @@
-# Install script for directory: /home/yq/work/Practice/CTK/Utilities/DGraph
+# Install script for directory: /home/yq/work/Practice/commontk/CTK/Utilities/DGraph
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yq/work/Practice/CTK/build/CTK-build/CTK-build/Utilities/DGraph/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yq/work/Practice/commontk/CTK/build/CTK-build/CTK-build/Utilities/DGraph/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yq/work/Practice/CTK
+CMAKE_SOURCE_DIR = /home/yq/work/Practice/commontk/CTK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yq/work/Practice/CTK/build/CTK-build
+CMAKE_BINARY_DIR = /home/yq/work/Practice/commontk/CTK/build/CTK-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -115,8 +115,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles /home/yq/work/Practice/CTK/build/CTK-build/Libs/Core/Documentation/Snippets/CMakeFiles/progress.marks
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/CTK/build/CTK-build/CMakeFiles 0
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles /home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/Documentation/Snippets/CMakeFiles/progress.marks
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/clean
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/preinstall
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/preinstall
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/rule:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/rule
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f CMakeFiles/Makefile2 Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/rule
 .PHONY : Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ Snippet-CommandLineParser: Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-C
 
 # fast build rule for target.
 Snippet-CommandLineParser/fast:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build
 .PHONY : Snippet-CommandLineParser/fast
 
 CommandLineParser/main.o: CommandLineParser/main.cpp.o
@@ -188,7 +188,7 @@ CommandLineParser/main.o: CommandLineParser/main.cpp.o
 
 # target to build an object file
 CommandLineParser/main.cpp.o:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.o
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.o
 .PHONY : CommandLineParser/main.cpp.o
 
 CommandLineParser/main.i: CommandLineParser/main.cpp.i
@@ -197,7 +197,7 @@ CommandLineParser/main.i: CommandLineParser/main.cpp.i
 
 # target to preprocess a source file
 CommandLineParser/main.cpp.i:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.i
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.i
 .PHONY : CommandLineParser/main.cpp.i
 
 CommandLineParser/main.s: CommandLineParser/main.cpp.s
@@ -206,7 +206,7 @@ CommandLineParser/main.s: CommandLineParser/main.cpp.s
 
 # target to generate assembly for a file
 CommandLineParser/main.cpp.s:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.s
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(MAKE) -f Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/build.make Libs/Core/Documentation/Snippets/CMakeFiles/Snippet-CommandLineParser.dir/CommandLineParser/main.cpp.s
 .PHONY : CommandLineParser/main.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yq/work/Practice/CTK/build/CTK-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/yq/work/Practice/commontk/CTK/build/CTK-build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

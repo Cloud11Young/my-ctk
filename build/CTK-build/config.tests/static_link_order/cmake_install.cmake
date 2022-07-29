@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yq/work/Practice/CTK/build/CTK-build/config.tests/static_link_order/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yq/work/Practice/commontk/CTK/build/CTK-build/config.tests/static_link_order/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
