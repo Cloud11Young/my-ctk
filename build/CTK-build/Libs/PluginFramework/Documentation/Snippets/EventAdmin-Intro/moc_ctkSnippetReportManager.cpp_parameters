@@ -1,0 +1,11 @@
+-I/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework/Resources/UI
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build
+-I/home/yq/work/Practice/commontk/CTK/Libs/Core
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core
+-I/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework
+-f/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework/Documentation/Snippets/EventAdmin-Intro/ctkSnippetReportManager.h
+-o
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework/Documentation/Snippets/EventAdmin-Intro/moc_ctkSnippetReportManager.cpp
+/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework/Documentation/Snippets/EventAdmin-Intro/ctkSnippetReportManager.h

@@ -53,7 +53,7 @@ ctkServiceReference::ctkServiceReference(ctkServiceRegistrationPrivate* reg)
 //----------------------------------------------------------------------------
 ctkServiceReference::operator bool() const
 {
-  return getPlugin();
+  return getPlugin() != nullptr;
 }
 
 //----------------------------------------------------------------------------
@@ -123,8 +123,8 @@ bool ctkServiceReference::operator<(const ctkServiceReference& reference) const
   if (!sameFw)
   {
     throw ctkInvalidArgumentException("Can not compare service references "
-                                      "belonging to different framework "
-                                      "instances.");
+      "belonging to different framework "
+      "instances.");
   }
 
   int r1 = getProperty(ctkPluginConstants::SERVICE_RANKING).toInt();
@@ -142,7 +142,7 @@ bool ctkServiceReference::operator<(const ctkServiceReference& reference) const
 
     // otherwise compare using IDs,
     // is less than if it has a higher ID.
-    return id2< id1;
+    return id2 < id1;
   }
 }
 
@@ -175,8 +175,8 @@ uint qHash(const ctkServiceReference& serviceRef)
 QDebug operator<<(QDebug dbg, const ctkServiceReference& serviceRef)
 {
   dbg.nospace() << "Reference for service object registered from "
-      << serviceRef.getPlugin()->getSymbolicName() << " " << serviceRef.getPlugin()->getVersion()
-      << " (";
+    << serviceRef.getPlugin()->getSymbolicName() << " " << serviceRef.getPlugin()->getVersion()
+    << " (";
   int i = serviceRef.getPropertyKeys().size();
   foreach(QString key, serviceRef.getPropertyKeys())
   {

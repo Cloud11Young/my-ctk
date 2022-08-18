@@ -25,27 +25,27 @@
 
 //----------------------------------------------------------------------------
 ctkRequirePlugin::ctkRequirePlugin(ctkPluginPrivate* requestor,
-              const QString& name, const QString& res,
-              const QString& range)
-                : name(name),
-                resolution(res.isEmpty() ? ctkPluginConstants::RESOLUTION_MANDATORY : res),
-                pluginRange(range.isEmpty() ? ctkVersionRange::defaultVersionRange() : range)
+  const QString& name, const QString& res,
+  const QString& range)
+  : name(name),
+  resolution(res.isEmpty() ? ctkPluginConstants::RESOLUTION_MANDATORY : res),
+  pluginRange(range.isEmpty() ? ctkVersionRange::defaultVersionRange() : range)
 {
 
   if (resolution != ctkPluginConstants::RESOLUTION_MANDATORY &&
-      resolution != ctkPluginConstants::RESOLUTION_OPTIONAL )
+    resolution != ctkPluginConstants::RESOLUTION_OPTIONAL)
   {
     QString what = QString("Invalid directive : '")
-                   + ctkPluginConstants::RESOLUTION_DIRECTIVE + ":=" + this->resolution
-                   + "' in manifest header '"
-                   + ctkPluginConstants::REQUIRE_PLUGIN + ": " + this->name
-                   + "' of plugin with id " + requestor->id
-                   + " (" + requestor->symbolicName + ")"
-                   + ". The value must be either '"
-                   + ctkPluginConstants::RESOLUTION_MANDATORY + "' or '"
-                   + ctkPluginConstants::RESOLUTION_OPTIONAL  + "'.";
+      + ctkPluginConstants::RESOLUTION_DIRECTIVE + ":=" + this->resolution
+      + "' in manifest header '"
+      + ctkPluginConstants::REQUIRE_PLUGIN + ": " + this->name
+      + "' of plugin with id " + QString::number(requestor->id)
+      + " (" + requestor->symbolicName + ")"
+      + ". The value must be either '"
+      + ctkPluginConstants::RESOLUTION_MANDATORY + "' or '"
+      + ctkPluginConstants::RESOLUTION_OPTIONAL + "'.";
     throw ctkInvalidArgumentException(what);
-    }
+  }
 
 
 }
@@ -54,7 +54,7 @@ ctkRequirePlugin::ctkRequirePlugin(ctkPluginPrivate* requestor,
 bool ctkRequirePlugin::overlap(const ctkRequirePlugin& rp) const
 {
   if (resolution == ctkPluginConstants::RESOLUTION_MANDATORY &&
-      rp.resolution != ctkPluginConstants::RESOLUTION_MANDATORY)
+    rp.resolution != ctkPluginConstants::RESOLUTION_MANDATORY)
   {
     return false;
   }

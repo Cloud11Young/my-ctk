@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CTK"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CTK.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CTK-complete.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-install.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-mkdir.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-download.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-update.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-patch.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-configure.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-build.rule"
+		},
+		{
+			"file" : "/home/yq/work/Practice/commontk/CTK/build/CTK-prefix/src/CTK-stamp/CTK-forceconfigure.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"CTK"
+		],
+		"name" : "CTK"
+	}
+}

@@ -1,0 +1,9 @@
+Plugin-SymbolicName: pluginSL1.test
+Plugin-ActivationPolicy: eager
+Plugin-Category: test
+Plugin-ContactAddress: http://commontk.org
+Plugin-Description: Test plugin for framework, pluginSL1_test
+Plugin-Name: pluginSL1
+Plugin-Vendor: CommonTK
+Plugin-Version: 1.0.0
+

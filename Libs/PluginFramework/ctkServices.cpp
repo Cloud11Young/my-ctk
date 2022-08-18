@@ -21,7 +21,7 @@
 
 #include "ctkServices_p.h"
 
-#include <QStringListIterator>
+// #include <QStringListIterator>
 #include <QMutexLocker>
 #include <QBuffer>
 
@@ -45,8 +45,8 @@ struct ServiceRegistrationComparator
 
 //----------------------------------------------------------------------------
 ctkDictionary ctkServices::createServiceProperties(const ctkDictionary& in,
-                                                       const QStringList& classes,
-                                                       long sid)
+  const QStringList& classes,
+  long sid)
 {
   static qlonglong nextServiceID = 1;
   ctkDictionary props = in;
@@ -84,9 +84,9 @@ void ctkServices::clear()
 
 //----------------------------------------------------------------------------
 ctkServiceRegistration ctkServices::registerService(ctkPluginPrivate* plugin,
-                             const QStringList& classes,
-                             QObject* service,
-                             const ctkDictionary& properties)
+  const QStringList& classes,
+  QObject* service,
+  const ctkDictionary& properties)
 {
   if (service == 0)
   {
@@ -107,14 +107,14 @@ ctkServiceRegistration ctkServices::registerService(ctkPluginPrivate* plugin,
       if (!checkServiceClass(service, cls))
       {
         QString msg = QString("Service class %1 is not an instance of %2. Maybe you forgot the Q_INTERFACES macro in the service class.")
-            .arg(service->metaObject()->className()).arg(cls);
+          .arg(service->metaObject()->className()).arg(cls);
         throw ctkInvalidArgumentException(msg);
       }
     }
   }
 
   ctkServiceRegistration res(plugin, service,
-                             createServiceProperties(properties, classes));
+    createServiceProperties(properties, classes));
   {
     QMutexLocker lock(&mutex);
     services.insert(res, classes);
@@ -123,21 +123,21 @@ ctkServiceRegistration ctkServices::registerService(ctkPluginPrivate* plugin,
       QString currClass = i.next();
       QList<ctkServiceRegistration>& s = classServices[currClass];
       QList<ctkServiceRegistration>::iterator ip =
-          std::lower_bound(s.begin(), s.end(), res, ServiceRegistrationComparator());
+        std::lower_bound(s.begin(), s.end(), res, ServiceRegistrationComparator());
       s.insert(ip, res);
     }
   }
 
   ctkServiceReference r = res.getReference();
   plugin->fwCtx->listeners.serviceChanged(
-      plugin->fwCtx->listeners.getMatchingServiceSlots(r),
-      ctkServiceEvent(ctkServiceEvent::REGISTERED, r));
+    plugin->fwCtx->listeners.getMatchingServiceSlots(r),
+    ctkServiceEvent(ctkServiceEvent::REGISTERED, r));
   return res;
 }
 
 //----------------------------------------------------------------------------
 void ctkServices::updateServiceRegistrationOrder(const ctkServiceRegistration& sr,
-                                              const QStringList& classes)
+  const QStringList& classes)
 {
   QMutexLocker lock(&mutex);
   for (QStringListIterator i(classes); i.hasNext(); )
@@ -165,26 +165,29 @@ QList<ctkServiceRegistration> ctkServices::get(const QString& clazz) const
 ctkServiceReference ctkServices::get(ctkPluginPrivate* plugin, const QString& clazz) const
 {
   QMutexLocker lock(&mutex);
-  try {
+  try
+  {
     QList<ctkServiceReference> srs = get_unlocked(clazz, QString(), plugin);
     if (framework->debug.service_reference)
     {
       qDebug() << "get service ref" << clazz << "for plugin"
-               << plugin->location << " = " << srs.size() << "refs";
+        << plugin->location << " = " << srs.size() << "refs";
     }
-    if (!srs.isEmpty()) {
+    if (!srs.isEmpty())
+    {
       return srs.front();
     }
   }
-  catch (const ctkInvalidArgumentException& )
-  { }
+  catch (const ctkInvalidArgumentException&)
+  {
+  }
 
   return ctkServiceReference();
 }
 
 //----------------------------------------------------------------------------
 QList<ctkServiceReference> ctkServices::get(const QString& clazz, const QString& filter,
-                                            ctkPluginPrivate* plugin) const
+  ctkPluginPrivate* plugin) const
 {
   QMutexLocker lock(&mutex);
   return get_unlocked(clazz, filter, plugin);
@@ -192,11 +195,11 @@ QList<ctkServiceReference> ctkServices::get(const QString& clazz, const QString&
 
 //----------------------------------------------------------------------------
 QList<ctkServiceReference> ctkServices::get_unlocked(const QString& clazz, const QString& filter,
-                                                     ctkPluginPrivate* plugin) const
+  ctkPluginPrivate* plugin) const
 {
   Q_UNUSED(plugin)
 
-  QListIterator<ctkServiceRegistration>* s = 0;
+    QListIterator<ctkServiceRegistration>* s = 0;
   QList<ctkServiceRegistration> v;
   ctkLDAPExpr ldap;
   if (clazz.isEmpty())
@@ -208,7 +211,7 @@ QList<ctkServiceReference> ctkServices::get_unlocked(const QString& clazz, const
       if (ldap.getMatchedObjectClasses(matched))
       {
         v.clear();
-        foreach (QString className, matched)
+        foreach(QString className, matched)
         {
           const QList<ctkServiceRegistration>& cl = classServices[className];
           v += cl;

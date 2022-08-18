@@ -1,0 +1,8 @@
+Plugin-SymbolicName: pluginAttrPwd.test
+Plugin-Category: test
+Plugin-ContactAddress: http://commontk.org
+Plugin-Description: Test plugin for MetaType implementations
+Plugin-Name: Test MetaType Password Attribute
+Plugin-Vendor: CommonTK
+Plugin-Version: 1.0.0
+

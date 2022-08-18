@@ -23,7 +23,7 @@
 
 #include "ctkException.h"
 
-#include <QStringListIterator>
+// #include <QStringListIterator>
 #include <QDebug>
 
 
@@ -74,15 +74,15 @@ void ctkVersion::validate()
 //----------------------------------------------------------------------------
 ctkVersion::ctkVersion(unsigned int majorVersion, unsigned int minorVersion, unsigned int microVersion)
   : majorVersion(majorVersion), minorVersion(minorVersion), microVersion(microVersion), qualifier(""),
-    undefined(false)
+  undefined(false)
 {
 
 }
 
 //----------------------------------------------------------------------------
 ctkVersion::ctkVersion(unsigned int majorVersion, unsigned int minorVersion, unsigned int microVersion, const QString& qualifier)
-   : majorVersion(majorVersion), minorVersion(minorVersion), microVersion(microVersion), qualifier(qualifier),
-     undefined(true)
+  : majorVersion(majorVersion), minorVersion(minorVersion), microVersion(microVersion), qualifier(qualifier),
+  undefined(true)
 {
   this->validate();
 }
@@ -116,7 +116,7 @@ ctkVersion::ctkVersion(const QString& version)
         qual = i.next();
         if (i.hasNext())
         {
-           ok = false;
+          ok = false;
         }
       }
     }
@@ -133,7 +133,7 @@ ctkVersion::ctkVersion(const QString& version)
 
 //----------------------------------------------------------------------------
 ctkVersion::ctkVersion(const ctkVersion& version)
-: majorVersion(version.majorVersion), minorVersion(version.minorVersion),
+  : majorVersion(version.majorVersion), minorVersion(version.minorVersion),
   microVersion(version.microVersion), qualifier(version.qualifier),
   undefined(version.undefined)
 {
@@ -218,7 +218,7 @@ bool ctkVersion::operator==(const ctkVersion& other) const
   if (other.undefined) return false;
 
   return (majorVersion == other.majorVersion) && (minorVersion == other.minorVersion) && (microVersion
-      == other.microVersion) && qualifier == other.qualifier;
+    == other.microVersion) && qualifier == other.qualifier;
 }
 
 //----------------------------------------------------------------------------
@@ -263,7 +263,7 @@ int ctkVersion::compare(const ctkVersion& other) const
 }
 
 //----------------------------------------------------------------------------
-bool ctkVersion::operator <(const ctkVersion &object) const
+bool ctkVersion::operator <(const ctkVersion& object) const
 {
   return this->compare(object) < 0;
 }

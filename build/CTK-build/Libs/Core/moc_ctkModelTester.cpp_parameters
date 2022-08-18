@@ -1,0 +1,9 @@
+-I/home/yq/work/Practice/commontk/CTK/Libs/Core
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/Resources/UI
+-I/home/yq/work/Practice/commontk/CTK/build/CTK-build
+-fctkModelTester.h
+-DHAVE_QT6
+-o
+/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core/moc_ctkModelTester.cpp
+/home/yq/work/Practice/commontk/CTK/Libs/Core/ctkModelTester.h

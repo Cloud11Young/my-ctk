@@ -1,0 +1,12 @@
+Plugin-SymbolicName: org.commontk.eventadmintest.perf
+Plugin-ActivationPolicy: eager
+Plugin-Category: test
+Plugin-ContactAddress: http://commontk.org
+Plugin-Copyright: German Cancer Research Center, Division of Medical and Biological Informatics
+Plugin-Description: Test the performance of the event admin
+Plugin-DocURL: http://commontk.org
+Plugin-License: http://www.apache.org/licenses/LICENSE-2.0.html
+Plugin-Name: Event Admin Performance Test Suite
+Plugin-Vendor: CommonTK
+Plugin-Version: 0.9
+
