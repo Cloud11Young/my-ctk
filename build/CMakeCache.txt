@@ -318,7 +318,7 @@ CTK_ENABLE_PluginFramework:BOOL=ON
 CTK_ENABLE_Python_Wrapping:BOOL=OFF
 
 //Enable Qt Widget libraries
-CTK_ENABLE_Widgets:BOOL=OFF
+CTK_ENABLE_Widgets:BOOL=ON
 
 //Build the Command Line Module back-end for function pointers
 CTK_LIB_CommandLineModules/Backend/FunctionPointer:BOOL=OFF
@@ -548,6 +548,12 @@ Qt6Multimedia_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Multimedia
 //The directory containing a CMake configuration file for Qt6Network.
 Qt6Network_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Network
 
+//The directory containing a CMake configuration file for Qt6OpenGLWidgets.
+Qt6OpenGLWidgets_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6OpenGLWidgets
+
+//The directory containing a CMake configuration file for Qt6OpenGL.
+Qt6OpenGL_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6OpenGL
+
 //The directory containing a CMake configuration file for Qt6Sql.
 Qt6Sql_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Sql
 
@@ -556,6 +562,9 @@ Qt6StateMachine_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6StateMachine
 
 //The directory containing a CMake configuration file for Qt6Test.
 Qt6Test_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Test
+
+//The directory containing a CMake configuration file for Qt6UiTools.
+Qt6UiTools_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6UiTools
 
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
 Qt6WidgetsTools_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6WidgetsTools
@@ -822,12 +831,12 @@ CTK_BUILD_QTDESIGNER_PLUGINS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTK_BUILD_SHARED_LIBS
 CTK_BUILD_SHARED_LIBS-ADVANCED:INTERNAL=1
 CTK_ENABLED_APPS:INTERNAL=
-CTK_ENABLED_LIBS:INTERNAL=Core;PluginFramework
+CTK_ENABLED_LIBS:INTERNAL=Core;PluginFramework;Widgets
 CTK_ENABLE_DICOMApplicationHosting_internal:INTERNAL=OFF
 CTK_ENABLE_DICOM_internal:INTERNAL=OFF
 CTK_ENABLE_PluginFramework_internal:INTERNAL=ON
 CTK_ENABLE_Python_Wrapping_internal:INTERNAL=OFF
-CTK_ENABLE_Widgets_internal:INTERNAL=OFF
+CTK_ENABLE_Widgets_internal:INTERNAL=ON
 //CTK libraries
 CTK_LIBRARIES:INTERNAL=
 //ADVANCED property for variable: CTK_LIB_CommandLineModules/Backend/FunctionPointer

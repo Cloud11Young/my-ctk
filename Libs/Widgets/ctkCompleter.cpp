@@ -22,6 +22,7 @@
 #include <QDebug>
 #include <QSortFilterProxyModel>
 #include <QStringList>
+#include <QRegExp>
 
 // CTK includes
 #include "ctkCompleter.h"
@@ -37,7 +38,7 @@ public:
   ctkCompleterPrivate(ctkCompleter& object);
   ~ctkCompleterPrivate();
   void init();
-  
+
   QStringList splitPath(const QString& path);
   void updateSortFilterProxyModel();
 
@@ -73,27 +74,29 @@ QStringList ctkCompleterPrivate::splitPath(const QString& s)
 {
   Q_Q(ctkCompleter);
   QStringList paths;
-  switch(q->modelFiltering())
-    {
-    default:
-    case ctkCompleter::FilterStartsWith:
-      paths = q->QCompleter::splitPath(s);
-      break;
-    case ctkCompleter::FilterContains:
-      this->updateSortFilterProxyModel();
-      this->SortFilterProxyModel->setFilterWildcard(s);
-      paths = QStringList();
-      break;
-    case ctkCompleter::FilterWordStartsWith:
-      {
-      this->updateSortFilterProxyModel();
-      QRegExp regexp = QRegExp(QRegExp::escape(s));
-      regexp.setCaseSensitivity(q->caseSensitivity());
-      this->SortFilterProxyModel->setFilterRegExp(regexp);
-      paths = QStringList();
-      break;
-      }
-    }
+  switch (q->modelFiltering())
+  {
+  default:
+  case ctkCompleter::FilterStartsWith:
+    paths = q->QCompleter::splitPath(s);
+    break;
+  case ctkCompleter::FilterContains:
+    this->updateSortFilterProxyModel();
+    this->SortFilterProxyModel->setFilterWildcard(s);
+    paths = QStringList();
+    break;
+  case ctkCompleter::FilterWordStartsWith:
+  {
+    this->updateSortFilterProxyModel();
+#if 0 //2022081817 YQ
+    QRegExp regexp = QRegExp(QRegExp::escape(s));
+    regexp.setCaseSensitivity(q->caseSensitivity());
+    this->SortFilterProxyModel->setFilterRegExp(regexp);
+#endif
+    paths = QStringList();
+    break;
+  }
+  }
   return paths;
 }
 
@@ -149,9 +152,9 @@ void ctkCompleter::setModelFiltering(ModelFiltering filter)
 {
   Q_D(ctkCompleter);
   if (filter == d->Filtering)
-    {
+  {
     return;
-    }
+  }
   QAbstractItemModel* source = this->sourceModel();
   d->Filtering = filter;
   this->setSourceModel(source);
@@ -172,9 +175,9 @@ QAbstractItemModel* ctkCompleter::sourceModel()const
 {
   Q_D(const ctkCompleter);
   if (d->Filtering != ctkCompleter::FilterStartsWith)
-    {
+  {
     return d->SortFilterProxyModel->sourceModel();
-    }
+  }
   return this->QCompleter::model();
 }
 
@@ -184,17 +187,17 @@ void ctkCompleter::setSourceModel(QAbstractItemModel* source)
   Q_D(ctkCompleter);
   QAbstractItemModel* model = source;
   if (d->Filtering != ctkCompleter::FilterStartsWith)
-    {
+  {
     d->SortFilterProxyModel->setSourceModel(source);
     if (source && source->parent() == this)
-      {
-      source->setParent(d->SortFilterProxyModel);
-      }
-    model = d->SortFilterProxyModel;
-    }
-  else if (source && source->parent() == d->SortFilterProxyModel)
     {
-    source->setParent(this);
+      source->setParent(d->SortFilterProxyModel);
     }
+    model = d->SortFilterProxyModel;
+  }
+  else if (source && source->parent() == d->SortFilterProxyModel)
+  {
+    source->setParent(this);
+  }
   this->setModel(model);
 }

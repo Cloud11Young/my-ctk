@@ -61,10 +61,12 @@ endif()
 # CTK library include dirctories
 set(CTKCore_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include/ctk-0.1")
 set(CTKPluginFramework_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include/ctk-0.1")
+set(CTKWidgets_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include/ctk-0.1")
 set(CTK_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include/ctk-0.1")
 # CTK library directories that could be used for linking
 set(CTKCore_LIBRARY_DIRS "")
 set(CTKPluginFramework_LIBRARY_DIRS "")
+set(CTKWidgets_LIBRARY_DIRS "")
 ##################################################
 
 # Include CTK macros
@@ -101,7 +103,7 @@ else()
 endif()
 
 # List all libraries
-SET(CTK_LIBRARIES CTKCore;CTKPluginFramework)
+SET(CTK_LIBRARIES CTKCore;CTKPluginFramework;CTKWidgets)
 
 # List all CTK libraries wrapped with PythonQt
 SET(CTK_WRAPPED_LIBRARIES_PYTHONQT )
@@ -111,7 +113,7 @@ include(${CTK_PLUGIN_USE_FILE})
 
 # Qt configuration
 set(CTK_QT_VERSION "6")
-set(CTK_QT6_COMPONENTS Core;Xml;Concurrent;Sql;Test;Multimedia;Core5Compat;StateMachine;Widgets)
+set(CTK_QT6_COMPONENTS Core;Xml;Concurrent;Sql;Test;Multimedia;Core5Compat;StateMachine;Widgets;Widgets;OpenGL;UiTools)
 
 # Update CMake module path so that calling "find_package(DCMTK)" works as expected 
 # after calling "find_package(CTK)"

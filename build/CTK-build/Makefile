@@ -82,7 +82,7 @@ install/local/fast: preinstall/fast
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Development\" \"RuntimeLibraries\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Development\" \"RuntimeLibraries\" \"RuntimePlugins\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -843,6 +843,45 @@ Snippet-EventAdmin-Intro/fast:
 	$(MAKE) -f Libs/PluginFramework/Documentation/Snippets/CMakeFiles/Snippet-EventAdmin-Intro.dir/build.make Libs/PluginFramework/Documentation/Snippets/CMakeFiles/Snippet-EventAdmin-Intro.dir/build
 .PHONY : Snippet-EventAdmin-Intro/fast
 
+#=============================================================================
+# Target rules for targets named CTKWidgets
+
+# Build rule for target.
+CTKWidgets: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKWidgets
+.PHONY : CTKWidgets
+
+# fast build rule for target.
+CTKWidgets/fast:
+	$(MAKE) -f Libs/Widgets/CMakeFiles/CTKWidgets.dir/build.make Libs/Widgets/CMakeFiles/CTKWidgets.dir/build
+.PHONY : CTKWidgets/fast
+
+#=============================================================================
+# Target rules for targets named CTKWidgetsPlugins
+
+# Build rule for target.
+CTKWidgetsPlugins: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKWidgetsPlugins
+.PHONY : CTKWidgetsPlugins
+
+# fast build rule for target.
+CTKWidgetsPlugins/fast:
+	$(MAKE) -f Libs/Widgets/Plugins/CMakeFiles/CTKWidgetsPlugins.dir/build.make Libs/Widgets/Plugins/CMakeFiles/CTKWidgetsPlugins.dir/build
+.PHONY : CTKWidgetsPlugins/fast
+
+#=============================================================================
+# Target rules for targets named CTKWidgetsCppTests
+
+# Build rule for target.
+CTKWidgetsCppTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CTKWidgetsCppTests
+.PHONY : CTKWidgetsCppTests
+
+# fast build rule for target.
+CTKWidgetsCppTests/fast:
+	$(MAKE) -f Libs/Widgets/Testing/Cpp/CMakeFiles/CTKWidgetsCppTests.dir/build.make Libs/Widgets/Testing/Cpp/CMakeFiles/CTKWidgetsCppTests.dir/build
+.PHONY : CTKWidgetsCppTests/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -908,6 +947,9 @@ help:
 	@echo "... org_commontk_metatypetest"
 	@echo "... pluginAttrPwd_test"
 	@echo "... Snippet-EventAdmin-Intro"
+	@echo "... CTKWidgets"
+	@echo "... CTKWidgetsPlugins"
+	@echo "... CTKWidgetsCppTests"
 .PHONY : help
 
 

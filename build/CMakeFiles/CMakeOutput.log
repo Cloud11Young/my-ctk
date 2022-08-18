@@ -745,3 +745,31 @@ make[1]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMa
 
 
 
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fd5e2/fast && /usr/bin/make -f CMakeFiles/cmTC_fd5e2.dir/build.make CMakeFiles/cmTC_fd5e2.dir/build
+make[1]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_fd5e2.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -fvisibility=hidden   -o CMakeFiles/cmTC_fd5e2.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_fd5e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd5e2.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_fd5e2.dir/DummyCXXFile.cxx.o  -o cmTC_fd5e2 
+make[1]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_efe57/fast && /usr/bin/make -f CMakeFiles/cmTC_efe57.dir/build.make CMakeFiles/cmTC_efe57.dir/build
+make[1]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_efe57.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -fvisibility=hidden   -o CMakeFiles/cmTC_efe57.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_efe57
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efe57.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_efe57.dir/DummyCXXFile.cxx.o  -o cmTC_efe57 
+make[1]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CMakeFiles/CMakeTmp”
+
+
+

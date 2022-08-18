@@ -7,6 +7,7 @@
 subdirs("CMake/Testing")
 subdirs("Libs/Core")
 subdirs("Libs/PluginFramework")
+subdirs("Libs/Widgets")
 subdirs("Libs/CommandLineModules/Core/Documentation")
 subdirs("Libs/CommandLineModules/Backend/LocalProcess/Documentation")
 subdirs("Libs/Testing")

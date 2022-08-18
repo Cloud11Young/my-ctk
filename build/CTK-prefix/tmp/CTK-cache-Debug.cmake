@@ -79,7 +79,7 @@ set(CTK_PLUGIN_org.commontk.dah.examplehost "OFF" CACHE BOOL "Initial cache" FOR
 set(CTK_USE_CONTRIBUTED_PLUGINS "OFF" CACHE BOOL "Initial cache" FORCE)
 set(CTK_ENABLE_DICOM "OFF" CACHE BOOL "Initial cache" FORCE)
 set(CTK_ENABLE_DICOMApplicationHosting "OFF" CACHE BOOL "Initial cache" FORCE)
-set(CTK_ENABLE_Widgets "OFF" CACHE BOOL "Initial cache" FORCE)
+set(CTK_ENABLE_Widgets "ON" CACHE BOOL "Initial cache" FORCE)
 set(CTK_ENABLE_PluginFramework "ON" CACHE BOOL "Initial cache" FORCE)
 set(CTK_ENABLE_Python_Wrapping "OFF" CACHE BOOL "Initial cache" FORCE)
 set(CTK_ENABLE_Python_Wrapping "OFF" CACHE BOOL "Initial cache" FORCE)

@@ -281,6 +281,24 @@ CTKTesting_BINARY_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/build/CTK-build
 //Value Computed by CMake
 CTKTesting_SOURCE_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/Libs/Testing
 
+//Value Computed by CMake
+CTKWidgetsPlugins_BINARY_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Widgets/Plugins
+
+//Dependencies for the target
+CTKWidgetsPlugins_LIB_DEPENDS:STATIC=general;CTKWidgets;general;Qt6::Designer;
+
+//Value Computed by CMake
+CTKWidgetsPlugins_SOURCE_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/Libs/Widgets/Plugins
+
+//Value Computed by CMake
+CTKWidgets_BINARY_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Widgets
+
+//Dependencies for the target
+CTKWidgets_LIB_DEPENDS:STATIC=general;CTKCore;general;Qt6::Widgets;general;Qt6::Xml;general;Qt6::OpenGL;
+
+//Value Computed by CMake
+CTKWidgets_SOURCE_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/Libs/Widgets
+
 //Build the Command Line Module Explorer
 CTK_APP_ctkCommandLineModuleExplorer:BOOL=OFF
 
@@ -375,7 +393,7 @@ CTK_ENABLE_PluginFramework:BOOL=ON
 CTK_ENABLE_Python_Wrapping:BOOL=OFF
 
 //Enable Qt Widget libraries
-CTK_ENABLE_Widgets:BOOL=OFF
+CTK_ENABLE_Widgets:BOOL=ON
 
 //Initial cache
 CTK_INSTALL_BIN_DIR:STRING=bin
@@ -626,6 +644,9 @@ Qt6CoreTools_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6CoreTools
 //The directory containing a CMake configuration file for Qt6Core.
 Qt6Core_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Core
 
+//The directory containing a CMake configuration file for Qt6Designer.
+Qt6Designer_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Designer
+
 //The directory containing a CMake configuration file for Qt6GuiTools.
 Qt6GuiTools_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6GuiTools
 
@@ -641,6 +662,12 @@ Qt6Multimedia_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Multimedia
 //The directory containing a CMake configuration file for Qt6Network.
 Qt6Network_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Network
 
+//The directory containing a CMake configuration file for Qt6OpenGLWidgets.
+Qt6OpenGLWidgets_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6OpenGLWidgets
+
+//The directory containing a CMake configuration file for Qt6OpenGL.
+Qt6OpenGL_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6OpenGL
+
 //The directory containing a CMake configuration file for Qt6Sql.
 Qt6Sql_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Sql
 
@@ -649,6 +676,12 @@ Qt6StateMachine_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6StateMachine
 
 //The directory containing a CMake configuration file for Qt6Test.
 Qt6Test_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6Test
+
+//The directory containing a CMake configuration file for Qt6UiPlugin.
+Qt6UiPlugin_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6UiPlugin
+
+//The directory containing a CMake configuration file for Qt6UiTools.
+Qt6UiTools_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6UiTools
 
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
 Qt6WidgetsTools_DIR:PATH=/opt/Qt/6.2.1/gcc_64/lib/cmake/Qt6WidgetsTools
@@ -966,7 +999,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=35
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=39
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1052,21 +1085,21 @@ CTK_APP_ctkSimplePythonShell-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTK_APP_ctkXnatTreeBrowser
 CTK_APP_ctkXnatTreeBrowser-ADVANCED:INTERNAL=1
 //CTK base libraries
-CTK_BASE_LIBRARIES:INTERNAL=CTKCore;Qt6::Sql;Qt6::Concurrent;CTKPluginFramework
+CTK_BASE_LIBRARIES:INTERNAL=CTKCore;Qt6::Widgets;Qt6::Xml;Qt6::OpenGL;CTKWidgets
 CTK_BUILD_EXAMPLES_internal:INTERNAL=OFF
 //ADVANCED property for variable: CTK_BUILD_QTDESIGNER_PLUGINS
 CTK_BUILD_QTDESIGNER_PLUGINS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTK_BUILD_SHARED_LIBS
 CTK_BUILD_SHARED_LIBS-ADVANCED:INTERNAL=1
 CTK_ENABLED_APPS:INTERNAL=
-CTK_ENABLED_LIBS:INTERNAL=Core;PluginFramework
+CTK_ENABLED_LIBS:INTERNAL=Core;PluginFramework;Widgets
 CTK_ENABLE_DICOMApplicationHosting_internal:INTERNAL=OFF
 CTK_ENABLE_DICOM_internal:INTERNAL=OFF
 CTK_ENABLE_PluginFramework_internal:INTERNAL=ON
 CTK_ENABLE_Python_Wrapping_internal:INTERNAL=OFF
-CTK_ENABLE_Widgets_internal:INTERNAL=OFF
+CTK_ENABLE_Widgets_internal:INTERNAL=ON
 //CTK libraries
-CTK_LIBRARIES:INTERNAL=CTKCore;CTKPluginFramework
+CTK_LIBRARIES:INTERNAL=CTKCore;CTKPluginFramework;CTKWidgets
 //ADVANCED property for variable: CTK_LIB_CommandLineModules/Backend/FunctionPointer
 CTK_LIB_CommandLineModules/Backend/FunctionPointer-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTK_LIB_CommandLineModules/Backend/LocalProcess

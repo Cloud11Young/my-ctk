@@ -733,7 +733,7 @@ void ctkPluginStorageSQL::executeQuery(QSqlQuery* query, const QString& statemen
       }
 
       ctkPluginDatabaseException::Type errorType;
-      int result = query->lastError().number();
+      int result = query->lastError().nativeErrorCode().toInt();
       if (result == 26 || result == 11) //SQLILTE_NOTADB || SQLITE_CORRUPT
       {
         qWarning() << "ctkPluginFramework:- Database file is corrupt or invalid:" << getDatabasePath();
@@ -1010,7 +1010,7 @@ void ctkPluginStorageSQL::beginTransaction(QSqlQuery* query, TransactionType typ
 
   if (!success)
   {
-    int result = query->lastError().number();
+    int result = query->lastError().nativeErrorCode().toInt();
     if (result == 26 || result == 11) //SQLITE_NOTADB || SQLITE_CORRUPT
     {
       throw ctkPluginDatabaseException(QString("ctkPluginFramework: Database file is corrupt or invalid: %1").arg(getDatabasePath()),

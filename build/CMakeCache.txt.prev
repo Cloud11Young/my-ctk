@@ -312,7 +312,7 @@ CTK_ENABLE_DICOM:BOOL=OFF
 CTK_ENABLE_DICOMApplicationHosting:BOOL=OFF
 
 //Enable Plugin Framework
-CTK_ENABLE_PluginFramework:BOOL=OFF
+CTK_ENABLE_PluginFramework:BOOL=ON
 
 //Wrap CTK classes using Qt meta-object system into Python language
 CTK_ENABLE_Python_Wrapping:BOOL=OFF
@@ -822,10 +822,10 @@ CTK_BUILD_QTDESIGNER_PLUGINS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTK_BUILD_SHARED_LIBS
 CTK_BUILD_SHARED_LIBS-ADVANCED:INTERNAL=1
 CTK_ENABLED_APPS:INTERNAL=
-CTK_ENABLED_LIBS:INTERNAL=Core
+CTK_ENABLED_LIBS:INTERNAL=Core;PluginFramework
 CTK_ENABLE_DICOMApplicationHosting_internal:INTERNAL=OFF
 CTK_ENABLE_DICOM_internal:INTERNAL=OFF
-CTK_ENABLE_PluginFramework_internal:INTERNAL=OFF
+CTK_ENABLE_PluginFramework_internal:INTERNAL=ON
 CTK_ENABLE_Python_Wrapping_internal:INTERNAL=OFF
 CTK_ENABLE_Widgets_internal:INTERNAL=OFF
 //CTK libraries

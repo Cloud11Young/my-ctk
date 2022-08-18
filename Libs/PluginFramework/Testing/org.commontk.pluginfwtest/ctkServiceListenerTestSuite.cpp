@@ -86,7 +86,7 @@ void ctkServiceListenerTestSuite::frameSL10a()
   QList<ctkServiceEvent::Type> events;
   events << ctkServiceEvent::REGISTERED;
   events << ctkServiceEvent::UNREGISTERING;
-  QVERIFY(runStartStopTest("FRAMEsl10A", cnt, pA2,events));
+  QVERIFY(runStartStopTest("FRAMEsl10A", cnt, pA2, events));
 }
 
 //----------------------------------------------------------------------------
@@ -178,13 +178,13 @@ void ctkServiceListenerTestSuite::frameSL25a()
   try
   {
     ctkServiceReference pSL3SR
-        = pc->getServiceReference("ctkActivatorSL3");
+      = pc->getServiceReference("ctkActivatorSL3");
     QObject* pSL3Activator = pc->getService(pSL3SR);
     QVERIFY2(pSL3Activator, "No activator service.");
 
     QVariant serviceAddedField3 = pSL3Activator->property("serviceAdded");
     QVERIFY2(serviceAddedField3.isValid() && serviceAddedField3.toBool(),
-             "pluginSL3 not notified about presence of ctkFooService");
+      "pluginSL3 not notified about presence of ctkFooService");
     qDebug() << "pSL3Activator::serviceAdded is true";
     pc->ungetService(pSL3SR);
   }
@@ -199,13 +199,13 @@ void ctkServiceListenerTestSuite::frameSL25a()
   try
   {
     ctkServiceReference pSL1SR
-        = pc->getServiceReference("ctkActivatorSL1");
+      = pc->getServiceReference("ctkActivatorSL1");
     QObject* pSL1Activator = pc->getService(pSL1SR);
     QVERIFY2(pSL1Activator, "No activator service.");
 
     QVariant serviceAddedField = pSL1Activator->property("serviceAdded");
     QVERIFY2(serviceAddedField.isValid() && serviceAddedField.toBool(),
-             "bundleSL1 not notified about presence of ctkFooService");
+      "bundleSL1 not notified about presence of ctkFooService");
     qDebug() << "pSL1Activator::serviceAdded is true";
     pc->ungetService(pSL1SR);
   }
@@ -241,12 +241,12 @@ void ctkServiceListenerTestSuite::frameSL25a()
   try
   {
     ctkServiceReference pSL3SR
-        = pc->getServiceReference("ctkActivatorSL3");
+      = pc->getServiceReference("ctkActivatorSL3");
     QObject* pSL3Activator = pc->getService(pSL3SR);
     QVERIFY2(pSL3Activator, "No activator service.");
     QVariant serviceRemovedField3 = pSL3Activator->property("serviceRemoved");
     QVERIFY2(serviceRemovedField3.isValid() && serviceRemovedField3.toBool(),
-             "pluginSL3 not notified about removal of ctkFooService");
+      "pluginSL3 not notified about removal of ctkFooService");
     qDebug() << "pSL3Activator::serviceRemoved is true";
     pc->ungetService(pSL3SR);
   }
@@ -304,11 +304,11 @@ void ctkServiceListenerTestSuite::frameSL25a()
 
 
   QVERIFY2(sListen.teststatus, "Service listener checks");
-  try 
+  try
   {
     //pc->disconnectServiceListener(&sListen, "serviceChanged");
     sListen.clearEvents();
-  } 
+  }
   catch (const ctkIllegalStateException& ise)
   {
     qDebug() << ise.what();
@@ -332,9 +332,9 @@ bool ctkServiceListenerTestSuite::runStartStopTest(
     }
     catch (const ctkIllegalStateException& ise)
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "service listener registration failed " << ise.what()
-               << " :" << tcName << ":FAIL";
+        << " :" << tcName << ":FAIL";
     }
 
     // Start the test target to get a service published.
@@ -345,15 +345,15 @@ bool ctkServiceListenerTestSuite::runStartStopTest(
     }
     catch (const ctkPluginException& pex)
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "Failed to start plugin, got exception: "
-               << pex.what() << " in " << tcName << ":FAIL";
+        << pex.what() << " in " << tcName << ":FAIL";
     }
     catch (const std::exception& e)
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "Failed to start plugin, got exception: "
-               << e.what() << " + in " << tcName << ":FAIL";
+        << e.what() << " + in " << tcName << ":FAIL";
     }
 
     // sleep to stabelize state.
@@ -366,22 +366,22 @@ bool ctkServiceListenerTestSuite::runStartStopTest(
     }
     catch (const ctkPluginException& pex)
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "Failed to stop plugin, got exception: "
-               << pex.what() << " in " << tcName << ":FAIL";
+        << pex.what() << " in " << tcName << ":FAIL";
     }
     catch (const std::exception& e)
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "Failed to stop plugin, got exception: "
-               << e.what() << " + in " << tcName << ":FAIL";
+        << e.what() << " + in " << tcName << ":FAIL";
     }
 
     if (teststatus && !sListen.checkEvents(events))
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "Service listener event notification error :"
-               << tcName << ":FAIL";
+        << tcName << ":FAIL";
     }
 
     try
@@ -392,9 +392,9 @@ bool ctkServiceListenerTestSuite::runStartStopTest(
     }
     catch (const ctkIllegalStateException& ise)
     {
-      teststatus  = false;
+      teststatus = false;
       qDebug() << "service listener removal failed " << ise.what()
-               << " :" << tcName << ":FAIL";
+        << " :" << tcName << ":FAIL";
     }
   }
   return teststatus;
@@ -422,7 +422,7 @@ bool ctkServiceListener::checkEvents(const QList<ctkServiceEvent::Type>& eventTy
     return false;
   }
 
-  for (int i=0; i < eventTypes.size(); ++i)
+  for (int i = 0; i < eventTypes.size(); ++i)
   {
     if (eventTypes[i] != events[i].getType())
     {
@@ -453,44 +453,44 @@ void ctkServiceListener::serviceChanged(const ctkServiceEvent& evt)
     // Check if the service can be fetched
     QObject* service = pc->getService(sr);
     usingPlugins = sr.getUsingPlugins();
-//    if (UNREGISTERSERVICE_VALID_DURING_UNREGISTERING) {
-      // In this mode the service shall be obtainable during
-      // unregistration.
-      if (service == 0)
-      {
-        teststatus = false;
-        qDebug() << "*** Service should be available to ServiceListener "
-                 << "while handling unregistering event.";
-      }
-      qDebug() << "Service (unreg): " << service->metaObject()->className();
-      if (checkUsingPlugins && usingPlugins.size() != 1)
-      {
-        teststatus = false;
-        printUsingPlugins(sr, "*** One using plugin expected "
-                          "(unreg, after getService), found: ");
-      }
-      else
-      {
-        printUsingPlugins(sr, "Using plugins (unreg, after getService): ");
-      }
-//    } else {
-//      // In this mode the service shall NOT be obtainable during
-//      // unregistration.
-//      if (null!=service) {
-//        teststatus = false;
-//        out.print("*** Service should not be available to ServiceListener "
-//                  +"while handling unregistering event.");
-//      }
-//      if (checkUsingBundles && null!=usingBundles) {
-//        teststatus = false;
-//        printUsingBundles(sr,
-//                          "*** Using bundles (unreg, after getService), "
-//                          +"should be null but is: ");
-//      } else {
-//        printUsingBundles(sr,
-//                          "Using bundles (unreg, after getService): null");
-//      }
-//    }
+    //    if (UNREGISTERSERVICE_VALID_DURING_UNREGISTERING) {
+          // In this mode the service shall be obtainable during
+          // unregistration.
+    if (service == 0)
+    {
+      teststatus = false;
+      qDebug() << "*** Service should be available to ServiceListener "
+        << "while handling unregistering event.";
+    }
+    qDebug() << "Service (unreg): " << service->metaObject()->className();
+    if (checkUsingPlugins && usingPlugins.size() != 1)
+    {
+      teststatus = false;
+      printUsingPlugins(sr, "*** One using plugin expected "
+        "(unreg, after getService), found: ");
+    }
+    else
+    {
+      printUsingPlugins(sr, "Using plugins (unreg, after getService): ");
+    }
+    //    } else {
+    //      // In this mode the service shall NOT be obtainable during
+    //      // unregistration.
+    //      if (null!=service) {
+    //        teststatus = false;
+    //        out.print("*** Service should not be available to ServiceListener "
+    //                  +"while handling unregistering event.");
+    //      }
+    //      if (checkUsingBundles && null!=usingBundles) {
+    //        teststatus = false;
+    //        printUsingBundles(sr,
+    //                          "*** Using bundles (unreg, after getService), "
+    //                          +"should be null but is: ");
+    //      } else {
+    //        printUsingBundles(sr,
+    //                          "Using bundles (unreg, after getService): null");
+    //      }
+    //    }
     pc->ungetService(sr);
 
     // Check that the UNREGISTERING service can not be looked up
@@ -498,18 +498,18 @@ void ctkServiceListener::serviceChanged(const ctkServiceEvent& evt)
     try
     {
       qulonglong sid = sr.getProperty(ctkPluginConstants::SERVICE_ID).toLongLong();
-      QString sidFilter = QString("(") + ctkPluginConstants::SERVICE_ID + "=" + sid + ")";
+      QString sidFilter = QString("(") + ctkPluginConstants::SERVICE_ID + "=" + QString::number(sid) + ")";
       QList<ctkServiceReference> srs = pc->getServiceReferences("", sidFilter);
       if (srs.isEmpty())
       {
         qDebug() << "ctkServiceReference for UNREGISTERING service is not"
-                    " found in the service registry; ok.";
+          " found in the service registry; ok.";
       }
       else
       {
         teststatus = false;
         qDebug() << "*** ctkServiceReference for UNREGISTERING service,"
-                 << sr << ", not found in the service registry; fail.";
+          << sr << ", not found in the service registry; fail.";
         qDebug() << "Found the following Service references:";
         foreach(ctkServiceReference sr, srs)
         {
@@ -521,15 +521,15 @@ void ctkServiceListener::serviceChanged(const ctkServiceEvent& evt)
     {
       teststatus = false;
       qDebug() << "*** Unexpected excpetion when trying to lookup a"
-                  " service while it is in state UNREGISTERING;"
-               << e.what();
+        " service while it is in state UNREGISTERING;"
+        << e.what();
     }
   }
 }
 
 //----------------------------------------------------------------------------
 void ctkServiceListener::printUsingPlugins(const ctkServiceReference& sr,
-                                           const QString& caption)
+  const QString& caption)
 {
   QList<QSharedPointer<ctkPlugin> > usingPlugins = sr.getUsingPlugins();
 
@@ -545,7 +545,7 @@ void ctkServiceListener::dumpEvents(const QList<ctkServiceEvent::Type>& eventTyp
 {
   int max = events.size() > eventTypes.size() ? events.size() : eventTypes.size();
   qDebug() << "Expected event type --  Actual event";
-  for (int i=0; i < max; ++i)
+  for (int i = 0; i < max; ++i)
   {
     ctkServiceEvent evt = i < events.size() ? events[i] : ctkServiceEvent();
     if (i < eventTypes.size())

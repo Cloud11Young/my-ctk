@@ -67,13 +67,15 @@ set(CTK_QTDESIGNERPLUGINS_DIR "/home/yq/work/Practice/commontk/CTK/build/CTK-bui
 # CTK library include dirctories
 set(CTKCore_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build")
 set(CTKPluginFramework_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build;/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core")
+set(CTKWidgets_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Widgets;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Widgets;/home/yq/work/Practice/commontk/CTK/build/CTK-build;/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core")
 set(CTKTesting_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build")
-set(CTK_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build;/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Testing")
+set(CTK_INCLUDE_DIRS "/home/yq/work/Practice/commontk/CTK/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Core;/home/yq/work/Practice/commontk/CTK/build/CTK-build;/home/yq/work/Practice/commontk/CTK/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/PluginFramework;/home/yq/work/Practice/commontk/CTK/Libs/Widgets;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Widgets;/home/yq/work/Practice/commontk/CTK/Libs/Testing;/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Testing")
 # CTK library directories that could be used for linking
 set(CTKCore_LIBRARY_DIRS "")
 set(CTKPluginFramework_LIBRARY_DIRS "")
+set(CTKWidgets_LIBRARY_DIRS "")
 # External project libraries
-set(CTK_EXTERNAL_LIBRARIES "general;Qt6::Core;general;Qt6::Core5Compat;general;Qt6::StateMachine;general;dl;general;Qt6::Sql;general;Qt6::Concurrent")
+set(CTK_EXTERNAL_LIBRARIES "general;Qt6::Core;general;Qt6::Core5Compat;general;Qt6::StateMachine;general;dl;general;Qt6::Widgets;general;Qt6::Xml;general;Qt6::OpenGL;general;Qt6::Sql;general;Qt6::Concurrent")
 ##################################################
 
 # Include CTK macros
@@ -110,7 +112,7 @@ else()
 endif()
 
 # List all libraries
-SET(CTK_LIBRARIES CTKCore;CTKPluginFramework)
+SET(CTK_LIBRARIES CTKCore;CTKPluginFramework;CTKWidgets)
 
 # List all CTK libraries wrapped with PythonQt
 SET(CTK_WRAPPED_LIBRARIES_PYTHONQT )
@@ -120,7 +122,7 @@ include(${CTK_PLUGIN_USE_FILE})
 
 # Qt configuration
 set(CTK_QT_VERSION "6")
-set(CTK_QT6_COMPONENTS Core;Xml;Concurrent;Sql;Test;Multimedia;Core5Compat;StateMachine;Widgets)
+set(CTK_QT6_COMPONENTS Core;Xml;Concurrent;Sql;Test;Multimedia;Core5Compat;StateMachine;Widgets;Widgets;OpenGL;UiTools)
 
 # Update CMake module path so that calling "find_package(DCMTK)" works as expected 
 # after calling "find_package(CTK)"
