@@ -66,6 +66,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QScrollBar>
 #include <QDebug>
 #include <QRegExp>
+#include <QGuiApplication>
 
 // CTK includes
 #include "ctkConsole.h"
@@ -153,7 +154,7 @@ void ctkConsolePrivate::init()
   this->RunFileButton->setVisible(false);
 
   QVBoxLayout* layout = new QVBoxLayout(q);
-  layout->setMargin(0);
+  // layout->setMargin(0);
   layout->setSpacing(0);
   layout->addWidget(this);
   layout->addWidget(this->RunFileButton);
@@ -530,7 +531,7 @@ void ctkConsolePrivate::keyPressEvent(QKeyEvent* e)
     return;
   }
 
-  if (this->CompleterShortcuts.contains(e->key() + e->modifiers()))
+  if (this->CompleterShortcuts.contains(e->key() + (int)e->modifiers()))
   {
     e->accept();
     this->updateCompleter();
@@ -784,7 +785,7 @@ void ctkConsolePrivate::internalExecuteCommand()
   QString command = this->commandBuffer();
   if (this->EditorHints & ctkConsole::RemoveTrailingSpaces)
   {
-    command.replace(QRegExp("\\s*$"), ""); // Remove trailing spaces
+    command.replace(QRegularExpression("\\s*$"), ""); // Remove trailing spaces
     this->commandBuffer() = command; // Update buffer
   }
 
@@ -827,7 +828,7 @@ void ctkConsolePrivate::processInput()
 
   if (this->EditorHints & ctkConsole::RemoveTrailingSpaces)
   {
-    command.replace(QRegExp("\\s*$"), ""); // Remove trailing spaces
+    command.replace(QRegularExpression("\\s*$"), ""); // Remove trailing spaces
     this->commandBuffer() = command; // Update buffer
   }
 
@@ -1020,7 +1021,7 @@ void ctkConsolePrivate::pasteText(const QString& text)
   textCursor.removeSelectedText();
   if (this->EditorHints & ctkConsole::SplitCopiedTextByLine)
   {
-    QStringList lines = text.split(QRegExp("(?:\r\n|\r|\n)"));
+    QStringList lines = text.split(QRegularExpression("(?:\r\n|\r|\n)")/*QRegExp("(?:\r\n|\r|\n)")*/);
     for (int i = 0; i < lines.count(); ++i)
     {
       this->switchToUserInputTextColor(&textCursor);

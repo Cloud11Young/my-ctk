@@ -353,7 +353,7 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  list(APPEND KIT_target_libraries Qt6::Widgets Qt6::Xml Qt6::OpenGL)
+  list(APPEND KIT_target_libraries Qt6::Widgets Qt6::Xml Qt6::OpenGL Qt6::OpenGLWidgets)
 endif()
 
 # A player and a translator must be added for custom Qt widgets

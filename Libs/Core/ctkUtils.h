@@ -27,7 +27,7 @@
 #include <QDebug>
 #include <QModelIndex>
 #include <QStringList>
-#include <QRegExp>
+#include <QRegularExpression>
 
 // STD includes
 #include <vector>
@@ -108,7 +108,7 @@ namespace ctk {
   /// Convert a list of wildcar extension filters ("*.jpg")
   /// into a regular expression string
   /// "*.jpg", "*.txt" -> "(.*\\.jpg?$|.*\\.txt?$)"
-  CTK_CORE_EXPORT QRegExp nameFiltersToRegExp(const QStringList& nameFilters);
+  CTK_CORE_EXPORT QRegularExpression nameFiltersToRegExp(const QStringList& nameFilters);
 
   ///
   /// \ingroup Core

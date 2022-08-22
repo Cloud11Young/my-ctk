@@ -68,7 +68,7 @@ set_target_properties(CTKPluginFramework PROPERTIES
 add_library(CTKWidgets SHARED IMPORTED)
 
 set_target_properties(CTKWidgets PROPERTIES
-  INTERFACE_LINK_LIBRARIES "CTKCore;Qt6::Widgets;Qt6::Xml;Qt6::OpenGL"
+  INTERFACE_LINK_LIBRARIES "CTKCore;Qt6::Widgets;Qt6::Xml;Qt6::OpenGL;Qt6::OpenGLWidgets"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

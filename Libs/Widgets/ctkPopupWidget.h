@@ -44,35 +44,35 @@ class CTK_WIDGETS_EXPORT ctkPopupWidget : public ctkBasePopupWidget
 {
   Q_OBJECT
 
-  /// Control whether the popup listens to the application and baseWidget
-  /// events and decides if it needs to be permanently or temporarily hidden.
-  /// You might want to setActive(false) when embedding the popup
-  /// into a static layout intead of having it top-level (no parent).
-  /// Consider also removing its windowFlags (Qt::ToolTip |
-  /// Qt::FramelessWindowHint) and removing the baseWidget.
-  /// True by default
-  /// \sa isActive(), setActive()
-  Q_PROPERTY( bool active READ isActive WRITE setActive)
+    /// Control whether the popup listens to the application and baseWidget
+    /// events and decides if it needs to be permanently or temporarily hidden.
+    /// You might want to setActive(false) when embedding the popup
+    /// into a static layout intead of having it top-level (no parent).
+    /// Consider also removing its windowFlags (Qt::ToolTip |
+    /// Qt::FramelessWindowHint) and removing the baseWidget.
+    /// True by default
+    /// \sa isActive(), setActive()
+    Q_PROPERTY(bool active READ isActive WRITE setActive)
 
-  /// Control wether the popup automatically opens when the mouse
-  /// enter the widget. True by default
-  /// \sa autoShow(), setAutoShow()
-  Q_PROPERTY( bool autoShow READ autoShow WRITE setAutoShow)
+    /// Control wether the popup automatically opens when the mouse
+    /// enter the widget. True by default
+    /// \sa autoShow(), setAutoShow()
+    Q_PROPERTY(bool autoShow READ autoShow WRITE setAutoShow)
 
-  /// Time in ms to wait before opening the popup if autoShow is set.
-  /// 20ms by default
-  /// \sa showDelay(), setShowDelay()
-  Q_PROPERTY( int showDelay READ showDelay WRITE setShowDelay)
+    /// Time in ms to wait before opening the popup if autoShow is set.
+    /// 20ms by default
+    /// \sa showDelay(), setShowDelay()
+    Q_PROPERTY(int showDelay READ showDelay WRITE setShowDelay)
 
-  /// Control wether the popup automatically closes when the mouse
-  /// leaves the widget. True by default.
-  /// \sa autoHide(), setAutoHide()
-  Q_PROPERTY( bool autoHide READ autoHide WRITE setAutoHide)
+    /// Control wether the popup automatically closes when the mouse
+    /// leaves the widget. True by default.
+    /// \sa autoHide(), setAutoHide()
+    Q_PROPERTY(bool autoHide READ autoHide WRITE setAutoHide)
 
-  /// Time in ms to wait before closing the popup if autoHide is set.
-  /// 200ms by default
-  /// \sa hideDelay(), setHideDelay()
-  Q_PROPERTY( int hideDelay READ hideDelay WRITE setHideDelay)
+    /// Time in ms to wait before closing the popup if autoHide is set.
+    /// 200ms by default
+    /// \sa hideDelay(), setHideDelay()
+    Q_PROPERTY(int hideDelay READ hideDelay WRITE setHideDelay)
 
 public:
   typedef ctkBasePopupWidget Superclass;
@@ -113,7 +113,7 @@ public:
 
 protected:
   virtual void leaveEvent(QEvent* event);
-  virtual void enterEvent(QEvent* event);
+  virtual void enterEvent(QEnterEvent* event);
   virtual bool eventFilter(QObject* obj, QEvent* event);
 
   /// Widget the popup is attached to. It opens right under \a baseWidget

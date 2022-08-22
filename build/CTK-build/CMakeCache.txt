@@ -294,7 +294,7 @@ CTKWidgetsPlugins_SOURCE_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/Libs/Wid
 CTKWidgets_BINARY_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/build/CTK-build/Libs/Widgets
 
 //Dependencies for the target
-CTKWidgets_LIB_DEPENDS:STATIC=general;CTKCore;general;Qt6::Widgets;general;Qt6::Xml;general;Qt6::OpenGL;
+CTKWidgets_LIB_DEPENDS:STATIC=general;CTKCore;general;Qt6::Widgets;general;Qt6::Xml;general;Qt6::OpenGL;general;Qt6::OpenGLWidgets;
 
 //Value Computed by CMake
 CTKWidgets_SOURCE_DIR:STATIC=/home/yq/work/Practice/commontk/CTK/Libs/Widgets
@@ -1085,7 +1085,7 @@ CTK_APP_ctkSimplePythonShell-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTK_APP_ctkXnatTreeBrowser
 CTK_APP_ctkXnatTreeBrowser-ADVANCED:INTERNAL=1
 //CTK base libraries
-CTK_BASE_LIBRARIES:INTERNAL=CTKCore;Qt6::Widgets;Qt6::Xml;Qt6::OpenGL;CTKWidgets
+CTK_BASE_LIBRARIES:INTERNAL=CTKCore;Qt6::Widgets;Qt6::Xml;Qt6::OpenGL;Qt6::OpenGLWidgets;CTKWidgets
 CTK_BUILD_EXAMPLES_internal:INTERNAL=OFF
 //ADVANCED property for variable: CTK_BUILD_QTDESIGNER_PLUGINS
 CTK_BUILD_QTDESIGNER_PLUGINS-ADVANCED:INTERNAL=1

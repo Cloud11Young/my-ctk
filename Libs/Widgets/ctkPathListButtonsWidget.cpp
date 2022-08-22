@@ -61,7 +61,7 @@ void ctkPathListButtonsWidgetPrivate::init()
 }
 
 //-----------------------------------------------------------------------------
-void ctkPathListButtonsWidgetPrivate::setupUi(QWidget * widget)
+void ctkPathListButtonsWidgetPrivate::setupUi(QWidget* widget)
 {
   this->Ui_ctkPathListButtonsWidget::setupUi(widget);
 
@@ -121,20 +121,20 @@ void ctkPathListButtonsWidgetPrivate::on_EditButton_clicked()
     if (!this->PathListWidget->editPath(currentPath, paths.front()))
     {
       QMessageBox::information(q, tr("Editing the path failed"),
-                               QString(tr("Failed to change path:\n\n%1\n\nto path\n\n%2\n\nPlease check your permissions."))
-                               .arg(currentPath).arg(paths.front()));
+        QString(tr("Failed to change path:\n\n%1\n\nto path\n\n%2\n\nPlease check your permissions."))
+        .arg(currentPath).arg(paths.front()));
     }
   }
 }
 
 //-----------------------------------------------------------------------------
-void ctkPathListButtonsWidgetPrivate::on_PathListWidget_selectionChanged(const QItemSelection &selected,
-                                                                         const QItemSelection &deselected)
+void ctkPathListButtonsWidgetPrivate::on_PathListWidget_selectionChanged(const QItemSelection& selected,
+  const QItemSelection& deselected)
 {
   Q_UNUSED(selected)
-  Q_UNUSED(deselected)
+    Q_UNUSED(deselected)
 
-  bool hasSelection = this->PathListWidget->selectionModel()->hasSelection();
+    bool hasSelection = this->PathListWidget->selectionModel()->hasSelection();
   this->EditButton->setEnabled(hasSelection);
   this->RemoveButton->setEnabled(hasSelection);
 }
@@ -157,7 +157,8 @@ QStringList ctkPathListButtonsWidgetPrivate::openAddFilesDialog(bool multiple)
   }
 
   QFileDialog fileDialog(q, caption);
-  fileDialog.setReadOnly(true);
+  // fileDialog.setReadOnly(true);
+  fileDialog.setOption(QFileDialog::ReadOnly);
 
   if (multiple)
   {
@@ -185,27 +186,27 @@ QStringList ctkPathListButtonsWidgetPrivate::openAddFilesDialog(bool multiple)
     {}
 
   protected:
-    virtual bool filterAcceptsRow(int sourceRow, const QModelIndex & sourceParent) const
+    virtual bool filterAcceptsRow(int sourceRow, const QModelIndex& sourceParent) const
     {
       QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0, sourceParent);
       QFileSystemModel* fileModel = qobject_cast<QFileSystemModel*>(sourceModel());
 
       QFileInfo fileInfo = fileModel->fileInfo(sourceIndex);
 
-      if(fileInfo.isFile())
+      if (fileInfo.isFile())
       {
         if (FileOptions.testFlag(ctkPathListWidget::Readable) &&
-            !fileInfo.isReadable())
+          !fileInfo.isReadable())
         {
           return false;
         }
         if (FileOptions.testFlag(ctkPathListWidget::Writable) &&
-            !fileInfo.isWritable())
+          !fileInfo.isWritable())
         {
           return false;
         }
-        if (FileOptions.testFlag(ctkPathListWidget::Executable)&&
-            !fileInfo.isExecutable())
+        if (FileOptions.testFlag(ctkPathListWidget::Executable) &&
+          !fileInfo.isExecutable())
         {
           return false;
         }
@@ -260,7 +261,7 @@ QStringList ctkPathListButtonsWidgetPrivate::openAddDirDialog()
     {}
 
   protected:
-    virtual bool filterAcceptsRow(int sourceRow, const QModelIndex & sourceParent) const
+    virtual bool filterAcceptsRow(int sourceRow, const QModelIndex& sourceParent) const
     {
       QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0, sourceParent);
       QFileSystemModel* fileModel = qobject_cast<QFileSystemModel*>(sourceModel());
@@ -268,7 +269,7 @@ QStringList ctkPathListButtonsWidgetPrivate::openAddDirDialog()
       QFileInfo fileInfo = fileModel->fileInfo(sourceIndex);
 
       if (DirOptions.testFlag(ctkPathListWidget::Readable) &&
-          !fileInfo.isReadable())
+        !fileInfo.isReadable())
       {
         return false;
       }
@@ -304,7 +305,7 @@ void ctkPathListButtonsWidgetPrivate::addPathsWithWarningMessage(const QStringLi
   if (addedPaths != paths)
   {
     QString problematicPaths;
-    foreach(const QString& path, paths)
+    foreach(const QString & path, paths)
     {
       if (!addedPaths.contains(path) && !this->PathListWidget->contains(path))
       {
@@ -314,8 +315,8 @@ void ctkPathListButtonsWidgetPrivate::addPathsWithWarningMessage(const QStringLi
     if (!problematicPaths.isEmpty())
     {
       QMessageBox::information(q, tr("Adding paths failed"),
-                               QString(tr("Failed to add the following paths:\n\n%1\nPlease check your permissions."))
-                               .arg(problematicPaths));
+        QString(tr("Failed to add the following paths:\n\n%1\nPlease check your permissions."))
+        .arg(problematicPaths));
     }
   }
 }
@@ -329,7 +330,7 @@ ctkPathListButtonsWidget::~ctkPathListButtonsWidget()
 {
 }
 
-void ctkPathListButtonsWidget::init(ctkPathListWidget *pathListWidget)
+void ctkPathListButtonsWidget::init(ctkPathListWidget* pathListWidget)
 {
   Q_D(ctkPathListButtonsWidget);
   d->PathListWidget = pathListWidget;
@@ -340,7 +341,7 @@ void ctkPathListButtonsWidget::init(ctkPathListWidget *pathListWidget)
     d->EditButton->setEnabled(false);
   }
 
-  switch(d->PathListWidget->mode())
+  switch (d->PathListWidget->mode())
   {
   case ctkPathListWidget::FilesOnly:
     d->AddDirectoryButton->setVisible(false);
@@ -352,8 +353,8 @@ void ctkPathListButtonsWidget::init(ctkPathListWidget *pathListWidget)
     break;
   }
 
-  connect(d->PathListWidget->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-          d, SLOT(on_PathListWidget_selectionChanged(QItemSelection,QItemSelection)));
+  connect(d->PathListWidget->selectionModel(), SIGNAL(selectionChanged(QItemSelection, QItemSelection)),
+    d, SLOT(on_PathListWidget_selectionChanged(QItemSelection, QItemSelection)));
   connect(d->PathListWidget, SIGNAL(pathActivated(QString)), d, SLOT(on_EditButton_clicked()));
 }
 
@@ -672,11 +673,11 @@ void ctkPathListButtonsWidget::setOrientation(Qt::Orientation orientation)
   {
     newLayout = new QHBoxLayout;
   }
-  newLayout->setContentsMargins(0,0,0,0);
+  newLayout->setContentsMargins(0, 0, 0, 0);
   newLayout->setSpacing(oldLayout->spacing());
 
   QLayoutItem* item = 0;
-  while((item = oldLayout->takeAt(0)))
+  while ((item = oldLayout->takeAt(0)))
   {
     if (item->widget())
     {
@@ -688,28 +689,28 @@ void ctkPathListButtonsWidget::setOrientation(Qt::Orientation orientation)
 }
 
 //-----------------------------------------------------------------------------
-QToolButton *ctkPathListButtonsWidget::buttonAddFiles() const
+QToolButton* ctkPathListButtonsWidget::buttonAddFiles() const
 {
   Q_D(const ctkPathListButtonsWidget);
   return d->AddFilesButton;
 }
 
 //-----------------------------------------------------------------------------
-QToolButton *ctkPathListButtonsWidget::buttonAddDirectory() const
+QToolButton* ctkPathListButtonsWidget::buttonAddDirectory() const
 {
   Q_D(const ctkPathListButtonsWidget);
   return d->AddDirectoryButton;
 }
 
 //-----------------------------------------------------------------------------
-QToolButton *ctkPathListButtonsWidget::buttonEdit() const
+QToolButton* ctkPathListButtonsWidget::buttonEdit() const
 {
   Q_D(const ctkPathListButtonsWidget);
   return d->EditButton;
 }
 
 //-----------------------------------------------------------------------------
-QToolButton *ctkPathListButtonsWidget::buttonRemove() const
+QToolButton* ctkPathListButtonsWidget::buttonRemove() const
 {
   Q_D(const ctkPathListButtonsWidget);
   return d->RemoveButton;

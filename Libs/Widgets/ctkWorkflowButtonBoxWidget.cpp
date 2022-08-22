@@ -18,7 +18,7 @@
 
   =========================================================================*/
 
-// Qt includes
+  // Qt includes
 #include <QBoxLayout>
 #include <QDebug>
 #include <QList>
@@ -45,9 +45,9 @@ protected:
   ctkWorkflowButtonBoxWidget* const q_ptr;
 public:
   ctkWorkflowButtonBoxWidgetPrivate(ctkWorkflowButtonBoxWidget& object);
-  ~ctkWorkflowButtonBoxWidgetPrivate(){}
+  ~ctkWorkflowButtonBoxWidgetPrivate() {}
 
-  void setupUi(QWidget * newParent);
+  void setupUi(QWidget* newParent);
 
   QPointer<ctkWorkflow>    Workflow;
 
@@ -55,9 +55,9 @@ public:
   typedef QMap<ctkPushButton*, ctkWorkflowStep*> ButtonToStepMapType;
 
   // The buttons on the widget (maintain maps associating each forward/goTo button with its step)
-  ctkPushButton*      BackButton;
+  ctkPushButton* BackButton;
   QString             BackButtonFormat;
-  ctkPushButton*      NextButton;
+  ctkPushButton* NextButton;
   QString             NextButtonFormat;
   ButtonToStepMapType GoToButtonToStepMap;
   QString             GoToButtonsFormat;
@@ -95,9 +95,9 @@ ctkWorkflowButtonBoxWidgetPrivate::ctkWorkflowButtonBoxWidgetPrivate(ctkWorkflow
 }
 
 //-----------------------------------------------------------------------------
-void ctkWorkflowButtonBoxWidgetPrivate::setupUi(QWidget * newParent)
+void ctkWorkflowButtonBoxWidgetPrivate::setupUi(QWidget* newParent)
 {
-  QBoxLayout * boxLayout = new QBoxLayout(this->Direction, newParent);
+  QBoxLayout* boxLayout = new QBoxLayout(this->Direction, newParent);
   boxLayout->setSpacing(0);
   boxLayout->setContentsMargins(0, 0, 0, 0);
   newParent->setLayout(boxLayout);
@@ -138,16 +138,16 @@ void ctkWorkflowButtonBoxWidgetPrivate::updateBackButton(ctkWorkflowStep* curren
   bool visible = true;
   // Apply the buttonBox hints if possible
   if (enable && step)
-    {
+  {
     enable = !(step->buttonBoxHints() & ctkWorkflowWidgetStep::BackButtonDisabled);
     visible = !(step->buttonBoxHints() & (ctkWorkflowWidgetStep::BackButtonHidden |
-                                          ctkWorkflowWidgetStep::ButtonBoxHidden));
-    }
+      ctkWorkflowWidgetStep::ButtonBoxHidden));
+  }
   this->BackButton->setEnabled(enable);
   if (!enable && this->HideInvalidButtons)
-    {
+  {
     visible = false;
-    }
+  }
   this->BackButton->setVisible(visible);
 }
 
@@ -172,16 +172,16 @@ void ctkWorkflowButtonBoxWidgetPrivate::updateNextButton(ctkWorkflowStep* curren
   bool visible = true;
   // Apply the buttonBox hints if possible
   if (enable && step)
-    {
+  {
     enable = !(step->buttonBoxHints() & ctkWorkflowWidgetStep::NextButtonDisabled);
     visible = !(step->buttonBoxHints() & (ctkWorkflowWidgetStep::NextButtonHidden |
-                                          ctkWorkflowWidgetStep::ButtonBoxHidden));
-    }
+      ctkWorkflowWidgetStep::ButtonBoxHidden));
+  }
   this->NextButton->setEnabled(enable);
   if (!enable && this->HideInvalidButtons)
-    {
+  {
     visible = false;
-    }
+  }
   this->NextButton->setVisible(visible);
 }
 
@@ -194,28 +194,34 @@ void ctkWorkflowButtonBoxWidgetPrivate::updateGoToButtons(ctkWorkflowStep* curre
   Q_ASSERT(q->layout());
 
   // Change the buttons only if the set of steps to have goTo buttons is either empty or has changed
-  QSet<ctkWorkflowStep*> goToStepsToHaveButtons =
-    QSet<ctkWorkflowStep*>::fromList(this->Workflow->finishSteps());
-  QSet<ctkWorkflowStep*> goToStepsThatHaveButtons =
-    QSet<ctkWorkflowStep*>::fromList(this->GoToButtonToStepMap.values());
+  const auto& steps = this->Workflow->finishSteps();
+  QSet<ctkWorkflowStep*> goToStepsToHaveButtons(steps.begin(), steps.end());
+
+  const auto& values = this->GoToButtonToStepMap.values();
+  QSet<ctkWorkflowStep*> goToStepsThatHaveButtons(values.begin(), values.end());
+
+  // QSet<ctkWorkflowStep*> goToStepsToHaveButtons =
+  //   QSet<ctkWorkflowStep*>::fromList(this->Workflow->finishSteps());
+  // QSet<ctkWorkflowStep*> goToStepsThatHaveButtons =
+  //   QSet<ctkWorkflowStep*>::fromList(this->GoToButtonToStepMap.values());
 
   // Remove the buttons if the set of steps to have goTo buttons has changed
   if (goToStepsThatHaveButtons != goToStepsToHaveButtons)
+  {
+    foreach(ctkPushButton * goToButton, this->GoToButtonToStepMap.keys())
     {
-    foreach (ctkPushButton* goToButton, this->GoToButtonToStepMap.keys())
-      {
       q->layout()->removeWidget(goToButton);
       goToButton->deleteLater();
-      }
-    this->GoToButtonToStepMap.clear();
     }
+    this->GoToButtonToStepMap.clear();
+  }
 
   // Create the buttons, either for the first time or after removing them above
   if (this->GoToButtonToStepMap.isEmpty())
-    {
+  {
     // Create a button for each of the goToSteps
-    foreach (ctkWorkflowStep* step, goToStepsToHaveButtons)
-      {
+    foreach(ctkWorkflowStep * step, goToStepsToHaveButtons)
+    {
       // TODO shouldn't have id here
       ctkPushButton* goToButton = new ctkPushButton();
       goToButton->setSizePolicy(this->ButtonSizePolicy);
@@ -224,13 +230,13 @@ void ctkWorkflowButtonBoxWidgetPrivate::updateGoToButtons(ctkWorkflowStep* curre
       q->layout()->addWidget(goToButton);
       QObject::connect(goToButton, SIGNAL(clicked()), q, SLOT(prepareGoToStep()));
       this->GoToButtonToStepMap[goToButton] = step;
-      }
     }
+  }
 
   // Show/hide the goTo buttons depending on whether they are accessible from the current step
   ctkWorkflowWidgetStep* step = dynamic_cast<ctkWorkflowWidgetStep*>(currentStep);
-  foreach (ctkPushButton* goToButton, this->GoToButtonToStepMap.keys())
-    {
+  foreach(ctkPushButton * goToButton, this->GoToButtonToStepMap.keys())
+  {
     // TODO enable and show the goTo button if we can go to it
     // ctkWorkflowStep* goToStep = this->GoToButtonToStepMap[goToButton];
     // if (this->Workflow->canGoToStep(currentStep, goToStep))
@@ -240,14 +246,14 @@ void ctkWorkflowButtonBoxWidgetPrivate::updateGoToButtons(ctkWorkflowStep* curre
     bool enable = currentStep && this->Workflow->canGoToStep(goToStep->id(), currentStep);
     bool visible = step ? !(step->buttonBoxHints() & ctkWorkflowWidgetStep::ButtonBoxHidden) : true;
     if ((!enable && this->HideInvalidButtons)
-        || this->HideGoToButtons
-        )
-      {
+      || this->HideGoToButtons
+      )
+    {
       visible = false;
-      }
+    }
     goToButton->setEnabled(enable);
     goToButton->setVisible(visible);
-    }
+  }
 }
 
 //-----------------------------------------------------------------------------
@@ -255,7 +261,7 @@ void ctkWorkflowButtonBoxWidgetPrivate::updateGoToButtons(ctkWorkflowStep* curre
 
 //-----------------------------------------------------------------------------
 ctkWorkflowButtonBoxWidget::ctkWorkflowButtonBoxWidget(ctkWorkflow* newWorkflow, QWidget* newParent) :
-    Superclass(newParent)
+  Superclass(newParent)
   , d_ptr(new ctkWorkflowButtonBoxWidgetPrivate(*this))
 {
   Q_D(ctkWorkflowButtonBoxWidget);
@@ -267,7 +273,7 @@ ctkWorkflowButtonBoxWidget::ctkWorkflowButtonBoxWidget(ctkWorkflow* newWorkflow,
 
 //-----------------------------------------------------------------------------
 ctkWorkflowButtonBoxWidget::ctkWorkflowButtonBoxWidget(QWidget* newParent) :
-    Superclass(newParent)
+  Superclass(newParent)
   , d_ptr(new ctkWorkflowButtonBoxWidgetPrivate(*this))
 {
   Q_D(ctkWorkflowButtonBoxWidget);
@@ -281,35 +287,35 @@ ctkWorkflowButtonBoxWidget::~ctkWorkflowButtonBoxWidget()
 }
 
 //-----------------------------------------------------------------------------
-void ctkWorkflowButtonBoxWidget::setWorkflow(ctkWorkflow * newWorkflow)
+void ctkWorkflowButtonBoxWidget::setWorkflow(ctkWorkflow* newWorkflow)
 {
   Q_D(ctkWorkflowButtonBoxWidget);
 
   if (d->Workflow == newWorkflow)
-    {
+  {
     return;
-    }
+  }
 
   // Disconnect
   if (!d->Workflow.isNull())
-    {
+  {
     QObject::disconnect(d->BackButton, SIGNAL(clicked()), d->Workflow, SLOT(goBackward()));
     QObject::disconnect(d->NextButton, SIGNAL(clicked()), d->Workflow, SLOT(goForward()));
-    }
+  }
 
   // Connect
   if (newWorkflow)
-    {
+  {
     QObject::connect(d->BackButton, SIGNAL(clicked()), newWorkflow, SLOT(goBackward()));
     QObject::connect(d->NextButton, SIGNAL(clicked()), newWorkflow, SLOT(goForward()));
-    }
+  }
 
   d->Workflow = newWorkflow;
 }
 
 //-----------------------------------------------------------------------------
 CTK_GET_CPP(ctkWorkflowButtonBoxWidget, QString, backButtonFormat,
-            BackButtonFormat);
+  BackButtonFormat);
 
 //-----------------------------------------------------------------------------
 void ctkWorkflowButtonBoxWidget::setBackButtonFormat(const QString& format)
@@ -321,7 +327,7 @@ void ctkWorkflowButtonBoxWidget::setBackButtonFormat(const QString& format)
 
 //-----------------------------------------------------------------------------
 CTK_GET_CPP(ctkWorkflowButtonBoxWidget, QString, nextButtonFormat,
-            NextButtonFormat);
+  NextButtonFormat);
 
 //-----------------------------------------------------------------------------
 void ctkWorkflowButtonBoxWidget::setNextButtonFormat(const QString& format)
@@ -333,7 +339,7 @@ void ctkWorkflowButtonBoxWidget::setNextButtonFormat(const QString& format)
 
 //-----------------------------------------------------------------------------
 CTK_GET_CPP(ctkWorkflowButtonBoxWidget, QString, goToButtonsFormat,
-            GoToButtonsFormat);
+  GoToButtonsFormat);
 
 //-----------------------------------------------------------------------------
 void ctkWorkflowButtonBoxWidget::setGoToButtonsFormat(const QString& format)
@@ -371,9 +377,9 @@ QList<ctkPushButton*> ctkWorkflowButtonBoxWidget::goToButtons()const
 void ctkWorkflowButtonBoxWidget::setDirection(const QBoxLayout::Direction& newDirection)
 {
   if (QBoxLayout* layout = qobject_cast<QBoxLayout*>(this->layout()))
-    {
+  {
     layout->setDirection(newDirection);
-    }
+  }
 }
 
 //-----------------------------------------------------------------------------
@@ -390,10 +396,10 @@ void ctkWorkflowButtonBoxWidget::prepareGoToStep()
 {
   Q_D(ctkWorkflowButtonBoxWidget);
   if (ctkPushButton* button = qobject_cast<ctkPushButton*>(QObject::sender()))
-    {
+  {
     if (ctkWorkflowStep* step = d->GoToButtonToStepMap.value(button))
-      {
+    {
       d->Workflow->goToStep(step->id());
-      }
     }
+  }
 }

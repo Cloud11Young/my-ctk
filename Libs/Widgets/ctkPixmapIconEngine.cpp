@@ -32,13 +32,13 @@ ctkPixmapIconEngine::ctkPixmapIconEngine()
 {
 }
 
-ctkPixmapIconEngine::ctkPixmapIconEngine(const ctkPixmapIconEngine &other)
+ctkPixmapIconEngine::ctkPixmapIconEngine(const ctkPixmapIconEngine& other)
 #if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
-  : QIconEngine(other)
+    : QIconEngine(other)
 #else
-  : QIconEngineV2(other)
+    : QIconEngineV2(other)
 #endif
-  , pixmaps(other.pixmaps)
+    , pixmaps(other.pixmaps)
 {
 }
 
@@ -46,7 +46,7 @@ ctkPixmapIconEngine::~ctkPixmapIconEngine()
 {
 }
 
-void ctkPixmapIconEngine::paint(QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state)
+void ctkPixmapIconEngine::paint(QPainter* painter, const QRect& rect, QIcon::Mode mode, QIcon::State state)
 {
     QSize pixmapSize = rect.size();
 #if defined(Q_WS_MAC)
@@ -55,37 +55,40 @@ void ctkPixmapIconEngine::paint(QPainter *painter, const QRect &rect, QIcon::Mod
     painter->drawPixmap(rect, pixmap(pixmapSize, mode, state));
 }
 
-static inline int area(const QSize &s) { return s.width() * s.height(); }
+static inline int area(const QSize& s) { return s.width() * s.height(); }
 
 // returns the smallest of the two that is still larger than or equal to size.
-static ctkPixmapIconEngineEntry *bestSizeMatch( const QSize &size, ctkPixmapIconEngineEntry *pa, ctkPixmapIconEngineEntry *pb)
+static ctkPixmapIconEngineEntry* bestSizeMatch(const QSize& size, ctkPixmapIconEngineEntry* pa, ctkPixmapIconEngineEntry* pb)
 {
     int s = area(size);
-    if (pa->size == QSize() && pa->pixmap.isNull()) {
+    if (pa->size == QSize() && pa->pixmap.isNull())
+    {
         pa->pixmap = QPixmap(pa->fileName);
         pa->size = pa->pixmap.size();
     }
     int a = area(pa->size);
-    if (pb->size == QSize() && pb->pixmap.isNull()) {
+    if (pb->size == QSize() && pb->pixmap.isNull())
+    {
         pb->pixmap = QPixmap(pb->fileName);
         pb->size = pb->pixmap.size();
     }
     int b = area(pb->size);
     int res = a;
-    if (qMin(a,b) >= s)
-        res = qMin(a,b);
+    if (qMin(a, b) >= s)
+        res = qMin(a, b);
     else
-        res = qMax(a,b);
+        res = qMax(a, b);
     if (res == a)
         return pa;
     return pb;
 }
 
-ctkPixmapIconEngineEntry *ctkPixmapIconEngine::tryMatch(const QSize &size, QIcon::Mode mode, QIcon::State state)
+ctkPixmapIconEngineEntry* ctkPixmapIconEngine::tryMatch(const QSize& size, QIcon::Mode mode, QIcon::State state)
 {
-    ctkPixmapIconEngineEntry *pe = 0;
+    ctkPixmapIconEngineEntry* pe = 0;
     for (int i = 0; i < pixmaps.count(); ++i)
-        if (pixmaps.at(i).mode == mode && pixmaps.at(i).state == state) {
+        if (pixmaps.at(i).mode == mode && pixmaps.at(i).state == state)
+        {
             if (pe)
                 pe = bestSizeMatch(size, &pixmaps[i], pe);
             else
@@ -95,12 +98,14 @@ ctkPixmapIconEngineEntry *ctkPixmapIconEngine::tryMatch(const QSize &size, QIcon
 }
 
 
-ctkPixmapIconEngineEntry *ctkPixmapIconEngine::bestMatch(const QSize &size, QIcon::Mode mode, QIcon::State state, bool sizeOnly)
+ctkPixmapIconEngineEntry* ctkPixmapIconEngine::bestMatch(const QSize& size, QIcon::Mode mode, QIcon::State state, bool sizeOnly)
 {
-    ctkPixmapIconEngineEntry *pe = tryMatch(size, mode, state);
-    while (!pe){
+    ctkPixmapIconEngineEntry* pe = tryMatch(size, mode, state);
+    while (!pe)
+    {
         QIcon::State oppositeState = (state == QIcon::On) ? QIcon::Off : QIcon::On;
-        if (mode == QIcon::Disabled || mode == QIcon::Selected) {
+        if (mode == QIcon::Disabled || mode == QIcon::Selected)
+        {
             QIcon::Mode oppositeMode = (mode == QIcon::Disabled) ? QIcon::Selected : QIcon::Disabled;
             if ((pe = tryMatch(size, QIcon::Normal, state)))
                 break;
@@ -116,7 +121,9 @@ ctkPixmapIconEngineEntry *ctkPixmapIconEngine::bestMatch(const QSize &size, QIco
                 break;
             if ((pe = tryMatch(size, oppositeMode, oppositeState)))
                 break;
-        } else {
+        }
+        else
+        {
             QIcon::Mode oppositeMode = (mode == QIcon::Normal) ? QIcon::Active : QIcon::Normal;
             if ((pe = tryMatch(size, oppositeMode, state)))
                 break;
@@ -138,7 +145,8 @@ ctkPixmapIconEngineEntry *ctkPixmapIconEngine::bestMatch(const QSize &size, QIco
             return pe;
     }
 
-    if (sizeOnly ? (pe->size.isNull() || !pe->size.isValid()) : pe->pixmap.isNull()) {
+    if (sizeOnly ? (pe->size.isNull() || !pe->size.isValid()) : pe->pixmap.isNull())
+    {
         pe->pixmap = QPixmap(pe->fileName);
         if (!pe->pixmap.isNull())
             pe->size = pe->pixmap.size();
@@ -147,17 +155,20 @@ ctkPixmapIconEngineEntry *ctkPixmapIconEngine::bestMatch(const QSize &size, QIco
     return pe;
 }
 
-QPixmap ctkPixmapIconEngine::pixmap(const QSize &size, QIcon::Mode mode, QIcon::State state)
+QPixmap ctkPixmapIconEngine::pixmap(const QSize& size, QIcon::Mode mode, QIcon::State state)
 {
     QPixmap pm;
-    ctkPixmapIconEngineEntry *pe = bestMatch(size, mode, state, false);
+    ctkPixmapIconEngineEntry* pe = bestMatch(size, mode, state, false);
     if (pe)
         pm = pe->pixmap;
 
-    if (pm.isNull()) {
+    if (pm.isNull())
+    {
         int idx = pixmaps.count();
-        while (--idx >= 0) {
-            if (pe == &pixmaps[idx]) {
+        while (--idx >= 0)
+        {
+            if (pe == &pixmaps[idx])
+            {
                 pixmaps.remove(idx);
                 break;
             }
@@ -173,20 +184,22 @@ QPixmap ctkPixmapIconEngine::pixmap(const QSize &size, QIcon::Mode mode, QIcon::
         actualSize.scale(size, Qt::KeepAspectRatio);
 
     QString key = QLatin1String("$qt_icon_")
-                  + QString::number(pm.cacheKey())
-                  + QString::number(static_cast<int>(pe->mode))
-                  + QString::number(QApplication::palette().cacheKey())
-                  + QLatin1Char('_')
-                  + QString::number(actualSize.width())
-                  + QLatin1Char('_')
-                  + QString::number(actualSize.height())
-                  + QLatin1Char('_');
+        + QString::number(pm.cacheKey())
+        + QString::number(static_cast<int>(pe->mode))
+        + QString::number(QApplication::palette().cacheKey())
+        + QLatin1Char('_')
+        + QString::number(actualSize.width())
+        + QLatin1Char('_')
+        + QString::number(actualSize.height())
+        + QLatin1Char('_');
 
 
-    if (mode == QIcon::Active) {
+    if (mode == QIcon::Active)
+    {
         if (QPixmapCache::find(key + QString::number(static_cast<int>(mode)), &pm))
             return pm; // horray
-        if (QPixmapCache::find(key + QString::number(static_cast<int>(QIcon::Normal)), &pm)) {
+        if (QPixmapCache::find(key + QString::number(static_cast<int>(QIcon::Normal)), &pm))
+        {
             QStyleOption opt(0);
             opt.palette = QApplication::palette();
             QPixmap active = QApplication::style()->generatedIconPixmap(QIcon::Active, pm, &opt);
@@ -195,10 +208,12 @@ QPixmap ctkPixmapIconEngine::pixmap(const QSize &size, QIcon::Mode mode, QIcon::
         }
     }
 
-    if (!QPixmapCache::find(key + QString::number(static_cast<int>(mode)), &pm)) {
+    if (!QPixmapCache::find(key + QString::number(static_cast<int>(mode)), &pm))
+    {
         if (pm.size() != actualSize)
             pm = pm.scaled(actualSize, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-        if (pe->mode != mode && mode != QIcon::Normal) {
+        if (pe->mode != mode && mode != QIcon::Normal)
+        {
             QStyleOption opt(0);
             opt.palette = QApplication::palette();
             QPixmap generated = QApplication::style()->generatedIconPixmap(mode, pm, &opt);
@@ -210,10 +225,10 @@ QPixmap ctkPixmapIconEngine::pixmap(const QSize &size, QIcon::Mode mode, QIcon::
     return pm;
 }
 
-QSize ctkPixmapIconEngine::actualSize(const QSize &size, QIcon::Mode mode, QIcon::State state)
+QSize ctkPixmapIconEngine::actualSize(const QSize& size, QIcon::Mode mode, QIcon::State state)
 {
     QSize actualSize;
-    if (ctkPixmapIconEngineEntry *pe = bestMatch(size, mode, state, true))
+    if (ctkPixmapIconEngineEntry* pe = bestMatch(size, mode, state, true))
         actualSize = pe->size;
 
     if (actualSize.isNull())
@@ -224,22 +239,27 @@ QSize ctkPixmapIconEngine::actualSize(const QSize &size, QIcon::Mode mode, QIcon
     return actualSize;
 }
 
-void ctkPixmapIconEngine::addPixmap(const QPixmap &pixmap, QIcon::Mode mode, QIcon::State state)
+void ctkPixmapIconEngine::addPixmap(const QPixmap& pixmap, QIcon::Mode mode, QIcon::State state)
 {
-    if (!pixmap.isNull()) {
-        ctkPixmapIconEngineEntry *pe = tryMatch(pixmap.size(), mode, state);
-        if(pe && pe->size == pixmap.size()) {
+    if (!pixmap.isNull())
+    {
+        ctkPixmapIconEngineEntry* pe = tryMatch(pixmap.size(), mode, state);
+        if (pe && pe->size == pixmap.size())
+        {
             pe->pixmap = pixmap;
             pe->fileName.clear();
-        } else {
+        }
+        else
+        {
             pixmaps += ctkPixmapIconEngineEntry(pixmap, mode, state);
         }
     }
 }
 
-void ctkPixmapIconEngine::addFile(const QString &fileName, const QSize &_size, QIcon::Mode mode, QIcon::State state)
+void ctkPixmapIconEngine::addFile(const QString& fileName, const QSize& _size, QIcon::Mode mode, QIcon::State state)
 {
-    if (!fileName.isEmpty()) {
+    if (!fileName.isEmpty())
+    {
         QSize size = _size;
         QPixmap pixmap;
 
@@ -247,18 +267,23 @@ void ctkPixmapIconEngine::addFile(const QString &fileName, const QSize &_size, Q
         if (fileName.at(0) != QLatin1Char(':'))
             abs = QFileInfo(fileName).absoluteFilePath();
 
-        for (int i = 0; i < pixmaps.count(); ++i) {
-            if (pixmaps.at(i).mode == mode && pixmaps.at(i).state == state) {
-                ctkPixmapIconEngineEntry *pe = &pixmaps[i];
-                if(size == QSize()) {
+        for (int i = 0; i < pixmaps.count(); ++i)
+        {
+            if (pixmaps.at(i).mode == mode && pixmaps.at(i).state == state)
+            {
+                ctkPixmapIconEngineEntry* pe = &pixmaps[i];
+                if (size == QSize())
+                {
                     pixmap = QPixmap(abs);
                     size = pixmap.size();
                 }
-                if (pe->size == QSize() && pe->pixmap.isNull()) {
+                if (pe->size == QSize() && pe->pixmap.isNull())
+                {
                     pe->pixmap = QPixmap(pe->fileName);
                     pe->size = pe->pixmap.size();
                 }
-                if(pe->size == size) {
+                if (pe->size == size)
+                {
                     pe->pixmap = pixmap;
                     pe->fileName = abs;
                     return;
@@ -277,15 +302,15 @@ QString ctkPixmapIconEngine::key() const
 }
 
 #if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
-QIconEngine *ctkPixmapIconEngine::clone() const
+QIconEngine* ctkPixmapIconEngine::clone() const
 #else
-QIconEngineV2 *ctkPixmapIconEngine::clone() const
+QIconEngineV2* ctkPixmapIconEngine::clone() const
 #endif
 {
     return new ctkPixmapIconEngine(*this);
 }
 
-bool ctkPixmapIconEngine::read(QDataStream &in)
+bool ctkPixmapIconEngine::read(QDataStream& in)
 {
     int num_entries;
     QPixmap pm;
@@ -295,8 +320,10 @@ bool ctkPixmapIconEngine::read(QDataStream &in)
     uint state;
 
     in >> num_entries;
-    for (int i=0; i < num_entries; ++i) {
-        if (in.atEnd()) {
+    for (int i = 0; i < num_entries; ++i)
+    {
+        if (in.atEnd())
+        {
             pixmaps.clear();
             return false;
         }
@@ -305,9 +332,12 @@ bool ctkPixmapIconEngine::read(QDataStream &in)
         in >> sz;
         in >> mode;
         in >> state;
-        if (pm.isNull()) {
+        if (pm.isNull())
+        {
             addFile(fileName, sz, QIcon::Mode(mode), QIcon::State(state));
-        } else {
+        }
+        else
+        {
             ctkPixmapIconEngineEntry pe(fileName, sz, QIcon::Mode(mode), QIcon::State(state));
             pe.pixmap = pm;
             pixmaps += pe;
@@ -316,11 +346,12 @@ bool ctkPixmapIconEngine::read(QDataStream &in)
     return true;
 }
 
-bool ctkPixmapIconEngine::write(QDataStream &out) const
+bool ctkPixmapIconEngine::write(QDataStream& out) const
 {
     int num_entries = pixmaps.size();
     out << num_entries;
-    for (int i=0; i < num_entries; ++i) {
+    for (int i = 0; i < num_entries; ++i)
+    {
         if (pixmaps.at(i).pixmap.isNull())
             out << QPixmap(pixmaps.at(i).fileName);
         else
@@ -333,35 +364,38 @@ bool ctkPixmapIconEngine::write(QDataStream &out) const
     return true;
 }
 
-void ctkPixmapIconEngine::virtual_hook(int id, void *data)
+void ctkPixmapIconEngine::virtual_hook(int id, void* data)
 {
-  switch (id) {
+    switch (id)
+    {
 #if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
-    case QIconEngine::AvailableSizesHook: {
-        QIconEngine::AvailableSizesArgument &arg =
-            *reinterpret_cast<QIconEngine::AvailableSizesArgument*>(data);
+        // case QIconEngine::AvailableSizesHook: {
+        //     QIconEngine::AvailableSizesArgument &arg =
+        //         *reinterpret_cast<QIconEngine::AvailableSizesArgument*>(data);
 #else
     case QIconEngineV2::AvailableSizesHook: {
-        QIconEngineV2::AvailableSizesArgument &arg =
+        QIconEngineV2::AvailableSizesArgument& arg =
             *reinterpret_cast<QIconEngineV2::AvailableSizesArgument*>(data);
 #endif
-        arg.sizes.clear();
-        for (int i = 0; i < pixmaps.size(); ++i) {
-            ctkPixmapIconEngineEntry &pe = pixmaps[i];
-            if (pe.size == QSize() && pe.pixmap.isNull()) {
-                pe.pixmap = QPixmap(pe.fileName);
-                pe.size = pe.pixmap.size();
-            }
-            if (pe.mode == arg.mode && pe.state == arg.state && !pe.size.isEmpty())
-                arg.sizes.push_back(pe.size);
-        }
-        break;
-    }
+        // arg.sizes.clear();
+        // for (int i = 0; i < pixmaps.size(); ++i)
+        // {
+        //     ctkPixmapIconEngineEntry& pe = pixmaps[i];
+        //     if (pe.size == QSize() && pe.pixmap.isNull())
+        //     {
+        //         pe.pixmap = QPixmap(pe.fileName);
+        //         pe.size = pe.pixmap.size();
+        //     }
+        //     if (pe.mode == arg.mode && pe.state == arg.state && !pe.size.isEmpty())
+        //         arg.sizes.push_back(pe.size);
+        // }
+    //     break;
+    // }
     default:
 #if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
-      QIconEngine::virtual_hook(id, data);
+        QIconEngine::virtual_hook(id, data);
 #else
-      QIconEngineV2::virtual_hook(id, data);
+        QIconEngineV2::virtual_hook(id, data);
 #endif
     }
-}
+    }

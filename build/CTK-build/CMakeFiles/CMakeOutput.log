@@ -955,3 +955,1075 @@ make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMak
 
 
 
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7f82a/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_7f82a.dir/build.make CMakeFiles/cmTC_7f82a.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_7f82a.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_7f82a.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_7f82a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f82a.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_7f82a.dir/DummyCXXFile.cxx.o  -o cmTC_7f82a 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_00304/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_00304.dir/build.make CMakeFiles/cmTC_00304.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_00304.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_00304.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_00304
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00304.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_00304.dir/DummyCXXFile.cxx.o  -o cmTC_00304 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1262a/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_1262a.dir/build.make CMakeFiles/cmTC_1262a.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_1262a.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_1262a.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_1262a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1262a.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_1262a.dir/DummyCXXFile.cxx.o  -o cmTC_1262a 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ba1a3/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ba1a3.dir/build.make CMakeFiles/cmTC_ba1a3.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ba1a3.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_ba1a3.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_ba1a3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba1a3.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_ba1a3.dir/DummyCXXFile.cxx.o  -o cmTC_ba1a3 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f8397/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_f8397.dir/build.make CMakeFiles/cmTC_f8397.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_f8397.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_f8397.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_f8397
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8397.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_f8397.dir/DummyCXXFile.cxx.o  -o cmTC_f8397 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_79095/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_79095.dir/build.make CMakeFiles/cmTC_79095.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_79095.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_79095.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_79095
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79095.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_79095.dir/DummyCXXFile.cxx.o  -o cmTC_79095 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_94711/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_94711.dir/build.make CMakeFiles/cmTC_94711.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_94711.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_94711.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_94711
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94711.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_94711.dir/DummyCXXFile.cxx.o  -o cmTC_94711 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_54b76/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_54b76.dir/build.make CMakeFiles/cmTC_54b76.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_54b76.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_54b76.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_54b76
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54b76.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_54b76.dir/DummyCXXFile.cxx.o  -o cmTC_54b76 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8c7d0/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_8c7d0.dir/build.make CMakeFiles/cmTC_8c7d0.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_8c7d0.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_8c7d0.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_8c7d0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c7d0.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_8c7d0.dir/DummyCXXFile.cxx.o  -o cmTC_8c7d0 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_95df5/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_95df5.dir/build.make CMakeFiles/cmTC_95df5.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_95df5.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_95df5.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_95df5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95df5.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_95df5.dir/DummyCXXFile.cxx.o  -o cmTC_95df5 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0e858/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0e858.dir/build.make CMakeFiles/cmTC_0e858.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0e858.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_0e858.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_0e858
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e858.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_0e858.dir/DummyCXXFile.cxx.o  -o cmTC_0e858 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cac27/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_cac27.dir/build.make CMakeFiles/cmTC_cac27.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_cac27.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_cac27.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_cac27
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cac27.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_cac27.dir/DummyCXXFile.cxx.o  -o cmTC_cac27 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_234e5/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_234e5.dir/build.make CMakeFiles/cmTC_234e5.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_234e5.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_234e5.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_234e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_234e5.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_234e5.dir/DummyCXXFile.cxx.o  -o cmTC_234e5 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a8fab/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_a8fab.dir/build.make CMakeFiles/cmTC_a8fab.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_a8fab.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_a8fab.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_a8fab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8fab.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_a8fab.dir/DummyCXXFile.cxx.o  -o cmTC_a8fab 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0cf11/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_0cf11.dir/build.make CMakeFiles/cmTC_0cf11.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_0cf11.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_0cf11.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_0cf11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0cf11.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_0cf11.dir/DummyCXXFile.cxx.o  -o cmTC_0cf11 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eab32/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_eab32.dir/build.make CMakeFiles/cmTC_eab32.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_eab32.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_eab32.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_eab32
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eab32.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_eab32.dir/DummyCXXFile.cxx.o  -o cmTC_eab32 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1f662/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_1f662.dir/build.make CMakeFiles/cmTC_1f662.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_1f662.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_1f662.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_1f662
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f662.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_1f662.dir/DummyCXXFile.cxx.o  -o cmTC_1f662 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d7ee1/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_d7ee1.dir/build.make CMakeFiles/cmTC_d7ee1.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_d7ee1.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_d7ee1.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_d7ee1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7ee1.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_d7ee1.dir/DummyCXXFile.cxx.o  -o cmTC_d7ee1 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b2839/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_b2839.dir/build.make CMakeFiles/cmTC_b2839.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_b2839.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_b2839.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_b2839
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2839.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_b2839.dir/DummyCXXFile.cxx.o  -o cmTC_b2839 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_75b18/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_75b18.dir/build.make CMakeFiles/cmTC_75b18.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_75b18.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_75b18.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_75b18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75b18.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_75b18.dir/DummyCXXFile.cxx.o  -o cmTC_75b18 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_08a21/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_08a21.dir/build.make CMakeFiles/cmTC_08a21.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_08a21.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_08a21.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_08a21
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08a21.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_08a21.dir/DummyCXXFile.cxx.o  -o cmTC_08a21 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ef0c5/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_ef0c5.dir/build.make CMakeFiles/cmTC_ef0c5.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_ef0c5.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_ef0c5.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_ef0c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef0c5.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_ef0c5.dir/DummyCXXFile.cxx.o  -o cmTC_ef0c5 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5dcab/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_5dcab.dir/build.make CMakeFiles/cmTC_5dcab.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_5dcab.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_5dcab.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_5dcab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5dcab.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_5dcab.dir/DummyCXXFile.cxx.o  -o cmTC_5dcab 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fced3/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_fced3.dir/build.make CMakeFiles/cmTC_fced3.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_fced3.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_fced3.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_fced3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fced3.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_fced3.dir/DummyCXXFile.cxx.o  -o cmTC_fced3 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb6be/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_cb6be.dir/build.make CMakeFiles/cmTC_cb6be.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_cb6be.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_cb6be.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_cb6be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb6be.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_cb6be.dir/DummyCXXFile.cxx.o  -o cmTC_cb6be 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a498c/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_a498c.dir/build.make CMakeFiles/cmTC_a498c.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_a498c.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_a498c.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_a498c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a498c.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_a498c.dir/DummyCXXFile.cxx.o  -o cmTC_a498c 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_17168/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_17168.dir/build.make CMakeFiles/cmTC_17168.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_17168.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_17168.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_17168
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17168.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_17168.dir/DummyCXXFile.cxx.o  -o cmTC_17168 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a7bc1/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_a7bc1.dir/build.make CMakeFiles/cmTC_a7bc1.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_a7bc1.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_a7bc1.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_a7bc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7bc1.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_a7bc1.dir/DummyCXXFile.cxx.o  -o cmTC_a7bc1 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e04de/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_e04de.dir/build.make CMakeFiles/cmTC_e04de.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_e04de.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_e04de.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_e04de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e04de.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_e04de.dir/DummyCXXFile.cxx.o  -o cmTC_e04de 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb503/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_cb503.dir/build.make CMakeFiles/cmTC_cb503.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_cb503.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_cb503.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_cb503
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb503.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_cb503.dir/DummyCXXFile.cxx.o  -o cmTC_cb503 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_88096/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_88096.dir/build.make CMakeFiles/cmTC_88096.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_88096.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_88096.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_88096
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88096.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_88096.dir/DummyCXXFile.cxx.o  -o cmTC_88096 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_017c9/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_017c9.dir/build.make CMakeFiles/cmTC_017c9.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_017c9.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_017c9.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_017c9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_017c9.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_017c9.dir/DummyCXXFile.cxx.o  -o cmTC_017c9 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_66385/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_66385.dir/build.make CMakeFiles/cmTC_66385.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_66385.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_66385.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_66385
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66385.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_66385.dir/DummyCXXFile.cxx.o  -o cmTC_66385 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e8082/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_e8082.dir/build.make CMakeFiles/cmTC_e8082.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_e8082.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_e8082.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_e8082
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8082.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_e8082.dir/DummyCXXFile.cxx.o  -o cmTC_e8082 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5c5b6/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_5c5b6.dir/build.make CMakeFiles/cmTC_5c5b6.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_5c5b6.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_5c5b6.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_5c5b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c5b6.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_5c5b6.dir/DummyCXXFile.cxx.o  -o cmTC_5c5b6 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6c4e0/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_6c4e0.dir/build.make CMakeFiles/cmTC_6c4e0.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_6c4e0.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_6c4e0.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_6c4e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c4e0.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_6c4e0.dir/DummyCXXFile.cxx.o  -o cmTC_6c4e0 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_35db2/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_35db2.dir/build.make CMakeFiles/cmTC_35db2.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_35db2.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_35db2.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_35db2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35db2.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_35db2.dir/DummyCXXFile.cxx.o  -o cmTC_35db2 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_855b2/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_855b2.dir/build.make CMakeFiles/cmTC_855b2.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_855b2.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_855b2.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_855b2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_855b2.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_855b2.dir/DummyCXXFile.cxx.o  -o cmTC_855b2 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1e76b/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1e76b.dir/build.make CMakeFiles/cmTC_1e76b.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1e76b.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_1e76b.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_1e76b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e76b.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_1e76b.dir/DummyCXXFile.cxx.o  -o cmTC_1e76b 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_34b52/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_34b52.dir/build.make CMakeFiles/cmTC_34b52.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_34b52.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_34b52.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_34b52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34b52.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_34b52.dir/DummyCXXFile.cxx.o  -o cmTC_34b52 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1557a/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1557a.dir/build.make CMakeFiles/cmTC_1557a.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1557a.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_1557a.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_1557a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1557a.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_1557a.dir/DummyCXXFile.cxx.o  -o cmTC_1557a 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eb3f3/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_eb3f3.dir/build.make CMakeFiles/cmTC_eb3f3.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eb3f3.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_eb3f3.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_eb3f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb3f3.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_eb3f3.dir/DummyCXXFile.cxx.o  -o cmTC_eb3f3 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_91801/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_91801.dir/build.make CMakeFiles/cmTC_91801.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_91801.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_91801.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_91801
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91801.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_91801.dir/DummyCXXFile.cxx.o  -o cmTC_91801 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9bf0c/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_9bf0c.dir/build.make CMakeFiles/cmTC_9bf0c.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_9bf0c.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_9bf0c.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_9bf0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bf0c.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_9bf0c.dir/DummyCXXFile.cxx.o  -o cmTC_9bf0c 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1f4c6/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_1f4c6.dir/build.make CMakeFiles/cmTC_1f4c6.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_1f4c6.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_1f4c6.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_1f4c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f4c6.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_1f4c6.dir/DummyCXXFile.cxx.o  -o cmTC_1f4c6 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9f9e9/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9f9e9.dir/build.make CMakeFiles/cmTC_9f9e9.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9f9e9.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_9f9e9.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_9f9e9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f9e9.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_9f9e9.dir/DummyCXXFile.cxx.o  -o cmTC_9f9e9 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7a4a5/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_7a4a5.dir/build.make CMakeFiles/cmTC_7a4a5.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_7a4a5.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_7a4a5.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_7a4a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a4a5.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_7a4a5.dir/DummyCXXFile.cxx.o  -o cmTC_7a4a5 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_06e65/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_06e65.dir/build.make CMakeFiles/cmTC_06e65.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_06e65.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_06e65.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_06e65
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06e65.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_06e65.dir/DummyCXXFile.cxx.o  -o cmTC_06e65 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4d4ea/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_4d4ea.dir/build.make CMakeFiles/cmTC_4d4ea.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_4d4ea.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_4d4ea.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_4d4ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d4ea.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_4d4ea.dir/DummyCXXFile.cxx.o  -o cmTC_4d4ea 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_94ece/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_94ece.dir/build.make CMakeFiles/cmTC_94ece.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_94ece.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_94ece.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_94ece
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94ece.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_94ece.dir/DummyCXXFile.cxx.o  -o cmTC_94ece 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3024a/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_3024a.dir/build.make CMakeFiles/cmTC_3024a.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_3024a.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_3024a.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_3024a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3024a.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_3024a.dir/DummyCXXFile.cxx.o  -o cmTC_3024a 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6ec61/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_6ec61.dir/build.make CMakeFiles/cmTC_6ec61.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_6ec61.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_6ec61.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_6ec61
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ec61.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_6ec61.dir/DummyCXXFile.cxx.o  -o cmTC_6ec61 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d1fa8/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_d1fa8.dir/build.make CMakeFiles/cmTC_d1fa8.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_d1fa8.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_d1fa8.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_d1fa8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1fa8.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_d1fa8.dir/DummyCXXFile.cxx.o  -o cmTC_d1fa8 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0ae1f/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0ae1f.dir/build.make CMakeFiles/cmTC_0ae1f.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0ae1f.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_0ae1f.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_0ae1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ae1f.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_0ae1f.dir/DummyCXXFile.cxx.o  -o cmTC_0ae1f 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3484d/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3484d.dir/build.make CMakeFiles/cmTC_3484d.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3484d.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_3484d.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_3484d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3484d.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_3484d.dir/DummyCXXFile.cxx.o  -o cmTC_3484d 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b0b96/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b0b96.dir/build.make CMakeFiles/cmTC_b0b96.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b0b96.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_b0b96.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_b0b96
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0b96.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_b0b96.dir/DummyCXXFile.cxx.o  -o cmTC_b0b96 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_24288/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_24288.dir/build.make CMakeFiles/cmTC_24288.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_24288.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_24288.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_24288
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24288.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_24288.dir/DummyCXXFile.cxx.o  -o cmTC_24288 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_64a13/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_64a13.dir/build.make CMakeFiles/cmTC_64a13.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_64a13.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_64a13.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_64a13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64a13.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_64a13.dir/DummyCXXFile.cxx.o  -o cmTC_64a13 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e19a4/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_e19a4.dir/build.make CMakeFiles/cmTC_e19a4.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_e19a4.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_e19a4.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_e19a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e19a4.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_e19a4.dir/DummyCXXFile.cxx.o  -o cmTC_e19a4 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8952d/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8952d.dir/build.make CMakeFiles/cmTC_8952d.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8952d.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_8952d.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_8952d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8952d.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_8952d.dir/DummyCXXFile.cxx.o  -o cmTC_8952d 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dc59d/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_dc59d.dir/build.make CMakeFiles/cmTC_dc59d.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_dc59d.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_dc59d.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_dc59d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc59d.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_dc59d.dir/DummyCXXFile.cxx.o  -o cmTC_dc59d 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ac209/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_ac209.dir/build.make CMakeFiles/cmTC_ac209.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_ac209.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_ac209.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_ac209
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac209.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_ac209.dir/DummyCXXFile.cxx.o  -o cmTC_ac209 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b1fb3/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_b1fb3.dir/build.make CMakeFiles/cmTC_b1fb3.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_b1fb3.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_b1fb3.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_b1fb3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1fb3.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_b1fb3.dir/DummyCXXFile.cxx.o  -o cmTC_b1fb3 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0a020/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_0a020.dir/build.make CMakeFiles/cmTC_0a020.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_0a020.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_0a020.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_0a020
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a020.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_0a020.dir/DummyCXXFile.cxx.o  -o cmTC_0a020 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_76af7/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_76af7.dir/build.make CMakeFiles/cmTC_76af7.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_76af7.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_76af7.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_76af7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76af7.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_76af7.dir/DummyCXXFile.cxx.o  -o cmTC_76af7 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2c440/fast && make[3]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_2c440.dir/build.make CMakeFiles/cmTC_2c440.dir/build
+make[4]: 进入目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_2c440.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_2c440.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_2c440
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c440.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_2c440.dir/DummyCXXFile.cxx.o  -o cmTC_2c440 
+make[4]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+make[3]: 离开目录“/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the CXX compiler accepts the flag -fvisibility=hidden passed with the following output:
+Change Dir: /home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e1dca/fast && make[3]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e1dca.dir/build.make CMakeFiles/cmTC_e1dca.dir/build
+make[4]: Entering directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e1dca.dir/DummyCXXFile.cxx.o
+/bin/x86_64-linux-gnu-g++-9    -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden   -o CMakeFiles/cmTC_e1dca.dir/DummyCXXFile.cxx.o -c /usr/share/cmake-3.16/Modules/DummyCXXFile.cxx
+Linking CXX executable cmTC_e1dca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1dca.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-g++-9  -Wall -Wextra -Wpointer-arith -Winvalid-pch -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wl,--no-undefined -fstack-protector-all -Woverloaded-virtual -Wold-style-cast -Wstrict-null-sentinel -Wsign-promo        -fvisibility=hidden -fvisibility-inlines-hidden   -fvisibility=hidden    -rdynamic CMakeFiles/cmTC_e1dca.dir/DummyCXXFile.cxx.o  -o cmTC_e1dca 
+make[4]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/yq/work/Practice/commontk/CTK/build/CTK-build/CMakeFiles/CMakeTmp'
+
+
+

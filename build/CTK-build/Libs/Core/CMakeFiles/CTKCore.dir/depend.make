@@ -786,6 +786,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QModelIndex
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QMutex
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
+Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QString
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStringList
@@ -852,6 +853,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qregularexpression.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qset.h
@@ -880,10 +882,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/QRegExp
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qcore5global.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qregexp.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qtcore5compat-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogFDMessageHandler.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogLevel.cpp.o: ../../Libs/Core/ctkCompatibility_p.h
@@ -990,6 +988,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QDebug
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QModelIndex
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
+Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QString
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStringList
@@ -1066,6 +1065,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qregularexpression.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qresultstore.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrunnable.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
@@ -1097,10 +1097,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/QRegExp
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qcore5global.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qregexp.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qtcore5compat-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogQtMessageHandler.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: ../../Libs/Core/ctkCompatibility_p.h
@@ -1119,6 +1115,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QModelIndex
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QMutexLocker
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
+Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QString
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStringList
@@ -1182,6 +1179,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qregularexpression.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qset.h
@@ -1210,10 +1208,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/QRegExp
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qcore5global.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qregexp.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qtcore5compat-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogStreamMessageHandler.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/ctkErrorLogTerminalOutput.cpp.o: ../../Libs/Core/ctkCompatibility_p.h
@@ -1395,6 +1389,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/inclu
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QFile
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QModelIndex
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
+Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStringList
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QTextStream
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QtGlobal
@@ -1456,6 +1451,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/inclu
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qregularexpression.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qset.h
@@ -1483,10 +1479,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/inclu
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/QRegExp
-Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qcore5global.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qregexp.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qtcore5compat-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkFileLogger.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/ctkHighPrecisionTimer.cpp.o: ../../Libs/Core/ctkBackTrace.h
@@ -1774,6 +1766,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/incl
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QModelIndex
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QPersistentModelIndex
+Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStack
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStringList
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QtGlobal
@@ -1832,6 +1825,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/incl
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qregularexpression.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qset.h
@@ -1860,10 +1854,6 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/incl
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvariant.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qvarlengtharray.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qversiontagging.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/QRegExp
-Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qcore5global.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qregexp.h
-Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore5Compat/qtcore5compat-config.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkModelTester.cpp.o: Libs/Core/ctkCoreExport.h
 
 Libs/Core/CMakeFiles/CTKCore.dir/ctkScopedCurrentDir.cpp.o: ../../Libs/Core/ctkCompatibility_p.h
@@ -2018,6 +2008,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/Qt
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QDebug
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QDir
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QModelIndex
+Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QString
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QStringList
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QtGlobal
@@ -2081,6 +2072,7 @@ Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/Qt
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qproperty.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qpropertyprivate.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qrefcount.h
+Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qregularexpression.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopedpointer.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qscopeguard.h
 Libs/Core/CMakeFiles/CTKCore.dir/ctkUtils.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/qset.h

@@ -34,7 +34,7 @@ class ctkQImageViewPrivate;
 /// \ingroup Widgets
 ///
 /// ctkQImageView is the base class of image viewer widgets.
-class CTK_WIDGETS_EXPORT ctkQImageView: public QWidget
+class CTK_WIDGETS_EXPORT ctkQImageView : public QWidget
 {
 
   Q_OBJECT
@@ -45,111 +45,111 @@ public:
   typedef QWidget Superclass;
 
   /// Constructor
-  ctkQImageView( QWidget* parent = 0 );
-  
+  ctkQImageView(QWidget* parent = 0);
+
   /// Destructor
-  virtual ~ctkQImageView( void );
+  virtual ~ctkQImageView(void);
 
-  double xSpacing( void );
-  double ySpacing( void );
-  double sliceSpacing( void );
-  double sliceThickness( void );
+  double xSpacing(void);
+  double ySpacing(void);
+  double sliceSpacing(void);
+  double sliceThickness(void);
 
-  double xPosition( void );
-  double yPosition( void );
-  double slicePosition( void );
-  double positionValue( void );
+  double xPosition(void);
+  double yPosition(void);
+  double slicePosition(void);
+  double positionValue(void);
 
-  double xCenter( void );
-  double yCenter( void );
+  double xCenter(void);
+  double yCenter(void);
 
-  int sliceNumber( void ) const;
-  int numberOfSlices( void ) const;
+  int sliceNumber(void) const;
+  int numberOfSlices(void) const;
 
-  double intensityWindow( void ) const;
-  double intensityLevel( void ) const;
+  double intensityWindow(void) const;
+  double intensityLevel(void) const;
 
-  bool invertImage( void ) const;
+  bool invertImage(void) const;
 
-  bool flipXAxis( void ) const;
-  bool flipYAxis( void ) const;
-  bool transposeXY( void ) const;
+  bool flipXAxis(void) const;
+  bool flipYAxis(void) const;
+  bool transposeXY(void) const;
 
-  double zoom( void );
+  double zoom(void);
 
 public Q_SLOTS:
 
-  void addImage( const QImage & image );
-  void clearImages( void );
+  void addImage(const QImage& image);
+  void clearImages(void);
 
-  void setSliceNumber( int slicenum );
+  void setSliceNumber(int slicenum);
 
-  void setIntensityWindowLevel( double iwWindow, double iwLevel );
+  void setIntensityWindowLevel(double iwWindow, double iwLevel);
 
-  void setInvertImage( bool invert );
-  void setFlipXAxis( bool flip );
-  void setFlipYAxis( bool flip );
-  void setTransposeXY( bool transpose );
+  void setInvertImage(bool invert);
+  void setFlipXAxis(bool flip);
+  void setFlipYAxis(bool flip);
+  void setTransposeXY(bool transpose);
 
-  virtual void keyPressEvent( QKeyEvent * event );
-  virtual void mousePressEvent( QMouseEvent * event );
-  virtual void mouseReleaseEvent( QMouseEvent * event );
-  virtual void mouseMoveEvent( QMouseEvent * event );
-  virtual void enterEvent( QEvent * event );
-  virtual void leaveEvent( QEvent * event );
+  virtual void keyPressEvent(QKeyEvent* event);
+  virtual void mousePressEvent(QMouseEvent* event);
+  virtual void mouseReleaseEvent(QMouseEvent* event);
+  virtual void mouseMoveEvent(QMouseEvent* event);
+  virtual void enterEvent(QEnterEvent* event);
+  virtual void leaveEvent(QEvent* event);
 
-  void setCenter( double x, double y );
-  void setPosition( double x, double y );
+  void setCenter(double x, double y);
+  void setPosition(double x, double y);
 
-  void setZoom( double factor );
+  void setZoom(double factor);
 
   void reset();
 
-  virtual void update( bool zoomChanged=false, bool sizeChanged=false );
+  virtual void update(bool zoomChanged = false, bool sizeChanged = false);
 
 Q_SIGNALS:
 
-  void xSpacingChanged( double xSpacing );
-  void ySpacingChanged( double ySpacing );
-  void sliceThicknessChanged( double sliceThickness );
+  void xSpacingChanged(double xSpacing);
+  void ySpacingChanged(double ySpacing);
+  void sliceThicknessChanged(double sliceThickness);
 
-  void xPositionChanged( double xPosition );
-  void yPositionChanged( double yPosition );
-  void slicePositionChanged( double slicePosition );
-  void positionValueChanged( double positionValue );
+  void xPositionChanged(double xPosition);
+  void yPositionChanged(double yPosition);
+  void slicePositionChanged(double slicePosition);
+  void positionValueChanged(double positionValue);
 
-  void sliceNumberChanged( int sliceNum );
+  void sliceNumberChanged(int sliceNum);
 
-  void zoomChanged( double factor );
-  void xCenterChanged( double x );
-  void yCenterChanged( double y );
+  void zoomChanged(double factor);
+  void xCenterChanged(double x);
+  void yCenterChanged(double y);
 
-  void numberOfSlicesChanged( int numberOfSlices );
+  void numberOfSlicesChanged(int numberOfSlices);
 
-  void invertImageChanged( bool invert );
+  void invertImageChanged(bool invert);
 
-  void flipXAxisChanged( bool flipXAxis );
-  void flipYAxisChanged( bool flipYAxis );
-  void transposeXYChanged( bool transposeXY );
+  void flipXAxisChanged(bool flipXAxis);
+  void flipYAxisChanged(bool flipYAxis);
+  void transposeXYChanged(bool transposeXY);
 
-  void intensityWindowChanged( double intensityWindow );
-  void intensityLevelChanged( double intensityLevel );
+  void intensityWindowChanged(double intensityWindow);
+  void intensityLevelChanged(double intensityLevel);
 
 protected:
 
-  virtual void resizeEvent( QResizeEvent* event );
+  virtual void resizeEvent(QResizeEvent* event);
 
   /// protected constructor to derive private implementations
-  ctkQImageView( ctkQImageViewPrivate & pvt,
-    QWidget* parent=0 );
+  ctkQImageView(ctkQImageViewPrivate& pvt,
+    QWidget* parent = 0);
 
 private:
 
   QScopedPointer< ctkQImageViewPrivate > d_ptr;
 
-  Q_DECLARE_PRIVATE( ctkQImageView );
+  Q_DECLARE_PRIVATE(ctkQImageView);
 
-  Q_DISABLE_COPY( ctkQImageView );
+  Q_DISABLE_COPY(ctkQImageView);
 
 };
 

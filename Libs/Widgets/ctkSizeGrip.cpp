@@ -67,7 +67,7 @@ ctkSizeGripPrivate::ctkSizeGripPrivate(ctkSizeGrip& object)
   , Orientations(Qt::Horizontal | Qt::Vertical)
   , Resize(false)
   , IgnoreWidgetMinimumSizeHint(true)
-  , WidgetSizeHint(-1,-1)  ///< the default widget sizeHint should be used.
+  , WidgetSizeHint(-1, -1)  ///< the default widget sizeHint should be used.
   , Hover(false)
   , Pressed(false)
 {
@@ -112,22 +112,22 @@ void ctkSizeGrip::setOrientations(Qt::Orientations newOrientations)
   d->Orientations = newOrientations;
   QCursor newCursor;
   QSizePolicy newSizePolicy;
-  switch(d->Orientations)
-    {
-    case Qt::Horizontal:
-      newCursor = Qt::SizeHorCursor;
-      newSizePolicy = QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
-      break;
-    case Qt::Vertical:
-      newCursor = Qt::SizeVerCursor;
-      newSizePolicy = QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
-      break;
-    default:
-      newCursor = this->isLeftToRight() ?
-        Qt::SizeFDiagCursor : Qt::SizeBDiagCursor;
-      newSizePolicy = QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-      break;
-    };
+  switch (d->Orientations)
+  {
+  case Qt::Horizontal:
+    newCursor = Qt::SizeHorCursor;
+    newSizePolicy = QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
+    break;
+  case Qt::Vertical:
+    newCursor = Qt::SizeVerCursor;
+    newSizePolicy = QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
+    break;
+  default:
+    newCursor = this->isLeftToRight() ?
+      Qt::SizeFDiagCursor : Qt::SizeBDiagCursor;
+    newSizePolicy = QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    break;
+  };
   this->setCursor(newCursor);
   this->setSizePolicy(newSizePolicy);
   this->updateGeometry(); // sizeHint might change
@@ -175,23 +175,23 @@ void ctkSizeGrip::setWidgetSizeHint(QSize sizeHint)
 {
   Q_D(ctkSizeGrip);
   if (d->Resize && d->WidgetToResize)
-    {
+  {
     QSize newSize = d->WidgetToResize->size();
     if (sizeHint.width() >= 0)
-      {
-      newSize.setWidth(sizeHint.width());
-      }
-    if (sizeHint.height() >= 0)
-      {
-      newSize.setHeight(sizeHint.height());
-      }
-    d->WidgetToResize->resize(newSize);
-    }
-  if (d->WidgetSizeHint != sizeHint)
     {
+      newSize.setWidth(sizeHint.width());
+    }
+    if (sizeHint.height() >= 0)
+    {
+      newSize.setHeight(sizeHint.height());
+    }
+    d->WidgetToResize->resize(newSize);
+  }
+  if (d->WidgetSizeHint != sizeHint)
+  {
     d->WidgetSizeHint = sizeHint;
     emit widgetSizeHintChanged(d->WidgetSizeHint);
-    }
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -208,96 +208,96 @@ QSize ctkSizeGrip::sizeHint() const
   QSize minSize;
   QStyle::ContentsType contents;
   switch (d->Orientations)
-    {
-    case Qt::Horizontal:
-    case Qt::Vertical:
-      {
-      contents = QStyle::CT_Splitter;
-      int splitterWidth = this->style()->pixelMetric(QStyle::PM_SplitterWidth, 0, this);
-      minSize = QSize(splitterWidth, splitterWidth);
-      break;
-      }
-    default:
-      contents = QStyle::CT_SizeGrip;
-      minSize = QSize(13, 13);
-      break;
-    };
+  {
+  case Qt::Horizontal:
+  case Qt::Vertical:
+  {
+    contents = QStyle::CT_Splitter;
+    int splitterWidth = this->style()->pixelMetric(QStyle::PM_SplitterWidth, 0, this);
+    minSize = QSize(splitterWidth, splitterWidth);
+    break;
+  }
+  default:
+    contents = QStyle::CT_SizeGrip;
+    minSize = QSize(13, 13);
+    break;
+  };
   QStyleOption opt(0);
-  opt.init(this);
+  opt.initFrom(this);
   return (this->style()->sizeFromContents(contents, &opt, minSize, this).
-          expandedTo(QApplication::globalStrut()));
+    expandedTo(QSize(80, 60)/*QApplication::globalStrut()*/));
 }
 
 //------------------------------------------------------------------------------
-void ctkSizeGrip::paintEvent(QPaintEvent *event)
+void ctkSizeGrip::paintEvent(QPaintEvent* event)
 {
   Q_UNUSED(event);
   Q_D(ctkSizeGrip);
   QPainter painter(this);
   switch (d->Orientations)
+  {
+  case Qt::Horizontal:
+  case Qt::Vertical:
+  {
+    QStyleOption opt(0);
+    opt.rect = rect();
+    opt.palette = palette();
+    opt.state = (d->Orientations == Qt::Horizontal) ?
+      QStyle::State_Horizontal : QStyle::State_None;
+    if (d->Hover)
     {
-    case Qt::Horizontal:
-    case Qt::Vertical:
-      {
-      QStyleOption opt(0);
-      opt.rect = rect();
-      opt.palette = palette();
-      opt.state = (d->Orientations == Qt::Horizontal) ?
-        QStyle::State_Horizontal : QStyle::State_None;
-      if (d->Hover)
-        {
-        opt.state |= QStyle::State_MouseOver;
-        }
-      if (d->Pressed)
-        {
-        opt.state |= QStyle::State_Sunken;
-        }
-      if (isEnabled())
-        {
-        opt.state |= QStyle::State_Enabled;
-        }
-      this->style()->drawControl(QStyle::CE_Splitter, &opt, &painter, this);
-      break;
-      }
-    default:
-      {
-      QStyleOptionSizeGrip opt;
-      opt.init(this);
-      opt.corner = this->isLeftToRight() ? Qt::BottomRightCorner : Qt::BottomLeftCorner;
-      style()->drawControl(QStyle::CE_SizeGrip, &opt, &painter, this);
-      break;
-      }
-    };
+      opt.state |= QStyle::State_MouseOver;
+    }
+    if (d->Pressed)
+    {
+      opt.state |= QStyle::State_Sunken;
+    }
+    if (isEnabled())
+    {
+      opt.state |= QStyle::State_Enabled;
+    }
+    this->style()->drawControl(QStyle::CE_Splitter, &opt, &painter, this);
+    break;
+  }
+  default:
+  {
+    QStyleOptionSizeGrip opt;
+    opt.initFrom(this);
+    opt.corner = this->isLeftToRight() ? Qt::BottomRightCorner : Qt::BottomLeftCorner;
+    style()->drawControl(QStyle::CE_SizeGrip, &opt, &painter, this);
+    break;
+  }
+  };
 }
 
 //------------------------------------------------------------------------------
-bool ctkSizeGrip::event(QEvent *event)
+bool ctkSizeGrip::event(QEvent* event)
 {
   Q_D(ctkSizeGrip);
-  switch(event->type())
-    {
-    case QEvent::HoverEnter:
-      d->Hover = true;
-      update();
-      break;
-    case QEvent::HoverLeave:
-      d->Hover = false;
-      update();
-      break;
-    default:
-      break;
-    }
+  switch (event->type())
+  {
+  case QEvent::HoverEnter:
+    d->Hover = true;
+    update();
+    break;
+  case QEvent::HoverLeave:
+    d->Hover = false;
+    update();
+    break;
+  default:
+    break;
+  }
   return this->Superclass::event(event);
 }
 
 //------------------------------------------------------------------------------
-void ctkSizeGrip::mousePressEvent(QMouseEvent * e)
+void ctkSizeGrip::mousePressEvent(QMouseEvent* e)
 {
   if (e->button() != Qt::LeftButton)
-    {
+  {
     QWidget::mousePressEvent(e);
     return;
-    }
+  }
 
   Q_D(ctkSizeGrip);
   d->StartPos = e->globalPos();
@@ -309,42 +309,42 @@ void ctkSizeGrip::mousePressEvent(QMouseEvent * e)
 
 
 //------------------------------------------------------------------------------
-void ctkSizeGrip::mouseMoveEvent(QMouseEvent * e)
+void ctkSizeGrip::mouseMoveEvent(QMouseEvent* e)
 {
   if (e->buttons() != Qt::LeftButton)
-    {
+  {
     this->Superclass::mouseMoveEvent(e);
     return;
-    }
+  }
 
   Q_D(ctkSizeGrip);
   if (!d->Pressed || d->WidgetToResize->testAttribute(Qt::WA_WState_ConfigPending))
-    {
+  {
     return;
-    }
+  }
 
   QPoint newPos(e->globalPos());
   QSize offset(newPos.x() - d->StartPos.x(), newPos.y() - d->StartPos.y());
 
   QSize widgetSizeHint = d->WidgetGeom.size();
   if (d->Orientations & Qt::Vertical)
-    {
+  {
     widgetSizeHint.rheight() = d->WidgetGeom.height() + offset.height();
-    }
+  }
 
   if (d->Orientations & Qt::Horizontal)
-    {
+  {
     widgetSizeHint.rwidth() = d->WidgetGeom.width() + offset.width() * (this->isLeftToRight() ? 1 : -1);
-    }
+  }
   // Make sure we don't allow "unreasonable" sizes.
   widgetSizeHint = widgetSizeHint.expandedTo(d->WidgetMinSize).boundedTo(d->WidgetMaxSize);
 
   if (!d->IgnoreWidgetMinimumSizeHint)
-    {
+  {
     widgetSizeHint = QLayout::closestAcceptableSize(d->WidgetToResize, widgetSizeHint);
-    }
+  }
   else
-    {
+  {
     // Here we can't use QLayout::closestAcceptableSize as it internally uses
     // the widget minimumSizeHint to expand the size.
     // This usually allows only enlarging the widget but prevent shrinking the
@@ -352,38 +352,38 @@ void ctkSizeGrip::mouseMoveEvent(QMouseEvent * e)
     // Manually assess the closest acceptable size
     // Respect the heightForWidth ratio
     if (d->WidgetToResize->heightForWidth(widgetSizeHint.width()) != -1)
-      {
+    {
       widgetSizeHint.rheight() = d->WidgetToResize->heightForWidth(widgetSizeHint.width());
-      }
     }
+  }
 
-  widgetSizeHint = widgetSizeHint.expandedTo(QApplication::globalStrut());
+  widgetSizeHint = widgetSizeHint.expandedTo(QSize(80, 60)/*QApplication::globalStrut()*/);
 
   this->setWidgetSizeHint(
     QSize(d->Orientations & Qt::Horizontal ? widgetSizeHint.width() : -1,
-          d->Orientations & Qt::Vertical ? widgetSizeHint.height() : -1));
+      d->Orientations & Qt::Vertical ? widgetSizeHint.height() : -1));
 }
 
 //------------------------------------------------------------------------------
-void ctkSizeGrip::mouseReleaseEvent(QMouseEvent *mouseEvent)
+void ctkSizeGrip::mouseReleaseEvent(QMouseEvent* mouseEvent)
 {
   if (mouseEvent->button() != Qt::LeftButton)
-    {
+  {
     this->Superclass::mouseReleaseEvent(mouseEvent);
     return;
-    }
+  }
   Q_D(ctkSizeGrip);
   d->Pressed = false;
   d->StartPos = QPoint();
 }
 
 //------------------------------------------------------------------------------
-void ctkSizeGrip::mouseDoubleClickEvent(QMouseEvent *mouseEvent)
+void ctkSizeGrip::mouseDoubleClickEvent(QMouseEvent* mouseEvent)
 {
   if (mouseEvent->button() != Qt::LeftButton)
-    {
+  {
     this->Superclass::mouseDoubleClickEvent(mouseEvent);
     return;
-    }
+  }
   this->setWidgetSizeHint(QSize(-1, -1));
 }

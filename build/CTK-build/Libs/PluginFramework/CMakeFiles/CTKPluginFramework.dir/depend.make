@@ -724,6 +724,7 @@ Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QPluginLoader
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QReadWriteLock
+Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QSet
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QSharedDataPointer
@@ -1874,6 +1875,7 @@ Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QPluginLoader
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QReadWriteLock
+Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QSet
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QSharedDataPointer
@@ -3898,6 +3900,7 @@ Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Q
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QPluginLoader
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QReadWriteLock
+Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QSet
 Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o: /opt/Qt/6.2.1/gcc_64/include/QtCore/QSharedDataPointer

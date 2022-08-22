@@ -29,7 +29,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QRegExp>
-#include <QRegExpValidator>
+// #include <QRegExpValidator>
 #include <QSettings>
 #include <QStyleOptionComboBox>
 #include <QToolButton>
@@ -52,189 +52,189 @@
 namespace // hide private implementation details
 {
 
-//-----------------------------------------------------------------------------
-static QFileSystemModel* globalFileSystemModelForFiles()
-{
-  static QFileSystemModel* m = NULL;
-  if (!m)
+  //-----------------------------------------------------------------------------
+  static QFileSystemModel* globalFileSystemModelForFiles()
+  {
+    static QFileSystemModel* m = NULL;
+    if (!m)
     {
-    m = new QFileSystemModel();
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-    // Prevent slow browsing of network drives
-    m->setOption(QFileSystemModel::DontUseCustomDirectoryIcons);
-#endif
-    m->setRootPath("");
-    }
-  return m;
-}
-
-//-----------------------------------------------------------------------------
-static QFileSystemModel* globalFileSystemModelForDirectories()
-{
-  static QFileSystemModel* m = NULL;
-  if (!m)
-    {
-    m = new QFileSystemModel();
-#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
-    // Prevent slow browsing of network drives
-    m->setOption(QFileSystemModel::DontUseCustomDirectoryIcons);
-#endif
-    m->setFilter(QDir::AllDirs | QDir::Drives | QDir::NoDotAndDotDot);
-    m->setRootPath("");
-    }
-  return m;
-}
-
-//-----------------------------------------------------------------------------
-/// Completer class with built-in file system model
-class ctkFileCompleter : public QCompleter
-{
-public:
-  ctkFileCompleter(QObject* o, bool showFiles);
-
-  // Ensure auto-completed file always uses forward-slash as separator
-  QString pathFromIndex(const QModelIndex& idx) const override;
-
-  // Helper function for getting the current model casted to QFileSystemModel
-  QFileSystemModel* fileSystemModel() const;
-
-  // Adds path to the file system model.
-  // This also automatically adds all children to the model.
-  void addPathToIndex(const QString& path);
-
-  // Switch between showing files or folders only
-  void setShowFiles(bool show);
-  bool showFiles();
-
-  // Set name filter. If filters is empty then all folder/file names are displayed
-  // and the global shared file system models are used. If name filters are set then
-  // a custom custom file system is created for the widget.
-  void setNameFilters(const QStringList& filters);
-  QStringList nameFilters() const;
-
-protected:
-  QFileSystemModel* CustomFileSystemModel;
-};
-
-//-----------------------------------------------------------------------------
-ctkFileCompleter::ctkFileCompleter(QObject* o, bool showFiles)
-  : QCompleter(o)
-  , CustomFileSystemModel(NULL)
-{
-  this->setShowFiles(showFiles);
-}
-
-//-----------------------------------------------------------------------------
-QString ctkFileCompleter::pathFromIndex(const QModelIndex& idx) const
-{
-  return QDir::fromNativeSeparators(QCompleter::pathFromIndex(idx));
-}
-
-//-----------------------------------------------------------------------------
-void ctkFileCompleter::setShowFiles(bool showFiles)
-{
-  if (this->CustomFileSystemModel)
-    {
-    if (showFiles)
-      {
-      this->CustomFileSystemModel->setFilter(globalFileSystemModelForFiles()->filter());
-      }
-    else
-      {
-      this->CustomFileSystemModel->setFilter(globalFileSystemModelForDirectories()->filter());
-      }
-    }
-  else
-    {
-    QFileSystemModel* m = showFiles ? globalFileSystemModelForFiles() : globalFileSystemModelForDirectories();
-    this->setModel(m);
-    }
-}
-
-//-----------------------------------------------------------------------------
-bool ctkFileCompleter::showFiles()
-{
-  QFileSystemModel* fileSystemModel = this->fileSystemModel();
-  if (!fileSystemModel)
-    {
-    return false;
-    }
-  return fileSystemModel->filter().testFlag(QDir::Files);
-}
-
-//-----------------------------------------------------------------------------
-void ctkFileCompleter::setNameFilters(const QStringList& filters)
-{
-  if (filters.empty())
-    {
-    // no name filter set use the global file system models
-    bool showFiles = this->showFiles();
-    QFileSystemModel* m = showFiles ? globalFileSystemModelForFiles() : globalFileSystemModelForDirectories();
-    this->setModel(m);
-    if (this->CustomFileSystemModel)
-      {
-      this->CustomFileSystemModel->setParent(NULL);
-      this->CustomFileSystemModel->deleteLater();
-      }
-    }
-  else
-    {
-    // name filter is set, we need to use a custom model
-    if (!this->CustomFileSystemModel)
-      {
-      this->CustomFileSystemModel = new QFileSystemModel(this);
+      m = new QFileSystemModel();
 #if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
       // Prevent slow browsing of network drives
-      this->CustomFileSystemModel->setOption(QFileSystemModel::DontUseCustomDirectoryIcons);
+      m->setOption(QFileSystemModel::DontUseCustomDirectoryIcons);
 #endif
-      this->CustomFileSystemModel->setNameFilterDisables(false);
-      this->CustomFileSystemModel->setNameFilters(filters);
-      bool showFiles = this->showFiles();
+      m->setRootPath("");
+    }
+    return m;
+  }
+
+  //-----------------------------------------------------------------------------
+  static QFileSystemModel* globalFileSystemModelForDirectories()
+  {
+    static QFileSystemModel* m = NULL;
+    if (!m)
+    {
+      m = new QFileSystemModel();
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+      // Prevent slow browsing of network drives
+      m->setOption(QFileSystemModel::DontUseCustomDirectoryIcons);
+#endif
+      m->setFilter(QDir::AllDirs | QDir::Drives | QDir::NoDotAndDotDot);
+      m->setRootPath("");
+    }
+    return m;
+  }
+
+  //-----------------------------------------------------------------------------
+  /// Completer class with built-in file system model
+  class ctkFileCompleter : public QCompleter
+  {
+  public:
+    ctkFileCompleter(QObject* o, bool showFiles);
+
+    // Ensure auto-completed file always uses forward-slash as separator
+    QString pathFromIndex(const QModelIndex& idx) const override;
+
+    // Helper function for getting the current model casted to QFileSystemModel
+    QFileSystemModel* fileSystemModel() const;
+
+    // Adds path to the file system model.
+    // This also automatically adds all children to the model.
+    void addPathToIndex(const QString& path);
+
+    // Switch between showing files or folders only
+    void setShowFiles(bool show);
+    bool showFiles();
+
+    // Set name filter. If filters is empty then all folder/file names are displayed
+    // and the global shared file system models are used. If name filters are set then
+    // a custom custom file system is created for the widget.
+    void setNameFilters(const QStringList& filters);
+    QStringList nameFilters() const;
+
+  protected:
+    QFileSystemModel* CustomFileSystemModel;
+  };
+
+  //-----------------------------------------------------------------------------
+  ctkFileCompleter::ctkFileCompleter(QObject* o, bool showFiles)
+    : QCompleter(o)
+    , CustomFileSystemModel(NULL)
+  {
+    this->setShowFiles(showFiles);
+  }
+
+  //-----------------------------------------------------------------------------
+  QString ctkFileCompleter::pathFromIndex(const QModelIndex& idx) const
+  {
+    return QDir::fromNativeSeparators(QCompleter::pathFromIndex(idx));
+  }
+
+  //-----------------------------------------------------------------------------
+  void ctkFileCompleter::setShowFiles(bool showFiles)
+  {
+    if (this->CustomFileSystemModel)
+    {
       if (showFiles)
-        {
-        this->CustomFileSystemModel->setFilter(globalFileSystemModelForFiles()->filter());
-        }
-      else
-        {
-        this->CustomFileSystemModel->setFilter(globalFileSystemModelForDirectories()->filter());
-        }
-      this->CustomFileSystemModel->setRootPath("");
-      this->setModel(this->CustomFileSystemModel);
-      }
-    else
       {
-      this->CustomFileSystemModel->setNameFilters(filters);
+        this->CustomFileSystemModel->setFilter(globalFileSystemModelForFiles()->filter());
+      }
+      else
+      {
+        this->CustomFileSystemModel->setFilter(globalFileSystemModelForDirectories()->filter());
       }
     }
-}
-
-//-----------------------------------------------------------------------------
-QStringList ctkFileCompleter::nameFilters() const
-{
-  QFileSystemModel* fileSystemModel = this->fileSystemModel();
-  if (!fileSystemModel)
+    else
     {
-    return QStringList();
+      QFileSystemModel* m = showFiles ? globalFileSystemModelForFiles() : globalFileSystemModelForDirectories();
+      this->setModel(m);
     }
-  return fileSystemModel->nameFilters();
-}
+  }
 
-//-----------------------------------------------------------------------------
-QFileSystemModel* ctkFileCompleter::fileSystemModel() const
-{
-  QFileSystemModel* fileSystemModel = qobject_cast<QFileSystemModel*>(this->model());
-  return fileSystemModel;
-}
-
-//-----------------------------------------------------------------------------
-void ctkFileCompleter::addPathToIndex(const QString& path)
-{
-  QFileSystemModel* fileSystemModel = this->fileSystemModel();
-  if (fileSystemModel)
+  //-----------------------------------------------------------------------------
+  bool ctkFileCompleter::showFiles()
+  {
+    QFileSystemModel* fileSystemModel = this->fileSystemModel();
+    if (!fileSystemModel)
     {
-    fileSystemModel->index(path);
+      return false;
     }
-}
+    return fileSystemModel->filter().testFlag(QDir::Files);
+  }
+
+  //-----------------------------------------------------------------------------
+  void ctkFileCompleter::setNameFilters(const QStringList& filters)
+  {
+    if (filters.empty())
+    {
+      // no name filter set use the global file system models
+      bool showFiles = this->showFiles();
+      QFileSystemModel* m = showFiles ? globalFileSystemModelForFiles() : globalFileSystemModelForDirectories();
+      this->setModel(m);
+      if (this->CustomFileSystemModel)
+      {
+        this->CustomFileSystemModel->setParent(NULL);
+        this->CustomFileSystemModel->deleteLater();
+      }
+    }
+    else
+    {
+      // name filter is set, we need to use a custom model
+      if (!this->CustomFileSystemModel)
+      {
+        this->CustomFileSystemModel = new QFileSystemModel(this);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,14,0))
+        // Prevent slow browsing of network drives
+        this->CustomFileSystemModel->setOption(QFileSystemModel::DontUseCustomDirectoryIcons);
+#endif
+        this->CustomFileSystemModel->setNameFilterDisables(false);
+        this->CustomFileSystemModel->setNameFilters(filters);
+        bool showFiles = this->showFiles();
+        if (showFiles)
+        {
+          this->CustomFileSystemModel->setFilter(globalFileSystemModelForFiles()->filter());
+        }
+        else
+        {
+          this->CustomFileSystemModel->setFilter(globalFileSystemModelForDirectories()->filter());
+        }
+        this->CustomFileSystemModel->setRootPath("");
+        this->setModel(this->CustomFileSystemModel);
+      }
+      else
+      {
+        this->CustomFileSystemModel->setNameFilters(filters);
+      }
+    }
+  }
+
+  //-----------------------------------------------------------------------------
+  QStringList ctkFileCompleter::nameFilters() const
+  {
+    QFileSystemModel* fileSystemModel = this->fileSystemModel();
+    if (!fileSystemModel)
+    {
+      return QStringList();
+    }
+    return fileSystemModel->nameFilters();
+  }
+
+  //-----------------------------------------------------------------------------
+  QFileSystemModel* ctkFileCompleter::fileSystemModel() const
+  {
+    QFileSystemModel* fileSystemModel = qobject_cast<QFileSystemModel*>(this->model());
+    return fileSystemModel;
+  }
+
+  //-----------------------------------------------------------------------------
+  void ctkFileCompleter::addPathToIndex(const QString& path)
+  {
+    QFileSystemModel* fileSystemModel = this->fileSystemModel();
+    if (fileSystemModel)
+    {
+      fileSystemModel->index(path);
+    }
+  }
 
 } // end of anonymous namespace
 
@@ -259,9 +259,9 @@ public:
   void createPathLineEditWidget(bool useComboBox);
   QString settingKey()const;
 
-  QLineEdit*            LineEdit;
-  QComboBox*            ComboBox;
-  QToolButton*          BrowseButton;       //!< "..." button
+  QLineEdit* LineEdit;
+  QComboBox* ComboBox;
+  QToolButton* BrowseButton;       //!< "..." button
 
   int                   MinimumContentsLength;
   ctkPathLineEdit::SizeAdjustPolicy SizeAdjustPolicy;
@@ -285,7 +285,7 @@ public:
   mutable QSize MinimumSizeHint;
 
   ctkFileCompleter* Completer;
-  QRegExpValidator* Validator;
+  QRegularExpressionValidator* Validator;
 };
 
 QString ctkPathLineEditPrivate::sCurrentDirectory = "";
@@ -300,7 +300,7 @@ ctkPathLineEditPrivate::ctkPathLineEditPrivate(ctkPathLineEdit& object)
   , MinimumContentsLength(0)
   , SizeAdjustPolicy(ctkPathLineEdit::AdjustToMinimumContentsLength)
   , Filters(QDir::AllEntries | QDir::NoDotAndDotDot
-      | QDir::Readable | QDir::Executable)
+    | QDir::Readable | QDir::Executable)
   , HasValidInput(false)
 {
 }
@@ -311,13 +311,13 @@ void ctkPathLineEditPrivate::init()
   Q_Q(ctkPathLineEdit);
 
   QHBoxLayout* layout = new QHBoxLayout(q);
-  layout->setContentsMargins(0,0,0,0);
+  layout->setContentsMargins(0, 0, 0, 0);
   layout->setSpacing(0); // no space between the combobx and button
 
   this->Completer = new ctkFileCompleter(q, true);
 
   // don't accept invalid path
-  this->Validator = new QRegExpValidator(q);
+  this->Validator = new QRegularExpressionValidator(q);
 
   this->createPathLineEditWidget(true);
 
@@ -327,14 +327,14 @@ void ctkPathLineEditPrivate::init()
   this->BrowseButton->setSizePolicy(QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Ignored));
   this->BrowseButton->setToolTip(ctkPathLineEdit::tr("Open a dialog"));
 
-  QObject::connect(this->BrowseButton,SIGNAL(clicked()),
-                   q, SLOT(browse()));
+  QObject::connect(this->BrowseButton, SIGNAL(clicked()),
+    q, SLOT(browse()));
 
   layout->addWidget(this->BrowseButton);
 
   q->setSizePolicy(QSizePolicy(
-                     QSizePolicy::Expanding, QSizePolicy::Fixed,
-                     QSizePolicy::LineEdit));
+    QSizePolicy::Expanding, QSizePolicy::Fixed,
+    QSizePolicy::LineEdit));
 
   q->setFocusProxy(this->LineEdit);
 }
@@ -347,17 +347,17 @@ void ctkPathLineEditPrivate::createPathLineEditWidget(bool useComboBox)
   QString path = q->currentPath();
 
   if (useComboBox)
-    {
+  {
     this->ComboBox = new QComboBox(q);
     this->ComboBox->setEditable(true);
     this->ComboBox->setInsertPolicy(QComboBox::NoInsert);
     this->LineEdit = this->ComboBox->lineEdit();
-    }
+  }
   else
-    {
+  {
     this->ComboBox = 0;
     this->LineEdit = new QLineEdit(q);
-    }
+  }
 
   this->LineEdit->setCompleter(this->Completer);
   QObject::connect(this->LineEdit->completer()->completionModel(), SIGNAL(layoutChanged()),
@@ -365,9 +365,9 @@ void ctkPathLineEditPrivate::createPathLineEditWidget(bool useComboBox)
   this->LineEdit->setValidator(this->Validator);
 
   if (q->layout() && q->layout()->itemAt(0))
-    {
+  {
     delete q->layout()->itemAt(0)->widget();
-    }
+  }
   qobject_cast<QHBoxLayout*>(q->layout())->insertWidget(
     0,
     this->ComboBox ? qobject_cast<QWidget*>(this->ComboBox) :
@@ -378,9 +378,9 @@ void ctkPathLineEditPrivate::createPathLineEditWidget(bool useComboBox)
   q->setCurrentPath(path);
 
   QObject::connect(this->LineEdit, SIGNAL(textChanged(QString)),
-                   q, SLOT(setCurrentDirectory(QString)));
+    q, SLOT(setCurrentDirectory(QString)));
   QObject::connect(this->LineEdit, SIGNAL(textChanged(QString)),
-                   q, SLOT(updateHasValidInput()));
+    q, SLOT(updateHasValidInput()));
   q->updateGeometry();
 }
 
@@ -389,80 +389,80 @@ QSize ctkPathLineEditPrivate::recomputeSizeHint(QSize& sh)const
 {
   Q_Q(const ctkPathLineEdit);
   if (!sh.isValid())
-    {
+  {
     int frame = 0;
     if (this->ComboBox)
-      {
+    {
       QStyleOptionComboBox option;
       int arrowWidth = this->ComboBox->style()->subControlRect(
-            QStyle::CC_ComboBox, &option, QStyle::SC_ComboBoxArrow, this->ComboBox).width()
-          + (this->ComboBox->hasFrame() ? 2 : 0);
+        QStyle::CC_ComboBox, &option, QStyle::SC_ComboBoxArrow, this->ComboBox).width()
+        + (this->ComboBox->hasFrame() ? 2 : 0);
       frame = 2 * (this->ComboBox->hasFrame() ? 3 : 0)
-          + arrowWidth
-          + 1; // for mac style, not sure why
-      }
+        + arrowWidth
+        + 1; // for mac style, not sure why
+    }
     else
-      {
+    {
       QStyleOptionFrame option;
       int frameWidth = this->LineEdit->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, &option, q);
       int horizontalMargin = 2; // QLineEditPrivate::horizontalMargin
       // See QLineEdit::sizeHint
       frame = 2 * frameWidth
-          + this->LineEdit->textMargins().left()
-          + this->LineEdit->textMargins().right()
-          + this->LineEdit->contentsMargins().left()
-          + this->LineEdit->contentsMargins().right()
-          + 2 * horizontalMargin;
-      }
+        + this->LineEdit->textMargins().left()
+        + this->LineEdit->textMargins().right()
+        + this->LineEdit->contentsMargins().left()
+        + this->LineEdit->contentsMargins().right()
+        + 2 * horizontalMargin;
+    }
     int browseWidth = 0;
     if (q->showBrowseButton())
-      {
+    {
       browseWidth = this->BrowseButton->minimumSizeHint().width();
-      }
+    }
 
     // text width
     int textWidth = 0;
     if (&sh == &this->SizeHint || this->MinimumContentsLength == 0)
-      {
+    {
       switch (SizeAdjustPolicy)
+      {
+      case ctkPathLineEdit::AdjustToContents:
+      case ctkPathLineEdit::AdjustToContentsOnFirstShow:
+        if (this->LineEdit->text().isEmpty())
         {
-        case ctkPathLineEdit::AdjustToContents:
-        case ctkPathLineEdit::AdjustToContentsOnFirstShow:
-          if (this->LineEdit->text().isEmpty())
-            {
-            #if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
-            int character_pixel_width = this->LineEdit->fontMetrics().horizontalAdvance(QLatin1Char('x'));
-            #else
-            int character_pixel_width = this->LineEdit->fontMetrics().width(QLatin1Char('x'));
-            #endif
-            textWidth = 7 * character_pixel_width;
-            }
-          else
-            {
-            textWidth = this->LineEdit->fontMetrics().boundingRect(this->LineEdit->text()).width() + 8;
-            }
-          break;
-        default:
-          ;
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+          int character_pixel_width = this->LineEdit->fontMetrics().horizontalAdvance(QLatin1Char('x'));
+#else
+          int character_pixel_width = this->LineEdit->fontMetrics().width(QLatin1Char('x'));
+#endif
+          textWidth = 7 * character_pixel_width;
         }
+        else
+        {
+          textWidth = this->LineEdit->fontMetrics().boundingRect(this->LineEdit->text()).width() + 8;
+        }
+        break;
+      default:
+        ;
       }
+    }
 
     if (this->MinimumContentsLength > 0)
-      {
-      #if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
+    {
+#if (QT_VERSION >= QT_VERSION_CHECK(5,11,0))
       int character_pixel_width = this->LineEdit->fontMetrics().horizontalAdvance(QLatin1Char('X'));
-      #else
+#else
       int character_pixel_width = this->LineEdit->fontMetrics().width(QLatin1Char('X'));
-      #endif
+#endif
       textWidth = qMax(textWidth, this->MinimumContentsLength * character_pixel_width);
-      }
+    }
 
     int height = (this->ComboBox ? this->ComboBox->minimumSizeHint() :
-                                   this->LineEdit->minimumSizeHint()).height();
+      this->LineEdit->minimumSizeHint()).height();
     sh.rwidth() = frame + textWidth + browseWidth;
     sh.rheight() = height;
   }
-  return sh.expandedTo(QApplication::globalStrut());
+  return sh.expandedTo(QSize(80,60)/*QApplication::globalStrut()*/);
 }
 
 //-----------------------------------------------------------------------------
@@ -471,7 +471,7 @@ void ctkPathLineEditPrivate::updateFilter()
   Q_Q(ctkPathLineEdit);
   this->Completer->setShowFiles(this->Filters & QDir::Files);
   this->Completer->setNameFilters(ctk::nameFiltersToExtensions(this->NameFilters));
-  this->Validator->setRegExp(ctk::nameFiltersToRegExp(this->NameFilters));
+  this->Validator->setRegularExpression(ctk::nameFiltersToRegExp(this->NameFilters));
 }
 
 //-----------------------------------------------------------------------------
@@ -479,11 +479,11 @@ void ctkPathLineEditPrivate::adjustPathLineEditSize()
 {
   Q_Q(ctkPathLineEdit);
   if (q->sizeAdjustPolicy() == ctkPathLineEdit::AdjustToContents)
-    {
+  {
     q->updateGeometry();
     q->adjustSize();
     q->update();
-    }
+  }
 }
 
 //-----------------------------------------------------------------------------
@@ -500,19 +500,19 @@ void ctkPathLineEditPrivate::_q_recomputeCompleterPopupSize()
   QStyleOptionFrame option;
   int frameWidth = view->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, &option, view);
   int frame = 2 * frameWidth
-      + view->contentsMargins().left()
-      + view->contentsMargins().right();
+    + view->contentsMargins().left()
+    + view->contentsMargins().right();
 
   QAbstractItemModel* model = this->LineEdit->completer()->completionModel();
   for (int i = 0; i < model->rowCount(); ++i)
-    {
+  {
     QVariant icon = model->data(model->index(i, 0), Qt::DecorationRole);
     if (icon.isValid() && icon.canConvert<QIcon>())
-      {
+    {
       iconWidth = qMax(iconWidth, icon.value<QIcon>().availableSizes().front().width() + 4);
-      }
-    textWidth = qMax(textWidth, fm.boundingRect(model->data(model->index(i, 0)).toString()).width());
     }
+    textWidth = qMax(textWidth, fm.boundingRect(model->data(model->index(i, 0)).toString()).width());
+  }
 
   view->setMinimumWidth(qMax(frame + iconWidth + textWidth, lineEditSize.width()));
 }
@@ -526,7 +526,7 @@ QString ctkPathLineEditPrivate::settingKey()const
 }
 
 //-----------------------------------------------------------------------------
-ctkPathLineEdit::ctkPathLineEdit(QWidget *parentWidget)
+ctkPathLineEdit::ctkPathLineEdit(QWidget* parentWidget)
   : QWidget(parentWidget)
   , d_ptr(new ctkPathLineEditPrivate(*this))
 {
@@ -539,9 +539,9 @@ ctkPathLineEdit::ctkPathLineEdit(QWidget *parentWidget)
 
 //-----------------------------------------------------------------------------
 ctkPathLineEdit::ctkPathLineEdit(const QString& label,
-                                 const QStringList& nameFilters,
-                                 Filters filters,
-                                 QWidget *parentWidget)
+  const QStringList& nameFilters,
+  Filters filters,
+  QWidget* parentWidget)
   : QWidget(parentWidget)
   , d_ptr(new ctkPathLineEditPrivate(*this))
 {
@@ -559,7 +559,7 @@ ctkPathLineEdit::~ctkPathLineEdit()
 }
 
 //-----------------------------------------------------------------------------
-void ctkPathLineEdit::setLabel(const QString &label)
+void ctkPathLineEdit::setLabel(const QString& label)
 {
   Q_D(ctkPathLineEdit);
   d->Label = label;
@@ -573,7 +573,7 @@ const QString& ctkPathLineEdit::label()const
 }
 
 //-----------------------------------------------------------------------------
-void ctkPathLineEdit::setNameFilters(const QStringList &nameFilters)
+void ctkPathLineEdit::setNameFilters(const QStringList& nameFilters)
 {
   Q_D(ctkPathLineEdit);
   d->NameFilters = nameFilters;
@@ -588,7 +588,7 @@ const QStringList& ctkPathLineEdit::nameFilters()const
 }
 
 //-----------------------------------------------------------------------------
-void ctkPathLineEdit::setFilters(const Filters &filters)
+void ctkPathLineEdit::setFilters(const Filters& filters)
 {
   Q_D(ctkPathLineEdit);
   d->Filters = QFlags<QDir::Filter>(static_cast<int>(filters));
@@ -629,56 +629,56 @@ void ctkPathLineEdit::browse()
 {
   Q_D(ctkPathLineEdit);
   QString path = "";
-  if ( d->Filters & QDir::Files ) //file
+  if (d->Filters & QDir::Files) //file
+  {
+    if (d->Filters & QDir::Writable) // load or save
     {
-    if ( d->Filters & QDir::Writable) // load or save
-      {
       path = QFileDialog::getSaveFileName(
-	this,
+        this,
         tr("Select a file to save "),
         this->currentPath().isEmpty() ? ctkPathLineEditPrivate::sCurrentDirectory :
-	                                this->currentPath(),
-	d->NameFilters.join(";;"),
-	0,
+        this->currentPath(),
+        d->NameFilters.join(";;"),
+        0,
 #ifdef USE_QFILEDIALOG_OPTIONS
-      d->DialogOptions);
+        d->DialogOptions);
 #else
-      QFlags<QFileDialog::Option>(int(d->DialogOptions)));
+        QFlags<QFileDialog::Option>(int(d->DialogOptions)));
 #endif
-      }
+    }
     else
-      {
+    {
       path = QFileDialog::getOpenFileName(
         this,
         QString("Open a file"),
-        this->currentPath().isEmpty()? ctkPathLineEditPrivate::sCurrentDirectory :
-	                               this->currentPath(),
+        this->currentPath().isEmpty() ? ctkPathLineEditPrivate::sCurrentDirectory :
+        this->currentPath(),
         d->NameFilters.join(";;"),
-	0,
+        0,
 #ifdef USE_QFILEDIALOG_OPTIONS
-      d->DialogOptions);
+        d->DialogOptions);
 #else
-      QFlags<QFileDialog::Option>(int(d->DialogOptions)));
+        QFlags<QFileDialog::Option>(int(d->DialogOptions)));
 #endif
-      }
     }
+  }
   else //directory
-    {
+  {
     path = QFileDialog::getExistingDirectory(
       this,
       QString("Select a directory..."),
       this->currentPath().isEmpty() ? ctkPathLineEditPrivate::sCurrentDirectory :
-                                      this->currentPath(),
+      this->currentPath(),
 #ifdef USE_QFILEDIALOG_OPTIONS
       d->DialogOptions);
 #else
       QFlags<QFileDialog::Option>(int(d->DialogOptions)));
 #endif
-    }
+  }
   if (path.isEmpty())
-    {
+  {
     return;
-    }
+  }
   this->setCurrentPath(path);
 }
 
@@ -687,9 +687,9 @@ void ctkPathLineEdit::retrieveHistory()
 {
   Q_D(ctkPathLineEdit);
   if (d->ComboBox == 0)
-    {
+  {
     return;
-    }
+  }
   QString path = this->currentPath();
   bool wasBlocking = this->blockSignals(true);
   d->ComboBox->clear();
@@ -697,25 +697,25 @@ void ctkPathLineEdit::retrieveHistory()
   QSettings settings;
   QString key = d->settingKey();
   const QStringList history = settings.value(key).toStringList();
-  foreach(const QString& path, history)
-    {
+  foreach(const QString & path, history)
+  {
     d->ComboBox->addItem(path);
     if (d->ComboBox->count() >= ctkPathLineEditPrivate::sMaxHistory)
-      {
+    {
       break;
-      }
     }
+  }
   // Restore path or select the most recent file location if none set.
   if (path.isEmpty())
-    {
+  {
     this->blockSignals(wasBlocking);
     d->ComboBox->setCurrentIndex(0);
-    }
+  }
   else
-    {
+  {
     this->setCurrentPath(path);
     this->blockSignals(wasBlocking);
-    }
+  }
 }
 
 //-----------------------------------------------------------------------------
@@ -723,10 +723,10 @@ void ctkPathLineEdit::addCurrentPathToHistory()
 {
   Q_D(ctkPathLineEdit);
   if (d->ComboBox == 0 ||
-      this->currentPath().isEmpty())
-    {
+    this->currentPath().isEmpty())
+  {
     return;
-    }
+  }
   QSettings settings;
   //keep the same values, add the current value
   //if more than m_MaxHistory entrees, drop the oldest.
@@ -734,22 +734,22 @@ void ctkPathLineEdit::addCurrentPathToHistory()
   QStringList history = settings.value(key).toStringList();
   QString pathToAdd = this->currentPath();
   if (history.contains(pathToAdd))
-    {
+  {
     history.removeAll(pathToAdd);
-    }
+  }
   history.push_front(pathToAdd);
   settings.setValue(key, history);
   // don't fire intermediate events.
   bool wasBlocking = d->ComboBox->blockSignals(false);
   int index = d->ComboBox->findText(this->currentPath());
   if (index >= 0)
-    {
+  {
     d->ComboBox->removeItem(index);
-    }
+  }
   while (d->ComboBox->count() >= ctkPathLineEditPrivate::sMaxHistory)
-    {
+  {
     d->ComboBox->removeItem(d->ComboBox->count() - 1);
-    }
+  }
   d->ComboBox->insertItem(0, pathToAdd);
   d->ComboBox->setCurrentIndex(0);
   d->ComboBox->blockSignals(wasBlocking);
@@ -762,13 +762,13 @@ void ctkPathLineEdit::setCurrentFileExtension(const QString& extension)
   QFileInfo fileInfo(filename);
 
   if (!fileInfo.suffix().isEmpty())
-    {
+  {
     filename.replace(fileInfo.suffix(), extension);
-    }
+  }
   else
-    {
+  {
     filename.append(QString(".") + extension);
-    }
+  }
   this->setCurrentPath(filename);
 }
 
@@ -792,13 +792,13 @@ void ctkPathLineEdit::setCurrentPath(const QString& path)
   Q_D(ctkPathLineEdit);
   d->LineEdit->setText(path);
   if (d->LineEdit->hasAcceptableInput())
-    {
+  {
     QFileInfo fileInfo(path);
     if (fileInfo.exists())
-      {
+    {
       d->Completer->addPathToIndex(path);
-      }
     }
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -815,27 +815,27 @@ void ctkPathLineEdit::updateHasValidInput()
   bool oldHasValidInput = d->HasValidInput;
   d->HasValidInput = d->LineEdit->hasAcceptableInput();
   if (d->HasValidInput)
-    {
+  {
     QFileInfo fileInfo(this->currentPath());
     if (fileInfo.exists())
-      {
+    {
       d->Completer->addPathToIndex(this->currentPath());
-      }
+    }
     ctkPathLineEditPrivate::sCurrentDirectory =
       fileInfo.isFile() ? fileInfo.absolutePath() : fileInfo.absoluteFilePath();
     emit currentPathChanged(this->currentPath());
-    }
+  }
   if (d->HasValidInput != oldHasValidInput)
-    {
+  {
     emit validInputChanged(d->HasValidInput);
-    }
+  }
 
   if (d->SizeAdjustPolicy == AdjustToContents)
-    {
+  {
     d->SizeHint = QSize();
     d->adjustPathLineEditSize();
     this->updateGeometry();
-    }
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -871,7 +871,7 @@ void ctkPathLineEdit::setShowBrowseButton(bool visible)
 bool ctkPathLineEdit::showHistoryButton()const
 {
   Q_D(const ctkPathLineEdit);
-  return d->ComboBox ? true: false;
+  return d->ComboBox ? true : false;
 }
 
 //------------------------------------------------------------------------------
@@ -917,12 +917,12 @@ void ctkPathLineEdit::setMinimumContentsLength(int length)
   d->MinimumContentsLength = length;
 
   if (d->SizeAdjustPolicy == AdjustToContents ||
-      d->SizeAdjustPolicy == AdjustToMinimumContentsLength)
-    {
+    d->SizeAdjustPolicy == AdjustToMinimumContentsLength)
+  {
     d->SizeHint = QSize();
     d->adjustPathLineEditSize();
     this->updateGeometry();
-    }
+  }
 }
 
 //------------------------------------------------------------------------------

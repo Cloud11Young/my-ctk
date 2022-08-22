@@ -75,7 +75,7 @@ set(CTKCore_LIBRARY_DIRS "")
 set(CTKPluginFramework_LIBRARY_DIRS "")
 set(CTKWidgets_LIBRARY_DIRS "")
 # External project libraries
-set(CTK_EXTERNAL_LIBRARIES "general;Qt6::Core;general;Qt6::Core5Compat;general;Qt6::StateMachine;general;dl;general;Qt6::Widgets;general;Qt6::Xml;general;Qt6::OpenGL;general;Qt6::Sql;general;Qt6::Concurrent")
+set(CTK_EXTERNAL_LIBRARIES "general;Qt6::Core;general;Qt6::Core5Compat;general;Qt6::StateMachine;general;dl;general;Qt6::Widgets;general;Qt6::Xml;general;Qt6::OpenGL;general;Qt6::OpenGLWidgets;general;Qt6::Sql;general;Qt6::Concurrent")
 ##################################################
 
 # Include CTK macros

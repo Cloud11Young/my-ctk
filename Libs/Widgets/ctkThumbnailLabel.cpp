@@ -35,7 +35,7 @@ static ctkLogger logger("org.commontk.Widgets.ctkThumbnailLabel");
 #include <iostream>
 
 //----------------------------------------------------------------------------
-class ctkThumbnailLabelPrivate: public Ui_ctkThumbnailLabel
+class ctkThumbnailLabelPrivate : public Ui_ctkThumbnailLabel
 {
   Q_DECLARE_PUBLIC(ctkThumbnailLabel);
 protected:
@@ -95,9 +95,9 @@ void ctkThumbnailLabelPrivate::updateThumbnail()
 {
   this->PixmapLabel->setPixmap(
     this->OriginalThumbnail.isNull() ? QPixmap() :
-      this->OriginalThumbnail.scaled(this->PixmapLabel->size(),
-                                     Qt::KeepAspectRatio,
-                                     this->TransformationMode));
+    this->OriginalThumbnail.scaled(this->PixmapLabel->size(),
+      Qt::KeepAspectRatio,
+      this->TransformationMode));
 }
 
 //----------------------------------------------------------------------------
@@ -119,14 +119,14 @@ ctkThumbnailLabel::~ctkThumbnailLabel()
 }
 
 //----------------------------------------------------------------------------
-void ctkThumbnailLabel::setText(const QString &text)
+void ctkThumbnailLabel::setText(const QString& text)
 {
   Q_D(ctkThumbnailLabel);
 
   d->TextLabel->setText(text);
   d->TextLabel->setVisible(!text.isEmpty() &&
-    ! (d->TextPosition & Qt::AlignHCenter &&
-       d->TextPosition & Qt::AlignVCenter) );
+    !(d->TextPosition & Qt::AlignHCenter &&
+      d->TextPosition & Qt::AlignVCenter));
 }
 
 //----------------------------------------------------------------------------
@@ -143,51 +143,51 @@ void ctkThumbnailLabel::setTextPosition(const Qt::Alignment& position)
   d->TextPosition = position;
   int textIndex = -1;
   for (textIndex = 0; textIndex < this->layout()->count(); ++textIndex)
-    {
+  {
     if (this->layout()->itemAt(textIndex)->widget() == d->TextLabel)
-      {
-      break;
-      }
-    }
-  if (textIndex > -1 && textIndex < this->layout()->count())
     {
-    this->layout()->takeAt(textIndex);
+      break;
     }
+  }
+  if (textIndex > -1 && textIndex < this->layout()->count())
+  {
+    this->layout()->takeAt(textIndex);
+  }
   int row = 1;
   int col = 1;
   QGridLayout* gridLayout = qobject_cast<QGridLayout*>(this->layout());
   if (position & Qt::AlignTop)
-    {
+  {
     row = 0;
-    }
-  else if (position &Qt::AlignBottom)
-    {
+  }
+  else if (position & Qt::AlignBottom)
+  {
     row = 2;
-    }
+  }
   else
-    {
+  {
     row = 1;
-    }
+  }
   if (position & Qt::AlignLeft)
-    {
+  {
     col = 0;
-    }
+  }
   else if (position & Qt::AlignRight)
-    {
+  {
     col = 2;
-    }
+  }
   else
-    {
+  {
     col = 1;
-    }
+  }
   if (row == 1 && col == 1)
-    {
+  {
     d->TextLabel->setVisible(false);
-    }
+  }
   else
-    {
-    gridLayout->addWidget(d->TextLabel,row, col);
-    }
+  {
+    gridLayout->addWidget(d->TextLabel, row, col);
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -198,7 +198,7 @@ Qt::Alignment ctkThumbnailLabel::textPosition()const
 }
 
 //----------------------------------------------------------------------------
-void ctkThumbnailLabel::setPixmap(const QPixmap &pixmap)
+void ctkThumbnailLabel::setPixmap(const QPixmap& pixmap)
 {
   Q_D(ctkThumbnailLabel);
 
@@ -235,13 +235,13 @@ void ctkThumbnailLabel::paintEvent(QPaintEvent* event)
   Q_D(ctkThumbnailLabel);
   this->Superclass::paintEvent(event);
   if (d->SelectedFlag && d->SelectedColor.isValid())
-    {
+  {
     QPainter p(this);
     QPen pen(d->SelectedColor);
     pen.setWidth(7);
     p.setPen(pen);
-    p.drawRect(QRect(0,0, this->width() -1, this->height() -1));
-    }
+    p.drawRect(QRect(0, 0, this->width() - 1, this->height() - 1));
+  }
 }
 
 //----------------------------------------------------------------------------
@@ -279,10 +279,10 @@ QSize ctkThumbnailLabel::minimumSizeHint()const
 {
   Q_D(const ctkThumbnailLabel);
   if (d->TextLabel->isVisibleTo(const_cast<ctkThumbnailLabel*>(this)) &&
-      !d->TextLabel->text().isEmpty())
-    {
+    !d->TextLabel->text().isEmpty())
+  {
     return d->TextLabel->minimumSizeHint();
-    }
+  }
   return QSize();
 }
 
@@ -292,7 +292,7 @@ QSize ctkThumbnailLabel::sizeHint()const
   Q_D(const ctkThumbnailLabel);
   return d->OriginalThumbnail.isNull() ?
     this->Superclass::sizeHint() :
-    d->OriginalThumbnail.size().expandedTo(QApplication::globalStrut());
+    d->OriginalThumbnail.size().expandedTo(QSize(80, 60)/*QApplication::globalStrut()*/);
 }
 
 //----------------------------------------------------------------------------
@@ -300,10 +300,10 @@ int ctkThumbnailLabel::heightForWidth(int width)const
 {
   Q_D(const ctkThumbnailLabel);
   if (d->OriginalThumbnail.isNull() ||
-      d->OriginalThumbnail.width() == 0)
-    {
+    d->OriginalThumbnail.width() == 0)
+  {
     return this->Superclass::heightForWidth(width);
-    }
+  }
   double ratio = static_cast<double>(d->OriginalThumbnail.height()) /
     static_cast<double>(d->OriginalThumbnail.width());
   return static_cast<int>(ratio * width + 0.5);
@@ -318,14 +318,14 @@ void ctkThumbnailLabel::mousePressEvent(QMouseEvent* event)
 }
 
 //----------------------------------------------------------------------------
-void ctkThumbnailLabel::mouseDoubleClickEvent(QMouseEvent *event)
+void ctkThumbnailLabel::mouseDoubleClickEvent(QMouseEvent* event)
 {
   this->Superclass::mouseDoubleClickEvent(event);
   emit doubleClicked(*this);
 }
 
 //----------------------------------------------------------------------------
-void ctkThumbnailLabel::resizeEvent(QResizeEvent *event)
+void ctkThumbnailLabel::resizeEvent(QResizeEvent* event)
 {
   Q_D(ctkThumbnailLabel);
   this->Superclass::resizeEvent(event);

@@ -725,6 +725,7 @@ Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin.cpp.o
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QPluginLoader
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QReadWriteLock
+ /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QSet
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QSharedDataPointer
@@ -1875,6 +1876,7 @@ Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPluginFrameworkContext
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QPluginLoader
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QReadWriteLock
+ /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QSet
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QSharedDataPointer
@@ -3899,6 +3901,7 @@ Libs/PluginFramework/CMakeFiles/CTKPluginFramework.dir/ctkPlugin_p.cpp.o
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QObject
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QPluginLoader
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QReadWriteLock
+ /opt/Qt/6.2.1/gcc_64/include/QtCore/QRegularExpression
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QScopedPointer
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QSet
  /opt/Qt/6.2.1/gcc_64/include/QtCore/QSharedDataPointer
