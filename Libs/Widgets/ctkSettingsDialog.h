@@ -26,21 +26,22 @@
 
 // CTK includes
 #include "ctkWidgetsExport.h"
+#include "ctkSettingsPanel.h"
 
 class QAbstractButton;
 class QSettings;
 class QTreeWidgetItem;
 class ctkSettingsDialogPrivate;
-class ctkSettingsPanel;
+// class ctkSettingsPanel;
 
 /// \ingroup Widgets
 class CTK_WIDGETS_EXPORT ctkSettingsDialog : public QDialog
 {
   Q_OBJECT
-  /// This property controls whether the reset button is visible in the
-  /// button box or not. The Cancel button is a reset button and closes
-  /// the dialog at the same time.
-  Q_PROPERTY(bool resetButton READ resetButton WRITE setResetButton);
+    /// This property controls whether the reset button is visible in the
+    /// button box or not. The Cancel button is a reset button and closes
+    /// the dialog at the same time.
+    Q_PROPERTY(bool resetButton READ resetButton WRITE setResetButton);
 
   Q_PROPERTY(QSettings* settings READ settings WRITE setSettings);
 
@@ -81,14 +82,14 @@ public:
   /// This convenience overload allows the caller to specify the panel name
   /// that will be used in the panels list.
   Q_INVOKABLE void addPanel(const QString& label, ctkSettingsPanel* panel,
-                            ctkSettingsPanel* parentPanel = 0);
+    ctkSettingsPanel* parentPanel = 0);
 
   /// \copybrief addPanel
   ///
   /// This convenience overload allows the caller to specify the panel name
   /// that will be used in the panels list, as well as an icon for the panel.
   Q_INVOKABLE void addPanel(const QString& label, const QIcon& icon,
-                            ctkSettingsPanel* panel, ctkSettingsPanel* parentPanel = 0);
+    ctkSettingsPanel* panel, ctkSettingsPanel* parentPanel = 0);
 
   bool resetButton()const;
   void setResetButton(bool show);
@@ -132,7 +133,7 @@ protected Q_SLOTS:
   void onDialogButtonClicked(QAbstractButton* button);
 
 protected:
-  virtual bool event(QEvent *);
+  virtual bool event(QEvent*);
 
 protected:
   QScopedPointer<ctkSettingsDialogPrivate> d_ptr;

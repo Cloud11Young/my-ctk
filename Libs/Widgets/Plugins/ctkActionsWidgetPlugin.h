@@ -21,6 +21,7 @@
 #ifndef __ctkActionsWidgetPlugin_h
 #define __ctkActionsWidgetPlugin_h
 
+#include <QObject>
 // CTK includes
 #include "ctkWidgetsAbstractPlugin.h"
 
@@ -31,9 +32,9 @@ class CTK_WIDGETS_PLUGINS_EXPORT ctkActionsWidgetPlugin :
   Q_OBJECT
 
 public:
-  ctkActionsWidgetPlugin(QObject *_parent = 0);
+  ctkActionsWidgetPlugin(QObject* _parent = 0);
 
-  QWidget *createWidget(QWidget *_parent);
+  QWidget* createWidget(QWidget* _parent);
   QString  domXml() const;
   QIcon    icon() const;
   QString  includeFile() const;

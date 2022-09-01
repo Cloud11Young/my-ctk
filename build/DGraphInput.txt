@@ -1,4 +1,0 @@
-4 2
-CTKTesting
-CTKPluginFramework CTKCore
-CTKWidgets CTKCore

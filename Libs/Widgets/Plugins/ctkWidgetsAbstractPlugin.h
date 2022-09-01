@@ -23,11 +23,13 @@
 
 // Qt includes
 #include <QtGlobal>
-#if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+// #if QT_VERSION < QT_VERSION_CHECK(5,5,0)
+// #include <QDesignerCustomWidgetInterface>
+// #else
+// #include <QtUiPlugin/QDesignerCustomWidgetInterface>
+// #endif
+
 #include <QDesignerCustomWidgetInterface>
-#else
-#include <QtUiPlugin/QDesignerCustomWidgetInterface>
-#endif
 
 // CTK includes
 #include "ctkWidgetsPluginsExport.h"
@@ -39,16 +41,16 @@ class CTK_WIDGETS_PLUGINS_EXPORT ctkWidgetsAbstractPlugin :
 public:
 
   ctkWidgetsAbstractPlugin();
-  
+
   // Do *NOT* reimplement this method.
   QString group() const;
-  
+
   // You can reimplement these methods
   virtual QIcon icon() const;
   virtual QString toolTip() const;
   virtual QString whatsThis() const;
-  virtual void initialize(QDesignerFormEditorInterface *formEditor);
-  
+  virtual void initialize(QDesignerFormEditorInterface* formEditor);
+
 protected:
   bool Initialized;
 };

@@ -64,78 +64,82 @@ namespace ctkTest
 
 #if (QT_VERSION < 0x50000 && QT_GUI_LIB) || (QT_VERSION >= 0x50000 && QT_WIDGETS_LIB)
 
-// ----------------------------------------------------------------------------
-static void mouseEvent(QTest::MouseAction action, QWidget *widget, Qt::MouseButton button,
-                       Qt::KeyboardModifiers stateKey, QPoint pos, int delay=-1)
-{
-  if (action != QTest::MouseMove)
+  // ----------------------------------------------------------------------------
+  static void mouseEvent(QTest::MouseAction action, QWidget* widget, Qt::MouseButton button,
+    Qt::KeyboardModifiers stateKey, QPoint pos, int delay = -1)
+  {
+    if (action != QTest::MouseMove)
     {
-    QTest::mouseEvent(action, widget, button, stateKey, pos, delay);
-    return;
+      QTest::mouseEvent(action, widget, button, stateKey, pos, delay);
+      return;
     }
-  QTEST_ASSERT(widget);
-  //extern int Q_TESTLIB_EXPORT defaultMouseDelay();
-  //if (delay == -1 || delay < defaultMouseDelay())
-  //    delay = defaultMouseDelay();
-  if (delay > 0)
+    QTEST_ASSERT(widget);
+    //extern int Q_TESTLIB_EXPORT defaultMouseDelay();
+    //if (delay == -1 || delay < defaultMouseDelay())
+    //    delay = defaultMouseDelay();
+    if (delay > 0)
       QTest::qWait(delay);
 
-  if (pos.isNull())
+    if (pos.isNull())
       pos = widget->rect().center();
 
-  QTEST_ASSERT(button == Qt::NoButton || button & Qt::MouseButtonMask);
-  QTEST_ASSERT(stateKey == Qt::KeyboardModifiers() || stateKey & Qt::KeyboardModifierMask);
+    QTEST_ASSERT(button == Qt::NoButton || button & Qt::MouseButtonMask);
+    QTEST_ASSERT(stateKey == Qt::KeyboardModifiers() || stateKey & Qt::KeyboardModifierMask);
 
-  stateKey &= static_cast<unsigned int>(Qt::KeyboardModifierMask);
+    stateKey &= static_cast<unsigned int>(Qt::KeyboardModifierMask);
 
-  QMouseEvent me(QEvent::User, QPoint(), Qt::LeftButton, button, stateKey);
+    // QMouseEvent me(QEvent::User, QPoint(), Qt::LeftButton, button, stateKey);
 
-  me = QMouseEvent(QEvent::MouseMove, pos, widget->mapToGlobal(pos), button, button, stateKey);
-  QSpontaneKeyEvent::setSpontaneous(&me);
-  if (!qApp->notify(widget, &me))
+    // me = QMouseEvent(QEvent::MouseMove, pos, widget->mapToGlobal(pos), button, button, stateKey);
+    QMouseEvent me(QEvent::MouseMove, pos, widget->mapToGlobal(pos), button, button, stateKey);
+
+    QSpontaneKeyEvent::setSpontaneous(&me);
+    if (!qApp->notify(widget, &me))
     {
-    static const char *mouseActionNames[] =
-        { "MousePress", "MouseRelease", "MouseClick", "MouseDClick", "MouseMove" };
-    QString warning = QString::fromLatin1("Mouse event \"%1\" not accepted by receiving widget");
-    QTest::qWarn(qPrintable(warning.arg(mouseActionNames[static_cast<int>(action)])));
+      static const char* mouseActionNames[] =
+      { "MousePress", "MouseRelease", "MouseClick", "MouseDClick", "MouseMove" };
+      QString warning = QString::fromLatin1("Mouse event \"%1\" not accepted by receiving widget");
+      QTest::qWarn(qPrintable(warning.arg(mouseActionNames[static_cast<int>(action)])));
     }
-}
+  }
 
 #endif
 
 #if (QT_VERSION < 0x50000 && QT_GUI_LIB) || (QT_VERSION >= 0x50000 && QT_WIDGETS_LIB)
 
-// ----------------------------------------------------------------------------
-inline void mouseMove(QWidget *widget, Qt::MouseButton button, Qt::KeyboardModifiers stateKey = Qt::KeyboardModifiers(),
-                      QPoint pos = QPoint(), int delay=-1)
-  { ctkTest::mouseEvent(QTest::MouseMove, widget, button, stateKey, pos, delay); }
+  // ----------------------------------------------------------------------------
+  inline void mouseMove(QWidget* widget, Qt::MouseButton button, Qt::KeyboardModifiers stateKey = Qt::KeyboardModifiers(),
+    QPoint pos = QPoint(), int delay = -1)
+  {
+    ctkTest::mouseEvent(QTest::MouseMove, widget, button, stateKey, pos, delay);
+  }
 
 #endif
 
-// ----------------------------------------------------------------------------
-inline void COMPARE(double v1, double v2)
-{
-  // QCOMPARE fails to compare NaN numbers
-  if (v2 != v2)
+  // ----------------------------------------------------------------------------
+  inline void COMPARE(double v1, double v2)
+  {
+    // QCOMPARE fails to compare NaN numbers
+    if (v2 != v2)
     {
-    QVERIFY(v1 != v1);
+      QVERIFY(v1 != v1);
     }
-  // QCOMPARE fails to compare - infinity
-  else if (v2 == -std::numeric_limits<double>::infinity())
+    // QCOMPARE fails to compare - infinity
+    else if (v2 == -std::numeric_limits<double>::infinity())
     {
-    QVERIFY(v1 == -std::numeric_limits<double>::infinity());
+      QVERIFY(v1 == -std::numeric_limits<double>::infinity());
     }
-  // QCOMPARE fails to compare infinity
-  else if (v2 == std::numeric_limits<double>::infinity())
+    // QCOMPARE fails to compare infinity
+    else if (v2 == std::numeric_limits<double>::infinity())
     {
-    QVERIFY(v1 == std::numeric_limits<double>::infinity());
+      QVERIFY(v1 == std::numeric_limits<double>::infinity());
     }
-  // QCOMPARE doesn't like to compare zeroes
-  else
+    // QCOMPARE doesn't like to compare zeroes
+    else
     {
-    QCOMPARE(v1, v2);
+      QCOMPARE(v1, v2);
     }
-}
+  }
 
 } // end ctkTest namespace
 

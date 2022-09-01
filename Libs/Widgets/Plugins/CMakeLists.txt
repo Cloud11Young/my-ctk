@@ -3,12 +3,12 @@ project(${PROJECT_NAME}Plugins)
 #
 # See CTK/CMake/ctkMacroBuildQtPlugin.cmake for details
 #
-
 set(PLUGIN_export_directive "CTK_WIDGETS_PLUGINS_EXPORT")
 
 # Source files
 set(PLUGIN_SRCS
-  ctkWidgetsPlugins.cpp
+
+  # ctkWidgetsPlugins.cpp
   ctkWidgetsPlugins.h
   ctkWidgetsAbstractPlugin.cpp
   ctkWidgetsAbstractPlugin.h
@@ -48,8 +48,9 @@ set(PLUGIN_SRCS
   ctkExpandButtonPlugin.h
   ctkExpandableWidgetPlugin.cpp
   ctkExpandableWidgetPlugin.h
-  #ctkExtensionFactory.cpp
-  #ctkExtensionFactory.h
+
+  # ctkExtensionFactory.cpp
+  # ctkExtensionFactory.h
   ctkFittedTextBrowserPlugin.cpp
   ctkFittedTextBrowserPlugin.h
   ctkFontButtonPlugin.cpp
@@ -98,7 +99,7 @@ set(PLUGIN_SRCS
   ctkWorkflowButtonBoxWidgetPlugin.h
   ctkWorkflowWidgetStepPlugin.cpp
   ctkWorkflowWidgetStepPlugin.h
-  )
+)
 
 # Headers that should run through moc
 set(PLUGIN_MOC_SRCS
@@ -122,7 +123,8 @@ set(PLUGIN_MOC_SRCS
   ctkDynamicSpacerPlugin.h
   ctkExpandButtonPlugin.h
   ctkExpandableWidgetPlugin.h
-  #ctkExtensionFactory.h
+
+  # ctkExtensionFactory.h
   ctkFittedTextBrowserPlugin.h
   ctkFontButtonPlugin.h
   ctkLanguageComboBoxPlugin.h
@@ -147,7 +149,7 @@ set(PLUGIN_MOC_SRCS
   ctkSliderWidgetPlugin.h
   ctkWorkflowButtonBoxWidgetPlugin.h
   ctkWorkflowWidgetStepPlugin.h
-  )
+)
 
 # Resources
 set(PLUGIN_resources
@@ -157,7 +159,7 @@ set(PLUGIN_resources
 # Target libraries
 set(PLUGIN_target_libraries
   CTKWidgets
-  )
+)
 
 ctkMacroBuildQtDesignerPlugin(
   NAME ${PROJECT_NAME}

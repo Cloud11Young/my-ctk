@@ -24,6 +24,7 @@
 // Qt includes
 #include <QMetaType>
 #include <QWidget>
+#include <QSettings>
 
 // CTK includes
 #include "ctkWidgetsExport.h"
@@ -35,10 +36,10 @@ class ctkSettingsPanelPrivate;
 class CTK_WIDGETS_EXPORT ctkSettingsPanel : public QWidget
 {
   Q_OBJECT
-  Q_ENUMS(SettingOption)
-  Q_FLAGS(SettingOptions)
+    Q_ENUMS(SettingOption)
+    Q_FLAGS(SettingOptions)
 
-  Q_PROPERTY(QSettings* settings READ settings WRITE setSettings);
+    Q_PROPERTY(QSettings* settings READ settings WRITE setSettings);
 
 public:
   /// Superclass typedef
@@ -53,47 +54,47 @@ public:
   QSettings* settings()const;
   void setSettings(QSettings* settings);
 
-  enum SettingOption{
+  enum SettingOption {
     OptionNone = 0x0000,
     OptionRequireRestart = 0x0001,
     OptionAll_Mask = ~0
   };
   Q_DECLARE_FLAGS(SettingOptions, SettingOption)
-  /// Add an entry into the settings uniquely defined by the \a key name and the
-  /// current value of the property.
-  /// The property is then synchronized with the settings by observing the signal
-  /// notification. Anytime the property is modified (the signal \a signal is
-  /// fired), its value associated to \a key is updated in the settings.
-  /// \a signal is typically the value under NOTIFY in Q_PROPERTY.
-  /// The current value of the property is later used when
-  /// restoreDefaultSettings() is called.
-  /// If you want to register the logical complement of a boolean property
-  /// you can use ctkBooleanMapper:
-  /// <code>
-  /// panel->registerProperty("unchecked",
-  ///                         new ctkBooleanMapper(checkBox, "checked", SIGNAL(toggled(bool))),
-  ///                         "complement", SIGNAL(complementChanged(bool)));
-  /// </code>
-  /// By default, property are associated with the general settings set using setSettings(QSettings*)
-  /// or ctkSettingsDialog::setSettings(QSettings*). Note that it also possible to associate
-  /// a specific \a settings for any given \a settingKey.
-  /// \sa Q_PROPERTY(), \sa ctkBooleanMapper
-  void registerProperty(const QString& settingKey,
-                        QObject* object,
-                        const QString& objectProperty,
-                        const char* propertySignal,
-                        const QString& settingLabel = QString(),
-                        SettingOptions options = OptionNone,
-                        QSettings * settings = 0);
+    /// Add an entry into the settings uniquely defined by the \a key name and the
+    /// current value of the property.
+    /// The property is then synchronized with the settings by observing the signal
+    /// notification. Anytime the property is modified (the signal \a signal is
+    /// fired), its value associated to \a key is updated in the settings.
+    /// \a signal is typically the value under NOTIFY in Q_PROPERTY.
+    /// The current value of the property is later used when
+    /// restoreDefaultSettings() is called.
+    /// If you want to register the logical complement of a boolean property
+    /// you can use ctkBooleanMapper:
+    /// <code>
+    /// panel->registerProperty("unchecked",
+    ///                         new ctkBooleanMapper(checkBox, "checked", SIGNAL(toggled(bool))),
+    ///                         "complement", SIGNAL(complementChanged(bool)));
+    /// </code>
+    /// By default, property are associated with the general settings set using setSettings(QSettings*)
+    /// or ctkSettingsDialog::setSettings(QSettings*). Note that it also possible to associate
+    /// a specific \a settings for any given \a settingKey.
+    /// \sa Q_PROPERTY(), \sa ctkBooleanMapper
+    void registerProperty(const QString& settingKey,
+      QObject* object,
+      const QString& objectProperty,
+      const char* propertySignal,
+      const QString& settingLabel = QString(),
+      SettingOptions options = OptionNone,
+      QSettings* settings = 0);
 
   /// \copybrief registerProperty
   /// \overload
   Q_INVOKABLE void registerProperty(const QString& settingKey, QObject* object,
-                                    const QString& objectProperty,
-                                    const QByteArray& propertySignal,
-                                    const QString& settingLabel = QString(),
-                                    SettingOptions options = OptionNone,
-                                    QSettings * settings = 0);
+    const QString& objectProperty,
+    const QByteArray& propertySignal,
+    const QString& settingLabel = QString(),
+    SettingOptions options = OptionNone,
+    QSettings* settings = 0);
 
   /// Set the setting to the property defined by the key.
   /// The old value can be restored using resetSettings()

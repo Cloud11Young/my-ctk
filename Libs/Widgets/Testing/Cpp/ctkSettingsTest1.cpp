@@ -24,6 +24,7 @@
 #include <QDialog>
 #include <QMainWindow>
 #include <QTimer>
+#include <QScreen>
 
 // CTK includes
 #include "ctkSettings.h"
@@ -50,9 +51,14 @@ int ctkSettingsTest1(int argc, char* argv[])
   QMainWindow mainWindow(0);
   mainWindow.show();
 
+#if 0
   QDesktopWidget desktop;
   QRect desktopRect = desktop.availableGeometry(&mainWindow);
   const QPoint origin = desktopRect.topLeft();
+#else
+  QRect desktopRect = QGuiApplication::primaryScreen()->availableGeometry();
+  const QPoint origin = desktopRect.topLeft();
+#endif
 
   mainWindow.move(origin);
   mainWindow.resize(640, 470);

@@ -34,7 +34,7 @@
 #include "ctkTest.h"
 
 // ----------------------------------------------------------------------------
-class ctkSliderWidgetTester: public QObject
+class ctkSliderWidgetTester : public QObject
 {
   Q_OBJECT
 private slots:
@@ -73,7 +73,7 @@ void ctkSliderWidgetTester::testUI()
   QTest::qWaitForWindowShown(&slider);
 #endif
   QObject::connect(&slider, SIGNAL(valueChanged(double)),
-                   &slider, SLOT(setValue(double)), Qt::QueuedConnection);
+    &slider, SLOT(setValue(double)), Qt::QueuedConnection);
 
 
   //qApp->exec();
@@ -138,7 +138,7 @@ void ctkSliderWidgetTester::testDecimalsByValue()
 {
   ctkSliderWidget slider;
   slider.spinBox()->setDecimalsOption(
-    ctkDoubleSpinBox::DecimalsByValue | ctkDoubleSpinBox::DecimalsByShortcuts );
+    ctkDoubleSpinBox::DecimalsByValue | ctkDoubleSpinBox::DecimalsByShortcuts);
   slider.setValue(-12.4);
 
   //slider.show();
@@ -162,7 +162,7 @@ void ctkSliderWidgetTester::testDecimalsByShortcuts()
   slider.setSingleStep(1.299995422363281);
   slider.setPageStep(1.299995422363281);
   slider.setRange(-100., 100.);
-  slider.setValue( -2.145195007324205 );
+  slider.setValue(-2.145195007324205);
 
   slider.show();
 #if (QT_VERSION >= 0x50000)
@@ -204,9 +204,9 @@ void ctkSliderWidgetTester::testValueChangedWithNoTracking()
   QPoint currentPoint = slider.slider()->rect().center();
   QPoint nextPoint = QPoint(slider.slider()->rect().left(), currentPoint.y());
 
-  QTest::mousePress(slider.slider()->slider(), Qt::LeftButton, 0, currentPoint);
-  ctkTest::mouseMove(slider.slider()->slider(), Qt::LeftButton, 0, nextPoint);
-  QTest::mouseRelease(slider.slider()->slider(), Qt::LeftButton, 0, nextPoint);
+  QTest::mousePress(slider.slider()->slider(), Qt::LeftButton, Qt::NoModifier, currentPoint);
+  ctkTest::mouseMove(slider.slider()->slider(), Qt::LeftButton, Qt::NoModifier, nextPoint);
+  QTest::mouseRelease(slider.slider()->slider(), Qt::LeftButton, Qt::NoModifier, nextPoint);
 
   QCOMPARE(spy.count(), 1);
 }

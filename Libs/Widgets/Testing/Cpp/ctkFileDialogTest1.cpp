@@ -44,7 +44,8 @@ int testSelectionMode(ctkFileDialog* fileDialog)
   CHECK_INT(fileDialog->selectionMode(), static_cast<int>(QAbstractItemView::SingleSelection));
 
   fileDialog->setSelectionMode(QAbstractItemView::ExtendedSelection);
-  fileDialog->setFileMode(QFileDialog::DirectoryOnly);
+  // fileDialog->setFileMode(QFileDialog::DirectoryOnly);
+  fileDialog->setOptions(QFileDialog::ShowDirsOnly);
   CHECK_INT(fileDialog->selectionMode(), static_cast<int>(QAbstractItemView::SingleSelection));
 
   fileDialog->setSelectionMode(QAbstractItemView::ExtendedSelection);
@@ -63,7 +64,7 @@ int testSelectionMode(ctkFileDialog* fileDialog)
 }
 
 //-----------------------------------------------------------------------------
-int ctkFileDialogTest1(int argc, char * argv [] )
+int ctkFileDialogTest1(int argc, char* argv[])
 {
   QApplication app(argc, argv);
 
@@ -74,24 +75,24 @@ int ctkFileDialogTest1(int argc, char * argv [] )
   QCheckBox* checkBox = new QCheckBox;
   fileDialog.setBottomWidget(checkBox, "Foo Bar:");
   if (checkBox != fileDialog.bottomWidget())
-    {
+  {
     return EXIT_FAILURE;
-    }
+  }
 
   CHECK_EXIT_SUCCESS(testSelectionMode(&fileDialog));
 
   // the following is only in interactive mode
-  if (argc < 2 || QString(argv[1]) != "-I" )
-    {
+  if (argc < 2 || QString(argv[1]) != "-I")
+  {
     return EXIT_SUCCESS;
-    }
+  }
   QObject::connect(checkBox, SIGNAL(toggled(bool)),
-                   &fileDialog, SLOT(setAcceptButtonEnable(bool)));
+    &fileDialog, SLOT(setAcceptButtonEnable(bool)));
   fileDialog.setAcceptButtonEnable(false);
   if (!fileDialog.exec())
-    {
+  {
     return EXIT_FAILURE;
-    }
+  }
 
   return EXIT_SUCCESS;
 

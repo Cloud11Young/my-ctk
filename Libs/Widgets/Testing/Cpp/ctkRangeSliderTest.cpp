@@ -33,7 +33,7 @@
 #include "ctkTest.h"
 
 // ----------------------------------------------------------------------------
-class ctkRangeSliderTester: public QObject
+class ctkRangeSliderTester : public QObject
 {
   Q_OBJECT
 private slots:
@@ -96,9 +96,9 @@ void ctkRangeSliderTester::testSimpleMouseEvents()
   QTest::mouseMove(&rangeSlider, center);
 
   QCOMPARE(rangeSlider.isSliderDown(), false);
-  QTest::mousePress(&rangeSlider, Qt::LeftButton, 0, center);
+  QTest::mousePress(&rangeSlider, Qt::LeftButton, Qt::NoModifier, center);
   QCOMPARE(rangeSlider.isSliderDown(), true);
-  QTest::mouseRelease(&rangeSlider, Qt::LeftButton, 0, center);
+  QTest::mouseRelease(&rangeSlider, Qt::LeftButton, Qt::NoModifier, center);
   QCOMPARE(rangeSlider.isSliderDown(), false);
 }
 
@@ -114,7 +114,7 @@ void ctkRangeSliderTester::testGrooveMouseEvents()
   // Size of the handle is added because of the following line in ctkRangeSlider:
   //  sliderMax = gr.right() - sliderLength + 1;
   QRect sliderHandleSize = rangeSlider.style()->subControlRect(
-    QStyle::CC_Slider, &option, QStyle::SC_SliderHandle, &rangeSlider );
+    QStyle::CC_Slider, &option, QStyle::SC_SliderHandle, &rangeSlider);
   rangeSlider.resize(100 + sliderHandleSize.width(), 20);
 
   QFETCH(int, moveInPx);
@@ -123,10 +123,10 @@ void ctkRangeSliderTester::testGrooveMouseEvents()
 
   QPoint currentCursorPos = rangeSlider.rect().center();
   QTest::mouseMove(&rangeSlider, currentCursorPos);
-  QTest::mousePress(&rangeSlider, Qt::LeftButton, 0, currentCursorPos);
+  QTest::mousePress(&rangeSlider, Qt::LeftButton, Qt::NoModifier, currentCursorPos);
   currentCursorPos += QPoint(moveInPx, 0);
-  ctkTest::mouseMove(&rangeSlider, Qt::LeftButton, 0, currentCursorPos);
-  QTest::mouseRelease(&rangeSlider, Qt::LeftButton, 0, currentCursorPos);
+  ctkTest::mouseMove(&rangeSlider, Qt::LeftButton, Qt::NoModifier, currentCursorPos);
+  QTest::mouseRelease(&rangeSlider, Qt::LeftButton, Qt::NoModifier, currentCursorPos);
 
   QCOMPARE(rangeSlider.minimumValue(), expectedMinValue);
   QCOMPARE(rangeSlider.maximumValue(), expectedMaxValue);
@@ -159,7 +159,7 @@ void ctkRangeSliderTester::testHandleMouseEvents()
   // Size of the handle is added because of the following line in ctkRangeSlider:
   //  sliderMax = gr.right() - sliderLength + 1;
   QRect sliderHandleSize = rangeSlider.style()->subControlRect(
-    QStyle::CC_Slider, &option, QStyle::SC_SliderHandle, &rangeSlider );
+    QStyle::CC_Slider, &option, QStyle::SC_SliderHandle, &rangeSlider);
   rangeSlider.resize(100 + sliderHandleSize.width(), 20);
 
   rangeSlider.show();
@@ -178,23 +178,23 @@ void ctkRangeSliderTester::testHandleMouseEvents()
 
   QPoint currentCursorPos = rangeSlider.rect().center();
   if (minHandle)
-    {
+  {
     currentCursorPos = QPoint(10, 10);
-    }
+  }
   else
-    {
+  {
     currentCursorPos = QPoint(80, 10);
-    }
+  }
   rangeSlider.setSymmetricMoves(symmetricMoves);
 
   QTest::mouseMove(&rangeSlider, currentCursorPos);
-  QTest::mousePress(&rangeSlider, Qt::LeftButton, 0, currentCursorPos);
+  QTest::mousePress(&rangeSlider, Qt::LeftButton, Qt::NoModifier, currentCursorPos);
   const bool isHandleDown = minHandle ? rangeSlider.isMinimumSliderDown() :
     rangeSlider.isMaximumSliderDown();
   QVERIFY(isHandleDown);
   currentCursorPos += QPoint(moveInPx, 0);
-  ctkTest::mouseMove(&rangeSlider, Qt::LeftButton, 0, currentCursorPos);
-  QTest::mouseRelease(&rangeSlider, Qt::LeftButton, 0, currentCursorPos);
+  ctkTest::mouseMove(&rangeSlider, Qt::LeftButton, Qt::NoModifier, currentCursorPos);
+  QTest::mouseRelease(&rangeSlider, Qt::LeftButton, Qt::NoModifier, currentCursorPos);
 
   QCOMPARE(rangeSlider.minimumValue(), expectedMinValue);
   QCOMPARE(rangeSlider.maximumValue(), expectedMaxValue);
