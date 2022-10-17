@@ -26,7 +26,7 @@
 #include <QSharedDataPointer>
 
 class QTextStream;
-class QStringList;
+// class QStringList;
 
 struct ctkCmdLineModuleParameterPrivate;
 

@@ -29,17 +29,16 @@
 // #include <QtUiPlugin/QDesignerCustomWidgetInterface>
 // #endif
 
-#include <QDesignerCustomWidgetInterface>
+#include <QtUiPlugin/QDesignerCustomWidgetInterface>
 
 // CTK includes
 #include "ctkWidgetsPluginsExport.h"
 
-class CTK_WIDGETS_PLUGINS_EXPORT ctkWidgetsAbstractPlugin :
-  public QDesignerCustomWidgetInterface
-{
+class CTK_WIDGETS_PLUGINS_EXPORT ctkWidgetsAbstractPlugin
+    : public QDesignerCustomWidgetInterface {
   Q_INTERFACES(QDesignerCustomWidgetInterface);
-public:
 
+ public:
   ctkWidgetsAbstractPlugin();
 
   // Do *NOT* reimplement this method.
@@ -51,7 +50,7 @@ public:
   virtual QString whatsThis() const;
   virtual void initialize(QDesignerFormEditorInterface* formEditor);
 
-protected:
+ protected:
   bool Initialized;
 };
 

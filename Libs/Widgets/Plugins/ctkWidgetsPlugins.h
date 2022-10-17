@@ -28,7 +28,7 @@
 // #else
 // #include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
 // #endif
-#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface1111>
+#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
 
 // CTK includes
 #include "ctkWidgetsPluginsExport.h"

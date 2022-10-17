@@ -24,7 +24,7 @@
 #include "ctkCmdLineModuleManager.h"
 #include "ctkCmdLineModuleRunException.h"
 
-#include <qtconcurrentexception.h>
+// #include <qtconcurrentexception.h>
 #include <QUrl>
 #include <QDebug>
 

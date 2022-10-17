@@ -23,6 +23,7 @@ if(DEFINED QtSOAP_DIR AND NOT EXISTS ${QtSOAP_DIR})
 endif()
 
 if(NOT DEFINED QtSOAP_DIR)
+  # set(revision_tag 914c72959412bfcbaaf0ea9836b0f34258145600)
   set(revision_tag 914c72959412bfcbaaf0ea9836b0f34258145600)
 
   if(${proj}_REVISION_TAG)

@@ -18,6 +18,8 @@
 
 =========================================================================*/
 
+#include <QRegularExpression>
+
 #include "ctkDICOMFilterProxyModel.h"
 
 #include "ctkDICOMModel.h"
@@ -96,14 +98,14 @@ bool ctkDICOMFilterProxyModel::filterAcceptsRow(int source_row, const QModelInde
     if(model){
         QModelIndex index = model->index(source_row, 0, source_parent);
         if(model->data(index, ctkDICOMModel::TypeRole) == static_cast<int>(ctkDICOMModel::PatientType)){
-            QRegExp regExp = QRegExp(d->searchTextName);
+            QRegularExpression regExp = QRegularExpression(d->searchTextName);
             if(model->data(index, Qt::DisplayRole).toString().contains(regExp)){
                 return true;
             }else{
                 return false;
             }
         }else if(model->data(index, ctkDICOMModel::TypeRole) == static_cast<int>(ctkDICOMModel::StudyType)){
-            QRegExp regExp = QRegExp(d->searchTextStudy);
+            QRegularExpression regExp = QRegularExpression(d->searchTextStudy);
             if(model->data(index, Qt::DisplayRole).toString().contains(regExp)){
                 return true;
             }else{

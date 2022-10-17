@@ -199,8 +199,11 @@ endmacro()
 macro(ctkMacroBuildQtDesignerPlugin)
   if(CTK_QT_VERSION VERSION_GREATER "4")
     find_package(Qt6 COMPONENTS Designer REQUIRED)
-    add_definitions(${Qt6Designer_DEFINITIONS})
+
+    # add_definitions(${Qt6Designer_DEFINITIONS})
+    add_definitions(-DQT_DESIGNER_LIB;-DQT_CORE_LIB;-DQT_GUI_LIB;-DQT_UIPLUGIN_LIB;-DQT_WIDGETS_LIB;-DQT_XML_LIB;-DQT_OPENGLWIDGETS_LIB;-DQT_OPENGL_LIB)
     include_directories(${Qt6Designer_INCLUDE_DIRS})
+    message(STATUS, ${Qt6Designer_DEFINITIONS})
   endif()
 
   ctkMacroBuildQtPlugin(
