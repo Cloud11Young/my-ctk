@@ -41,7 +41,7 @@ ctkCmdLineModuleRunException::ctkCmdLineModuleRunException(const QUrl &location,
 
 //----------------------------------------------------------------------------
 ctkCmdLineModuleRunException::ctkCmdLineModuleRunException(const ctkCmdLineModuleRunException& o)
-  : QtConcurrent::Exception(o), ctkException(o),
+  : /*QtConcurrent::Exception(o),*/QException(o), ctkException(o),
     Location(o.Location), ErrorCode(o.ErrorCode), ErrorString(o.ErrorString)
 {
 }
@@ -49,7 +49,8 @@ ctkCmdLineModuleRunException::ctkCmdLineModuleRunException(const ctkCmdLineModul
 //----------------------------------------------------------------------------
 ctkCmdLineModuleRunException& ctkCmdLineModuleRunException::operator=(const ctkCmdLineModuleRunException& o)
 {
-  QtConcurrent::Exception::operator=(o);
+  //QtConcurrent::Exception::operator=(o);
+  QException::operator=(o);
   ctkException::operator=(o);
   this->Location = o.Location;
   this->ErrorCode = o.ErrorCode;

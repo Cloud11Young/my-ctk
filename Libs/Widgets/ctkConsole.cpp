@@ -531,7 +531,7 @@ void ctkConsolePrivate::keyPressEvent(QKeyEvent* e)
     return;
   }
 
-  if (this->CompleterShortcuts.contains(e->key() + (int)e->modifiers()))
+  if (this->CompleterShortcuts.contains(e->key() + static_cast<int>(e->modifiers())))
   {
     e->accept();
     this->updateCompleter();

@@ -26,6 +26,7 @@
 #include <QXmlStreamReader>
 
 #include <QDebug>
+#include <QStringRef>
 
 namespace {
 
@@ -125,7 +126,9 @@ public:
       }
       case QXmlStreamReader::StartElement:
       {
-        QStringRef name = reader.name();
+        //QStringRef name = reader.name();
+        QStringView name = reader.name();
+
         QString parent;
         if (!stack.empty()) parent = stack.back();
 
@@ -166,7 +169,8 @@ public:
       }
       case QXmlStreamReader::EndElement:
       {
-        QStringRef name = reader.name();
+        // QStringRef name = reader.name();
+        QStringView name = reader.name();
 
         QString curr;
         QString parent;

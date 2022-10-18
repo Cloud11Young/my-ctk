@@ -55,7 +55,7 @@ private:
 
   ctkPluginContext* context;
   ctkConfigurationAdminFactory* configurationAdminFactory;
-  QMutex configurationStoreMutex;
+  QRecursiveMutex configurationStoreMutex;
   ctkConfigurationStore* configurationStore;
 
   // managedServiceMutex guards both managedServices and managedServiceReferences

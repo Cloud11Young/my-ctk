@@ -75,9 +75,12 @@ void ctkDICOMDisplayedFieldGeneratorRadiotherapySeriesDescriptionRule::registerE
   Q_UNUSED(emptyFieldsDisplayStudies);
   Q_UNUSED(emptyFieldsDisplayPatients);
 
-  emptyFieldsDisplaySeries.insertMulti("SeriesDescription", this->EmptySeriesDescriptionRtPlan);
-  emptyFieldsDisplaySeries.insertMulti("SeriesDescription", this->EmptySeriesDescriptionRtStruct);
-  emptyFieldsDisplaySeries.insertMulti("SeriesDescription", this->EmptySeriesDescriptionRtImage);
+  // emptyFieldsDisplaySeries.insertMulti("SeriesDescription", this->EmptySeriesDescriptionRtPlan);
+  // emptyFieldsDisplaySeries.insertMulti("SeriesDescription", this->EmptySeriesDescriptionRtStruct);
+  // emptyFieldsDisplaySeries.insertMulti("SeriesDescription", this->EmptySeriesDescriptionRtImage);
+  emptyFieldsDisplaySeries.insert("SeriesDescription", this->EmptySeriesDescriptionRtPlan);
+  emptyFieldsDisplaySeries.insert("SeriesDescription", this->EmptySeriesDescriptionRtStruct);
+  emptyFieldsDisplaySeries.insert("SeriesDescription", this->EmptySeriesDescriptionRtImage);
 }
 
 //------------------------------------------------------------------------------

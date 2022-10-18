@@ -39,7 +39,8 @@
  * \ingroup CommandLineModulesCore_API
  */
 class CTK_CMDLINEMODULECORE_EXPORT ctkCmdLineModuleRunException
-    : public QtConcurrent::Exception, public ctkException
+    : public QException, public ctkException
+    // : public QtConcurrent::Exception, public ctkException
 {
 public:
 

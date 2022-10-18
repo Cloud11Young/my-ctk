@@ -19,6 +19,8 @@
 
 =============================================================================*/
 
+#include <QTextDecoder>
+
 #include "ctkDICOMItem.h"
 
 #include <dcmtk/dcmdata/dcuid.h>

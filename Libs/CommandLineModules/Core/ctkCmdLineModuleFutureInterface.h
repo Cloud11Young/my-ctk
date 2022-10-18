@@ -110,7 +110,7 @@ private:
 
 inline void QFutureInterface<ctkCmdLineModuleResult>::reportResult(const ctkCmdLineModuleResult *result, int index)
 {
-    QMutexLocker locker(mutex());
+    QMutexLocker<QMutex> locker(&mutex());
     if (this->queryState(Canceled) || this->queryState(Finished)) {
         return;
     }
@@ -140,7 +140,7 @@ inline void QFutureInterface<ctkCmdLineModuleResult>::reportResult(const ctkCmdL
 
 inline void QFutureInterface<ctkCmdLineModuleResult>::reportResults(const QVector<ctkCmdLineModuleResult> &_results, int beginIndex, int count)
 {
-    QMutexLocker locker(mutex());
+    QMutexLocker<QMutex> locker(&mutex());
     if (this->queryState(Canceled) || this->queryState(Finished)) {
         return;
     }
@@ -172,7 +172,7 @@ inline void QFutureInterface<ctkCmdLineModuleResult>::reportFinished(const ctkCm
 
 inline const ctkCmdLineModuleResult &QFutureInterface<ctkCmdLineModuleResult>::resultReference(int index) const
 {
-    QMutexLocker lock(mutex());
+    QMutexLocker lock(&mutex());
 #if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
     return resultStore().resultAt(index).value();
 #else
@@ -182,7 +182,7 @@ inline const ctkCmdLineModuleResult &QFutureInterface<ctkCmdLineModuleResult>::r
 
 inline const ctkCmdLineModuleResult *QFutureInterface<ctkCmdLineModuleResult>::resultPointer(int index) const
 {
-    QMutexLocker lock(mutex());
+    QMutexLocker lock(&mutex());
 #if (QT_VERSION < QT_VERSION_CHECK(5, 9, 0))
     return resultStore().resultAt(index).pointer();
 #else
@@ -199,7 +199,7 @@ inline QList<ctkCmdLineModuleResult> QFutureInterface<ctkCmdLineModuleResult>::r
     QFutureInterfaceBase::waitForResult(-1);
 
     QList<ctkCmdLineModuleResult> res;
-    QMutexLocker lock(mutex());
+    QMutexLocker<QMutex> lock(&mutex());
 
 #if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
     QtConcurrent::ResultIterator<ctkCmdLineModuleResult> it = resultStore().begin();

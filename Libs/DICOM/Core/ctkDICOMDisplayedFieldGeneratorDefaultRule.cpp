@@ -89,7 +89,8 @@ void ctkDICOMDisplayedFieldGeneratorDefaultRule::registerEmptyFieldNames(
   Q_UNUSED(emptyFieldsDisplaySeries);
   Q_UNUSED(emptyFieldsDisplayStudies);
   Q_UNUSED(emptyFieldsDisplayPatients);
-  emptyFieldsDisplaySeries.insertMulti("SeriesDescription", EMPTY_SERIES_DESCRIPTION);
+//  emptyFieldsDisplaySeries.insertMulti("SeriesDescription", EMPTY_SERIES_DESCRIPTION);
+  emptyFieldsDisplaySeries.insert("SeriesDescription", EMPTY_SERIES_DESCRIPTION);
 }
 
 //------------------------------------------------------------------------------

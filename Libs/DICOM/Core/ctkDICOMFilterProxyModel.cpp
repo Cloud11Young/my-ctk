@@ -112,7 +112,7 @@ bool ctkDICOMFilterProxyModel::filterAcceptsRow(int source_row, const QModelInde
                 return false;
             }
         }else if(model->data(index, ctkDICOMModel::TypeRole) == static_cast<int>(ctkDICOMModel::SeriesType)){
-            QRegExp regExp = QRegExp(d->searchTextSeries);
+            QRegularExpression regExp = QRegularExpression(d->searchTextSeries);
             if(model->data(index, Qt::DisplayRole).toString().contains(regExp)){
                 return true;
             }else{
