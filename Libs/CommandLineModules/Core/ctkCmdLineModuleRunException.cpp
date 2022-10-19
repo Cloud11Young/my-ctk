@@ -25,7 +25,7 @@
 
 //----------------------------------------------------------------------------
 ctkCmdLineModuleRunException::ctkCmdLineModuleRunException(const QUrl &location, int errorCode, const QString &errorString)
-  : QtConcurrent::Exception(),
+  : QException(),//QtConcurrent::Exception(),
     ctkException(QString("Running module \"%1\" failed with code %2: %3").arg(location.toString()).arg(errorCode).arg(errorString)),
     Location(location), ErrorCode(errorCode), ErrorString(errorString)
 {
@@ -34,7 +34,7 @@ ctkCmdLineModuleRunException::ctkCmdLineModuleRunException(const QUrl &location,
 //----------------------------------------------------------------------------
 ctkCmdLineModuleRunException::ctkCmdLineModuleRunException(const QUrl &location, int errorCode, const QString &errorString,
     const ctkCmdLineModuleRunException& cause)
-  : QtConcurrent::Exception(), ctkException(location.toString(), cause),
+  : QException(),/*QtConcurrent::Exception(),*/ ctkException(location.toString(), cause),
     Location(location), ErrorCode(errorCode), ErrorString(errorString)
 {
 }

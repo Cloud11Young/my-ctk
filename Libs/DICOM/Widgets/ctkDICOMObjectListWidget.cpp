@@ -46,7 +46,8 @@ public:
 
   bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
   {
-    if (filterRegExp().isEmpty())
+    // if (filterRegExp().isEmpty())
+    if (filterRegularExpression().isValid())
       {
       return true;
       }
@@ -59,11 +60,11 @@ private:
   {
     // Accept item if its tag, attribute, or value text matches
     if ((sourceModel()->data(sourceModel()->index(index.row(), ctkDICOMObjectModel::TagColumn,
-      index.parent()), Qt::DisplayRole).toString().contains(filterRegExp()))
+      index.parent()), Qt::DisplayRole).toString().contains(filterRegularExpression()))
       || (sourceModel()->data(sourceModel()->index(index.row(), ctkDICOMObjectModel::AttributeColumn,
-      index.parent()), Qt::DisplayRole).toString().contains(filterRegExp()))
+      index.parent()), Qt::DisplayRole).toString().contains(filterRegularExpression()))
       || (sourceModel()->data(sourceModel()->index(index.row(), ctkDICOMObjectModel::ValueColumn,
-      index.parent()), Qt::DisplayRole).toString().contains(filterRegExp())))
+      index.parent()), Qt::DisplayRole).toString().contains(filterRegularExpression())))
       {
       return true;
       }
@@ -130,7 +131,7 @@ void ctkDICOMObjectListWidgetPrivate::setFilterExpressionInModel(qRecursiveTreeP
   if (expr.startsWith(regexpPrefix))
     {
     filterModel->setFilterCaseSensitivity(Qt::CaseSensitive);
-    filterModel->setFilterRegExp(expr.right(expr.length() - regexpPrefix.length()));
+    filterModel->setFilterRegularExpression(expr.right(expr.length() - regexpPrefix.length()));
     }
   else
     {

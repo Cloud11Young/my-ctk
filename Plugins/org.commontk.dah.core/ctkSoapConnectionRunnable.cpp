@@ -143,7 +143,7 @@ void ctkSoapConnectionRunnable::readClient(QTcpSocket& socket)
       block.append("Content-Length: ").append(QString::number(content.size())).append("\n");
       block.append("\n");
 
-      block.append(content);
+      block.append(content.toStdString().c_str());
 
       CTK_SOAP_LOG_LOWLEVEL( << block );
 

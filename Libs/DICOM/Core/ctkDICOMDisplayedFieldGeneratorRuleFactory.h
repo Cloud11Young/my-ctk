@@ -27,8 +27,10 @@
 #include <QObject>
 #include <QList>
 
+#include "ctkDICOMDisplayedFieldGeneratorAbstractRule.h"
+
 class ctkDICOMDatabase;
-class ctkDICOMDisplayedFieldGeneratorAbstractRule;
+// class ctkDICOMDisplayedFieldGeneratorAbstractRule;
 class ctkDICOMDisplayedFieldGeneratorRuleFactoryCleanup;
 
 /// \ingroup SlicerRt_QtModules_Segmentations

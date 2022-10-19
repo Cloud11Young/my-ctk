@@ -169,7 +169,8 @@ ctkCmdLineModuleBackend*ctkCmdLineModuleManager::backend(const QString& scheme) 
 QList<ctkCmdLineModuleBackend*> ctkCmdLineModuleManager::backends() const
 {
   QList<ctkCmdLineModuleBackend*> result = d->SchemeToBackend.values();
-  qSort(result);
+  //qSort(result);
+  std::sort(result);
   result.erase(std::unique(result.begin(), result.end()), result.end());
   return result;
 }

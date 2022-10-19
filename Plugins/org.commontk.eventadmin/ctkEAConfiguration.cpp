@@ -311,7 +311,8 @@ void ctkEAConfiguration::updated(const ctkDictionary& properties)
 {
   // do this in the background as we don't want to stop
   // the config admin
-  QtConcurrent::run(this, &ctkEAConfiguration::updateFromConfigAdmin, properties);
+  // QtConcurrent::run(this, &ctkEAConfiguration::updateFromConfigAdmin, properties);
+  QtConcurrent::run(&ctkEAConfiguration::updateFromConfigAdmin, this, properties);
 }
 
 int ctkEAConfiguration::getIntProperty(const QString& key, const QVariant& value,

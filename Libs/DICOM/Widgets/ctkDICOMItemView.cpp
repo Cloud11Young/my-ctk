@@ -320,7 +320,7 @@ void ctkDICOMItemView::addImage( DicomImage & dcmImage, bool defaultIntensity )
     /* create output buffer for DicomImage class */
     QByteArray buffer;
     /* copy header to output buffer and resize it for pixel data */
-    buffer.append(header);
+    buffer.append(header.toStdString().c_str());
     buffer.resize(length);
 
     /* render pixel data to buffer */
@@ -363,7 +363,7 @@ void ctkDICOMItemView::mouseMoveEvent(QMouseEvent* event){
             emit requestPreviousImage();
             d->OldMousePos = event->pos();
         }
-    }else if(event->buttons() == Qt::MidButton){
+    }else if(event->buttons() == Qt::MiddleButton){
         event->accept();
         QPoint nowPos = event->pos();
 

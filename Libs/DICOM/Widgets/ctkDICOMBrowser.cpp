@@ -74,7 +74,8 @@ public:
     this->setModal(true);
     this->setSizeGripEnabled(true);
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(0);
+//    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     this->tagListWidget = new ctkDICOMObjectListWidget();
     layout->addWidget(this->tagListWidget);
   }
@@ -1574,7 +1575,9 @@ void ctkDICOMBrowser::exportSelectedItems(ctkDICOMModel::IndexType level)
   Q_D(const ctkDICOMBrowser);
   ctkFileDialog* directoryDialog = new ctkFileDialog();
   directoryDialog->setOption(QFileDialog::ShowDirsOnly);
-  directoryDialog->setFileMode(QFileDialog::DirectoryOnly);
+  // directoryDialog->setFileMode(QFileDialog::DirectoryOnly);
+  directoryDialog->setOptions(QFileDialog::ShowDirsOnly);
+
   bool res = directoryDialog->exec();
   if (!res)
   {

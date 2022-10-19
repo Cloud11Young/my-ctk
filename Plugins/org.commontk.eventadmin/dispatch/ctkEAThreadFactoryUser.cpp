@@ -43,7 +43,7 @@ ctkEAInterruptibleThread* ctkEAThreadFactoryUser::DefaultThreadFactory::newThrea
 
 
 ctkEAThreadFactoryUser::ctkEAThreadFactoryUser()
-  : mutex(QMutex::Recursive), threadFactory(new DefaultThreadFactory())
+  : mutex(/*QMutex::Recursive*/), threadFactory(new DefaultThreadFactory())
 {
 
 }

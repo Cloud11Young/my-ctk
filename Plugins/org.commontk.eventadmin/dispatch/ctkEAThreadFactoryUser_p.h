@@ -38,7 +38,7 @@ class ctkEAThreadFactoryUser
 
 protected:
 
-  mutable QMutex mutex;
+  mutable QRecursiveMutex mutex;
 
   ctkEAThreadFactory* threadFactory;
 
