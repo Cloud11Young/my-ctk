@@ -24,6 +24,8 @@
 // Qt includes 
 #include <QWidget>
 
+#include "ctkDICOMDatabase.h"
+
 #include "ctkDICOMWidgetsExport.h"
 
 class ctkDICOMAppWidgetPrivate;

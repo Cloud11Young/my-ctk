@@ -140,7 +140,7 @@ void ctkSoapConnectionRunnable::readClient(QTcpSocket& socket)
       QByteArray block;
       block.append("HTTP/1.1 200 OK\n");
       block.append("Content-Type: text/xml;charset=utf-8\n");
-      block.append("Content-Length: ").append(QString::number(content.size())).append("\n");
+      block.append("Content-Length: ").append(QByteArray::number(content.size())).append("\n");
       block.append("\n");
 
       block.append(content.toStdString().c_str());

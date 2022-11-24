@@ -35,7 +35,7 @@ ctkCmdLineModuleFuture::ctkCmdLineModuleFuture(ctkCmdLineModuleFutureInterface* 
 //----------------------------------------------------------------------------
 QByteArray ctkCmdLineModuleFuture::readAllOutputData() const
 {
-  return d.outputData();
+  return static_cast<QFuture<ctkCmdLineModuleResult>*>(this)->d.outputData();
 }
 
 //----------------------------------------------------------------------------

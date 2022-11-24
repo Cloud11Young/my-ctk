@@ -172,7 +172,7 @@ bool ctkDICOMThumbnailGenerator::generateThumbnail(DicomImage *dcmImage, const Q
   /* create output buffer for DicomImage class */
   QByteArray buffer;
   /* copy header to output buffer and resize it for pixel data */
-  buffer.append(header);
+  buffer.append(header.toStdString().c_str());
   buffer.resize(length);
 
   /* render pixel data to buffer */
