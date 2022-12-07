@@ -20,9 +20,9 @@ limitations under the License.
 
 // Qt includes
 #include <QDebug>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
-#include <QAbstractMessageHandler>
+// #include <QXmlSchema>
+// #include <QXmlSchemaValidator>
+// #include <QAbstractMessageHandler>
 #include <QXmlStreamReader>
 
 // CTK includes
@@ -101,7 +101,7 @@ void ctkCmdLineModuleXmlParser::handleExecutableElement()
 {
   while(_xmlReader.readNextStartElement())
   {
-    QStringRef name = _xmlReader.name();
+    QStringView name = _xmlReader.name();
 
     if (compare(name, "category", Qt::CaseInsensitive) == 0)
     {
@@ -157,7 +157,7 @@ void ctkCmdLineModuleXmlParser::handleParametersElement()
 
   while(_xmlReader.readNextStartElement())
   {
-    QStringRef name = _xmlReader.name();
+    QStringView name = _xmlReader.name();
 
     if (compare(name, "label", Qt::CaseInsensitive) == 0)
     {

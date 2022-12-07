@@ -23,18 +23,19 @@
 #define CTKCMDLINEMODULEPARAMETERPARSERS_P_H
 
 #include <QXmlStreamReader>
+#include <QStringRef>
 
 #include "ctkCmdLineModuleParameter.h"
 #include "ctkCmdLineModuleParameter_p.h"
 
 namespace {
 
-static int compare(const QStringRef& value1, const char* value2, Qt::CaseSensitivity cs = Qt::CaseSensitive)
+static int compare(const QStringView& value1, const char* value2, Qt::CaseSensitivity cs = Qt::CaseSensitive)
 {
   return value1.compare(QLatin1String(value2), cs);
 }
 
-static bool parseBooleanAttribute(const QStringRef& attrValue)
+static bool parseBooleanAttribute(const QStringView& attrValue)
 {
   if (compare(attrValue, "true", Qt::CaseInsensitive) == 0 ||
       compare(attrValue, "1") == 0)
@@ -82,7 +83,7 @@ protected:
   {
     // handle common sub-elements
 
-    QStringRef name = xmlReader.name();
+    QStringView name = xmlReader.name();
 
     if (compare(name, "name", Qt::CaseInsensitive) == 0)
     {
@@ -138,7 +139,7 @@ protected:
     moduleParamPrivate->Constraints = true;
     while(xmlReader.readNextStartElement())
     {
-      QStringRef constraintElem = xmlReader.name();
+      QStringView constraintElem = xmlReader.name();
       if (compare(constraintElem, "minimum", Qt::CaseInsensitive) == 0)
       {
         moduleParamPrivate->Minimum = xmlReader.readElementText().trimmed();
@@ -180,7 +181,7 @@ protected:
 
   bool handleSubElement(ctkCmdLineModuleParameterPrivate* moduleParamPrivate, QXmlStreamReader& xmlReader)
   {
-    QStringRef name = xmlReader.name();
+    QStringView name = xmlReader.name();
 
     if (compare(name, "constraints", Qt::CaseInsensitive) == 0)
     {
@@ -200,7 +201,7 @@ protected:
 
   bool handleSubElement(ctkCmdLineModuleParameterPrivate* moduleParamPrivate, QXmlStreamReader& xmlReader)
   {
-    QStringRef name = xmlReader.name();
+    QStringView name = xmlReader.name();
 
     if (compare(name, "constraints", Qt::CaseInsensitive) == 0)
     {
@@ -220,7 +221,7 @@ protected:
 
   bool handleSubElement(ctkCmdLineModuleParameterPrivate* moduleParamPrivate, QXmlStreamReader& xmlReader)
   {
-    QStringRef name = xmlReader.name();
+    QStringView name = xmlReader.name();
 
     if (compare(name, "element", Qt::CaseInsensitive) == 0)
     {

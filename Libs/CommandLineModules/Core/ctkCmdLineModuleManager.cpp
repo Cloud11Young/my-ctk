@@ -170,7 +170,7 @@ QList<ctkCmdLineModuleBackend*> ctkCmdLineModuleManager::backends() const
 {
   QList<ctkCmdLineModuleBackend*> result = d->SchemeToBackend.values();
   //qSort(result);
-  std::sort(result);
+  std::sort(result.begin(), result.end());
   result.erase(std::unique(result.begin(), result.end()), result.end());
   return result;
 }

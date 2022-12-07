@@ -23,14 +23,14 @@
 #include <QBuffer>
 #include <QDebug>
 #include <QFile>
-#include <QXmlQuery>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
-#include <QXmlFormatter>
+// #include <QXmlQuery>
+// #include <QXmlSchema>
+// #include <QXmlSchemaValidator>
+// #include <QXmlFormatter>
 
 // CTK includes
 #include "ctkCmdLineModuleXslTransform.h"
-#include "ctkCmdLineModuleXmlMsgHandler_p.h"
+// #include "ctkCmdLineModuleXmlMsgHandler_p.h"
 
 //----------------------------------------------------------------------------
 class ctkCmdLineModuleXslTransformPrivate
@@ -43,9 +43,13 @@ public:
     , OutputSchema(0)
     , Transformation(0)
     , Output(output)
+  #if 0 //yangqi 2022120715
     , XslTransform(QXmlQuery::XSLT20)
+  #endif
   {
+    #if 0 //yangqi 2022120715
     this->XslTransform.setMessageHandler(&this->MsgHandler);
+    #endif
   }
 
   bool validateOutput();
@@ -57,10 +61,11 @@ public:
   QIODevice* Transformation;
   QIODevice* Output;
 
-  QXmlQuery XslTransform;
   QList<QIODevice*> ExtraTransformations;
+#if 0 //yangqi 2022120715
+  QXmlQuery XslTransform;
   ctkCmdLineModuleXmlMsgHandler MsgHandler;
-
+#endif
   QString ErrorStr;
 };
 
@@ -84,6 +89,7 @@ bool ctkCmdLineModuleXslTransformPrivate::validateOutput()
   }
   outputSchema->reset();
 
+#if 0 //yangqi 2022120715
   QXmlSchema schema;
 
   ctkCmdLineModuleXmlMsgHandler msgHandler;
@@ -106,7 +112,7 @@ bool ctkCmdLineModuleXslTransformPrivate::validateOutput()
                 .arg(msgHandler.statusMessage());
     return false;
   }
-
+#endif
   return true;
 }
 
@@ -174,13 +180,14 @@ bool ctkCmdLineModuleXslTransform::transform()
   }
   inputDevice->reset();
 
-
+#if 0 //yangqi 2022120715
   if (!d->XslTransform.setFocus(inputDevice))
   {
     QString msg("Error transforming XML input: %1");
     d->ErrorStr = msg.arg(d->MsgHandler.statusMessage());
     return false;
   }
+#endif
 
   if (!d->Transformation)
   {
@@ -200,7 +207,10 @@ bool ctkCmdLineModuleXslTransform::transform()
 #if 0
   qDebug() << query;
 #endif
+
+#if 0 //yangqi 2022120715
   d->XslTransform.setQuery(query);
+#endif
 
   bool closeOutput = false;
   if (!(d->Output->openMode() & QIODevice::WriteOnly))
@@ -209,6 +219,7 @@ bool ctkCmdLineModuleXslTransform::transform()
     closeOutput = true;
   }
 
+#if 0 //yangqi 2022120715
   QScopedPointer<QXmlSerializer> xmlSerializer;
   if (d->Format)
   {
@@ -226,7 +237,7 @@ bool ctkCmdLineModuleXslTransform::transform()
         .arg(d->MsgHandler.statusMessage());
     return false;
   }
-
+#endif
 #if 0
   qDebug() << d->Output;
 #endif
@@ -256,7 +267,9 @@ void ctkCmdLineModuleXslTransform::setXslTransformation(QIODevice *transformatio
 //----------------------------------------------------------------------------
 void ctkCmdLineModuleXslTransform::bindVariable(const QString& name, const QVariant& value)
 {
+  #if 0 //yangqi 2022120715
   d->XslTransform.bindVariable(name, value);
+  #endif
 }
 
 //----------------------------------------------------------------------------

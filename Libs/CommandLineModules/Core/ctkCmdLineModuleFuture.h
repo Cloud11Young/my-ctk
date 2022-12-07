@@ -74,6 +74,8 @@ public:
    */
   bool canPause() const;
 
+  bool operator==(const ctkCmdLineModuleFuture& other) const { return (d == other.d); }
+  bool operator!=(const ctkCmdLineModuleFuture& other) const { return (d != other.d); }
 };
 
 inline ctkCmdLineModuleFuture ctkCmdLineModuleFutureInterface::future()

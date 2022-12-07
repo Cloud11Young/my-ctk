@@ -42,8 +42,11 @@ if(NOT DEFINED VTK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://vtk.org/VTK.git"
+    # set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://vtk.org/VTK.git"
+    #   GIT_TAG ${revision_tag})
+    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://gitlab.kitware.com/vtk/VTK.git"
       GIT_TAG ${revision_tag})
+
   endif()
 
   set(additional_vtk_cmakevars)

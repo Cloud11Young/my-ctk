@@ -41,7 +41,9 @@ if(NOT DEFINED ITK_DIR AND NOT ${CMAKE_PROJECT_NAME}_USE_SYSTEM_${proj})
     set(location_args GIT_REPOSITORY ${${proj}_GIT_REPOSITORY}
                       GIT_TAG ${revision_tag})
   else()
-    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://itk.org/ITK.git"
+    # set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://itk.org/ITK.git"
+    #                   GIT_TAG ${revision_tag})
+    set(location_args GIT_REPOSITORY "${EP_GIT_PROTOCOL}://github.com/InsightSoftwareConsortium/ITK.git"
                       GIT_TAG ${revision_tag})
   endif()
 

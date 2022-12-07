@@ -21,12 +21,12 @@
 
 #include "ctkCmdLineModuleXmlValidator.h"
 
-#include "ctkCmdLineModuleXmlMsgHandler_p.h"
+// #include "ctkCmdLineModuleXmlMsgHandler_p.h"
 
 #include <QFile>
 #include <QBuffer>
-#include <QXmlSchema>
-#include <QXmlSchemaValidator>
+// #include <QXmlSchema>
+// #include <QXmlSchemaValidator>
 
 #include <QDebug>
 
@@ -95,6 +95,7 @@ bool ctkCmdLineModuleXmlValidator::validateInput()
     inputSchema->open(QIODevice::ReadOnly);
   }
 
+#if 0 //yangqi 2022120715
   ctkCmdLineModuleXmlMsgHandler errorHandler;
 
   QXmlSchema schema;
@@ -116,7 +117,7 @@ bool ctkCmdLineModuleXmlValidator::validateInput()
                 .arg(errorHandler.statusMessage());
     return false;
   }
-
+#endif
   return true;
 }
 

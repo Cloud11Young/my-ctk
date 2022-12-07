@@ -9,6 +9,7 @@ project(CTKCommandLineModulesCore)
 #
 set(KIT_export_directive "CTK_CMDLINEMODULECORE_EXPORT")
 
+add_definitions(-DQFUTURE_TEST)
 # Additional directories to include
 
 # Source files
@@ -44,8 +45,8 @@ set(KIT_SRCS
   ctkCmdLineModuleTimeoutException.cpp
   ctkCmdLineModuleUtils.cpp
   ctkCmdLineModuleXmlException.cpp
-  ctkCmdLineModuleXmlMsgHandler_p.h
-  ctkCmdLineModuleXmlMsgHandler.cpp
+  # ctkCmdLineModuleXmlMsgHandler_p.h
+  # ctkCmdLineModuleXmlMsgHandler.cpp
   ctkCmdLineModuleXmlParser_p.h
   ctkCmdLineModuleXmlParser.cpp
   ctkCmdLineModuleXmlValidator.cpp
@@ -79,8 +80,8 @@ set(KIT_resources
 ctkFunctionGetTargetLibraries(KIT_target_libraries)
 
 if(CTK_QT_VERSION VERSION_GREATER "4")
-  # list(APPEND KIT_target_libraries Qt6::XmlPatterns Qt6::Widgets Qt6::Concurrent Qt::xml)
-  list(APPEND KIT_target_libraries Qt6::Widgets Qt6::Concurrent Qt::xml)
+  # list(APPEND KIT_target_libraries Qt6::XmlPatterns Qt6::Widgets Qt6::Concurrent Qt::xml /*Qt6::xml Qt6::Core5compat*/)
+  list(APPEND KIT_target_libraries Qt6::Widgets Qt6::Concurrent)
 else()
   set(QT_USE_QTXMLPATTERNS 1)
   include(${QT_USE_FILE})
