@@ -233,7 +233,7 @@ void ctkCommandLineModuleAppLogic::onDataAvailable()
       {
         s=s+" uid:" + data.patients.begin()->studies.begin()->series.begin()->seriesUID;
 //        QUuid uuid("93097dc1-caf9-43a3-a814-51a57f8d861d");//data.patients.begin()->studies.begin()->series.begin()->seriesUID);
-        QUuid uuid = data.patients.begin()->studies.begin()->series.begin()->objectDescriptors.begin()->descriptorUUID;
+        QUuid uuid = QUuid(data.patients.begin()->studies.begin()->series.begin()->objectDescriptors.begin()->descriptorUUID);
         s=s+" uuid:"+uuid.toString();
       }
     }
@@ -304,8 +304,10 @@ void ctkCommandLineModuleAppLogic::onLoadDataClicked()
 
 void ctkCommandLineModuleAppLogic::onCreateSecondaryCapture()
 {
-  const QPixmap* pixmap = ui.PlaceHolderForImage->pixmap();
-  if(pixmap!=NULL)
+  // const QPixmap* pixmap = ui.PlaceHolderForImage->pixmap();
+  // if(pixmap!=NULL)
+  QPixmap&& pixmap = ui.PlaceHolderForImage->pixmap();
+  if(!pixmap.isNull())
   {
     QString templatefilename = QDir(OutputLocation).absolutePath();
     if(templatefilename.isEmpty()==false) templatefilename.append('/');
@@ -325,7 +327,7 @@ void ctkCommandLineModuleAppLogic::onCreateSecondaryCapture()
       outputtmp.close();
     }
 
-    pixmap->save(inputFileName);
+    pixmap.save(inputFileName);
 
     ModuleFrontend->setValue("fileVar", inputFileName);
     ModuleFrontend->setValue("dirVar", outputFileName);

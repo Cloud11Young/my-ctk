@@ -548,11 +548,11 @@ ctk_lib_option(CommandLineModules/Backend/LocalProcess
 ctk_lib_option(CommandLineModules/Backend/FunctionPointer
   "Build the Command Line Module back-end for function pointers" OFF)
 
-ctk_lib_option(XNAT/Core
-  "Build the XNAT Core library" OFF)
+# ctk_lib_option(XNAT/Core
+#   "Build the XNAT Core library" OFF)
 
-ctk_lib_option(XNAT/Widgets
-  "Build the XNAT Widgets library" OFF)
+# ctk_lib_option(XNAT/Widgets
+#   "Build the XNAT Widgets library" OFF)
 
 # Save enabled CTK libraries in the cache to ensure expected player and translator
 # are enabled in "Libs/QtTesting".
@@ -655,9 +655,9 @@ if(CTK_USE_QTTESTING AND CTK_QT_VERSION VERSION_LESS "5")
     CTK_BUILD_EXAMPLES)
 endif()
 
-ctk_app_option(ctkXnatTreeBrowser
-  "Build the XNAT Tree Browser application" OFF
-  CTK_BUILD_EXAMPLES)
+# ctk_app_option(ctkXnatTreeBrowser
+#   "Build the XNAT Tree Browser application" OFF
+#   CTK_BUILD_EXAMPLES)
 
 # Save the set of enabled apps in a cache file
 set(_enabled_apps)
@@ -978,7 +978,7 @@ set(CTK_DEPENDENCIES
   ZMQ
   QtSOAP
   qxmlrpc
-  qRestAPI
+  # qRestAPI
   OpenIGTLink
   ITK
   QtTesting

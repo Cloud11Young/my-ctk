@@ -101,7 +101,7 @@ QList<QString> ctkCmdLineModuleBackendXMLChecker::schemes() const
 //----------------------------------------------------------------------------
 qint64 ctkCmdLineModuleBackendXMLChecker::timeStamp(const QUrl & /*location*/) const
 {
-  return ctk::msecsTo(QDateTime::fromTime_t(0), d->m_LastModified);
+  return ctk::msecsTo(QDateTime::currentDateTimeUtc(), d->m_LastModified);
 }
 
 

@@ -2,6 +2,8 @@ project(org_commontk_dah_cmdlinemoduleapp)
 
 set(PLUGIN_export_directive "org_commontk_dah_cmdlinemoduleapp_EXPORT")
 
+add_definitions(-DQFUTURE_TEST)
+
 set(PLUGIN_SRCS
   ctkCommandLineModuleAppLogic_p.h
   ctkCommandLineModuleAppPlugin_p.h

@@ -4,6 +4,8 @@ set(LIBRARY_NAME ${KIT})
 set(_test_srcs)
 set(_test_mocs)
 
+add_definitions(-DQFUTURE_TEST)
+
 if(CTK_LIB_CommandLineModules/Frontend/QtGui)
   if(CTK_QT_VERSION VERSION_LESS "5")
     set(QT_USE_QTUITOOLS 1)

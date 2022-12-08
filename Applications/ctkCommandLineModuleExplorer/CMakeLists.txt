@@ -1,5 +1,7 @@
 project(ctkCommandLineModuleExplorer)
 
+add_definitions(-DQFUTURE_TEST)
+
 #
 # See CTK/CMake/ctkMacroBuildApp.cmake for details
 #

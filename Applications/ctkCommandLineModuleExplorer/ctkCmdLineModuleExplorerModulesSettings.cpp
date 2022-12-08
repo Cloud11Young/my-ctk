@@ -82,7 +82,7 @@ void ctkCmdLineModuleExplorerModulesSettings::applySettings()
 
   this->setCursor(Qt::BusyCursor);
 
-  QFuture<void> future1 = QtConcurrent::mapped(removedModules, ctkCmdLineModuleConcurrentUnRegister(this->ModuleManager));
+  QFuture<bool> future1 = QtConcurrent::mapped(removedModules, ctkCmdLineModuleConcurrentUnRegister(this->ModuleManager));
   QFuture<ctkCmdLineModuleReferenceResult> future2 = QtConcurrent::mapped(addedModules, ctkCmdLineModuleConcurrentRegister(this->ModuleManager, true));
 
   ctkSettingsPanel::applySettings();

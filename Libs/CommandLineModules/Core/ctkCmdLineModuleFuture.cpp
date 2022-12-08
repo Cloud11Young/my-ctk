@@ -57,3 +57,9 @@ bool ctkCmdLineModuleFuture::canPause() const
 {
   return d.canPause();
 }
+
+// bool ctkCmdLineModuleFuture::operator==(const ctkCmdLineModuleFuture& other) const
+// { return (d == other.d); }
+
+// bool ctkCmdLineModuleFuture::operator!=(const ctkCmdLineModuleFuture& other) const
+// { return (d != other.d); }

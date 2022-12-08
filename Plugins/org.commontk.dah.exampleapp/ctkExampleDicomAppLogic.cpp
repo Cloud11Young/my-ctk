@@ -202,7 +202,7 @@ void ctkExampleDicomAppLogic::onDataAvailable()
       {
         s=s+" uid:" + data.patients.begin()->studies.begin()->series.begin()->seriesUID;
 //        QUuid uuid("93097dc1-caf9-43a3-a814-51a57f8d861d");//data.patients.begin()->studies.begin()->series.begin()->seriesUID);
-        QUuid uuid = data.patients.begin()->studies.begin()->series.begin()->objectDescriptors.begin()->descriptorUUID;
+        QUuid uuid = QUuid(data.patients.begin()->studies.begin()->series.begin()->objectDescriptors.begin()->descriptorUUID);
         s=s+" uuid:"+uuid.toString();
       }
     }
@@ -280,8 +280,10 @@ void ctkExampleDicomAppLogic::onLoadDataClicked()
 
 void ctkExampleDicomAppLogic::onCreateSecondaryCapture()
 {
-  const QPixmap* pixmap = ui.PlaceHolderForImage->pixmap();
-  if(pixmap!=NULL)
+  // const QPixmap* pixmap = ui.PlaceHolderForImage->pixmap();
+  // if(pixmap!=NULL)
+  QPixmap&& pixmap = ui.PlaceHolderForImage->pixmap();
+  if(!pixmap.isNull())
   {
     QStringList preferredProtocols;
     preferredProtocols.append("file:");
@@ -296,7 +298,7 @@ void ctkExampleDicomAppLogic::onCreateSecondaryCapture()
       QString filename = QFileInfo(tempfile->fileName()).absoluteFilePath();
       qDebug() << "Created file: " << filename;
       tempfile->close();
-      QPixmap tmppixmap(*pixmap);
+      QPixmap tmppixmap(pixmap);
       QPainter painter(&tmppixmap);
       painter.setPen(Qt::white);
       painter.setFont(QFont("Arial", 15));

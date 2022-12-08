@@ -49,7 +49,7 @@ struct ctkCmdLineModuleBackendLocalProcessPrivate
 
   QString normalizeFlag(const QString& flag) const
   {
-    return flag.trimmed().remove(QRegExp("^-*"));
+    return flag.trimmed().remove(QRegularExpression("^-*"));
   }
 
   QStringList commandLineArguments(const QHash<QString,QVariant>& currentValues,
@@ -125,7 +125,7 @@ struct ctkCmdLineModuleBackendLocalProcessPrivate
     }
 
     QList<int> indexes = indexedArgs.keys();
-    qSort(indexes.begin(), indexes.end());
+    std::sort(indexes.begin(), indexes.end());
     foreach(int index, indexes)
     {
       cmdLineArgs << indexedArgs[index];
@@ -171,7 +171,8 @@ qint64 ctkCmdLineModuleBackendLocalProcess::timeStamp(const QUrl &location) cons
   if (fileInfo.exists())
   {
     QDateTime dateTime = fileInfo.lastModified();
-    return ctk::msecsTo(QDateTime::fromTime_t(0), dateTime);
+    // return ctk::msecsTo(QDateTime::fromTime_t(0), dateTime);
+    return ctk::msecsTo(QDateTime::currentDateTimeUtc(), dateTime);
   }
   return 0;
 }

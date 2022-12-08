@@ -33,6 +33,7 @@
 class ctkDICOMTableManager;
 // CTK includes
 #include <ctkDICOMDatabase.h>
+#include <ctkDICOMTableManager.h>
 
 class ctkDICOMQueryRetrieveWidgetPrivate;
 

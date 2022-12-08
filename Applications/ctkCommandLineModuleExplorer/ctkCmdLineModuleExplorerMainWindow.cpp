@@ -206,7 +206,8 @@ void ctkCLModuleExplorerMainWindow::closeEvent(QCloseEvent *event)
                              QMessageBox::Ok | QMessageBox::Cancel);
     if (button == QMessageBox::Ok)
     {
-      QFutureSynchronizer<void> futureSync;
+      //QFutureSynchronizer<void> futureSync;
+      QFutureSynchronizer<ctkCmdLineModuleResult> futureSync;
       futureSync.setCancelOnWait(true);
       foreach(ctkCmdLineModuleFrontend* frontend, runningFrontends)
       {

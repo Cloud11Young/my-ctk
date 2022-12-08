@@ -293,7 +293,7 @@ bool ModuleSortFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelInd
     return false;
   }
 
-  return (sourceModel()->data(index).toString().contains(filterRegExp()));
+  return (sourceModel()->data(index).toString().contains(filterRegularExpression()));
 }
 
 bool ModuleSortFilterProxyModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

@@ -1,6 +1,8 @@
 set(KIT ${PROJECT_NAME})
 set(LIBRARY_NAME ${PROJECT_NAME})
 
+add_definitions(-DQFUTURE_TEST)
+
 create_test_sourcelist(Tests ${KIT}CppTests.cpp
   ctkCmdLineModuleFrontendQtGuiTest.cpp
   ctkCmdLineModuleQtXslTransformTest.cpp

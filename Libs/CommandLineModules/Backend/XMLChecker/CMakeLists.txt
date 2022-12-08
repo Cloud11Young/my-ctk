@@ -10,6 +10,7 @@ project(CTKCommandLineModulesBackendXMLChecker)
 
 set(KIT_export_directive "CTK_CMDLINEMODULEBACKENDXMLCHECKER_EXPORT")
 
+add_definitions(-DQFUTURE_TEST)
 # Additional directories to include
 
 # Source files

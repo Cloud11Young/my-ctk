@@ -29,7 +29,7 @@
 
 #include <QDebug>
 
-#include <QXmlQuery>
+// #include <QXmlQuery>
 #include <QUiLoader>
 
 // CTK includes
@@ -143,7 +143,9 @@ int main(int argc, char** argv)
   else if (args.contains("string"))
   {
     QByteArray byteArray;
-    byteArray.append(args["string"].toString());
+    // byteArray.append(args["string"].toString());
+    byteArray.append(args["string"].toByteArray());
+
     QBuffer buffer(&byteArray);
     buffer.open(QIODevice::ReadOnly);
 

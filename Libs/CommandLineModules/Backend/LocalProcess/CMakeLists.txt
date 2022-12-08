@@ -10,6 +10,8 @@ project(CTKCommandLineModulesBackendLocalProcess)
 
 set(KIT_export_directive "CTK_CMDLINEMODULEBACKENDLP_EXPORT")
 
+add_definitions(-DQFUTURE_TEST)
+
 # Additional directories to include
 
 # Source files

@@ -284,7 +284,7 @@ ctkDicomSoapArrayOfUUIDS::ctkDicomSoapArrayOfUUIDS(const QString& name, const QL
     {
     QString uuidstring((*it).toString());
     uuidstring.remove(0,1).chop(1);
-    this->insert(new ctkDicomSoapUUID("UUID",uuidstring));
+    this->insert(new ctkDicomSoapUUID(QString("UUID"),QUuid(uuidstring)));
     }
 }
 
@@ -305,7 +305,7 @@ ctkDicomSoapObjectDescriptor::ctkDicomSoapObjectDescriptor(const QString& name,
   : QtSoapStruct(QtSoapQName(name))
 {
   this->insert(new ctkDicomSoapUUID("DescriptorUuid",
-                                    od.descriptorUUID) );
+                                    QUuid(od.descriptorUUID)) );
 
   /*this->insert(new QtSoapSimpleType(
                  QtSoapQName("MimeType"),
@@ -636,10 +636,10 @@ ctkDicomSoapObjectLocator::ctkDicomSoapObjectLocator(const QString& name,
                  ol.URI) );
 
   this->insert(new ctkDicomSoapUUID("Locator",
-                                    ol.locator) );
+                                    QUuid(ol.locator)) );
 
    this->insert(new ctkDicomSoapUUID("Source",
-                                    ol.source) );
+                                    QUuid(ol.source)) );
 
   /*this->insert(new QtSoapSimpleType(
                  QtSoapQName("Source"),

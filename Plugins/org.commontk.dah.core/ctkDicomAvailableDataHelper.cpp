@@ -327,7 +327,7 @@ void appendAllUuids(const ctkDicomAppHosting::Patient& patient, QList<QUuid> & u
   // Loop over patient level object descriptors
   foreach(const ctkDicomAppHosting::ObjectDescriptor& objectDescriptor, patient.objectDescriptors)
     {
-    uuidlist.append(objectDescriptor.descriptorUUID);
+    uuidlist.append(QUuid(objectDescriptor.descriptorUUID));
     }
 
   // Loop over studies
@@ -336,7 +336,7 @@ void appendAllUuids(const ctkDicomAppHosting::Patient& patient, QList<QUuid> & u
     // Loop over study level object descriptors
     foreach(const ctkDicomAppHosting::ObjectDescriptor& objectDescriptor, study.objectDescriptors)
       {
-      uuidlist.append(objectDescriptor.descriptorUUID);
+      uuidlist.append(QUuid(objectDescriptor.descriptorUUID));
       }
     // Loop over series
     foreach(const ctkDicomAppHosting::Series& series, study.series)
@@ -344,7 +344,7 @@ void appendAllUuids(const ctkDicomAppHosting::Patient& patient, QList<QUuid> & u
       // Loop over series level object descriptors
       foreach(const ctkDicomAppHosting::ObjectDescriptor& objectDescriptor, series.objectDescriptors)
         {
-        uuidlist.append(objectDescriptor.descriptorUUID);
+        uuidlist.append(QUuid(objectDescriptor.descriptorUUID));
         }
       }
     }
@@ -366,7 +366,7 @@ QList<QUuid> getAllUuids(const ctkDicomAppHosting::AvailableData& availableData)
   // Loop over top level object descriptors
   foreach(const ctkDicomAppHosting::ObjectDescriptor& objectDescriptor, availableData.objectDescriptors)
     {
-    uuidlist.append(objectDescriptor.descriptorUUID);
+    uuidlist.append(QUuid(objectDescriptor.descriptorUUID));
     }
 
    // Loop over patients

@@ -2,6 +2,8 @@
 set(_base_src_include_dir ${CMAKE_SOURCE_DIR}/Libs/CommandLineModules)
 set(_base_bin_include_dir ${CMAKE_BINARY_DIR}/Libs/CommandLineModules)
 
+add_definitions(-DQFUTURE_TEST)
+
 include_directories(
   ${CTKCore_SOURCE_DIR}
   ${CTKCore_BINARY_DIR}
